@@ -84,6 +84,8 @@ ear_height,numeric,cm,no,,no,10,210,yes,height of first ear (maize female inflor
 pathogen,character,,no,pathogen,yes,,,yes,Name of the pathogen studied,,
 AUDPC,numeric,,no,,no,0,150,yes,Area under the disease progress curve,,
 rAUDPC,numeric,,no,,no,0,1,yes,Area under the disease progress curve divided by the non-diseased season length,,
+root_infection,numeric,%,no,,no,0,100,yes,percent of roots that are disease infected,,
+root_AMF,numeric,%,no,,no,0,100,yes,Root colonization by arbuscular micorrhizal fungi  (%),,
 nodule_weight,numeric,?,no,,no,0,,yes,Fresh weight or root nodules,,TO_0000899
 leaf_N,numeric,mg/kg,no,,no,0,1000,yes,nitrogen content in leaf,,TO_0000543
 leaf_K,numeric,mg/kg,no,,no,0,100,yes,potassium content in leaf,,
