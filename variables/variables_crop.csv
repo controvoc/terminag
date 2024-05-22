@@ -149,7 +149,7 @@ residue_prevcrop,numeric,kg/ha,no,,no,,,yes,how much residue of the previous cro
 mulch,numeric,kg/ha,no,,no,,,yes,how much mulch is on the field?,,AGRO_00010013
 seed_source,character,,no,,no,,,yes,source of the seed used,,
 seed_amount,numeric,kg/ha,no,,no,0,1000,yes,amount of seed used (seeding rate),,AGRO_00000202
-seed_treament,character,,no,,no,,,yes,chemical or biological products applied to the seed,,
+seed_treatment,character,,no,,no,,,yes,chemical or biological products applied to the seed,,
 crop_cut,logical,,no,,no,,,yes,was the yield (in a survey) determined with a crop cut?,,
 previous_crop_residue_weight,numeric,kg/ha,no,,no,0,10000,yes,weight of residue of previous crop that stayed on the field,,
 previous_crop_residue_perc,numeric,%,no,,no,0,100,yes,percentage of residue of previous crop that stayed on the field,,
