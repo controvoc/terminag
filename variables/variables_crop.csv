@@ -29,6 +29,7 @@ residue_yield,numeric,kg/ha,no,,no,0,60000,yes,"Fresh weight of the above ground
 grain_weight,numeric,g,no,,no,0,1000,yes,1000 grain weight,,TO_0000382
 fertilizer_type,character,,no,fertilizer_type,yes,,,yes,Name of fertilizer used,,CHEBI_33287
 fertilizer_date,character,,no,,no,,,yes,"Date of fertilizer applications. Possibly followed by ""(product; amount)""",,AGRO_00010143
+fertilizer_amount,numeric,kg/ha,,,no,0,600,no,Total amount of inorganic fertilizer applied,,
 N_fertilizer,numeric,kg/ha,fertilizer,,no,0,600,no,N applied in inorganic fertilizer,,AGRO_00000158
 N_splits,integer,,no,,no,0,5,yes,Number of splits in the N_fertilizer application,,
 P_fertilizer,numeric,kg/ha,fertilizer,,no,0,250,no,"P applied in inorganic fertilizer (as P, not P2O5)",,AGRO_00000160 
@@ -82,7 +83,7 @@ harvest_days,numeric,days,no,,no,45,300,yes,Days to harvest (after planting),,
 plant_height,numeric,cm,no,,no,10,350,yes,Maximum plant height,,TO_0000207
 ear_height,numeric,cm,no,,no,10,210,yes,height of first ear (maize female inflorescence),,
 pathogen,character,,no,pathogen,yes,,,yes,Name of the pathogen studied,,
-AUDPC,numeric,,no,,no,0,150,yes,Area under the disease progress curve,,
+AUDPC,numeric,,no,,no,0,150,yes,Area under the disease progress curve (the sum of fraction infected (not percentage)),,
 rAUDPC,numeric,,no,,no,0,1,yes,Area under the disease progress curve divided by the non-diseased season length,,
 root_infection,numeric,%,no,,no,0,100,yes,Roots that are disease infected,,
 root_AMF,numeric,%,no,,no,0,100,yes,Root colonization by arbuscular micorrhizal fungi,,
@@ -161,3 +162,5 @@ flood_stress,character,,no,,no,,,yes,how severe was the damage from flooding?,,
 drought_stress,character,,no,,no,,,yes,how severe was the damage from drought?,,
 spike_density,numeric,spikes/ha,no,,no,1,3100000,yes,Number of spikes per ha,,
 LAI,numeric,leaf area index,no,,no,0,12,yes,"leaf area index (presumbably the max; this needs to be improved, it should be linked to a date and/or growht stage)",,
+farmer_gender,character,,no,,no,,,yes,gender of farmer (on-farm trials or survey),,
+virus_severity,character,,no,,no,,,yes,how severe was the virus infection?,,
