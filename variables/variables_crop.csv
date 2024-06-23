@@ -14,6 +14,7 @@ crop,character,,yes,crop,no,,,yes,Crop name(s),,AGRO_00000325
 variety,character,,no,,no,,,yes,Variety name,,
 variety_code,character,,no,,no,,,yes,Variety code (used by breeders),,
 variety_type,character,,no,,no,,,yes,"variety grouping (e.g. climbing/bush) and/or ""improved/landrace""",,AGRO_00000616
+variety_release_year,integer,,no,,no,,,yes,year the variety was released,,
 intercrops,character,,no,crop,yes,,,yes,Other crop grown together with the main crop,,
 previous_crop,character,,no,crop,yes,,,yes,Crop grown on this plot in the prior season,,AGRO_00000592
 crop_rotation,character,,no,crop,yes,,,yes,Crops grown in rotation on this plot,,
@@ -64,7 +65,7 @@ planting_implement,character,,no,implement,no,,,yes,Planting (sowing) implement 
 transplanting_method,character,,no,method,no,,,yes,(rice) transplanting method,,AGRO_00000229
 uncertainty,numeric,,no,,no,0,,yes,Measure of noise in data ,,
 uncertainty_type,character,,no,,no,,,yes,Type of noise measure,,
-row_spacing,numeric,cm,no,,no,5,150,yes,Distance between rows,AGRO_00000318,
+row_spacing,numeric,cm,no,,no,5,180,yes,Distance between rows,AGRO_00000318,
 plot_area,numeric,m2,no,,no,0,,yes,Area of the plot in square meter,,AGRO_00000302
 plot_lenght,numeric,m,no,,no,0,,yes, Lenght of the plot in meter,.AGRO_00000307,
 plot_width,numeric,m,no,,no,0,,yes, Width of the plot in meter,,AGRO_00000308
@@ -164,3 +165,4 @@ spike_density,numeric,spikes/ha,no,,no,1,3100000,yes,Number of spikes per ha,,
 LAI,numeric,leaf area index,no,,no,0,12,yes,"leaf area index (presumbably the max; this needs to be improved, it should be linked to a date and/or growht stage)",,
 farmer_gender,character,,no,,no,,,yes,gender of farmer (on-farm trials or survey),,
 virus_severity,character,,no,,no,,,yes,how severe was the virus infection?,,
+striga_present,logical,,no,,no,,,yes,was striga present in the plot?,,
