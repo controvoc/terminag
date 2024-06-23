@@ -14,6 +14,7 @@ crop,character,,yes,crop,no,,,yes,Crop name(s),,AGRO_00000325
 variety,character,,no,,no,,,yes,Variety name,,
 variety_code,character,,no,,no,,,yes,Variety code (used by breeders),,
 variety_type,character,,no,,no,,,yes,"variety grouping (e.g. climbing/bush) and/or ""improved/landrace""",,AGRO_00000616
+variety_traits,character,,no,,no,,,yes,variety characteristics,,
 variety_release_year,integer,,no,,no,,,yes,year the variety was released,,
 intercrops,character,,no,crop,yes,,,yes,Other crop grown together with the main crop,,
 previous_crop,character,,no,crop,yes,,,yes,Crop grown on this plot in the prior season,,AGRO_00000592
