@@ -6,8 +6,8 @@ flowering_date,character,,no,,no,,,yes,"Flowering date in ""yyyy-mm-dd"", ""yyyy
 maturity_date,character,,no,,no,,,yes,"Maturity date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
 harvest_date,character,,no,,no,,,yes,"Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,AGRO_00010128
 season,character,,no,,no,,,yes,Season name,,
-on_farm,logical,,no,,no,,,yes,Is this observation on farm (not on station),,AGRO_00000601
-is_survey,logical,,no,,no,,,yes,Is this observation from a survey (not an experiment),,
+on_farm,logical,,yes,,no,,,yes,Is this observation on farm (not on an expermiment station),,AGRO_00000601
+is_survey,logical,,yes,,no,,,yes,Is this observation from a survey (not an experiment),,
 treatment,character,,no,,no,,,yes,"Description of the treatment, if any. Can be a code used in the original data. There are no rules about its content or format",,AGRO_00000370
 rep,integer,,no,,no,,,yes,"Replication number (1, 2, 3, ...) For this specific observation",,AGRO_00000318
 crop,character,,yes,crop,no,,,yes,Crop name(s),,AGRO_00000325
@@ -69,7 +69,7 @@ uncertainty,numeric,,no,,no,0,,yes,Measure of noise in data ,,
 uncertainty_type,character,,no,,no,,,yes,Type of noise measure,,
 row_spacing,numeric,cm,no,,no,5,180,yes,Distance between rows,AGRO_00000318,
 plot_area,numeric,m2,no,,no,0,,yes,Area of the plot in square meter,,AGRO_00000302
-plot_lenght,numeric,m,no,,no,0,,yes, Lenght of the plot in meter,.AGRO_00000307,
+plot_length,numeric,m,no,,no,0,,yes, Length of the plot in meter,.AGRO_00000307,
 plot_width,numeric,m,no,,no,0,,yes, Width of the plot in meter,,AGRO_00000308
 plant_spacing,numeric,cm,no,,no,5,100,yes,Distance between plants,,AGRO_00000316
 plant_density,numeric,plants/ha,no,,no,1000,3100000,yes,Number of plants per ha,,PCO_0000079
