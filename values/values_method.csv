@@ -14,6 +14,8 @@ raised beds,,land_prep
 conventional tilled beds,,land_prep
 permanent beds,,land_prep
 wide permanent beds,,land_prep
+puddled,,land_prep
+not puddled,,land_prep
 surface ,,irrigation
 basin ,,irrigation
 border ,,irrigation
