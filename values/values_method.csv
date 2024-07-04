@@ -9,6 +9,8 @@ strip tillage,,land_prep
 basins,,land_prep
 ripping,,land_prep
 ploughing,,land_prep
+rotovating,,land_prep
+hilling,,land_prep
 hoeing,,land_prep
 raised beds,,land_prep
 conventional tilled beds,,land_prep

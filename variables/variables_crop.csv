@@ -27,6 +27,7 @@ dmy_total,numeric,kg/ha,no,,no,0,100000,yes,Dry-weight total biomass per ha,,
 dmy_residue,numeric,kg/ha,no,,no,0,100000,yes,Dry-weight residue biomass per ha,,
 yield_part,character,,yes,yield_part,no,,,no,"The part of the crop that ""yield"" refers to (e.g. grain, tubers, roots, leaves, fruit)",,
 yield,numeric,kg/ha,yes,,no,0,150000,no,"Fresh weight biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
+yield_marketable,numeric,kg/ha,no,,no,0,150000,no,"Fresh weight marketable (e.g. large enough tubers) biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
 residue_yield,numeric,kg/ha,no,,no,0,60000,yes,"Fresh weight of the above ground biomass except for the harvestable parts at maturity, per ha",,AGRO_00000164 
 seed_weight,numeric,g,no,,no,0,1000,yes,1000 seed (grain) weight,,TO_0000382
 fertilizer_type,character,,no,fertilizer_type,yes,,,yes,Name of fertilizer used,,CHEBI_33287
@@ -43,6 +44,7 @@ B_fertilizer,numeric,kg/ha,no,,no,0,100,yes,B applied in inorganic fertilizer,,
 Ca_fertilizer,numeric,kg/ha,no,,no,0,250,yes,Ca applied in inorganic fertilizer,,
 Mg_fertilizer,numeric,kg/ha,no,,no,0,250,yes,Mg applied in inorganic fertilizer,,
 Fe_fertilizer,numeric,kg/ha,no,,no,0,250,yes,Fe applied in inorganic fertilizer,,
+foliar_fertilizer_used,logical,,no,,no,,,yes,was any foliar fertilizer used?,,
 lime,numeric,kg/ha,no,,no,0,10000,yes,lime applied,,
 lime_used,logical,,no,,no,,,yes,was any lime applied?,,
 gypsum,numeric,kg/ha,no,,no,0,10000,yes,gypsum applied,,
@@ -72,9 +74,10 @@ plot_area,numeric,m2,no,,no,0,,yes,Area of the plot in square meter,,AGRO_000003
 plot_length,numeric,m,no,,no,0,,yes, Length of the plot in meter,.AGRO_00000307,
 plot_width,numeric,m,no,,no,0,,yes, Width of the plot in meter,,AGRO_00000308
 plant_spacing,numeric,cm,no,,no,5,100,yes,Distance between plants,,AGRO_00000316
-plant_density,numeric,plants/ha,no,,no,1000,3100000,yes,Number of plants per ha,,PCO_0000079
-ear_density,numeric,ears/ha,no,,no,1000,100000,yes,Number of cobs (maize) per ha,,
-cob_density,numeric,cobs/ha,no,,no,1000,100000,yes,Number of ears (cereals) per ha,,
+seed_density,numeric,plants/ha,no,,no,1000,3100000,yes,Number of plants per ha that were seeded/planted,,PCO_0000079
+plant_density,numeric,plants/ha,no,,no,1000,3100000,yes,Number of plants per ha that emerged/survived,,PCO_0000079
+cob_density,numeric,cobs/ha,no,,no,1000,100000,yes,Number of cobs (maize) per ha,,
+spike_density,numeric,spikes/ha,no,,no,1000,3100000,yes,Number of spikes per ha,,
 rain,numeric,mm,no,,no,0,3000,yes,Total rainfall between planting and harvest,,ENVO_01000830
 emergence_days,numeric,days,no,,no,3,90,yes,Days to emergence (after planting),,
 heading_days,numeric,days,no,,no,25,300,yes,Days to heading (after planting),,
@@ -147,6 +150,7 @@ weed_cover,numeric,%,no,,no,,,yes,% weed cover,,
 weed_implement,character,,no,implement,no,,,yes,the implement (machine) used,,AGRO_00002006
 insecticide_used,logical,,no,,no,,,yes,was an insecticide used?,,
 insecticide_product,character,,no,insecticides,yes,,,yes,name(s) of the active ingredient of the insecticide,,
+insectcide_dates,character,,no,,yes,,,yes,"insecticide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
 insecticide_timing,integer,,no,,no,-30,200,yes,days after (or before) planting on which insecticide was used,,
 insecticide_times,integer,,no,,no,0,12,yes,number of insecticide applications,,
 insecticide_amount,numeric,kg (ai) / ha,no,,no,,,yes,how much insecticide was used?,,AGRO_00000663
@@ -156,6 +160,7 @@ pest_species,character,,no,,no,,,yes,name(s) of relevant pest(s),,
 pest_number,integer,,no,,no,,,yes,number of pest species,,
 fungicide_used,logical,,no,,no,,,yes,was a herbicide used?,,
 fungicide_product,character,,no,fungicides,yes,,,yes,name(s) of the active ingredient of the fungicide,,
+fungicide_dates,character,,no,,yes,,,yes,"fungicide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
 fungicide_timing,integer,,no,,no,-30,200,yes,days after (or before) planting on which fungicide was used,,
 fungicide_times,integer,,no,,no,0,20,yes,number of fungicide applications,,
 fungicide_amount,numeric,kg (ai) / ha,no,,no,,,yes,how much fungicide was used?,,
@@ -177,7 +182,6 @@ fertilizer_price,character,currency/kg,no,,no,0,100,yes,price paid for fertilize
 currency,character,,no,currency,no,,,yes,currency used for prices,,
 flood_stress,character,,no,,no,,,yes,how severe was the damage from flooding?,,
 drought_stress,character,,no,,no,,,yes,how severe was the damage from drought?,,
-spike_density,numeric,spikes/ha,no,,no,1,3100000,yes,Number of spikes per ha,,
 LAI,numeric,leaf area index,no,,no,0,12,yes,"leaf area index (presumbably the max; this needs to be improved, it should be linked to a date and/or growht stage)",,
 farmer_gender,character,,no,,no,,,yes,gender of farmer (on-farm trials or survey),,
 virus_severity,character,,no,,no,,,yes,how severe was the virus infection?,,
