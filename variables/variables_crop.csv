@@ -73,6 +73,8 @@ plot_length,numeric,m,no,,no,0,,yes, Length of the plot in meter,.AGRO_00000307,
 plot_width,numeric,m,no,,no,0,,yes, Width of the plot in meter,,AGRO_00000308
 plant_spacing,numeric,cm,no,,no,5,100,yes,Distance between plants,,AGRO_00000316
 plant_density,numeric,plants/ha,no,,no,1000,3100000,yes,Number of plants per ha,,PCO_0000079
+ear_density,numeric,ears/ha,no,,no,1000,100000,yes,Number of cobs (maize) per ha,,
+cob_density,numeric,cobs/ha,no,,no,1000,100000,yes,Number of ears (cereals) per ha,,
 rain,numeric,mm,no,,no,0,3000,yes,Total rainfall between planting and harvest,,ENVO_01000830
 emergence_days,numeric,days,no,,no,3,90,yes,Days to emergence (after planting),,
 heading_days,numeric,days,no,,no,25,300,yes,Days to heading (after planting),,
