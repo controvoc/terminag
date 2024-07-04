@@ -150,7 +150,7 @@ weed_cover,numeric,%,no,,no,,,yes,% weed cover,,
 weed_implement,character,,no,implement,no,,,yes,the implement (machine) used,,AGRO_00002006
 insecticide_used,logical,,no,,no,,,yes,was an insecticide used?,,
 insecticide_product,character,,no,insecticides,yes,,,yes,name(s) of the active ingredient of the insecticide,,
-insectcide_dates,character,,no,,yes,,,yes,"insecticide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
+insecticide_dates,character,,no,,yes,,,yes,"insecticide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
 insecticide_timing,integer,,no,,no,-30,200,yes,days after (or before) planting on which insecticide was used,,
 insecticide_times,integer,,no,,no,0,12,yes,number of insecticide applications,,
 insecticide_amount,numeric,kg (ai) / ha,no,,no,,,yes,how much insecticide was used?,,AGRO_00000663
