@@ -15,5 +15,5 @@ data_institute,character,,yes,institute,yes,,,yes,organizational home(s) of the 
 data_published,character,,no,,no,,,yes,date the data were published,,
 project,character,,yes,,no,,,yes,project that this dataset belongs to (if any),,
 carob_date,character,,yes,,no,,,no,date of first contribution to Carob,,
-revised_by,character,,no,,no,,,no,name(s) of contributers who made significant changes,,
-revision_date,character,,no,,no,,,no,date of last revision,,
+last_modified,character,,no,,no,,,no,date of last significant revision of the script,,
+modfied_by,character,,no,,no,,,no,name(s) of contributers who made significant changes to the script,,

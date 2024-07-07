@@ -1,26 +1,27 @@
-name,longname
-ABC,Alliance of CIAT and Bioversity
-AfricaRice,Africa Rice Center
-ARARI,Amhara Regional Agricultural Research Institute
-CIAT,Centro Internacional de Agricultura Tropical
-CIMMYT,International Maize and Wheat Improvement Center
-CIP,International Potato Center
-CIRAD,Centre de coopération internationale en recherche agronomique pour le développement
-EIAR,Ethiopian Institute of Agricultural Research
-ETHZ,ETH ZURICH
-Göttingen,University of Göttingen
-ICARDA,International Center for Agricultural Research in the Dry Areas
-ICRAF,World Agroforestry Center
-ICRISAT,International Crops Research Institute for the Semi-Arid Tropics
-IFPRI,International Food Policy Research Institute
-IITA,International Institute of Tropical Agriculture
-ILRI,International Livestock Research Institute
-OAF,One Acre Fund
-SARC,South Africa Agricultural Research Council
-TARI,Tanzania Agricultural Research Institute
-UCD,"University of California, Davis"
-UNL,University of Nebraska-Lincoln
-USDA-ARS,"United States Department of Agriculture, Agricultural Research Service"
-UZIM,University of Zimbabwe
-WUR,Wageningen University & Research
-ZARI,Zambian Agriculture Research Institute
+name,longname,URL
+ABC,Alliance of CIAT and Bioversity,alliancebioversityciat.org
+AfricaRice,Africa Rice Center,
+ARARI,Amhara Regional Agricultural Research Institute,
+CIAT,Centro Internacional de Agricultura Tropical,
+CIMMYT,International Maize and Wheat Improvement Center,
+CIP,International Potato Center,cipotato.org
+CIRAD,Centre de Coopération Internationale en Recherche Agronomique pour le Développement,
+EIAR,Ethiopian Institute of Agricultural Research,
+ETHZ,ETH ZURICH,
+Göttingen,University of Göttingen,
+ICARDA,International Center for Agricultural Research in the Dry Areas,
+ICRAF,World Agroforestry Center,
+ICRISAT,International Crops Research Institute for the Semi-Arid Tropics,
+IFPRI,International Food Policy Research Institute,
+IITA,International Institute of Tropical Agriculture,
+ILRI,International Livestock Research Institute,
+OAF,One Acre Fund,
+SARC,South Africa Agricultural Research Council,
+TARI,Tanzania Agricultural Research Institute,
+UCD,"University of California, Davis",
+UNL,University of Nebraska-Lincoln,
+UM,Univeristy of Maryland,
+USDA-ARS,"United States Department of Agriculture, Agricultural Research Service",
+UZIM,University of Zimbabwe,
+WUR,Wageningen University & Research,
+ZARI,Zambian Agriculture Research Institute,

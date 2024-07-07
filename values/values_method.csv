@@ -22,7 +22,7 @@ surface ,,irrigation
 basin ,,irrigation
 border ,,irrigation
 continuous flooding,,irrigation
-furrow ,,irrigation
+furrow,,irrigation
 uncontrolled flooding,,irrigation
 bubbler ,,irrigation
 drip ,,irrigation

@@ -29,6 +29,7 @@ yield_part,character,,yes,yield_part,no,,,no,"The part of the crop that ""yield"
 yield,numeric,kg/ha,yes,,no,0,150000,no,"Fresh weight biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
 yield_marketable,numeric,kg/ha,no,,no,0,150000,no,"Fresh weight marketable (e.g. large enough tubers) biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
 residue_yield,numeric,kg/ha,no,,no,0,60000,yes,"Fresh weight of the above ground biomass except for the harvestable parts at maturity, per ha",,AGRO_00000164 
+biomass_yield,numeric,kg/ha,no,,no,0,60000,yes,"Fresh weight above ground biomass at maturity, per ha",,
 seed_weight,numeric,g,no,,no,0,1000,yes,1000 seed (grain) weight,,TO_0000382
 fertilizer_type,character,,no,fertilizer_type,yes,,,yes,Name of fertilizer used,,CHEBI_33287
 fertilizer_date,character,,no,,no,,,yes,"Date(s) of fertilizer applications. Possibly followed by ""(product; amount)""",,AGRO_00010143
