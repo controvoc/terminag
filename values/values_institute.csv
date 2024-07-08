@@ -1,27 +1,28 @@
 name,longname,URL
 ABC,Alliance of CIAT and Bioversity,alliancebioversityciat.org
-AfricaRice,Africa Rice Center,
-ARARI,Amhara Regional Agricultural Research Institute,
-CIAT,Centro Internacional de Agricultura Tropical,
-CIMMYT,International Maize and Wheat Improvement Center,
+AfricaRice,Africa Rice Center,africarice.org
+ARARI,Amhara Regional Agricultural Research Institute,arari.gov.et
+CIAT,Centro Internacional de Agricultura Tropical,alliancebioversityciat.org
+CIMMYT,International Maize and Wheat Improvement Center,cimmyt.org
 CIP,International Potato Center,cipotato.org
-CIRAD,Centre de Coopération Internationale en Recherche Agronomique pour le Développement,
-EIAR,Ethiopian Institute of Agricultural Research,
-ETHZ,ETH ZURICH,
-Göttingen,University of Göttingen,
-ICARDA,International Center for Agricultural Research in the Dry Areas,
-ICRAF,World Agroforestry Center,
-ICRISAT,International Crops Research Institute for the Semi-Arid Tropics,
-IFPRI,International Food Policy Research Institute,
-IITA,International Institute of Tropical Agriculture,
-ILRI,International Livestock Research Institute,
-OAF,One Acre Fund,
-SARC,South Africa Agricultural Research Council,
-TARI,Tanzania Agricultural Research Institute,
-UCD,"University of California, Davis",
-UNL,University of Nebraska-Lincoln,
-UM,Univeristy of Maryland,
-USDA-ARS,"United States Department of Agriculture, Agricultural Research Service",
-UZIM,University of Zimbabwe,
-WUR,Wageningen University & Research,
-ZARI,Zambian Agriculture Research Institute,
+CIRAD,Centre de Coopération Internationale en Recherche Agronomique pour le Développement,cirad.fr
+EIAR,Ethiopian Institute of Agricultural Research,eiar.gov.et
+ETHZ,ETH Zürich,ethz.ch
+Göttingen,University of Göttingen,uni-goettingen.de
+ICARDA,International Center for Agricultural Research in the Dry Areas,icarda.org
+ICRAF,World Agroforestry Center,cifor-icraf.org
+ICRISAT,International Crops Research Institute for the Semi-Arid Tropics,icrisat.org
+IFPRI,International Food Policy Research Institute,ifpri.org
+IITA,International Institute of Tropical Agriculture,iita.org
+ILRI,International Livestock Research Institute,ilri.org
+IRRI,International Rice Research Institute,irri.org
+OAF,One Acre Fund,oneacrefund.org
+SARC,South Africa Agricultural Research Council,arc.agric.za
+TARI,Tanzania Agricultural Research Institute,tari.go.tz
+UCD,"University of California, Davis",ucdavis.edu
+UNL,University of Nebraska-Lincoln,unl.edu
+UM,Univeristy of Maryland,umd.edu
+USDA-ARS,"United States Department of Agriculture, Agricultural Research Service",ars.usda.gov
+UZIM,University of Zimbabwe,uz.ac.zw
+WUR,Wageningen University & Research,wur.nl
+ZARI,Zambian Agriculture Research Institute,zari.gov.zm
