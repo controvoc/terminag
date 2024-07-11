@@ -34,6 +34,7 @@ biomass_yield,numeric,kg/ha,no,,no,0,140000,yes,"Fresh weight above ground bioma
 seed_weight,numeric,g,no,,no,0,1000,yes,1000 seed (grain) weight,,TO_0000382
 fertilizer_type,character,,no,fertilizer_type,yes,,,yes,Name of fertilizer used,,CHEBI_33287
 fertilizer_date,character,,no,,no,,,yes,"Date(s) of fertilizer applications. Possibly followed by ""(product; amount)""",,AGRO_00010143
+fertilizer_dap,character,,no,,no,-30,150,yes,"Fertilizer applications in ""days after planting"". Possibly followed by ""(product; amount)""",,AGRO_00010143
 fertilizer_amount,numeric,kg/ha,no,,no,0,1000,yes,Total amount of inorganic fertilizer applied,,
 fertilization_method,character,,no,,no,,,yes,Fertilizer application method,,
 N_fertilizer,numeric,kg/ha,yes,,no,0,600,no,N applied in inorganic fertilizer,,AGRO_00000158
