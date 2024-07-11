@@ -189,3 +189,6 @@ LAI,numeric,leaf area index,no,,no,0,12,yes,"leaf area index (presumbably the ma
 farmer_gender,character,,no,,no,,,yes,gender of farmer (on-farm trials or survey),,
 virus_severity,character,,no,,no,,,yes,how severe was the virus infection?,,
 striga_damage,logical,,no,,no,,,yes,was yield affected by the striga parasite?,,
+bird_damage,character,,no,,no,,,yes,"one of : ""none"", ""traces"", ""slight"", ""moderate"", ""severe""",,
+hail_damage,character,,no,,no,,,yes,"one of : ""none"", ""traces"", ""slight"", ""moderate"", ""severe""",,
+herbicide_damage,character,,no,,no,,,yes,"one of : ""none"", ""traces"", ""slight"", ""moderate"", ""severe""",,
