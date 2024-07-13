@@ -37,8 +37,8 @@ puddling,,puddling
 broadcasting,,seeding
 line sowing,,seeding
 dibbling,,seeding
-mechanized,,seeding
-manual,,seeding
+mechanized,,seeding;transplanting
+manual,,seeding;transplanting
 monocrop,,intercropping
 mixed,,intercropping
 relay,,intercropping
