@@ -39,30 +39,29 @@ broccoli,Brassica oleracea var. italica,,yes,,vegetables,,,broccoli,c_7339
 brussels sprouts,Brassica oleracea,,yes,,vegetables,,,brussels sprouts,c_1127
 buckwheat,Fagopyrum esculentum,,yes,seed,pseudocereals,,,buckwheat,c_9471
 cabbage,Brassica oleracea,,yes,,vegetables,,,cabbages,c_1173
-cactus pear,,,yes,fruit,fruits,,,cactus pears,c_ba7fc495
-calamondin,,,yes,fruit,fruits,,,calamondins,c_15497
-cantaloupe,,,yes,fruit,fruits,,,cantaloupes,c_12714
-carambola,,,yes,fruit,fruits,,,carambolas,c_9605
-cardamom,,,yes,seed,spices,,,cardamom,c_9620
+calamansi,Citrus × microcarpa,calamondin,yes,fruit,fruits,,,calamondins,c_15497
+cantaloupe,Cucumis melo,,yes,fruit,fruits,,,cantaloupes,c_12714
+carambola,Averrhoa carambola,star fruit,yes,fruit,fruits,,,carambolas,c_9605
+cardamom,Elettaria cardamomum;Amomum subulatum,,yes,seed,spices,,,cardamom,c_9620
 cardoon,Cynara cardunculus,artichoke thistle,yes,,vegetables,,,cardoons,c_9623
-carob,,,yes,seed,pulses,,,carobs,c_9631
-carrot,,,yes,,vegetables,,,carrots,c_9640
-cashew,,,yes,seed,nuts,,,cashews,c_9647
+carob,Ceratonia siliqua,,yes,seed,pulses,,,carobs,c_9631
+carrot,Daucus carota,,yes,,vegetables,,,carrots,c_9640
+cashew,Anacardium occidentale,,yes,seed,nuts,,,cashews,c_9647
 cassabanana,Sicana odorifera,,yes,fruit,fruits,,,cassabanana,c_972d313c
 cassava,Manihot esculenta,,yes,roots; leaves,root_tuber,,90000,cassava,c_9649
-castor bean,,,yes,seed,oil_seeds,,,castor beans,c_18705
+castor bean,Ricinus communis,,yes,seed,oil_seeds,,,castor beans,c_18705
 catjang,Vigna unguiculata subsp. cylindrica,,yes,seed,pulses,,,catjang,c_1389
-cauliflower,,,yes,,vegetables,,,cauliflowers,c_1394
+cauliflower,Brassica oleracea,,yes,,vegetables,,,cauliflowers,c_1394
 celeriac,Apium graveolens var. rapaceum,celery root,yes,,vegetables,,,celeriac,c_1411
-celery,,,yes,stems; leaves; seed,vegetables,,,celery,c_1412
+celery,Apium graveolens,,yes,stems; leaves; seed,vegetables,,,celery,c_1412
 cereal,spp,,no,seed,cereals,,,,
-cherimoya,,,yes,fruit,fruits,,,cherimoyas,c_9761
-cherry,,,yes,fruit,fruits,,,cherries,c_1534
-chestnut,,,yes,seed,nuts,,,chestnuts,c_25467
-chia,,,yes,seed,oil_seeds,,,chia seeds,c_fd182bf3
+cherimoya,Annona cherimola,,yes,fruit,fruits,,,cherimoyas,c_9761
+cherry,Prunus avium; Prunus cerasus,,yes,fruit,fruits,,,cherries,c_1534
+chestnut,Castanea sativa,,yes,seed,nuts,,,chestnuts,c_25467
+chia,Salvia hispanica,,yes,seed,oil_seeds,,,chia seeds,c_fd182bf3
 chickpea,Cicer arientinum,,yes,seed,pulses,,6000,chickpeas,c_9785
-chicory,,,yes,leaves; root,vegetables,,,chicory,c_9786
-chili pepper,,,yes,fruit,spices,,,chillies,c_9795
+chicory,Cichorium intybus,,yes,leaves; root,vegetables,,,chicory,c_9786
+chili pepper,Capsicum spp,,yes,fruit,spices,,,chillies,c_9795
 chinotto,,,yes,fruit,fruits,,,chinotto,c_66133b33
 chives,,,yes,,vegetables,,,chives,c_9813
 cinnamon,,,yes,stem,spices,,,cinnamon,c_9862
@@ -85,7 +84,7 @@ crowberry,,,yes,fruit,fruits,,,crowberries,c_526caa65
 cucumber,,,yes,,vegetables,,,cucumbers,c_10195
 cucurbit fruit,,,yes,fruit,fruits,,,cucurbit fruits,c_2005
 cumin,,,yes,seed,spices,,,cumin,c_10205
-date,,,yes,fruit,fruits,,,dates,c_25475
+date,Phoenix dactylifera,,yes,fruit,fruits,,,dates,c_25475
 dewberry,,,yes,fruit,fruits,,,dewberries,c_2232
 dragon fruit,,,yes,fruit,fruits,,,dragon fruits,c_42ce209e
 durian,,,yes,fruit,fruits,,,durians,c_10488
@@ -95,15 +94,16 @@ endive,,,yes,leaves,vegetables,,,endives,c_10596
 faba bean,Vicia faba,,yes,seed,pulses,,6500,faba beans,c_10722
 fenugreek,Trigonella foenum-graecum,,yes,seed,spices,,5500,fenugreek,c_b8cb7919
 fiber crop,spp,,no,stems; leaves,fibre_crops,,,fibre crops,c_2876
-fig,,,yes,fruit,fruits,,,figs,c_10840
+fig,Ficus carica,,yes,fruit,fruits,,,figs,c_10840
 fig-leaf gourd,Cucurbita ficifolia,,yes,fruit,fruits,,,,
 finger millet,Eleusine coracana,,yes,grain,cereals,,6000,finger millet,c_2904
 flax,Linum usitatissimum,,yes,seed; stems,oil_seeds; fibre_crops,,,flax,c_2970
 forage crop,,,no,above_ground,fodder_crops,,,forage,c_36108
 forage legume,spp,,no,forage,fodder_crops,,,,
+foxtail amaranth,Amaranthus caudatus,,yes,seed; leaves,pseudocereals; vegetables,,,,
 foxtail millet,Setaria italica,,yes,grain,cereals,,,,
 garlic,Allium sativum,,yes,tuber,vegetables,,,garlic,c_11091
-ginger,,,yes,tuber,spices,,,ginger,c_11157
+ginger,Zingiber officinale,,yes,tuber,spices,,,ginger,c_11157
 gliricidia,Gliricidia sepium,,yes,wood,fuel,,,,
 globe artichoke,,,yes,,vegetables,,,globe artichokes,c_11171
 goji berry,,,yes,fruit,fruits,,,goji berries,c_caacd4d4
@@ -172,6 +172,7 @@ napa shak,Malva verticillata,,yes,leaves,vegetables,,,,
 napier grass,Cenchrus purpureus,Pennisetum purpureum,yes,above_ground,fodder_crops,,,,
 nectarine,,,yes,fruit,fruits,,,nectarines,c_5100
 niger ,Guizotia abyssinica,sunflecks,yes,seed,oil_seeds,,,,
+none,,fallow,yes,,other,,,,
 noug,Guziota scarba,,yes,seed,oil_seeds,,5000,noug seed,c_12827
 nutmeg,,,yes,seed,spices,,,nutmegs,c_23169
 oats,Avena sativa,,yes,grain,cereals,,13450,oats,c_5287
@@ -189,6 +190,7 @@ parsley,Petroselinum crispum,,yes,leaves,culinary_herbs; root_crops,,,parsley,c_
 parsley root,Petroselinum crispum,,yes,root,vegetables,,,parsley root,c_7f40dbdf
 parsnip,,,yes,,vegetables,,,parsnips,c_13122
 passion fruit,,,yes,fruit,fruits,,,passion fruits,c_13127
+pasture,,,yes,above_ground,fodder_crops,,,,
 pawpaw,Asimina triloba,,yes,fruit,fruits,,,pawpaws,c_ceb1a952
 pea,Pisum sativum,,yes,seed,pulses,,10000,peas,c_13177
 peach,,,yes,fruit,fruits,,,peaches,c_5638
@@ -208,6 +210,7 @@ plum,,,yes,fruit,fruits,,,plums,c_6028
 pomegranate,,,yes,fruit,fruits,,,pomegranates,c_13505
 poppy,,,yes,seed,oil_seeds,,,poppy seed,c_25498
 potato,Solanum tuberosum,,yes,tuber,root_tuber,80,175000,potatoes,c_13551
+prickly pear,Opuntia spp.,cactus pear,yes,fruit,fruits,,,cactus pears,c_ba7fc495
 pulse,spp,,no,bean,pulses,,,,
 pummelo,,,yes,fruit,fruits,,,pummelos,c_6367
 pumpkin,,,yes,fruit; seed,vegetables,,,pumpkins,c_6369
@@ -253,10 +256,10 @@ spinach,,,yes,,vegetables,,,spinach,c_14508
 squash,,,yes,,vegetables,,,squashes,c_37735
 star anise,Illicium verum,,yes,fruit,spices,,,,
 strawberry,,,yes,fruit,fruits,,,strawberries,c_7443
+subterranean clover,Trifolium subterraneum,,yes,,,,,,
 sugar beet,Beta vulgaris,,yes,root,sugar_crops,,,sugar beet,c_7499
 sugarcane,Saccharum officinarum,,yes,stems,sugar_crops,,300000,sugar cane,c_7501
 sumac,,,yes,,spices,,,sumac,c_aa51cda6
-subterranean clover,Trifolium subterraneum,,yes,,,,,,
 sunflower,Helianthus annuus,,yes,seed,oil_crops,,80000,sunflowers,c_aad037e4
 sunn hemp,Crotalaria juncea,,yes,leaves,fibre_crops,,,sunn hemp,c_7520
 sweetpotato,Ipomoea batatas,,yes,root,root_tuber,,100000,sweet potatoes,c_14729
@@ -274,21 +277,19 @@ tomato,Solanum lycopersicum,,yes,fruit,vegetables,,100000,tomatoes,c_7805
 triticale,×Triticosecale,,yes,grain,cereals,,12000,triticales,c_7949
 tung tree,,,yes,seed,oil_crops,,,tung tree,c_253
 turnip,,,yes,root; leaves,vegetables,,,turnips,c_8019
-urd bean,,,yes,seed,pulses,,,urd beans,c_8089
-vanilla,,,yes,fruit,spices,,,vanilla,c_15126
+unknown,,,,,oher,,,,
+urd bean,Vigna mungo,,yes,seed,pulses,,,urd beans,c_8089
+vanilla,Vanilla planifolia,,yes,fruit,spices,,,vanilla,c_15126
 vegetables,spp,,no,leaves,vegetables,,,,
 velvet bean,Mucuna pruriens,,yes,,green manure,,,velvet bean,c_4971
 vetch,Vicia spp,,yes,above_ground,green_manures; fodder_crops,,,vetches,c_8214
-walnut,,,yes,seed,nuts,,,walnuts,c_15254
+walnut,Juglans regia,,yes,seed,nuts,,,walnuts,c_15254
 watercress,,,yes,,vegetables,,,watercress,c_15275
-watermelon,,,yes,fruit,fruits,,,watermelons,c_15277
+watermelon,Citrullus lanatus,,yes,fruit,fruits,,,watermelons,c_15277
 wheat,Triticum aestivum,,yes,seed,cereals,,19000,wheat,c_8373
 white clover,Trifolium repens,,yes,above_ground,green_manures,,,,
-white currant,,,yes,fruit,fruits,,,white currants,c_8379
+white currant,Ribes rubrum,,yes,fruit,fruits,,,white currants,c_8379
 white fonio,Digitaria exilis,,yes,grain,cereals,,,,
 white lupin,Lupinus albus,,yes,seed,pulses,,,,
-winter melon,,,yes,fruit,fruits,,,winter melons,c_acf09bff
+winter melon,Benincasa hispida,,yes,fruit,fruits,,,winter melons,c_acf09bff
 yam,Dioscorea cayenensis,,yes,tuber,root_tuber,,60000,yams,c_8478
-pasture,,,yes,above_ground,fodder_crops,,,,
-none,,fallow,yes,,other,,,,
-unknown,,,,,oher,,,,
