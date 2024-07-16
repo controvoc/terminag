@@ -2,6 +2,7 @@ name,sciname,altname,is_preferred,harvest,group,fresh_moisture,max_yield,FAO_nam
 abacá,Musa textilis,Manila hemp,yes,leaves,fibre_crops,,,abaca,c_4
 abyssinian cabbage,Brassica carinata,,yes,leaves,vegetables,,,brassica carinata,c_33311
 adzuki bean,Vigna angularis,,yes,seed,pulses,,,adzuki beans,c_8632
+african yam bean,Sphenostylis stenocarpa,,yes,seed,pulses,,,,
 agave,Agave spp.,,yes,leaves,fibre_crops,,,agave,c_176
 akee,Blighia sapida,,yes,fruit,fruits,,,akees,c_8697
 allspice,Pimenta dioica,,yes,,spices,,,allspice,c_19193
@@ -38,6 +39,7 @@ brazil nut,Bertholletia excelsa,,yes,seed,nuts,,,brazil nuts,c_9410
 broccoli,Brassica oleracea var. italica,,yes,,vegetables,,,broccoli,c_7339
 brussels sprouts,Brassica oleracea,,yes,,vegetables,,,brussels sprouts,c_1127
 buckwheat,Fagopyrum esculentum,,yes,seed,pseudocereals,,,buckwheat,c_9471
+butter bean,Phaseolus lunatus,,yes,seed,pulses,,,,
 cabbage,Brassica oleracea,,yes,,vegetables,,,cabbages,c_1173
 calamansi,Citrus × microcarpa,calamondin,yes,fruit,fruits,,,calamondins,c_15497
 cantaloupe,Cucumis melo,,yes,fruit,fruits,,,cantaloupes,c_12714
