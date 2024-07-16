@@ -71,7 +71,7 @@ irrigation_method,character,,no,method,no,,,yes,the irrigation method,,AGRO_0000
 irrigation_number,integer,,no,,no,0,50,yes,How many times was the crop irrigated?,,AGRO_00010015
 irrigation_amount,numeric,mm,no,,no,0,1000,yes,The total irrigation amount applied to the crop,,AGRO_00000010
 irrigation_dates,character,,no,,yes,,,yes,"Irrigation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00010126
-land_prep_method,character,,no,method,yes,,,yes,Land preparation (tillage) method used (including no-till),,AGRO_00000322
+land_prep_method,character,,no,method,yes,,,yes,"Land preparation (tillage) method used (including ""none"" = ""zero-tillage"")",,AGRO_00000322
 land_prep_implement,character,,no,implement,yes,,,yes,Land preparation (tillage) implement(s) used,,AGRO_00000224
 planting_method,character,,no,method,no,,,yes,Planting (sowing) method,,AGRO_00000231
 planting_implement,character,,no,implement,no,,,yes,Planting (sowing) implement used,,AGRO_00000232
@@ -150,6 +150,7 @@ herbicide_dates,character,,no,,yes,,,yes,"herbicide appliacation dates in ""yyyy
 herbicide_amount,numeric,kg (ai) / ha,no,,no,0,100,yes,how much herbicide was used?,,AGRO_00000662
 herbicide_implement,character,,no,implement,no,,,yes,the implement (machine) used,,
 weeding_done,logical,,no,,no,,,yes,was the crop weeded?,,
+weeding_method,character,,no,,yes,,,yes,Weeding method used,,
 weeding_times,integer,,no,,no,0,10,yes,how many times was the crop weeded?,,AGRO_00010018
 weeding_dates,character,,no,,yes,,,yes,"weeding dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00000562
 weed_species,character,,no,,no,,,yes,weed species names ,,
