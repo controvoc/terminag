@@ -1,0 +1,36 @@
+﻿name,sciname,altname,,product,,,,,,,,,,,,,,,,,,,,,,,,,,
+chicken,Gallus gallus domesticus,,,egg;meat,,,,,,,,,,,,,,,,,,14,146,raising of poultry-production of eggs,no match,,40721,"birds' eggs, in shell; fresh, not for incubation, of fowls of the species Gallus domesticus (domestic hens)",,
+buffalo,Bubalus bubalis,,,milk;meat,,,,,,,,,,,,,,,,,,14,146,raising of poultry-production of eggs,no match,,407,"birds' eggs, in shell; fresh, preserved or cooked",,
+camel,Camelus dromedarius,,,milk;meat,,,,,,,,,,,,,,,,,,1,12,buffaloes,2112,,201,meat of bovine animals; fresh or chilled,,
+cattle,Bos taurus,,,milk;meat,,,,,,,,,,,,,,,,,,5,51,camels,2121,,20860,"meat and edible meat offal; of camels and other camelids (Camelidae), fresh, chilled or frozen",,
+goat,Capra aegagrus hircus,,,milk;meat,,,,,,,,,,,,,,,,,,5,51,camels,2121,,10613,"mammals; live, camels and other camelids (Camelidae)",401,"milk and cream; not concentrated, not containing added sugar or other sweetening matter"
+pig,Sus scrofa domesticus,,,meat,,,,,,,,,,,,,,,,,,1,11,cattle,2111,,201,meat of bovine animals; fresh or chilled,,
+rabbit,Oryctolagus cuniculus domesticus,,,meat,,,,,,,,,,,,,,,,,,1,11,cattle,2111,,401,"milk and cream; not concentrated, not containing added sugar or other sweetening matter",,
+sheep,Ovis aries,,,wool;meat,,,,,,,,,,,,,,,,,,2,22,goats,2123,,20450,"meat; of goats, fresh, chilled or frozen",,
+horse,Equus ferus caballus,,,power;meat,,,,,,,,,,,,,,,,,,2,22,goats,2123,,10420,Goats; live,401,"milk and cream; not concentrated, not containing added sugar or other sweetening matter"
+donkey,Equus asinus,,,power;meat,,,,,,,,,,,,,,,,,,3,3,swine/ pigs,2140,,203,"meat of swine; fresh, chilled or frozen",,
+mule,Equus asinus × caballus,,,power;meat,,,,,,,,,,,,,,,,,,7,72,rabbits and hares,2191,,20810,"meat and edible meat offal; of rabbits or hares, fresh, chilled or frozen",,
+hinny,Equus caballus × asinus,,,power;meat,,,,,,,,,,,,,,,,,,,,,,,,,,
+guinea pig,Cavia porcellus,,,meat,,,,,,,,,,,,,,,,,,2,21,sheep,2122,,204,"meat of sheep or goats; fresh, chilled or frozen",,
+duck,Anas platyrhynchos domesticus,,,egg;meat,,,,,,,,,,,,,,,,,,2,21,sheep,2122,,10410,sheep; live,401,"milk and cream; not concentrated, not containing added sugar or other sweetening matter"
+goose,Anser anser domesticus,,,egg;meat,,,,,,,,,,,,,,,,,,2,21,sheep,2122,,10410,sheep; live,,
+turkey,Meleagris gallopavo,,,meat,,,,,,,,,,,,,,,,,,4,41,horses,2131,,20500,"meat; of horses, asses, mules or hinnies, fresh, chilled or frozen",,
+guinea fowl,Numida meleagris,,,meat,,,,,,,,,,,,,,,,,,4,42-43,asses-mules and hinnies,02132-02133,,20500,"meat; of horses, asses, mules or hinnies, fresh, chilled or frozen",,
+ostrich,Struthio camelus,,,meat,,,,,,,,,,,,,,,,,,no match,no match,no match,no match,,no match,,,
+Japanese quail,Cortunix cortunix japonica,,,meat,,,,,,,,,,,,,,,,,,14,141,production of raw cow milk from cows or buffaloes-production of raw sheep or goat milk,,,401,"milk and cream; not concentrated, not containing added sugar or other sweetening matter",,
+,,,,,,,,,,,,,,,,,,,,,,6,61,chickens,2151,,207,"meat and edible offal of poultry; of the poultry of heading no. 0105, (i.e. fowls of the species Gallus domesticus), fresh, chilled or frozen",,
+,,,,,,,,,,,,,,,,,,,,,,6,61,chickens,2151,,40721,"birds' eggs, in shell; fresh, not for incubation, of fowls of the species Gallus domesticus (domestic hens)",,
+,,,,,,,,,,,,,,,,,,,,,,6,64,ducks,2154,,10513,"poultry; live, ducks, weighing not more than 185g",2,meat and edible offal
+,,,,,,,,,,,,,,,,,,,,,,6,63,geese,2153,,10514,"poultry; live, geese, weighing not more than 185g",2,meat and edible offal
+,,,,,,,,,,,,,,,,,,,,,,6,62,turkeys,2152,,10512,"poultry; live, turkeys, weighing not more than 185g",2,meat and edible offal
+,,,,,,,,,,,,,,,,,,,,,,7,76,other birds (e.g pigeons),2194,,10639,"birds; live, other than birds of prey, Psittaciformes, ostriches and emus (Dromaius novaehollandiae)",2,meat and edible offal
+,,,,,,,,,,,,,,,,,,,,,,6,65,guinea fowls,2155,,10515,"poultry; live, guinea fowls, weighing not more than 185g",2,meat and edible offal
+,,,,,,,,,,,,,,,,,,,,,,7,75,ostriches and emus,2193,,10633,"birds; live, ostriches; emus (Dromaius novaehollandiae)",2,meat and edible offal
+,,,,,,,,,,,,,,,,,,,,,,7,75,ostriches and emus,2193,,10633,"birds; live, ostriches; emus (Dromaius novaehollandiae)",407,"birds' eggs, in shell; fresh, preserved or cooked"
+,,,,,,,,,,,,,,,,,,,,,,no match,no match,no match,no match,,no match,,,
+,,,,,,,,,,,,,,,,,,,,,,no match,no match,no match,no match,,306,"crustaceans; in shell or not, live, fresh, chilled, frozen, dried, salted or in brine; smoked, cooked or not before or during smoking; in shell, steamed or boiled, whether or not chilled, frozen, dried, salted or in brine; edible flours, meals, pellets",2,meat and edible offal
+,,,,,,,,,,,,,,,,,,,,,,no match,no match,no match,no match,,304,"fish fillets and other fish meat (whether or not minced); fresh, chilled or frozen",,
+,,,,,,,,,,,,,,,,,,,,,,no match,no match,no match,no match,,no match,,,
+,,,,,,,,,,,,,,,,,,,,,,no match,no match,no match,no match,,30751,"molluscs; octopus (Octopus spp.), live, fresh or chilled",2,meat and edible offal
+,,,,,,,,,,,,,,,,,,,,,,no match,no match,no match,no match,,30821,"aquatic invertebrates; sea urchins (Strongylocentrotus spp., Paracentrotus lividus, Loxechinus albus, Echinus esculentus), live, fresh or chilled",2,meat and edible offal
+,,,,,,,,,,,,,,,,,,,,,,14,149,"raising of other animals-operation of worm farms, land mollusc farms, snail farms, etc.",,,no match,,,
