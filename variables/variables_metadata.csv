@@ -10,7 +10,7 @@ carob_contributor,character,,yes,,yes,,,no,name(s) of contributers of this scrip
 data_citation,character,,yes,,no,,,no,can be same as publication,,
 data_type,character,,yes,datatype,no,,,no,"what kind of data is this (e.g. experiment, survey, compilation)",,
 treatment_vars,character,,yes,,yes,,,no,"treatment variables (if data_type = trial/experiments; else ""none"")",,
-outcome_vars,character,,no,,yes,,,no,"outcome variables (if data_type = trial/experiments; else ""none"")",,
+response_vars,character,,yes,,yes,,,no,"outcome variables (if data_type = trial/experiments; else ""none"")",,
 publication,character,,yes,,no,,,yes,the doi of the associated publication (if any),,
 data_institute,character,,yes,institute,yes,,,yes,organizational home(s) of the data providers,,
 data_published,character,,no,,no,,,yes,date the data were published,,
