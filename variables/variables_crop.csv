@@ -35,7 +35,8 @@ yield_part,character,,yes,yield_part,no,,,no,"The part of the crop that ""yield"
 yield,numeric,kg/ha,yes,,no,0,150000,no,"Fresh weight biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
 yield_marketable,numeric,kg/ha,no,,no,0,150000,no,"Fresh weight marketable (e.g. large enough tubers) biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
 seed_weight,numeric,g,no,,no,0,1000,yes,1000 seed (grain) weight,,TO_0000382
-fertilzier_used,logical,,no,,no,,,yes,WQas any inorganic fertilizer used?,,
+fertilizer_used,logical,,no,,no,,,yes,was any inorganic fertilizer used?,,
+foliar_fertilizer_used,logical,,no,,no,,,yes,was any foliar fertilizer used?,,
 fertilizer_type,character,,no,fertilizer_type,yes,,,yes,Name of inorganic fertilizer used,,CHEBI_33287
 fertilizer_date,character,,no,,no,,,yes,"Date(s) of inorganic fertilizer applications. Possibly followed by ""(product; amount)""",,AGRO_00010143
 fertilizer_dap,character,,no,,yes,-30,150,yes,"Inorganic fertilizer applications in ""days after planting"". Possibly followed by ""(product; amount)""",,AGRO_00010143
@@ -57,7 +58,6 @@ P_organic,numeric,kg/ha,no,,no,0,250,no,"P applied in organic fertilizer (as P, 
 K_organic,numeric,kg/ha,no,,no,0,300,no,"K applied in organic fertilizer (as K, not K2O)",,
 Ca_organic,numeric,kg/ha,no,,no,0,250,yes,Ca applied in organic fertilizer,,
 Mg_organic,numeric,kg/ha,no,,no,0,250,yes,Mg applied in organic fertilizer,,
-foliar_fertilizer_used,logical,,no,,no,,,yes,was any foliar fertilizer used?,,
 lime,numeric,kg/ha,no,,no,0,10000,yes,lime applied,,
 lime_used,logical,,no,,no,,,yes,was any lime applied?,,
 gypsum,numeric,kg/ha,no,,no,0,10000,yes,gypsum applied,,
