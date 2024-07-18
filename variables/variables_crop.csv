@@ -19,18 +19,24 @@ variety_release_year,integer,,no,,no,,,yes,year the variety was released,,
 intercrops,character,,no,crop,yes,,,yes,Other crop grown together with the main crop,,
 previous_crop,character,,no,crop,yes,,,yes,Crop grown on this plot in the prior season,,AGRO_00000592
 crop_rotation,character,,no,crop,yes,,,yes,Crops grown in rotation on this plot,,
-dmy_roots,numeric,kg/ha,no,,no,0,5000,yes,Dry-weight biomass of fine roots per ha,,
-dmy_stems,numeric,kg/ha,no,,no,0,20000,yes,Dry-weight biomass of stems per ha,,
-dmy_leaves,numeric,kg/ha,no,,no,0,20000,yes,Dry-weight biomass of leaves per ha,,
-dmy_storage,numeric,kg/ha,no,,no,0,50000,yes,Dry-weight biomass of storage organs per ha,,
-dmy_total,numeric,kg/ha,no,,no,0,100000,yes,Dry-weight total biomass per ha,,
-dmy_residue,numeric,kg/ha,no,,no,0,100000,yes,Dry-weight residue biomass per ha,,
+dmy_roots,numeric,kg/ha,no,,no,0,5000,yes,Dry-matter weight biomass of fine roots per ha,,
+dmy_stems,numeric,kg/ha,no,,no,0,20000,yes,Dry-matter weight biomass of stems per ha,,
+dmy_leaves,numeric,kg/ha,no,,no,0,20000,yes,Dry-matter weight biomass of leaves per ha,,
+dmy_storage,numeric,kg/ha,no,,no,0,50000,yes,Dry-matter weight biomass of storage organs per ha,,
+dmy_total,numeric,kg/ha,no,,no,0,100000,yes,Dry-matter weight total biomass per ha,,
+dmy_residue,numeric,kg/ha,no,,no,0,100000,yes,Dry-matter weight residue biomass per ha,,
+fwy_roots,numeric,kg/ha,no,,no,0,5000,yes,Fresh weight biomass of fine roots per ha,,
+fwy_stems,numeric,kg/ha,no,,no,0,20000,yes,Fresh weight biomass of stems per ha,,
+fwy_leaves,numeric,kg/ha,no,,no,0,20000,yes,Fresh weight biomass of leaves per ha,,
+fwy_storage,numeric,kg/ha,no,,no,0,50000,yes,Fresh weight biomass of storage organs per ha,,
+fwy_total,numeric,kg/ha,no,,no,0,100000,yes,Fresh weight total biomass per ha,,
+fwy_residue,numeric,kg/ha,no,,no,0,100000,yes,Fresh weight residue biomass per ha,,
 yield_part,character,,yes,yield_part,no,,,no,"The part of the crop that ""yield"" refers to (e.g. grain, tubers, roots, leaves, fruit)",,
 yield,numeric,kg/ha,yes,,no,0,150000,no,"Fresh weight biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
 yield_marketable,numeric,kg/ha,no,,no,0,150000,no,"Fresh weight marketable (e.g. large enough tubers) biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
-residue_yield,numeric,kg/ha,no,,no,0,60000,yes,"Fresh weight of the above ground biomass except for the harvestable parts at maturity, per ha",,AGRO_00000164 
-leaves_yield,numeric,kg/ha,no,,no,0,60000,yes,"Fresh weight of leaves at maturity or harvest, per ha",,
-biomass_yield,numeric,kg/ha,no,,no,0,140000,yes,"Fresh weight above ground biomass at maturity or harvest, per ha",,
+residue_yield,numeric,kg/ha,no,,no,0,60000,yes,Obsolete; use fwy_resiude,,AGRO_00000164 
+leaves_yield,numeric,kg/ha,no,,no,0,60000,yes,Obsolete; use fwy_leaves,,
+biomass_yield,numeric,kg/ha,no,,no,0,140000,yes,Obsolete; use fwy_total,,
 seed_weight,numeric,g,no,,no,0,1000,yes,1000 seed (grain) weight,,TO_0000382
 fertilzier_used,logical,,no,,no,,,yes,WQas any inorganic fertilizer used?,,
 fertilizer_type,character,,no,fertilizer_type,yes,,,yes,Name of inorganic fertilizer used,,CHEBI_33287
