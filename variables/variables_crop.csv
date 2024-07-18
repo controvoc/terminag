@@ -32,9 +32,10 @@ residue_yield,numeric,kg/ha,no,,no,0,60000,yes,"Fresh weight of the above ground
 leaves_yield,numeric,kg/ha,no,,no,0,60000,yes,"Fresh weight of leaves at maturity or harvest, per ha",,
 biomass_yield,numeric,kg/ha,no,,no,0,140000,yes,"Fresh weight above ground biomass at maturity or harvest, per ha",,
 seed_weight,numeric,g,no,,no,0,1000,yes,1000 seed (grain) weight,,TO_0000382
-fertilizer_type,character,,no,fertilizer_type,yes,,,yes,Name of fertilizer used,,CHEBI_33287
-fertilizer_date,character,,no,,no,,,yes,"Date(s) of fertilizer applications. Possibly followed by ""(product; amount)""",,AGRO_00010143
-fertilizer_dap,character,,no,,yes,-30,150,yes,"Fertilizer applications in ""days after planting"". Possibly followed by ""(product; amount)""",,AGRO_00010143
+fertilzier_used,logical,,no,,no,,,yes,WQas any inorganic fertilizer used?,,
+fertilizer_type,character,,no,fertilizer_type,yes,,,yes,Name of inorganic fertilizer used,,CHEBI_33287
+fertilizer_date,character,,no,,no,,,yes,"Date(s) of inorganic fertilizer applications. Possibly followed by ""(product; amount)""",,AGRO_00010143
+fertilizer_dap,character,,no,,yes,-30,150,yes,"Inorganic fertilizer applications in ""days after planting"". Possibly followed by ""(product; amount)""",,AGRO_00010143
 fertilizer_amount,numeric,kg/ha,no,,no,0,1000,yes,Total amount of inorganic fertilizer applied,,
 fertilization_method,character,,no,,no,,,yes,Fertilizer application method,,
 N_fertilizer,numeric,kg/ha,yes,,no,0,600,no,N applied in inorganic fertilizer,,AGRO_00000158
@@ -153,11 +154,11 @@ weeding_done,logical,,no,,no,,,yes,was the crop weeded?,,
 weeding_method,character,,no,,yes,,,yes,Weeding method used,,
 weeding_times,integer,,no,,no,0,10,yes,how many times was the crop weeded?,,AGRO_00010018
 weeding_dates,character,,no,,yes,,,yes,"weeding dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00000562
+weeding_implement,character,,no,implement,no,,,yes,the implement (machine) used,,AGRO_00002006
 weed_species,character,,no,,no,,,yes,weed species names ,,
 weed_biomass,numeric,kg/ha,no,,no,0,100000,yes,Fresh weight weeds biomass,,
 weed_severity,character,,no,,no,,,yes,how severe was the competition from weeds?,,
 weed_cover,numeric,%,no,,no,,,yes,% weed cover,,
-weed_implement,character,,no,implement,no,,,yes,the implement (machine) used,,AGRO_00002006
 insecticide_used,logical,,no,,no,,,yes,was an insecticide used?,,
 insecticide_product,character,,no,insecticides,yes,,,yes,name(s) of the active ingredient of the insecticide,,
 insecticide_dates,character,,no,,yes,,,yes,"insecticide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
@@ -200,3 +201,4 @@ bird_damage,character,,no,,no,,,yes,"one of : ""none"", ""traces"", ""slight"", 
 hail_damage,character,,no,,no,,,yes,"one of : ""none"", ""traces"", ""slight"", ""moderate"", ""severe""",,
 herbicide_damage,character,,no,,no,,,yes,"one of : ""none"", ""traces"", ""slight"", ""moderate"", ""severe""",,
 shelling_percentage,numeric,,no,,no,10,90,yes,"100 * grain weight / fruit (pod, ear) weight",,
+house_distance,numeric,,no,,no,0,25,yes,Distance of field to the house of the person managing the field,,
