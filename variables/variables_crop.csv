@@ -88,7 +88,7 @@ plot_area,numeric,m2,no,,no,0,,yes,Area of the plot in square meter,,AGRO_000003
 plot_length,numeric,m,no,,no,0,,yes, Length of the plot in meter,.AGRO_00000307,
 plot_width,numeric,m,no,,no,0,,yes, Width of the plot in meter,,AGRO_00000308
 plant_spacing,numeric,cm,no,,no,5,100,yes,Distance between plants,,AGRO_00000316
-seed_density,numeric,plants/ha,no,,no,1000,3100000,yes,Number of plants per ha that were seeded/planted,,PCO_0000079
+seed_density,numeric,plants/ha,no,,no,1000,3100000,yes,Number of plants per ha that were seeded/planted (seeding rate),,AGRO_00000202
 plant_density,numeric,plants/ha,no,,no,1000,3100000,yes,Number of plants per ha that emerged/survived,,PCO_0000079
 cob_density,numeric,cobs/ha,no,,no,1000,100000,yes,Number of cobs (maize) per ha,,
 spike_density,numeric,spikes/ha,no,,no,1000,3100000,yes,Number of spikes per ha,,
@@ -186,7 +186,6 @@ residue_prevcrop,numeric,kg/ha,no,,no,,,yes,how much residue of the previous cro
 residue_prevcrop_used,logical,,no,,no,,,yes,Was the residue of the previous crop left on the field?,,
 mulch,numeric,kg/ha,no,,no,,,yes,how much mulch is on the field?,,AGRO_00010013
 seed_source,character,,no,,no,,,yes,source of the seed used,,
-seed_amount,numeric,kg/ha,no,,no,0,1000,yes,amount of seed used (seeding rate),,AGRO_00000202
 seed_treatment,character,,no,,no,,,yes,chemical or biological products applied to the seed,,
 crop_cut,logical,,no,,no,,,yes,was the yield (in a survey) determined with a crop cut?,,
 previous_crop_residue_weight,numeric,kg/ha,no,,no,0,10000,yes,weight of residue of previous crop that stayed on the field,,
