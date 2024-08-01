@@ -14,6 +14,7 @@ reference,character,,no,,no,,,yes,Reference to source if the data set is a compi
 longitude,numeric,degrees,yes,,no,-180,180,no,Longitude of the location where the observation was made (in decimal notation),,
 latitude,numeric,degrees,yes,,no,-60,60,no,Latitude of the location where the observation was made (in decimal notation),,
 geo_uncertainty,numeric,,no,,no,0,1000000,yes,"Uncertainty of location, expressed as max distance from location (m)",,
+geo_source,logical,,yes,,no,,,no,Is the georeference for a record from the data source (TRUE) or added by the Carob script author (FALSE)?,,
 elevation,numeric,meter,no,,no,,,yes,Elevation above sea level,,
 date,character,,no,,no,,,yes,"Observation date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
 time,character,,no,,no,,,yes,"Observation time in ""hh:mm:ss"", ""hh:mm"", or ""hh"" format",,
