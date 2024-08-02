@@ -25,7 +25,8 @@ continuous flooding,,irrigation
 furrow,,irrigation
 uncontrolled flooding,,irrigation
 bubbler ,,irrigation
-drip ,,irrigation
+drip,,irrigation
+sub-surface drip,,irrigation
 pitcher ,,irrigation
 subsurface drip ,,irrigation
 subsurface textile ,,irrigation
@@ -34,13 +35,14 @@ center pivot sprinkler ,,irrigation
 sprinkler by lateral move,,irrigation
 sprinkler by side roll,,irrigation
 puddling,,puddling
-broadcasting,,seeding
-line sowing,,seeding
-dibbling,,seeding
-transplanted,,seeding
-mechanized line sowing,,seeding
-mechanized,,seeding;transplanting
-manual,,seeding;transplanting
+broadcasting,,planting
+line sowing,,planting
+dibbling,,planting
+transplanted,,planting
+mechanized line sowing,,planting
+mechanized,,planting;transplanting
+manual,,planting;transplanting
+direct seeding,,planting
 monocrop,,intercropping
 mixed,,intercropping
 relay,,intercropping
