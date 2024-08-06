@@ -2,7 +2,7 @@ name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,des
 dataset_id,character,,yes,,no,,,no,"dataset identifier (normalized URI, that is: ""/"" replaced with ""_"")",,
 trial_id,character,,yes,,no,,,yes,Identifier of a single trial (that may have treatments and replicates); should be unique within dataset_id,,
 record_id,integer,,no,,no,,,no,Unique identifier for each records in a dataset (sequence from 1 to n),,
-country,character,,yes,country,no,,,no,Country name,,ENVO_00000009 
+country,character,,yes,country,no,,,no,Country name,,ENVO_00000009
 adm1,character,,no,,no,,,yes,First level administrative subdivision,follow GADM,ENVO_00000005
 adm2,character,,no,,no,,,yes,Second level administrative subdivision (within the first level subdivision),follow GADM,ENVO_00000006
 adm3,character,,no,,no,,,yes,Third level administrative subdivision (within the second level subdivision),follow GADM,ENVO_00000007
