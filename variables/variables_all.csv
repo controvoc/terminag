@@ -18,4 +18,6 @@ geo_from_source,logical,,yes,,no,,,yes,Is the georeference from the data source 
 elevation,numeric,meter,no,,no,,,yes,Elevation above sea level,,
 date,character,,no,,no,,,yes,"Observation date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
 time,character,,no,,no,,,yes,"Observation time in ""hh:mm:ss"", ""hh:mm"", or ""hh"" format",,
+DAP,integer,,no,,no,,,yes,"Observation date in ""days after planting""",,
+DAE,integer,,no,,no,,,yes,"Observation date in ""days after emergence""",,
 LTE_name,character,,no,,no,,,yes,Name of long-term experiment,,
