@@ -1,4 +1,5 @@
 name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
+station_name,character,,no,,no,,,yes,name of the weather station if it is distinct from location/site,,
 prec,numeric,mm,no,,no,0,1000,yes,precipitation,,
 temp,numeric,C,no,,no,-50,60,yes,(average) temperature,,
 tmin,numeric,C,no,,no,-50,60,yes,minimum temperature,,
