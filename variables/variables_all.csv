@@ -4,6 +4,3 @@ trial_id,character,,yes,,no,,,yes,Identifier of a single trial (that may have tr
 record_id,integer,,no,,no,,,no,Unique identifier for each records in a dataset (sequence from 1 to n),,
 date,character,,no,,no,,,yes,"Observation date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
 time,character,,no,,no,,,yes,"Observation time in ""hh:mm:ss"", ""hh:mm"", or ""hh"" format",,
-DAP,integer,,no,,no,,,yes,"Observation date in ""days after planting""",,
-DAE,integer,,no,,no,,,yes,"Observation date in ""days after emergence""",,
-LTE_name,character,,no,,no,,,yes,Name of long-term experiment,,

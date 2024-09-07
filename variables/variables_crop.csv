@@ -5,6 +5,9 @@ transplanting_date,character,,no,,no,,,yes,"Transplanting date in ""yyyy-mm-dd""
 flowering_date,character,,no,,no,,,yes,"Flowering date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
 maturity_date,character,,no,,no,,,yes,"Maturity date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
 harvest_date,character,,no,,no,,,yes,"Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,AGRO_00010128
+DAP,integer,,no,,no,,,yes,"Observation date in ""days after planting""",,
+DAE,integer,,no,,no,,,yes,"Observation date in ""days after emergence""",,
+LTE_name,character,,no,,no,,,yes,Name of long-term experiment,,
 season,character,,no,,no,,,yes,Season name,,
 on_farm,logical,,yes,,no,,,yes,Is this observation on farm (not on an expermiment station),,AGRO_00000601
 is_survey,logical,,yes,,no,,,yes,Is this observation from a survey (not an experiment),,
