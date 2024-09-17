@@ -15,6 +15,7 @@ treatment,character,,no,,no,,,yes,"Description of the treatment, if any. Can be 
 rep,integer,,no,,no,,,yes,"Replication number (1, 2, 3, ...) For this specific observation",,AGRO_00000318
 crop,character,,yes,crop,no,,,yes,Crop name(s),,AGRO_00000325
 variety,character,,no,,no,,,yes,Variety name,,
+variety_alt,character,,no,,no,,,yes,Alternative names for variety,,
 variety_code,character,,no,,no,,,yes,Variety code (used by breeders),,
 variety_type,character,,no,,no,,,yes,"variety grouping (e.g. climbing/bush) and/or ""improved/landrace""",,AGRO_00000616
 variety_traits,character,,no,,no,,,yes,variety characteristics,,
