@@ -24,7 +24,7 @@ sympal,Sympal,,0,23,15,4,0,0,0,0,
 TSP,Triple superphosphate,,0,19.23,0,0,0,0,0,0,AGRO_00002065
 unknown,,,NA,NA,NA,NA,NA,NA,NA,NA,
 urea,Urea,,46,0,0,0,0,0,0,0,CHEBI_16199
-ZnSO4,Zinc sulfate,ZnSO4,0,0,0,15,0,0,0.365,0,CHEBI_35176
+ZnSO4,Zinc sulfate,ZnSO4,0,0,0,19.9,0,0,40.5,0,CHEBI_35176
 S-compound,S-compound,,8,21,7,4,0,0,0,0,
 MgSO4,Magnesium sulfate,MgSO4,0,0,0,13.19,0,20.19,0,0,
 H3BO3,Boric acid,H3BO3,0,0,0,0,17.48,0,0,0,

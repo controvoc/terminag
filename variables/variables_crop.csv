@@ -217,3 +217,4 @@ house_distance,numeric,,no,,no,,,yes,Distance of field to the house of the perso
 severity_scale,character,,no,,no,,,yes,"Scale of (disease) severity measure, from low to high. E.g. 1-9",,
 NDVI,numeric,,no,,no,0,1,yes,Normalized difference vegetation index,,
 mulch_type,character,,no,,no,,,yes,Type of mulch used,,
+flesh_color,character,,no,,no,,,yes,"""flesh"" color of (sweet)potato and other root/tubers",,
