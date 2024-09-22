@@ -295,4 +295,6 @@ white currant,Ribes rubrum,,yes,fruit,fruits,,,white currants,c_8379
 white fonio,Digitaria exilis,,yes,grain,cereals,,,,
 white lupin,Lupinus albus,,yes,seed,pulses,,,,
 winter melon,Benincasa hispida,,yes,fruit,fruits,,,winter melons,c_acf09bff
-yam,Dioscorea cayenensis,,yes,tuber,root_tuber,,60000,yams,c_8478
+yam,Dioscorea cayenensis subsp. rotundata,white yam,yes,tuber,root_tuber,,60000,yams,c_8478
+guinea yam,Dioscorea cayenensis subsp. cayenensis,yellow yam,yes,tuber,root_tuber,,60000,yams,c_8478
+purple yam,Dioscorea alata,purple yam; ube,yes,tuber,root_tuber,,60000,yams,c_8478
