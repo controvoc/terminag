@@ -16,7 +16,8 @@ rep,integer,,no,,no,,,yes,"Replication number (1, 2, 3, ...) For this specific o
 crop,character,,yes,crop,no,,,yes,Crop name(s),,AGRO_00000325
 variety,character,,no,,no,,,yes,Variety name,,
 variety_alt,character,,no,,no,,,yes,Alternative names for variety,,
-variety_code,character,,no,,no,,,yes,Variety code (used by breeders),,
+variety_code,character,,no,,no,,,yes,Variety code,,
+variety_pedigree,character,,no,,no,,,yes,Variety pedigree. E.g. CML311 x CML483,,
 variety_type,character,,no,,no,,,yes,"variety grouping (e.g. climbing/bush) and/or ""improved/landrace""",,AGRO_00000616
 variety_traits,character,,no,,no,,,yes,variety characteristics,,
 variety_release_year,integer,,no,,no,,,yes,year the variety was released,,
