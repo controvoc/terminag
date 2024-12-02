@@ -204,7 +204,7 @@ previous_crop_residue_perc,numeric,%,no,,no,0,100,yes,percentage of residue of p
 previous_crop_burnt,logical,,no,,no,,,yes,was the residue of the previous crop burnt?,,
 previous_crop_residue_management,character,,no,,no,,,yes,how was the previous crop residue managed?,,
 crop_price,numeric,currency/kg,no,,no,0,100,yes,current crop price when sold to market,,
-fertilizer_price,character,currency/kg,no,,no,0,100,yes,price paid for fertilizer(s). E.g (urea=1, DAP=1.2),
+fertilizer_price,character,currency/kg,no,,no,,,yes,price paid for fertilizer(s), DAP=1.2),
 currency,character,,no,currency,no,,,yes,currency used for prices,,
 flood_stress,character,,no,,no,,,yes,how severe was the damage from flooding?,,
 drought_stress,character,,no,,no,,,yes,how severe was the damage from drought?,,
