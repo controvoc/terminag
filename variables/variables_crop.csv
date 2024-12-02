@@ -31,7 +31,7 @@ dmy_storage,numeric,kg/ha,no,,no,0,50000,yes,Dry-matter weight biomass of storag
 dmy_total,numeric,kg/ha,no,,no,0,100000,yes,Dry-matter weight total biomass per ha,,
 dmy_residue,numeric,kg/ha,no,,no,0,100000,yes,Dry-matter weight residue biomass per ha,,
 fwy_roots,numeric,kg/ha,no,,no,0,5000,yes,Fresh weight biomass of fine roots per ha,,
-fwy_stems,numeric,kg/ha,no,,no,0,20000,yes,Fresh weight biomass of stems per ha,,
+fwy_stems,numeric,kg/ha,no,,no,0,21000,yes,Fresh weight biomass of stems per ha,,
 fwy_leaves,numeric,kg/ha,no,,no,0,20000,yes,Fresh weight biomass of leaves per ha,,
 fwy_storage,numeric,kg/ha,no,,no,0,50000,yes,Fresh weight biomass of storage organs per ha,,
 fwy_total,numeric,kg/ha,no,,no,0,100000,yes,Fresh weight total biomass per ha,,
