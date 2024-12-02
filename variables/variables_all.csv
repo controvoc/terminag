@@ -1,6 +1,5 @@
 name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
 dataset_id,character,,yes,,no,,,no,"dataset identifier (normalized URI, that is: ""/"" replaced with ""_"")",,
-trial_id,character,,yes,,no,,,yes,Identifier of a single trial (that may have treatments and replicates), should be unique within dataset_id,
 record_id,integer,,no,,no,,,no,Unique identifier for each records in a dataset (sequence from 1 to n),,
 date,character,,no,,no,,,yes,"Observation date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
 time,character,,no,,no,,,yes,"Observation time in ""hh:mm:ss"", ""hh:mm"", or ""hh"" format",,
