@@ -8,7 +8,7 @@ soil_SOM,numeric,%,no,,no,0,20,yes,soil organic matter,,
 soil_sand,numeric,%,no,,no,0,100,yes,soil sand content (excluding gravel),,
 soil_clay,numeric,%,no,,no,0,100,yes,soil clay content (excluding gravel),,ENVO_00002982
 soil_silt,numeric,%,no,,no,0,100,yes,soil silt content (excluding gravel),,
-soil_texture,character,,no,soil_texture,no,,,yes,soil texture,,
+soil_texture,character,,no,soil_texture,yes,,,yes,soil texture,,
 soil_N,numeric,mg/kg,no,,no,0.01,10000,yes,soil N content,,ENVO_09000017
 soil_K,numeric,mg/kg,no,,no,1,10000,yes,soil K content,,
 soil_P_total,numeric,mg/kg,no,,no,0.4,1000,yes,soil P (total) ,,
