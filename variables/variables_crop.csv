@@ -112,8 +112,8 @@ asi,numeric,days,no,,no,-7,30,yes,Anthesis silking interval,,
 tassling_days,numeric,days,no,,no,30,125,yes,Days to tassling (after planting),,TO_0000629
 maturity_days,numeric,days,no,,no,45,300,yes,Days to maturity (after planting),,TO_0000469
 harvest_days,numeric,days,no,,no,45,300,yes,Days to harvest (after planting),,
-plant_height,numeric,cm,no,,no,10,400,yes,Maximum plant height,,TO_0000207
-ear_height,numeric,cm,no,,no,10,250,yes,height of first ear (maize female inflorescence),,
+plant_height,numeric,cm,no,,no,10,500,yes,Maximum plant height,,TO_0000207
+ear_height,numeric,cm,no,,no,10,350,yes,height of first ear (maize female inflorescence),,
 pathogen,character,,no,pathogen,yes,,,yes,Name of the pathogen studied,,
 AUDPC,numeric,,no,,no,0,150,yes,Area under the disease progress curve (the sum of fraction infected (not percentage)),,
 rAUDPC,numeric,,no,,no,0,1,yes,Area under the disease progress curve divided by the non-diseased season length,,
