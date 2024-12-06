@@ -3,7 +3,7 @@ soil_type,character,,no,,yes,,,yes,soil name or description,,AGRO_00010099
 soil_pH,numeric,,no,,no,3,10,yes,soil pH (H2O),,ENVO_09200010
 soil_pH_KCl,numeric,,no,,no,3,9,yes,soil pH (KCl),,ENVO_09200010
 soil_pH_CaCl2,numeric,,no,,no,3,10,yes,soil pH (CaCl2),,ENVO_09200010
-soil_SOC,numeric,%,no,,no,0,20,yes,soil organic carbon,,
+soil_SOC,numeric,%,no,,no,0,30,yes,soil organic carbon,,
 soil_SOM,numeric,%,no,,no,0,20,yes,soil organic matter,,
 soil_sand,numeric,%,no,,no,0,100,yes,soil sand content (excluding gravel),,
 soil_clay,numeric,%,no,,no,0,100,yes,soil clay content (excluding gravel),,ENVO_00002982

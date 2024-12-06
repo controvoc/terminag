@@ -93,7 +93,7 @@ planting_implement,character,,no,implement,no,,,yes,Planting (sowing) implement 
 transplanting_method,character,,no,method,no,,,yes,(rice) transplanting method,,AGRO_00000229
 uncertainty,numeric,,no,,no,0,,yes,Measure of noise in data ,,
 uncertainty_type,character,,no,,no,,,yes,Type of noise measure,,
-row_spacing,numeric,cm,no,,no,5,180,yes,Distance between rows,AGRO_00000318,
+row_spacing,numeric,cm,no,,no,1,180,yes,Distance between rows,AGRO_00000318,
 plot_area,numeric,m2,no,,no,0,,yes,Area of the plot in square meter,,AGRO_00000302
 plot_length,numeric,m,no,,no,0,,yes, Length of the plot in meter,.AGRO_00000307,
 plot_width,numeric,m,no,,no,0,,yes, Width of the plot in meter,,AGRO_00000308
