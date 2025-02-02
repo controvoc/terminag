@@ -74,9 +74,6 @@ gypsum,numeric,kg/ha,no,,no,0,10000,yes,gypsum applied,,
 OM_used,logical,,no,,no,,,yes,Organic fertilizer applied,,AGRO_00002039
 OM_type,character,,no,OM,yes,,,yes,Type of organic fertilzer applied,,AGRO_00002039
 OM_amount,numeric,kg/ha,no,,no,0,,yes,Amount of organic fertilizer applied,,AGRO_00010008
-OM_N,numeric,kg/ha,no,,no,0,,yes,N applied in organic fertilizer,,AGRO_00000158
-OM_P,numeric,kg/ha,no,,no,0,,yes,P applied in organic fertilizer,,AGRO_00000160
-OM_K,numeric,kg/ha,no,,no,0,,yes,K applied in organic fertilizer,,AGRO_00000201
 inoculated,logical,,no,,no,,,yes,Was the field inoculated (with Rhizobium),,
 inoculant,character,,no,,no,,,yes,Name of the inoculant product,,
 irrigated,logical,,yes,,no,,,yes,Was the plot irrigated?,,AGRO_00000006
