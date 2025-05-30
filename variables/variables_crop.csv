@@ -1,13 +1,11 @@
 name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
 trial_id,character,,yes,,no,,,yes,Identifier of a single trial in a single location and season (that may have treatments and replicates), should be unique within dataset_id,
 planting_date,character,,yes,,no,,,yes,"Planting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,AGRO_00010099
-emergence_date,character,,no,,no,,,yes,"Emergence date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
-transplanting_date,character,,no,,no,,,yes,"Transplanting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,AGRO_00010131
-flowering_date,character,,no,,no,,,yes,"Flowering date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
-maturity_date,character,,no,,no,,,yes,"Maturity date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
-harvest_date,character,,no,,no,,,yes,"Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,AGRO_00010128
-DAP,integer,,no,,no,,,yes,"Observation date in ""days after planting""",,
-DAE,integer,,no,,no,,,yes,"Observation date in ""days after emergence""",,
+emergence_date,character,,no,,no,,,yes,"Emergence date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see emergence_days,
+transplanting_date,character,,no,,no,,,yes,"Transplanting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see transplanting_days,AGRO_00010131
+flowering_date,character,,no,,no,,,yes,"Flowering date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see flowering_days,
+maturity_date,character,,no,,no,,,yes,"Maturity date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see maturity_days,
+harvest_date,character,,no,,no,,,yes,"Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see harvest_days,AGRO_00010128
 LTE_name,character,,no,,no,,,yes,Name of long-term experiment,,
 season,character,,no,,no,,,yes,Season name,,
 on_farm,logical,,yes,,no,,,yes,Is this observation on farm (not on an expermiment station),,AGRO_00000601
@@ -87,29 +85,29 @@ land_prep_method,character,,no,method,yes,,,yes,"Land preparation (tillage) meth
 land_prep_implement,character,,no,implement,yes,,,yes,Land preparation (tillage) implement(s) used,,AGRO_00000224
 planting_method,character,,no,method,no,,,yes,Planting (sowing) method,,AGRO_00000231
 planting_implement,character,,no,implement,no,,,yes,Planting (sowing) implement used,,AGRO_00000232
-transplanting_method,character,,no,method,no,,,yes,(rice) transplanting method,,AGRO_00000229
+transplanting_method,character,,no,method,no,,,yes,Transplanting method,,AGRO_00000229
 uncertainty,numeric,,no,,no,0,,yes,Measure of noise in data ,,
 uncertainty_type,character,,no,,no,,,yes,Type of noise measure,,
-row_spacing,numeric,cm,no,,no,1,180,yes,Distance between rows,AGRO_00000318,
+row_spacing,numeric,cm,no,,no,1,180,yes,Distance between rows,,AGRO_00000318
 plot_area,numeric,m2,no,,no,0,,yes,Area of the plot in square meter,,AGRO_00000302
-plot_length,numeric,m,no,,no,0,,yes, Length of the plot in meter,.AGRO_00000307,
-plot_width,numeric,m,no,,no,0,,yes, Width of the plot in meter,,AGRO_00000308
+plot_length,numeric,m,no,,no,0,,yes,Length of the plot in meter,,AGRO_00000307
+plot_width,numeric,m,no,,no,0,,yes,Width of the plot in meter,,AGRO_00000308
 plant_spacing,numeric,cm,no,,no,5,100,yes,Distance between plants,,AGRO_00000316
 seed_density,numeric,plants/ha,no,,no,500,3100000,yes,Number of plants per ha that were seeded/planted,,
-seed_rate,numeric,kg/ha,no,,no,0,3000,yes, Mass of the seeds sown per hectare,,AGRO_00000202
+seed_rate,numeric,kg/ha,no,,no,0,3000,yes,Mass of the seeds sown per hectare,,AGRO_00000202
 plant_density,numeric,plants/ha,no,,no,500,3100000,yes,Number of plants per ha that emerged/survived,,PCO_0000079
 cob_density,numeric,cobs/ha,no,,no,500,100000,yes,Number of cobs (maize) per ha,,
 spike_density,numeric,spikes/ha,no,,no,500,6000000,yes,Number of spikes per ha,,
 rain,numeric,mm,no,,no,0,3000,yes,Total rainfall between planting and harvest,,ENVO_01000830
-emergence_days,numeric,days,no,,no,3,90,yes,Days to emergence (after planting),,
-heading_days,numeric,days,no,,no,25,300,yes,Days to heading (after planting),,
-flowering_days,numeric,days,no,,no,15,250,yes,Days to flowering (after planting),,TO_0000344
-anthesis_days,numeric,days,no,,no,30,125,yes,Days to anthesis (after planting). Anthesis occurs when pollen is released,,
-silking_days,numeric,days,no,,no,30,125,yes,Days to silking (after planting),,
-asi,numeric,days,no,,no,-7,30,yes,Anthesis silking interval,,
-tassling_days,numeric,days,no,,no,30,125,yes,Days to tassling (after planting),,TO_0000629
-maturity_days,numeric,days,no,,no,45,365,yes,Days to maturity (after planting),,TO_0000469
-harvest_days,numeric,days,no,,no,45,365,yes,Days to harvest (after planting),,
+emergence_days,numeric,days,no,,no,3,90,yes,Days to emergence (after planting),Assumed to be the median number of days,
+heading_days,numeric,days,no,,no,25,300,yes,Days to heading (after planting),Assumed to be the median number of days,
+flowering_days,numeric,days,no,,no,15,250,yes,Days to flowering (after planting),Assumed to be the median number of days,TO_0000344
+anthesis_days,numeric,days,no,,no,30,125,yes,Days to anthesis (after planting). Anthesis occurs when pollen is released,Assumed to be the median number of days,
+silking_days,numeric,days,no,,no,30,125,yes,Days to silking (after planting),Assumed to be the median number of days,
+asi,numeric,days,no,,no,-7,30,yes,Anthesis silking interval,Assumed to be the median number of days,
+tassling_days,numeric,days,no,,no,30,125,yes,Days to tassling (after planting),Assumed to be the median number of days,TO_0000629
+maturity_days,numeric,days,no,,no,45,365,yes,Days to maturity (after planting),Assumed to be the median number of days,TO_0000469
+harvest_days,numeric,days,no,,no,45,365,yes,Days to harvest (after planting),Assumed to be the median number of days,
 plant_height,numeric,cm,no,,no,10,500,yes,Maximum plant height,,TO_0000207
 ear_height,numeric,cm,no,,no,10,350,yes,height of first ear (maize female inflorescence),,
 pathogen,character,,no,pathogen,yes,,,yes,Name of the pathogen studied,,
@@ -203,7 +201,7 @@ previous_crop_residue_perc,numeric,%,no,,no,0,100,yes,percentage of residue of p
 previous_crop_burnt,logical,,no,,no,,,yes,was the residue of the previous crop burnt?,,
 previous_crop_residue_management,character,,no,,no,,,yes,how was the previous crop residue managed?,,
 crop_price,numeric,currency/kg,no,,no,0,100,yes,current crop price when sold to market,,
-fertilizer_price,character,currency/kg,no,,no,,,yes,price paid for fertilizer(s), DAP=1.2),
+fertilizer_price,character,currency/kg,no,,no,,,yes,price paid for fertilizer(s),,
 currency,character,,no,currency,no,,,yes,currency used for prices,,
 flood_stress,character,,no,,no,,,yes,how severe was the damage from flooding?,,
 drought_stress,character,,no,,no,,,yes,how severe was the damage from drought?,,
