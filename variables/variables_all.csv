@@ -4,3 +4,5 @@ record_id,integer,,no,,no,,,no,Unique identifier for each records in a dataset (
 date,character,,no,,no,,,yes,"Observation date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
 time,character,,no,,no,,,yes,"Observation time in ""hh:mm:ss"", ""hh:mm"", or ""hh"" format",,
 reference,character,,no,,no,,,yes,The data source (in data compilations for meta analysis),,
+DAP,integer,,no,,no,,,yes,Days after planting,,
+DAE,integer,,no,,no,,,yes,Days after emergece,,
