@@ -20,5 +20,6 @@ last_modified,character,,no,,no,,,no,date of last significant revision of the sc
 modified_by,character,,no,,yes,,,no,name(s) of contributers who made significant changes to the script,,
 notes,character,,no,,no,,,yes,notes about data quality issues in the dataset,,
 design,character,,no,,no,,,yes,short description of the experimental or survey design,,
-countries,character,,no,,no,,,yes,countries in the data,,
-crops,character,,no,,no,,,yes,crops in the data,,
+completion,numeric,,no,,no,,,yes,the percentage of relevant variables that have been standardized,,
+countries,character,,no,,no,,,yes,countries in the data,automatically generated,
+crops,character,,no,,no,,,yes,crops in the data,automatically generated,
