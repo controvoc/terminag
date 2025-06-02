@@ -14,7 +14,7 @@ response_vars,character,,yes,,yes,,,no,"outcome variables (if data_type = trial/
 publication,character,,yes,,no,,,yes,the doi of the associated publication (if any),,
 data_institute,character,,yes,institute,yes,,,yes,organizational home(s) of the data providers,,
 data_published,character,,no,,no,,,yes,date the data were published,,
-version,numeric,,no,,no,,,yes,the dataset version number,,
+version,character,,no,,no,,,yes,the dataset version number,,
 project,character,,yes,,no,,,yes,project that this dataset belongs to (if any),,
 carob_date,character,,yes,,no,,,no,date of first contribution to Carob,,
 last_modified,character,,no,,no,,,no,date of last significant revision of the script,,
