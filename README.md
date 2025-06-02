@@ -6,4 +6,5 @@ This is a community standard that provides a standard for the variables and valu
 - "values" defines accepted values for some character variables. For example, country and crop names.
 
 This standard is under development. It is currently used in the [Carob](https://github.com/carob-data/carob) project.
-  
+
+*R* package [vocal](https://github.com/carob-data/vocal) uses this standard for compliance checking.
