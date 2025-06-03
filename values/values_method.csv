@@ -19,20 +19,20 @@ permanent beds,,land_prep
 wide permanent beds,,land_prep
 puddled,,land_prep
 not puddled,,land_prep
-surface ,,irrigation
-basin ,,irrigation
-border ,,irrigation
+surface,,irrigation
+basin,,irrigation
+border,,irrigation
 continuous flooding,,irrigation
 furrow,,irrigation
 uncontrolled flooding,,irrigation
-bubbler ,,irrigation
+bubbler,,irrigation
 drip,,irrigation
 sub-surface drip,,irrigation
-pitcher ,,irrigation
-subsurface drip ,,irrigation
-subsurface textile ,,irrigation
-sprinkler ,,irrigation
-center pivot sprinkler ,,irrigation
+pitcher,,irrigation
+subsurface drip,,irrigation
+subsurface textile,,irrigation
+sprinkler,,irrigation
+center pivot sprinkler,,irrigation
 sprinkler by lateral move,,irrigation
 sprinkler by side roll,,irrigation
 puddling,,puddling
@@ -50,4 +50,4 @@ mixed,,intercropping
 relay,,intercropping
 row,,intercropping
 strip,,intercropping
-within-row ,,intercropping
+within-row,,intercropping
