@@ -30,6 +30,7 @@ bilberry,Vaccinium myrtillus,,yes,fruit,fruits,,,bilberries,c_aeec9b59
 black currant,Ribes nigrum,,yes,fruit,fruits,,,black currants,c_945
 black fonio,Digitaria iburua,,yes,grain,cereals,,,,
 black gram,Vigna mungo,,yes,seed,pulses,,,,
+black mustard,Brassica nigra,,yes,seed,spices,,,,
 black salsify,Scorzonera hispanica,,yes,root,vegetables,,,black salsify,c_0f628632
 blackberry,Rubus spp,,yes,fruit,fruits,,,blackberries,c_947
 blue agave,Agave tequilana,,yes,,sugar_crops,,,,
@@ -37,7 +38,7 @@ blueberry,Vaccinium spp.,,yes,fruit,fruits,,,blueberries,c_974
 borage,Borago officinalis,,yes,seed,oil_seeds,,,borage seed,c_d2910779
 brazil nut,Bertholletia excelsa,,yes,seed,nuts,,,brazil nuts,c_9410
 broccoli,Brassica oleracea var. italica,,yes,,vegetables,,,broccoli,c_7339
-brown mustard,Brassica juncea,,yes,seed;leaves,spices,,,,
+brown mustard,Brassica juncea,,yes,seed;leaves,spices;vegetables,,,,
 brussels sprouts,Brassica oleracea,,yes,,vegetables,,,brussels sprouts,c_1127
 buckwheat,Fagopyrum esculentum,,yes,seed,pseudocereals,,,buckwheat,c_9471
 butter bean,Phaseolus lunatus,,yes,seed,pulses,,,,
@@ -172,7 +173,7 @@ mulberry,,,yes,fruit,fruits,,,mulberries,c_25487
 mung bean,Vigna radiata,,yes,seed,pulses,,,mung beans,c_4988
 mushrooms,,,yes,,vegetables,,,mushrooms,c_2487
 muskmelon,,,yes,fruit,fruits,,,muskmelons,c_12487
-mustard,,,yes,seed,spices,,,mustard seed,c_fd07a050
+mustard,,,no,seed,spices,,,mustard seed,c_fd07a050
 napa shak,Malva verticillata,,yes,leaves,vegetables,,,,
 napier grass,Cenchrus purpureus,Pennisetum purpureum,yes,above_ground,fodder_crops,,,,
 nectarine,,,yes,fruit,fruits,,,nectarines,c_5100
@@ -222,7 +223,7 @@ pumpkin,,,yes,fruit; seed,vegetables,,,pumpkins,c_6369
 quince,,,yes,fruit,fruits,,,quinces,c_13714
 quinoa,,,yes,seed,pseudocereals,,,quinoa,c_13716
 radicchio,,,yes,,vegetables,,,radicchio,c_c32f344d
-radish,Raphanus sp.,,yes,root,vegetables,,,radishes,c_13735
+radish,Raphanus sp.,,yes,root,vegetables;green_manures,,,radishes,c_13735
 rambutan,,,yes,fruit,fruits,,,rambutans,c_13754
 ramie,,,yes,,fibre_crops,,,ramie,c_6442
 rapeseed,Brassica napus,,yes,seed,oil_seeds,,5000,rapeseed,c_25499
@@ -297,6 +298,7 @@ white clover,Trifolium repens,,yes,above_ground,green_manures,,,,
 white currant,Ribes rubrum,,yes,fruit,fruits,,,white currants,c_8379
 white fonio,Digitaria exilis,,yes,grain,cereals,,,,
 white lupin,Lupinus albus,,yes,seed,pulses,,,,
+white mustard,Sinapis alba,,yes,seed;none,spices;green_manures,,,,
 winter melon,Benincasa hispida,,yes,fruit,fruits,,,winter melons,c_acf09bff
 yam,Dioscorea cayenensis subsp. rotundata,white yam,yes,tuber,root_tuber,,60000,yams,c_8478
 guinea yam,Dioscorea cayenensis subsp. cayenensis,yellow yam,yes,tuber,root_tuber,,60000,yams,c_8478
