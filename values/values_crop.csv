@@ -37,6 +37,7 @@ blueberry,Vaccinium spp.,,yes,fruit,fruits,,,blueberries,c_974
 borage,Borago officinalis,,yes,seed,oil_seeds,,,borage seed,c_d2910779
 brazil nut,Bertholletia excelsa,,yes,seed,nuts,,,brazil nuts,c_9410
 broccoli,Brassica oleracea var. italica,,yes,,vegetables,,,broccoli,c_7339
+brown mustard,Brassica juncea,,yes,seed;leaves,spices,,,,
 brussels sprouts,Brassica oleracea,,yes,,vegetables,,,brussels sprouts,c_1127
 buckwheat,Fagopyrum esculentum,,yes,seed,pseudocereals,,,buckwheat,c_9471
 butter bean,Phaseolus lunatus,,yes,seed,pulses,,,,
@@ -279,6 +280,7 @@ thyme,,,yes,leaves,culinary_herbs,,,thyme,c_14877
 tobacco,Nicotiana tabacum,,yes,leaves,stimulants,,10000,tobacco,c_7796
 tomato,Solanum lycopersicum,,yes,fruit,vegetables,,100000,tomatoes,c_7805
 triticale,×Triticosecale,,yes,grain,cereals,,12000,triticales,c_7949
+tritordeum,×Tritordeum,,yes,grain,cereals,,12000,,
 tung tree,,,yes,seed,oil_crops,,,tung tree,c_253
 turnip,,,yes,root; leaves,vegetables,,,turnips,c_8019
 unknown,,,,,oher,,,,
