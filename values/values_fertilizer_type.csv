@@ -8,6 +8,7 @@ CMP,Calcium Magnesium Phosphate,CaMgO4P+,0,7,0,0,0,12,0,23,
 DAP,Diammonium phosphate,(NH4)2HPO4,18,20.1,0,0,0,0,0,0,CHEBI_63051
 DAS,Ammonium sulfate,(NH4)2SO4,21,0,0,24,0,0,0,0,CHEBI_62946
 D-compound,D-compound,,10,20,10,9,0,0,0,0,
+DSP,Double Super Phosphate,(NH4)2HPO4,18,20,0,0,0,0,0,0,
 ERP,Ethiopian rock phosphate,,0,NA,0,0,0,0,0,0,
 GRP,Gafsa rock phosphate,,0,NA,0,0,0,0,0,0,
 gypsum,Gypsum,CaSO4 . 2H2O,0,0,0,19,0,0,0,0,CHEBI_48838
