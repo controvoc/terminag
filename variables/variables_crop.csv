@@ -36,9 +36,9 @@ fwy_storage,numeric,kg/ha,no,,no,0,50000,yes,Fresh weight biomass of storage org
 fwy_total,numeric,kg/ha,no,,no,0,100000,yes,Fresh weight total biomass per ha,,
 fwy_residue,numeric,kg/ha,no,,no,0,100000,yes,Fresh weight residue biomass per ha,,
 yield_part,character,,yes,yield_part,no,,,no,"The part of the crop that ""yield"" refers to (e.g. grain, tubers, roots, leaves, fruit)",,
-yield,numeric,kg/ha,yes,,no,0,150000,no,"Biomass of the main harvestable parts at maturity, per ha --- not specified whether fresh or dr- matter",,AGRO_00000176 
-fw_yield,numeric,kg/ha,no,,no,0,150000,no,"Fresh-weight biomass of the main harvestable parts at maturity, per ha",,
-dm_yield,numeric,kg/ha,no,,no,0,100000,no,"Dry-matter biomass of the main harvestable parts at maturity, per ha",,
+yield,numeric,kg/ha,fw_yield;dm_yield,,no,0,150000,no,"Biomass of the main harvestable parts at maturity, per ha --- not specified whether fresh or dr- matter",,AGRO_00000176 
+fw_yield,numeric,kg/ha,yield;dm_yield,,no,0,150000,no,"Fresh-weight biomass of the main harvestable parts at maturity, per ha",,
+dm_yield,numeric,kg/ha,yield;fw_yield,,no,0,100000,no,"Dry-matter biomass of the main harvestable parts at maturity, per ha",,
 yield_moisture,numeric,%,no,,no,5,90,yes,Reported moisture content of fresh yield,,
 yield_marketable,numeric,kg/ha,no,,no,0,150000,no,"Fresh weight marketable (e.g. large enough tubers) biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
 seed_weight,numeric,g,no,,no,0,1000,yes,1000 seed (grain) weight,,TO_0000382
@@ -78,7 +78,7 @@ OM_type,character,,no,OM,yes,,,yes,Type of organic fertilzer applied,,AGRO_00002
 OM_amount,numeric,kg/ha,no,,no,0,,yes,Amount of organic fertilizer applied,,AGRO_00010008
 inoculated,logical,,no,,no,,,yes,Was the field inoculated (with Rhizobium),,
 inoculant,character,,no,,no,,,yes,Name of the inoculant product,,
-biochar,numeric,kg/ha,no,,no,,,yes,Amount of biochar applied	
+biochar,numeric,kg/ha,no,,no,,,yes,"Amount of biochar applied	",,
 irrigated,logical,,yes,,no,,,yes,Was the plot irrigated?,,AGRO_00000006
 irrigation_source,character,,no,,no,,,yes,the source of irrigation water,,AGRO_00000009
 irrigation_method,character,,no,method,no,,,yes,the irrigation method,,AGRO_00000054
@@ -133,6 +133,7 @@ leaf_Cu,numeric,mg/g,no,,no,5,50,yes,copper content in leaf,,
 leaf_Mn,numeric,mg/g,no,,no,5,50,yes,manganese content in leaf,,
 leaf_B,numeric,mg/g,no,,no,5,50,yes,boron content in leaf,,
 leaf_Al,numeric,mg/g,no,,no,5,50,yes,aluminium content in leaf,,
+leaf_Na,numeric,mg/g,no,,no,5,50,yes,sodium content in leaf,,
 grain_N,numeric,mg/g,no,,no,100,600,yes,nitrogen content in grain,,TO_0003068
 grain_K,numeric,mg/g,no,,no,10,300,yes,potassium content in grain,,TO_0003056
 grain_P,numeric,mg/g,no,,no,10,300,yes,phosphorous content in grain,,TO_0003082
