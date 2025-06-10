@@ -1,10 +1,10 @@
 # terminag
 
-This is a community standard that provides a standard for the variables and values used in agricultural research data. There are two sections.
+*terminag* is a controlled vocabuarly for organizing agricultural research data. It is organized in two main groups
 
 - "variables" defines variable names and units, and, for numeric variables, a miniumum and maximum accepted value.
 - "values" defines accepted values for some character variables. For example, country and crop names.
 
-This standard is under development. It is currently used in the [Carob](https://github.com/carob-data/carob) project.
+The vocabulary is under development. It is currently used as part of the [Carob](https://github.com/carob-data/carob) data standard.
 
-*R* package [vocal](https://github.com/carob-data/vocal) uses this standard for compliance checking.
+You can use *R* package [vocal](https://github.com/carob-data/vocal) to check for compliance with this vocabulary.
