@@ -7,7 +7,7 @@ flowering_date,character,,no,,no,,,yes,"Flowering date in ""yyyy-mm-dd"", ""yyyy
 maturity_date,character,,no,,no,,,yes,"Maturity date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see maturity_days,
 harvest_date,character,,no,,no,,,yes,"Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see harvest_days,AGRO_00010128
 LTE_name,character,,no,,no,,,yes,Name of long-term experiment,,
-season,character,,no,,no,,,yes,Season name,,
+season,character,,no,season,no,,,yes,Season name,,
 on_farm,logical,,yes,,no,,,yes,Is this observation on farm (not on an expermiment station),,AGRO_00000601
 is_survey,logical,,yes,,no,,,yes,Is this observation from a survey (not an experiment),,
 treatment,character,,no,,no,,,yes,"Description of the treatment, if any. Can be a code used in the original data. There are no rules about its content or format",,AGRO_00000370
