@@ -1,4 +1,7 @@
 name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
+soil_depth,numeric,cm,no,,no,0,,yes,soil depth,,
+soil_depth_top,numeric,cm,no,,no,0,200,yes,soil sampling depth (top),,
+soil_depth_bottom,numeric,cm,no,,no,0,200,yes,soil sampling depth (bottom),,
 soil_type,character,,no,,yes,,,yes,soil name or description,,AGRO_00010099
 soil_pH,numeric,,no,,no,3,10,yes,soil pH (H2O),,ENVO_09200010
 soil_pH_KCl,numeric,,no,,no,3,9,yes,soil pH (KCl),,ENVO_09200010
@@ -38,8 +41,6 @@ soil_Al_Mehlich,numeric,mg/kg,no,,no,0,200,yes,soil Al content (plant available;
 soil_C,numeric,%,no,,no,0.01,20,yes,soil C content,,
 soil_EC,numeric,mS/cm,no,,no,0,20,yes,soil electric conductivity,,
 soil_bd,numeric,g/cm^-3,no,,no,0,20,yes,soil bulk density,,
-soil_sample_top,numeric,cm,no,,no,0,200,yes,soil sampling depth (top),,
-soil_sample_bottom,numeric,cm,no,,no,0,200,yes,soil sampling depth (bottom),,
 soil_CEC,numeric,cmol/kg,no,,no,0,200,yes,Cation Exchange Capacity,,
 soil_ECEC,numeric,cmol/kg,no,,no,0,200,yes,Effective Cation Exchange Capacity,,
 soil_ex_Ca,numeric,mg/kg,no,,no,0,200,yes,soil exchangeable Ca,,
@@ -50,7 +51,6 @@ soil_ex_Al,numeric,mg/kg,no,,no,0,200,yes,soil exchangeable Al,,
 soil_color,character,,no,,no,,,yes,soil color,,
 soil_quality,character,,no,,no,,,yes,soil quality preception,,
 landscape_position,character,,no,,no,,,yes,Relative landscape position,,
-soil_depth,numeric,cm,no,,no,0,,yes,soil depth,,
 soil_constraint,character,,no,,no,,,yes,soil constraint (e.g. saline),,
 soil_PSI,numeric,,no,,no,,,yes,phosphorous sorption index,,
 soil_ex_acidity,numeric,cmol/kg,no,,no,,,yes,"soil exchangeable acidity (""hp"")",,
