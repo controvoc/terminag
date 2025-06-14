@@ -105,6 +105,7 @@ cob_density,numeric,cobs/ha,no,,no,500,100000,yes,Number of cobs (maize) per ha,
 spike_density,numeric,spikes/ha,no,,no,500,6000000,yes,Number of spikes per ha,,
 rain,numeric,mm,no,,no,0,3000,yes,Total rainfall between planting and harvest,,ENVO_01000830
 emergence_days,numeric,days,no,,no,3,90,yes,Days to emergence (after planting),Assumed to be the median number of days,
+transplanting_days,numeric,days,no,,no,1,50,yes,Days to transplanting,Assumed to be the median number of days,
 heading_days,numeric,days,no,,no,25,300,yes,Days to heading (after planting),Assumed to be the median number of days,
 flowering_days,numeric,days,no,,no,15,250,yes,Days to flowering (after planting),Assumed to be the median number of days,TO_0000344
 anthesis_days,numeric,days,no,,no,30,125,yes,Days to anthesis (after planting). Anthesis occurs when pollen is released,Assumed to be the median number of days,
