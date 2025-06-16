@@ -233,3 +233,4 @@ severity_scale,character,,no,,no,,,yes,"Scale of (disease) severity measure, fro
 NDVI,numeric,,no,,no,0,1,yes,Normalized difference vegetation index,,
 flesh_color,character,,no,,no,,,yes,"""flesh"" color of (sweet)potato and other root/tubers",,
 CA_years,numeric,,no,,no,0,30,yes,number of years that Conservation Agriculture has been practised,,
+sterility_index,numeric,,no,,no,0,100,yes,% sterility of inflorescence,,
