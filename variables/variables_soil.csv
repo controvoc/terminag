@@ -55,3 +55,4 @@ soil_ex_acidity,numeric,cmol/kg,no,,no,,,yes,"soil exchangeable acidity (""hp"")
 soil_aluminium_toxicity,logical,,no,,no,,,yes,was the soil Al concentration toxic for the crop?,,
 soil_Al_sat,numeric,%,no,,no,0,100,yes,soil Al saturation (% of ECEC),,
 soil_WHC_sat,numeric,%,no,,no,0,100,yes,% of soil water holding capacity that is filled,,
+soil_drainage,character,,no,soil_drainage,no,,,no,soil drainage class ,,
