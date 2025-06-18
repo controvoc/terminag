@@ -1,31 +1,27 @@
-name,description
-clay,
-clay loam,
-coarse loamy sand,
-coarse sand,
-coarse sandy loam,
-coarse silt,
-fine loam,
-fine loamy sand,
-fine sand,
-fine sandy loam,
-loam,
-loamy sand,
-sand,
-sandy clay,
-sandy clay loam,
-sandy loam,
-silt,
-silty clay,
-silty loam,
-silty loam,
-very fine loamy sand,
-very fine sand,
-very fine sandy loam,
-fine,
-medium,
-coarse,
-,
-,
-,
-,
+name,description,is_preferred
+clay,,yes
+clay loam,,yes
+coarse loamy sand,,yes
+coarse sand,,yes
+coarse sandy loam,,yes
+coarse silt,,yes
+fine loam,,yes
+fine loamy sand,,yes
+fine sand,,yes
+fine sandy loam,,yes
+loam,,yes
+loamy sand,,yes
+sand,,yes
+sandy clay,,yes
+sandy clay loam,,yes
+sandy loam,,yes
+silt,,yes
+silty clay,,yes
+silty loam,,yes
+silty loam,,yes
+very fine loamy sand,,yes
+very fine sand,,yes
+very fine sandy loam,,yes
+fine,,no
+medium,,no
+coarse,,no

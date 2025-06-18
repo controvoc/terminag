@@ -1,11 +1,12 @@
 name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
 trial_id,character,,yes,,no,,,yes,Identifier of a single trial in a single location and season (that may have treatments and replicates), should be unique within dataset_id,
-planting_date,character,,yes,,no,,,yes,"Planting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,AGRO_00010099
-emergence_date,character,,no,,no,,,yes,"Emergence date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see emergence_days,
-transplanting_date,character,,no,,no,,,yes,"Transplanting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see transplanting_days,AGRO_00010131
-flowering_date,character,,no,,no,,,yes,"Flowering date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see flowering_days,
-maturity_date,character,,no,,no,,,yes,"Maturity date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see maturity_days,
-harvest_date,character,,no,,no,,,yes,"Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see harvest_days,AGRO_00010128
+plot_id,character,,no,,no,,,yes,Identifier of a single plot in a single trial in a single location and season,,
+planting_date,date,,yes,,no,,,yes,"Planting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,AGRO_00010099
+emergence_date,date,,no,,no,,,yes,"Emergence date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see emergence_days,
+transplanting_date,date,,no,,no,,,yes,"Transplanting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see transplanting_days,AGRO_00010131
+flowering_date,date,,no,,no,,,yes,"Flowering date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see flowering_days,
+maturity_date,date,,no,,no,,,yes,"Maturity date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see maturity_days,
+harvest_date,date,,no,,no,,,yes,"Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see harvest_days,AGRO_00010128
 LTE_name,character,,no,,no,,,yes,Name of long-term experiment,,
 season,character,,no,season,no,,,yes,Season name,,
 on_farm,logical,,yes,,no,,,yes,Is this observation on farm (not on an expermiment station),,AGRO_00000601
@@ -45,7 +46,7 @@ seed_weight,numeric,g,no,,no,0,1000,yes,1000 seed (grain) weight,,TO_0000382
 fertilizer_used,logical,,no,,no,,,yes,was any inorganic fertilizer used?,,
 foliar_fertilizer_used,logical,,no,,no,,,yes,was any foliar fertilizer used?,,
 fertilizer_type,character,,no,fertilizer_type,yes,,,yes,Name of inorganic fertilizer used,,CHEBI_33287
-fertilizer_date,character,,no,,no,,,yes,"Date(s) of inorganic fertilizer applications. Possibly followed by ""(product; amount)""",,AGRO_00010143
+fertilizer_date,date,,no,,no,,,yes,"Date(s) of inorganic fertilizer applications. Possibly followed by ""(product; amount)""",,AGRO_00010143
 fertilizer_dap,character,,no,,yes,-30,150,yes,"Inorganic fertilizer applications in ""days after planting"". Possibly followed by ""(product; amount)""",,AGRO_00010143
 fertilizer_amount,numeric,kg/ha,no,,no,0,1000,yes,Total amount of inorganic fertilizer applied,,
 fertilization_method,character,,no,,no,,,yes,Fertilizer application method,,
@@ -85,7 +86,7 @@ irrigation_method,character,,no,method,no,,,yes,the irrigation method,,AGRO_0000
 irrigation_number,integer,,no,,no,0,50,yes,How many times was the crop irrigated?,,AGRO_00010015
 irrigation_amount,numeric,mm,no,,no,0,1000,yes,The total irrigation amount applied to the crop,,AGRO_00000010
 irrigation_fulfullment,character,,no,,no,,,yes,The degree to which irrigation needs were fulfilled,,
-irrigation_dates,character,,no,,yes,,,yes,"Irrigation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00010126
+irrigation_dates,date,,no,,yes,,,yes,"Irrigation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00010126
 land_prep_method,character,,no,method,yes,,,yes,"Land preparation (tillage) method used (including ""none"" = ""zero-tillage"")",,AGRO_00000322
 land_prep_implement,character,,no,implement,yes,,,yes,Land preparation (tillage) implement(s) used,,AGRO_00000224
 planting_method,character,,no,method,no,,,yes,Planting (sowing) method,,AGRO_00000231
@@ -171,13 +172,13 @@ herbicide_used,logical,,no,,no,,,yes,was a herbicide used?,,
 herbicide_product,character,,no,herbicides,yes,,,yes,name(s) of the active ingredient of the herbicide,,
 herbicide_timing,character,,no,,no,-30,200,yes,days after (or before) planting on which herbicide was used, multiple applications separated by ,
 herbicide_times,integer,,no,,no,0,5,yes,number of herbicide applications,,
-herbicide_dates,character,,no,,yes,,,yes,"herbicide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
+herbicide_dates,date,,no,,yes,,,yes,"herbicide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
 herbicide_amount,numeric,kg (ai) / ha,no,,no,0,100,yes,how much herbicide was used?,,AGRO_00000662
 herbicide_implement,character,,no,implement,no,,,yes,the implement (machine) used,,
 weeding_done,logical,,no,,no,,,yes,was the crop weeded?,,
 weeding_method,character,,no,,yes,,,yes,Weeding method used,,
 weeding_times,integer,,no,,no,0,10,yes,how many times was the crop weeded?,,AGRO_00010018
-weeding_dates,character,,no,,yes,,,yes,"weeding dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00000562
+weeding_dates,date,,no,,yes,,,yes,"weeding dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00000562
 weeding_implement,character,,no,implement,no,,,yes,the implement (machine) used,,AGRO_00002006
 weed_species,character,,no,,no,,,yes,weed species names ,,
 weed_biomass,numeric,kg/ha,no,,no,0,100000,yes,Fresh weight weeds biomass,,
@@ -185,7 +186,7 @@ weed_severity,character,,no,,no,,,yes,how severe was the competition from weeds?
 weed_cover,numeric,%,no,,no,,,yes,% weed cover,,
 insecticide_used,logical,,no,,no,,,yes,was an insecticide used?,,
 insecticide_product,character,,no,insecticides,yes,,,yes,name(s) of the active ingredient of the insecticide,,
-insecticide_dates,character,,no,,yes,,,yes,"insecticide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
+insecticide_dates,date,,no,,yes,,,yes,"insecticide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
 insecticide_timing,integer,,no,,no,-30,200,yes,days after (or before) planting on which insecticide was used,,
 insecticide_times,integer,,no,,no,0,12,yes,number of insecticide applications,,
 insecticide_amount,numeric,kg (ai) / ha,no,,no,,,yes,how much insecticide was used?,,AGRO_00000663
@@ -195,7 +196,7 @@ pest_species,character,,no,,no,,,yes,name(s) of relevant pest(s),,
 pest_number,integer,,no,,no,,,yes,number of pest species,,
 fungicide_used,logical,,no,,no,,,yes,was a herbicide used?,,
 fungicide_product,character,,no,fungicides,yes,,,yes,name(s) of the active ingredient of the fungicide,,
-fungicide_dates,character,,no,,yes,,,yes,"fungicide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
+fungicide_dates,date,,no,,yes,,,yes,"fungicide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
 fungicide_timing,integer,,no,,no,-30,200,yes,days after (or before) planting on which fungicide was used,,
 fungicide_times,integer,,no,,no,0,20,yes,number of fungicide applications,,
 fungicide_amount,numeric,kg (ai) / ha,no,,no,,,yes,how much fungicide was used?,,
