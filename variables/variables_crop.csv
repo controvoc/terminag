@@ -23,6 +23,7 @@ variety_type,character,,no,,no,,,yes,"variety grouping (e.g. climbing/bush) and/
 variety_traits,character,,no,,no,,,yes,variety characteristics,,
 variety_release_year,integer,,no,,no,,,yes,year the variety was released,,
 intercrops,character,,no,crop,yes,,,yes,Other crop grown together with the main crop,,
+intercrop_type,character,,no,intercrop,yes,,,yes,"Type of intercropping (e.g. mixed, strip)",,
 previous_crop,character,,no,crop,yes,,,yes,Crop grown on this plot in the prior season,,AGRO_00000592
 crop_rotation,character,,no,crop,yes,,,yes,Crops grown in rotation on this plot,,
 dmy_roots,numeric,kg/ha,no,,no,0,5000,yes,Dry-matter weight biomass of fine roots per ha,,
@@ -84,16 +85,16 @@ node_count,numeric,,no,,no,,,yes,Number of Rhizobium nodes per plant,,
 biochar,numeric,kg/ha,no,,no,,,yes,"Amount of biochar applied	",,
 irrigated,logical,,yes,,no,,,yes,Was the plot irrigated?,,AGRO_00000006
 irrigation_source,character,,no,,no,,,yes,the source of irrigation water,,AGRO_00000009
-irrigation_method,character,,no,method,no,,,yes,the irrigation method,,AGRO_00000054
+irrigation_method,character,,no,irrigation,no,,,yes,the irrigation method,,AGRO_00000054
 irrigation_number,integer,,no,,no,0,50,yes,How many times was the crop irrigated?,,AGRO_00010015
 irrigation_amount,numeric,mm,no,,no,0,1000,yes,The total irrigation amount applied to the crop,,AGRO_00000010
 irrigation_fulfullment,character,,no,,no,,,yes,The degree to which irrigation needs were fulfilled,,
 irrigation_dates,date,,no,,yes,,,yes,"Irrigation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00010126
-land_prep_method,character,,no,method,yes,,,yes,"Land preparation (tillage) method used (including ""none"" = ""zero-tillage"")",,AGRO_00000322
+land_prep_method,character,,no,land_prep,yes,,,yes,"Land preparation (tillage) method used (including ""none"" = ""zero-tillage"")",,AGRO_00000322
 land_prep_implement,character,,no,implement,yes,,,yes,Land preparation (tillage) implement(s) used,,AGRO_00000224
-planting_method,character,,no,method,no,,,yes,Planting (sowing) method,,AGRO_00000231
+planting_method,character,,no,planting,no,,,yes,Planting (sowing) method,,AGRO_00000231
 planting_implement,character,,no,implement,no,,,yes,Planting (sowing) implement used,,AGRO_00000232
-transplanting_method,character,,no,method,no,,,yes,Transplanting method,,AGRO_00000229
+transplanting_method,character,,no,planting,no,,,yes,Transplanting method,,AGRO_00000229
 uncertainty,numeric,,no,,no,0,,yes,Measure of noise in data ,,
 uncertainty_type,character,,no,,no,,,yes,Type of noise measure,,
 row_spacing,numeric,cm,no,,no,1,180,yes,Distance between rows,,AGRO_00000318
