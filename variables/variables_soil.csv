@@ -56,3 +56,5 @@ soil_aluminium_toxicity,logical,,no,,no,,,yes,was the soil Al concentration toxi
 soil_Al_sat,numeric,%,no,,no,0,100,yes,soil Al saturation (% of ECEC),,
 soil_WHC_sat,numeric,%,no,,no,0,100,yes,% of soil water holding capacity that is filled,,
 soil_drainage,character,,no,soil_drainage,no,,,no,soil drainage class ,,
+soil_microbial_activity_category,character,,no,,no,,,no,microbial activity variable name (for use in long format),,
+soil_microbial_activity_value,numeric,,no,,no,,,no,microbial activity value (for use in long format),,
