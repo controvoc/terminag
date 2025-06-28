@@ -70,6 +70,7 @@ cauliflower,Brassica oleracea,,yes,,vegetables,,,cauliflowers,c_1394
 celeriac,Apium graveolens var. rapaceum,celery root,yes,,vegetables,,,celeriac,c_1411
 celery,Apium graveolens,,yes,stems; leaves; seed,vegetables,,,celery,c_1412
 cereal,spp,,no,seed,cereals,,,,
+chayote,Sicyos edulis,,yes,fruit,vegetables,,,,
 cherimoya,Annona cherimola,,yes,fruit,fruits,,,cherimoyas,c_9761
 cherry,Prunus avium; Prunus cerasus,,yes,fruit,fruits,,,cherries,c_1534
 chestnut,Castanea sativa,,yes,seed,nuts,,,chestnuts,c_25467
@@ -88,8 +89,9 @@ clementine,,,yes,fruit,fruits,,,clementines,c_9895
 clover,Trifolium sp.,,yes,above_ground,fodder_crops,,,clover,c_7910
 cloves,Syzygium aromaticum,,yes,flower,spices,,,cloves,c_23597
 cochineal nopal cactus,Nopalea cochenillifera,,yes,,,,,,
-cocoa,,,yes,seed,stimulants,,,cocoa beans,c_1711
-coconut,,,yes,seed,nuts,,,coconuts,c_25470
+cockscomb,Celosia argentea,,yes,flower,flowers,,,,
+cocoa,Theobroma cacao,,yes,seed,stimulants,,,cocoa beans,c_1711
+coconut,Cocos nucifera,,yes,seed,nuts,,,coconuts,c_25470
 coffee,Coffea sp.,,yes,seed,stimulants,,,,
 common bean,Phaseolus vulgaris,,yes,seed,pulses,,9000,common beans,c_4098
 concord grape,Vitis labrusca,,yes,fruit,,,,,
@@ -191,6 +193,7 @@ maize,Zea mays,,yes,grain,cereals,12,41500,maize,c_12332
 mandarin,,,yes,fruit,fruits,,,mandarins,c_4568
 mango,Mangifera indica,,yes,fruit,fruits,,100000,mangoes,c_12367
 mangosteen,,,yes,fruit,fruits,,,mangosteens,c_12368
+marigold,Tagetes spp.,,yes,flowers,flowers,,,,
 mate,,,yes,leaves,stimulants,,,mate,c_4647
 melon,Cucumis melo,,no,fruit,fruits,,,,
 millet,spp,,no,grain,cereals,,,millets,c_4838
