@@ -7,6 +7,7 @@ agave,Agave spp.,,yes,leaves,fibre_crops,,,agave,c_176
 akee,Blighia sapida,,yes,fruit,fruits,,,akees,c_8697
 allspice,Pimenta dioica,,yes,,spices,,,allspice,c_19193
 almond,Prunus dulcis,,yes,seed,nuts,,,almonds,c_8734
+aloe vera,Aloe vera,,yes,leaves,medicinal,,,,
 amaranth,Amaranthus sp,,yes,seed; leaves,pseudocereals; vegetables,,,,
 anise,Pimpinella anisum,,yes,seed,spices,,,anise,c_8817
 annual ryegrass,Festuca perennis,,yes,fodder,,,,,
@@ -150,6 +151,7 @@ jack bean,Canavalia ensiformis,,yes,seed,,,,,
 jackfruit,Artocarpus heterophyllus,,yes,fruit,fruits,,80000,jackfruit,c_11864
 jatropha,Jatropha curcas,,yes,,,,,,
 jerusalem artichoke,Solanum tuberosum,topinambour,yes,tuber,root_tuber,,,jerusalem artichokes,c_11903
+jicama,Pachyrhizus erosus,Mexican turnip,,root,root_tuber,,,,
 jojoba,,,yes,seed,oil_seeds,,,jojoba,c_11913
 jute,Corchorus olitorius,,yes,fiber,fibre_crops,,,jute,c_4065
 kaki,,,yes,fruit,fruits,,,kaki,c_11934
@@ -161,7 +163,7 @@ kiwi,,,yes,fruit,fruits,,,kiwifruits,c_12002
 kohlrabi,,,yes,,vegetables,,,kohlrabi,c_4114
 kola nut,Cola sp.,,yes,seed,nuts,,10000,kola nuts,c_25471
 kumquat,,,yes,fruit,fruits,,,kumquats,c_22df2056
-lablab,Lablab purpureus,,yes,seed,pulses,,5000,lablab,c_12024
+lablab,Lablab purpureus,hyacinth bean,yes,seed,pulses,,5000,lablab,c_12024
 leek,Alllium ampeloprasum,,yes,,vegetables,,,leeks,c_12128
 legume,spp,,no,,other,,,,
 lemon,,,yes,fruit,fruits,,,lemons,c_4259
@@ -230,7 +232,7 @@ pear,Pyrus sp.,,yes,fruit,fruits,,,pears,c_5645
 pearl millet,Pennisetum glaucum,,yes,grain,cereals,,15000,pearl millet,c_e4e17d1b
 pecan,Carya illinoinensis,,yes,seed,nuts,,,pecans,c_13178
 pepino,,,yes,fruit,fruits,,,pepino,c_ea979075
-pepper,Capsicum spp,,yes,seed,spices,,100000,pepper,c_25495
+pepper,Piper nigrum,,yes,seed,spices,,1000,pepper,c_25495
 peppermint,,,yes,leaves,culinary_herbs,,,peppermint,c_ae411b49
 perilla,Perilla frutescens,,yes,seed,oil_seeds,,,perilla seed,c_04f3705c
 persimmon,Diospyros kaki,,yes,fruit,,,,,
@@ -271,6 +273,7 @@ rose hips,,,yes,fruit,fruits,,,rose hips,c_50142
 roselle,,,yes,,vegetables,,,roselle,c_a8b0f9a7
 rosemary,,,yes,leaves,culinary_herbs,,,rosemary,c_13963
 rubber,,,yes,,industrial_crops,,,rubber crops,c_6679
+runner bean,Phaseolus coccineus,,yes,fruits,pulses,,,,
 rutabaga,,,yes,,vegetables,,,rutabagas,c_6713
 rye,Secale cereale,,yes,grain,cereals,,,rye,c_14010
 rye grass,Lolium perenne,,yes,above_ground,fodder_crops,,,,
@@ -316,6 +319,7 @@ tepary bean,Phaseolus acutifolius,,yes,seed,,,,,
 thyme,,,yes,leaves,culinary_herbs,,,thyme,c_14877
 tobacco,Nicotiana tabacum,,yes,leaves,stimulants,,10000,tobacco,c_7796
 tomato,Solanum lycopersicum,,yes,fruit,vegetables,,100000,tomatoes,c_7805
+tomatillo,Physalis philadelphica; Physalis ixocarpa,Mexican husk tomato,yes,fruit,vegetables,,10000,tomatoes,
 triticale,×Triticosecale,,yes,grain,cereals,,12000,triticales,c_7949
 tritordeum,×Tritordeum,,yes,grain,cereals,,12000,,
 tung tree,,,yes,seed,oil_crops,,,tung tree,c_253
@@ -324,7 +328,7 @@ unknown,,,no,,other,,,,
 urd bean,Vigna mungo,,yes,seed,pulses,,,urd beans,c_8089
 vanilla,Vanilla planifolia,,yes,fruit,spices,,,vanilla,c_15126
 vegetables,spp,,no,leaves,vegetables,,,,
-velvet bean,Mucuna pruriens,,yes,,green manure,,,velvet bean,c_4971
+velvet bean,Mucuna pruriens,,yes,,green manure; medicinal,,,velvet bean,c_4971
 vetch,Vicia spp,,yes,above_ground,green_manures; fodder_crops,,,vetches,c_8214
 walnut,Juglans regia,,yes,seed,nuts,,,walnuts,c_15254
 watercress,,,yes,,vegetables,,,watercress,c_15275
