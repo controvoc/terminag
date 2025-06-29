@@ -16,7 +16,7 @@ apricot,Prunus armeniaca,,yes,fruit,fruits,,,apricots,c_545
 arabica coffee,Coffea arabica,,yes,seed,stimulants,,,arabica coffee,c_566
 areca nut,Areca catechu,,yes,seed,nuts,,,areca nuts,c_ac0d27db
 argan,Argania spinosa,,yes,seed,oil_crops,,,argan,c_32068
-artichoke,Cynara scolymus ,,yes,flower,,,,,
+artichoke,Cynara cardunculus,,yes,flower,,,,,
 asparagus,asparagus officinalis,,yes,stems,vegetables,,,asparagus,c_669
 asparagus bean,Vigna unguiculata subsp. sesquipedalis,yardlong bean; pea bean; long-podded cowpea; Chinese long bean; snake bean,yes,seed,pulses,,,asparagus beans,c_670
 avocado,Persea americana,,yes,fruit,fruits,,,avocados,c_9022
@@ -79,13 +79,13 @@ chickpea,Cicer arientinum,,yes,seed,pulses,,6000,chickpeas,c_9785
 chicory,Cichorium intybus,,yes,leaves; root,vegetables,,,chicory,c_9786
 chili pepper,Capsicum spp,,yes,fruit,spices,,,chillies,c_9795
 chinese cabbage,Brassica rapa,,yes,leaves,,,,,
-chinotto,,,yes,fruit,fruits,,,chinotto,c_66133b33
-chives,,,yes,,vegetables,,,chives,c_9813
-cinnamon,,,yes,stem,spices,,,cinnamon,c_9862
-citrange,,,yes,fruit,fruits,,,citranges,c_1629
-citron,,,yes,fruit,fruits,,,citrons,c_1632
+chinotto,Citrus myrtifolia,,yes,fruit,fruits,,,chinotto,c_66133b33
+chives,Allium schoenoprasum,,yes,,vegetables,,,chives,c_9813
+cinnamon,Cinnamomum verum,,yes,stem,spices,,,cinnamon,c_9862
+citrange,Citrus sp.,,yes,fruit,fruits,,,citranges,c_1629
+citron,Citrus medica,,yes,fruit,fruits,,,citrons,c_1632
 citrus,Citrus sp.,,no,fruit,fruits,,,citrus fruits,c_1641
-clementine,,,yes,fruit,fruits,,,clementines,c_9895
+clementine,Citrus × clementina,,yes,fruit,fruits,,,clementines,c_9895
 clover,Trifolium sp.,,yes,above_ground,fodder_crops,,,clover,c_7910
 cloves,Syzygium aromaticum,,yes,flower,spices,,,cloves,c_23597
 cochineal nopal cactus,Nopalea cochenillifera,,yes,,,,,,
@@ -95,21 +95,19 @@ coconut,Cocos nucifera,,yes,seed,nuts,,,coconuts,c_25470
 coffee,Coffea sp.,,yes,seed,stimulants,,,,
 common bean,Phaseolus vulgaris,,yes,seed,pulses,,9000,common beans,c_4098
 concord grape,Vitis labrusca,,yes,fruit,,,,,
-coriander,,,yes,leaves,culinary_herbs,,,coriander,c_10097
+coriander,Coriandrum sativum,,yes,leaves,culinary_herbs,,,coriander,c_10097
 cotton,Gossypium hirsutum,,yes,bolls,plant_fibres,,5000,cotton,c_1926
 cowpea,Vigna unguiculata,,yes,seed,pulses,,5000,cowpeas,c_1938
 crambe,Crambe abyssinica,,yes,,,,,,
-cranberry,,,yes,fruit,fruits,,,cranberries,c_1944
-cranberry,Vaccinium macrocarpon,,yes,fruit,,,,,
+cranberry,Vaccinium sp.,,yes,fruit,fruits,,,cranberries,c_1944
 crotalaria,Crotalaria spp,,yes,above_ground,green_manures,,2500,crotalaria,c_1977
-crowberry,,,yes,fruit,fruits,,,crowberries,c_526caa65
-cucumber,,,yes,,vegetables,,,cucumbers,c_10195
-cucurbit fruit,,,yes,fruit,fruits,,,cucurbit fruits,c_2005
-cumin,,,yes,seed,spices,,,cumin,c_10205
+crowberry,Empetrum nigrum,,yes,fruit,fruits,,,crowberries,c_526caa65
+cucumber,Cucumis sativus,,yes,,vegetables,,,cucumbers,c_10195
+cumin,Cuminum cyminum,,yes,seed,spices,,,cumin,c_10205
 date,Phoenix dactylifera,,yes,fruit,fruits,,,dates,c_25475
-dewberry,,,yes,fruit,fruits,,,dewberries,c_2232
+dewberry,Rubus sp.,,yes,fruit,fruits,,,dewberries,c_2232
 dragon fruit,Selenicereus spp.,,yes,fruit,fruits,,,dragon fruits,c_42ce209e
-durian,,,yes,fruit,fruits,,,durians,c_10488
+durian,Durio zibethinus,,yes,fruit,fruits,,,durians,c_10488
 durum wheat,Triticum durum,,yes,grain,cereals,,,,
 eggplant,Solanum melongena,,yes,fruit,vegetables,,,eggplants,c_8998
 endive,Cichorium endivia,,yes,leaves,vegetables,,,endives,c_10596
@@ -127,19 +125,18 @@ foxtail millet,Setaria italica,,yes,grain,cereals,,,,
 garlic,Allium sativum,,yes,tuber,vegetables,,,garlic,c_11091
 ginger,Zingiber officinale,,yes,tuber,spices,,,ginger,c_11157
 gliricidia,Gliricidia sepium,,yes,wood,fuel,,,,
-globe artichoke,,,yes,,vegetables,,,globe artichokes,c_11171
-goji berry,,,yes,fruit,fruits,,,goji berries,c_caacd4d4
+goji berry,Lycium sp.,,yes,fruit,fruits,,,goji berries,c_caacd4d4
 gomenzer,Brassica carinata,,yes,leaves,vegetables,,2300,,
-gooseberry,,,yes,fruit,fruits,,,gooseberries,c_3333
-grape,,,yes,fruit; seed,fruits,,,grapes,c_3359
-grapefruit,,,yes,fruit,fruits,,,grapefruits,c_3358
+gooseberry,Ribes uva-crispa,,yes,fruit,fruits,,,gooseberries,c_3333
+grape,Vitis vinifera,,yes,fruit; seed,fruits,,,grapes,c_3359
+grapefruit,Citrus × paradisi,,yes,fruit,fruits,,,grapefruits,c_3358
 grass pea,Lathyrus sativus,,yes,seed,pulses,,5000,grass pea,c_4218
-green bean,,,yes,pods,vegetables,,,green beans,c_f461a9d7
+green bean,Phaseolus vulgaris,,yes,pods,vegetables,,,green beans,c_f461a9d7
 green manure,spp,,no,green manure,green_manures,,,,
-green onions,,,yes,leaves,vegetables,,,green onions,c_ffd65b9e
+green onions,Allium sp.,scallion,yes,leaves,vegetables,,,green onions,c_ffd65b9e
 groundnut,Arachis hypogaea,,yes,seed,oil_seeds,,8500,groundnuts,c_11368
 guar,Cyamopsis tetragonoloba,,yes,above_ground,fodder_crops,,,guar,c_2051
-guava,,,yes,fruit,fruits,,,guavas,c_11392
+guava,Psidium guajava,,yes,fruit,fruits,,,guavas,c_11392
 guayule,Parthenium argentatum,,yes,,,,,,
 guinea grass,Megathyrsus maximus,,yes,fodder,,,,,
 guinea yam,Dioscorea cayenensis subsp. cayenensis,yellow yam,yes,tuber,root_tuber,,60000,yams,c_8478
@@ -148,13 +145,13 @@ hazelnut,Corylus avellana,,yes,seed,nuts,,,hazelnuts,c_18248
 hemp,Cannabis sativa,,yes,stems,fibre_crops,,,hemp,c_3558
 hesperaloe,Hesperaloe spp.,,yes,,,,,,
 hops,Humulus lupulus,,yes,fruit,,,,,
-horseradish,,,yes,root,spices,,,horseradish,c_11614
+horseradish,Armoracia rusticana,,yes,root,spices,,,horseradish,c_11614
 jack bean,Canavalia ensiformis,,yes,seed,,,,,
 jackfruit,Artocarpus heterophyllus,,yes,fruit,fruits,,80000,jackfruit,c_11864
 jatropha,Jatropha curcas,,yes,,,,,,
 jerusalem artichoke,Solanum tuberosum,topinambour,yes,tuber,root_tuber,,,jerusalem artichokes,c_11903
 jicama,Pachyrhizus erosus,Mexican turnip,,root,root_tuber,,,,
-jojoba,,,yes,seed,oil_seeds,,,jojoba,c_11913
+jojoba,Simmondsia chinensis,,yes,seed,oil_seeds,,,jojoba,c_11913
 jute,Corchorus olitorius,,yes,fiber,fibre_crops,,,jute,c_4065
 kaki,,,yes,fruit,fruits,,,kaki,c_11934
 kale,,,yes,leaves,vegetables,,,kales,c_4070
