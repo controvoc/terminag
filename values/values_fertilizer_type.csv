@@ -1,9 +1,11 @@
 name,description,formula,N,P,K,S,B,Ca,Cu,Fe,Mg,Mn,Zn,obo
 NH3,Anhydrous ammonia,NH3,82,0,0,0,0,0,0,0,0,0,0,
+NH4Cl,Ammonium chloride,NH4Cl,26.2,0,0,0,0,0,0,0,0,0,0,
 AN,Ammonium nitrate,NH4NO3,34,0,0,0,0,0,0,0,0,0,0,CHEBI_63038
 ATS,Ammonium thiosulfate,[NH4]2S2O3,12,0,0,26,0,0,0,0,0,0,0,
 basic slag,Basic slag,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
 CAN,Calcium ammonium nitrate,CA-NH4NO3,26,0,0,0,0,0,0,0,0,0,0,
+CaCl2,Calcium chloride,CaCl2,0,0,0,0,0,36.1,0,0,0,0,0,
 CN,Calcium nitrate,Ca(NO3)2,15.5,0,0,0,0,19,0,0,0,0,0,
 C-compound,C-compound,,7,9.156,5.785,6,0,0,0,0,0,0,0,
 CMP,Calcium Magnesium Phosphate,CaMgO4P+,0,7,0,0,0,23,0,0,12,0,0,
@@ -43,6 +45,7 @@ unknown,,,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,NA,
 urea,Urea,,46,0,0,0,0,0,0,0,0,0,0,CHEBI_16199
 SR_urea,Slow-release urea,,46,0,0,0,0,0,0,0,0,0,0,CHEBI_16199
 ZnSO4,Zinc sulfate,ZnSO4,0,0,0,19.9,0,0,0,0,0,0,40.5,CHEBI_35176
+ZnCl2,Zinc chloride,,0,0,0,0,0,0,0,0,0,0,47.8,
 S-compound,S-compound,,8,21,7,4,0,0,0,0,0,0,0,
 MgSO4,Magnesium sulfate,MgSO4,0,0,0,13.19,0,0,0,0,20.19,0,0,
 H3BO3,Boric acid,H3BO3,0,0,0,0,17.48,0,0,0,0,0,0,
