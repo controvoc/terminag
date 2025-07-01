@@ -41,6 +41,7 @@ black salsify,Scorzonera hispanica,,yes,root,vegetables,,,black salsify,c_0f6286
 black walnut,Juglans nigra,,yes,fruit,,,,,
 blackberry,Rubus spp,,yes,fruit,fruits,,,blackberries,c_947
 blue agave,Agave tequilana,,yes,,sugar_crops,,,,
+blue lupin,Lupinus angustifolius,,yes,,green_manures,,,,
 blueberry,Vaccinium spp.,,yes,fruit,fruits,,,blueberries,c_974
 borage,Borago officinalis,,yes,seed,oil_seeds,,,borage seed,c_d2910779
 brachiaria,Brachiaria sp.,,yes,fodder,,,,,
@@ -342,3 +343,4 @@ white mustard,Sinapis alba,,yes,seed;none,spices;green_manures,,,,
 winter melon,Benincasa hispida,,yes,fruit,fruits,,,winter melons,c_acf09bff
 winter squash,Cucurbita moschata,,yes,fruit,,,,,
 yam,Dioscorea cayenensis subsp. rotundata,white yam,yes,tuber,root_tuber,,60000,yams,c_8478
+yellow lupin,Lupinus luteus,,yes,seed,pulses;feed,,,,
