@@ -1,7 +1,7 @@
 name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
 depth,numeric,cm,no,,no,0,300,yes,depth of soil sample,,
 depth_top,numeric,cm,no,,no,0,200,yes,depth of soil sample (top; e.g. 0),,
-detpth_bottom,numeric,cm,no,,no,0,200,yes,depth of soil sample (bottom; e.g 20),,
+depth_bottom,numeric,cm,no,,no,0,200,yes,depth of soil sample (bottom; e.g 20),,
 soil_depth,numeric,cm,no,,no,0,200,yes,soil depth (not the sampling depth),,
 soil_type,character,,no,,yes,,,yes,soil name or description,,AGRO_00010099
 soil_pH,numeric,,no,,no,3,10,yes,soil pH (H2O),,ENVO_09200010
