@@ -6,3 +6,5 @@ time,time,,no,,no,,,yes,"Observation time in ""hh:mm:ss"", ""hh:mm"", or ""hh"" 
 reference,character,,no,,no,,,yes,The data source (in data compilations for meta analysis),,
 DAP,integer,,no,,no,,,yes,Days after planting,,
 DAE,integer,,no,,no,,,yes,Days after emergece,,
+variable,character,,no,,no,,,yes,Variable name (for long format data),,
+value,character,,no,,no,,,yes,Value (for long format data),,
