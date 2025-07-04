@@ -10,7 +10,7 @@ CIMMYT,International Maize and Wheat Improvement Center,cimmyt.org,data.cimmyt.o
 CIP,International Potato Center,cipotato.org,data.cipotato.org,05asvgp75
 CIRAD,Centre de Coopération Internationale en Recherche Agronomique pour le Développement,cirad.fr,dataverse.cirad.fr,05kpkpg04
 CRS,Catholic Relief Services,crs.org,,05xm0ec82
-CSU,Colorado State University,,,03k1gpj17
+COLSU,Colorado State University,colostate.edu,,03k1gpj17
 EIAR,Ethiopian Institute of Agricultural Research,eiar.gov.et,,01mhm6x57
 ETH,ETH Zürich,ethz.ch,,05a28rw58
 GT,Grassroots Trust,grassrootstrust.co.nz,,
@@ -56,6 +56,6 @@ UPS,Université Paris-Saclay,universite-paris-saclay.fr,,
 WUR,Wageningen University & Research,wur.nl,research.wur.nl/en/datasets/,04qw24q55
 ZARI,Zambian Agriculture Research Institute,zari.gov.zm,,
 Harvard Dataverse,Harvard Dataverse,dataverse.harvard.edu,,
-Dryad,Dryad,datadryad.org,,00x6h5n95
-Zenodo,Zenodo,zenodo.org,,
-Figshare,Figshare,figshare.com,,041mxqs23
+Dryad,Dryad,datadryad.org,datadryad.org,00x6h5n95
+Zenodo,Zenodo,zenodo.org,zenodo.org,
+Figshare,Figshare,figshare.com,figshare.com,041mxqs23
