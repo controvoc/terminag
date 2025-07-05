@@ -5,12 +5,13 @@ ANU,Australian National University,anu.edu.au,,019wvm592
 ARC,Agricultural Research Council of South Africa,arc.agric.za,,04r1s2546
 ARARI,Amhara Regional Agricultural Research Institute,arari.gov.et,,01vwxpj86
 CAAS,Chinese Academy of Agricultural Sciences,caas.cn,,0313jb750
-CIAT,Centro Internacional de Agricultura Tropical,alliancebioversityciat.org,dataverse.harvard.edu/dataverse/CIAT,037wny167
+CIAT,International Center for Tropical Agriculture,alliancebioversityciat.org,dataverse.harvard.edu/dataverse/CIAT,037wny167
 CIMMYT,International Maize and Wheat Improvement Center,cimmyt.org,data.cimmyt.org,04d4vcg59
 CIP,International Potato Center,cipotato.org,data.cipotato.org,05asvgp75
 CIRAD,Centre de Coopération Internationale en Recherche Agronomique pour le Développement,cirad.fr,dataverse.cirad.fr,05kpkpg04
 CRS,Catholic Relief Services,crs.org,,05xm0ec82
 COLSU,Colorado State University,colostate.edu,,03k1gpj17
+CU,Cornell University,cornell.edu,,
 EIAR,Ethiopian Institute of Agricultural Research,eiar.gov.et,,01mhm6x57
 ETH,ETH Zürich,ethz.ch,,05a28rw58
 GT,Grassroots Trust,grassrootstrust.co.nz,,
@@ -18,6 +19,7 @@ GMOFA,"Ministry of Food and Agriculture, Ghana",mofa.gov.gh,,056e86068
 GAU,Georg-August-Universität Göttingen,uni-goettingen.de,data.goettingen-research-online.de,01y9bpm73
 GXU,Guangxi University,www.gxu.edu.cn,,02c9qn167
 IAU,Islamic Azad University,iau.ir,,049g0t365
+ICAR,Indian Council of Agricultural Research,,,04fw54a43
 ICARDA,International Center for Agricultural Research in the Dry Areas,icarda.org,data.mel.cgiar.org,02n2syw04
 ICRAF,World Agroforestry Center,cifor-icraf.org,data.worldagroforestry.org,01kmz4383
 ICRISAT,International Crops Research Institute for the Semi-Arid Tropics,icrisat.org,data.worldagroforestry.org,0541a3n79
@@ -26,6 +28,7 @@ ISRIC,International Soil Reference and Information Centre,isric.org,,01z8yfp14
 IFPRI,International Food Policy Research Institute,ifpri.org,dataverse.harvard.edu/dataverse/IFPRI,03pxz9p87
 IITA,International Institute of Tropical Agriculture,iita.org,data.iita.org,0556kt608
 ILRI,International Livestock Research Institute,ilri.org,data.ilri.org,01jxjwb74
+IPNI,International Plant Nutrition Institute,ipni.net,,
 IRRI,International Rice Research Institute,irri.org,dataverse.harvard.edu/dataverse/IRRI,0593p4448
 JMU,Julius-Maximilians-Universität Würzburg,uni-wuerzburg.de,,00fbnyb24
 LLNL,Lawrence Livermore National Laboratory,llnl.gov,,041nk4h53
@@ -54,6 +57,8 @@ UWM,"University of Wisconsin, Madison",wisc.edu,,01y2jtd41
 UZIM,University of Zimbabwe,www.uz.ac.zw,,04ze6rb18
 UPS,Université Paris-Saclay,universite-paris-saclay.fr,,
 WUR,Wageningen University & Research,wur.nl,research.wur.nl/en/datasets/,04qw24q55
+AVRDC,World Vegetable Center,avrdc.org,,05dvmy761
+ZALF,Leibniz Centre for Agricultural Landscape Research,,,01ygyzs83
 ZARI,Zambian Agriculture Research Institute,zari.gov.zm,,
 Harvard Dataverse,Harvard Dataverse,dataverse.harvard.edu,,
 Dryad,Dryad,datadryad.org,datadryad.org,00x6h5n95
