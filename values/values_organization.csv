@@ -9,7 +9,7 @@ ARC,Agricultural Research Council of South Africa,arc.agric.za,,04r1s2546
 AAU,Aarhus Universitet,au.dk,,01aj84f44
 AVRDC,World Vegetable Center,avrdc.org,,05dvmy761
 BARI,Bangladesh Agricultural Research Institute,bari.gov.bd,,01n09m616
-BRRI,Bangladesh Rice Research Institute,,brri.gov.bd,01zmzpt10
+BRRI,Bangladesh Rice Research Institute,brri.gov.bd,,01zmzpt10
 BU,Boston University,bu.edu,,05qwgg493
 CAAS,Chinese Academy of Agricultural Sciences,caas.cn,,0313jb750
 CARS,Chitedze Agricultural Research Station,,,
@@ -22,7 +22,7 @@ CLU,Clemson University,clemson.edu,,037s24f05
 COLSU,Colorado State University,colostate.edu,,03k1gpj17
 CREA,Consiglio per la ricerca in agricoltura e l'analisi dell'economia agraria,crea.gov.it,,0327f2m07
 CRS,Catholic Relief Services,crs.org,,05xm0ec82
-CU,Cornell University,cornell.edu,,
+CU,Cornell University,cornell.edu,,05bnh6r87
 EIAR,Ethiopian Institute of Agricultural Research,eiar.gov.et,,01mhm6x57
 ETH,ETH Zürich,ethz.ch,,05a28rw58
 FOFIFA,Centre National de la Recherche Appliquée au Developpement Rural,fofifa.mg,,0579ray12
@@ -35,7 +35,7 @@ HAU,Chaudhary Charan Singh Haryana Agricultural University,hau.ernet.in,,0261g6j
 HWU,Hawassa University,hu.edu.et,,04r15fz20
 IASU,Iowa State University,iastate.edu,,04rswrd78
 IAU,Islamic Azad University,iau.ir,,049g0t365
-ICAR,Indian Council of Agricultural Research,,,04fw54a43
+ICAR,Indian Council of Agricultural Research,icar.org.in,,04fw54a43
 ICARDA,International Center for Agricultural Research in the Dry Areas,icarda.org,data.mel.cgiar.org,02n2syw04
 ICRAF,World Agroforestry Center,cifor-icraf.org,data.worldagroforestry.org,01kmz4383
 ICRISAT,International Crops Research Institute for the Semi-Arid Tropics,icrisat.org,data.worldagroforestry.org,0541a3n79
@@ -47,7 +47,7 @@ IITA,International Institute of Tropical Agriculture,iita.org,data.iita.org,0556
 ILO,International Labour Organization,ilo.org,,03tebpn36
 ILRI,International Livestock Research Institute,ilri.org,data.ilri.org,01jxjwb74
 INRAN,Institut National de la Recherche Agronomique du Niger,inran.refer.ne,,00rnmt205
-IPNI,International Plant Nutrition Institute,,,
+IPNI,International Plant Nutrition Institute,ipni.net,,05dn5a810
 IRD,Institut de Recherche pour le Développement,ird.fr,dataverse.ird.fr,051ykjw41
 IRRI,International Rice Research Institute,irri.org,dataverse.harvard.edu/dataverse/IRRI,0593p4448
 ISRIC,International Soil Reference and Information Centre,isric.org,,01z8yfp14
@@ -77,7 +77,7 @@ SARI,Selian Agricultural Research Institute,tari.go.tz/centres/tari-selian,,
 SIU,"Southern Illinois University, Carbondale",siu.edu,,049kefs16
 SUA,Sokoine University of Agriculture,sua.ac.tz,,00jdryp44
 SUN,Stellenbosch University,www.sun.ac.za,,05bk57929
-TARI,Tanzania Agricultural Research Institute,tari.go.tz,,
+TARI,Tanzania Agricultural Research Institute,tari.go.tz,,00h98p168
 TLC,Total Land Care,totallandcare.net,,
 UAF,"University of Arkansas, Fayetteville",uark.edu,,05jbt9m15
 UAKS,University of Arkansas System,uasys.edu,,05vvhh982
@@ -98,7 +98,7 @@ UMINN,University of Minnesota,umn.edu,,017zqws13
 UNAL,Universidad Nacional de Colombia,unal.edu.co,,059yx9a68
 UNL,"University of Nebraska, Lincoln",unl.edu,,043mer456
 UOR,University of Oregon,uoregon.edu,,0293rh119
-UPS,Université Paris-Saclay,universite-paris-saclay.fr,,
+UPS,Université Paris-Saclay,universite-paris-saclay.fr,,03s92mv58
 UQL,University of Queensland,uq.edu.au,,00rqy9422
 USH,University of Sheffield,sheffield.ac.uk,,05krs5044
 USDA-ARS,"United States Department of Agriculture, Agricultural Research Service",uq.edu.au,,02d2m2044
@@ -107,8 +107,8 @@ UWM,"University of Wisconsin, Madison",wisc.edu,,01y2jtd41
 UZIM,University of Zimbabwe,www.uz.ac.zw,,04ze6rb18
 WHRC,Woodwell Climate Research Center,woodwellclimate.org,,04cvvej54
 WUR,Wageningen University & Research,wur.nl,research.wur.nl/en/datasets/,04qw24q55
-ZALF,Leibniz Centre for Agricultural Landscape Research,,,01ygyzs83
-ZARI,Zambian Agriculture Research Institute,zari.gov.zm,,
+ZALF,Leibniz Centre for Agricultural Landscape Research,zalf.de,,01ygyzs83
+ZARI,Zambian Agriculture Research Institute,zari.gov.zm,,00vz50m28
 Harvard Dataverse,Harvard Dataverse,dataverse.harvard.edu,,
 Dryad,Dryad,datadryad.org,datadryad.org,00x6h5n95
 Zenodo,Zenodo,zenodo.org,zenodo.org,
