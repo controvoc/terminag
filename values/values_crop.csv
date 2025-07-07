@@ -298,15 +298,16 @@ squash,Cucurbita pepo,summer squash,yes,,vegetables,,,squashes,c_37735
 star anise,Illicium verum,,yes,fruit,spices,,,,
 stevia,Stevia rebaudiana,,yes,,,,,,
 strawberry,Fragaria sp.,,yes,fruit,fruits,,,strawberries,c_7443
-subterranean clover,Trifolium subterraneum,,yes,,,,,,
+subterranean clover,Trifolium subterraneum,,yes,above_ground,fodder,,,,
+sudan grass,Sorghum × drummondii ,,yes,above_ground,fodder,,,,
 sugar beet,Beta vulgaris,,yes,root,sugar_crops,,,sugar beet,c_7499
 sugarcane,Saccharum officinarum,,yes,stems,sugar_crops,,300000,sugar cane,c_7501
 sumac,,,yes,,spices,,,sumac,c_aa51cda6
 sunflower,Helianthus annuus,,yes,seed,oil_crops,,80000,sunflowers,c_aad037e4
 sunn hemp,Crotalaria juncea,,yes,leaves,fibre_crops,,,sunn hemp,c_7520
 sweetpotato,Ipomoea batatas,,yes,root,root_tuber,,100000,sweet potatoes,c_14729
-switch grass,Panicum virgatum,,yes,fodder,,,,,
-tall fescue,Lolium arundinaceum ,,yes,fodder,,,,,
+switch grass,Panicum virgatum,,yes,above_ground,fodder,,,,
+tall fescue,Lolium arundinaceum ,,yes,above_ground,fodder,,,,
 tangelo,,,yes,fruit,fruits,,,tangelos,c_7600
 tangerine,,,yes,fruit,fruits,,,tangerines,c_7601
 tangor,,,yes,fruit,fruits,,,tangors,c_7602

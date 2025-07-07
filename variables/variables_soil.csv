@@ -14,6 +14,9 @@ soil_clay,numeric,%,no,,no,0,100,yes,soil clay content (excluding gravel),,ENVO_
 soil_silt,numeric,%,no,,no,0,100,yes,soil silt content (excluding gravel),,
 soil_texture,character,,no,soil_texture,yes,,,yes,soil texture,,
 soil_N,numeric,mg/kg,no,,no,0.01,10000,yes,soil N content,,ENVO_09000017
+soil_CO2,numeric,,,,,,,,CO2 emitted from soil,,
+soil_N2O,numeric,,,,,,,,N2O emitted from soil,,
+soil_NO,numeric,,,,,,,,NO emitted from soil,,
 soil_NO3,numeric,mg/kg,no,,no,0.01,10000,yes,soil NO3 content,,ENVO_09000017
 soil_NH4,numeric,mg/kg,no,,no,0.01,10000,yes,soil NH4 content,,ENVO_09000017
 soil_K,numeric,mg/kg,no,,no,1,10000,yes,soil K content,,
