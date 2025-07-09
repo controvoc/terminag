@@ -1,5 +1,6 @@
 name,longname,URL,dataURL,ROR
 AAU,Aarhus Universitet,au.dk,,01aj84f44
+ABIO,abacusbio,abacusbio.com,,
 ABC,Alliance of Bioversity and International Center for Tropical Agriculture,alliancebioversityciat.org,,04xsxqp89
 ABU,Ahmadu Bello University,abu.edu.ng,,019apvn83
 AfricaRice,Africa Rice Center,africarice.org,dataverse.harvard.edu/dataverse/AfricaRice,040y9br29
@@ -11,8 +12,9 @@ ARC,Agricultural Research Council of South Africa,arc.agric.za,,04r1s2546
 ARSU,Arkansas State University,astate.edu,,006pyvd89
 AVRDC,World Vegetable Center,avrdc.org,,05dvmy761
 BARI,Bangladesh Agricultural Research Institute,bari.gov.bd,,01n09m616
+BAU,Bangor University,bangor.ac.uk,,006jb1a24
 BRRI,Bangladesh Rice Research Institute,brri.gov.bd,,01zmzpt10
-BU,Boston University,bu.edu,,05qwgg493
+BOU,Boston University,bu.edu,,05qwgg493
 CAAS,Chinese Academy of Agricultural Sciences,caas.cn,,0313jb750
 CARS,Chitedze Agricultural Research Station,,,
 CAU,Christian-Albrechts-Universität zu Kiel,uni-kiel.de,,04v76ef78
@@ -32,6 +34,8 @@ EIAR,Ethiopian Institute of Agricultural Research,eiar.gov.et,,01mhm6x57
 ETH,ETH Zürich,ethz.ch,,05a28rw58
 FENALCE,"Federación Nacional de Cultivadores de Cereales, Leguminosas y Soya",fenalce.co,,
 FOFIFA,Centre National de la Recherche Appliquée au Developpement Rural,fofifa.mg,,0579ray12
+FRB,Fondation pour la recherche sur la biodiversité,fondationbiodiversite.fr,,05x5km989
+FVAL,Fundación Valles,fundacionvalles.org,,
 GAU,Georg-August-Universität Göttingen,uni-goettingen.de,data.goettingen-research-online.de,01y9bpm73
 GISS,Goddard Institute for Space Studies,giss.nasa.gov,,01cyfxe35
 GIZ,Deutsche Gesellschaft für Internationale Zusammenarbeit,giz.de,,00q08t645
@@ -85,25 +89,34 @@ PATAZ,Asociación Pataz,asociacionpataz.org.pe,,
 PSU,Pennsylvania State University,psu.edu,,04p491231
 RAB,Rwanda Agriculture and Animal Resources Development Board,rab.gov.rw,,03nkkb025
 RDRS,Rangpur Dinajpur Rural Service,rdrsbangladesh.org,,
+ROTH,Rothamsted Research,.rothamsted.ac.uk,,0347fy350
+RUA,Royal University of Agriculture,rua.edu.kh,,033dmae14
 SARC,Agricultural Research Council of South Africa,arc.agric.za,,04r1s2546
 SARI,Selian Agricultural Research Institute,tari.go.tz/centres/tari-selian,,
 SIU,"Southern Illinois University, Carbondale",siu.edu,,049kefs16
 SLU,Sveriges lantbruksuniversitet,slu.se,,02yy8x990
+SNV,SNV Netherlands Development Organisation,snv.org,,01a4v4q66
 SSSA,Scuola Superiore Sant'Anna,santannapisa.it,,025602r80
+STATS4SD,Statistics for Sustainable Development,stats4sd.org,,
 SUA,Sokoine University of Agriculture,sua.ac.tz,,00jdryp44
 SUN,Stellenbosch University,www.sun.ac.za,,05bk57929
 TARI,Tanzania Agricultural Research Institute,tari.go.tz,,00h98p168
 TLC,Total Land Care,totallandcare.net,,
+TAID,Tree AID,treeaid.org,,
+TUAF,Thai Nguyen University of Agriculture and Forestry,tuaf.edu.vn,,028zxrr95
 UAB,Universitat Autònoma de Barcelona,uab.cat,,052g8jq94
 UAKS,University of Arkansas System,uasys.edu,,05vvhh982
 UAR,University of Arkansas,uark.edu,,05jbt9m15
 UBKV,Uttar Banga Krishi Viswavidyalaya,ubkv.ac.in,,02c8fr539
+UBR,University of Bristol,bristol.ac.uk,,0524sp257
 UCB,"University of California, Berkeley",berkeley.edu,,01an7q238
+UCBU,Université Catholique de Bukavu,ucbukavu.ac.cd,,03cg80535
 UCD,"University of California, Davis",ucdavis.edu,,05rrcem69
 UCR,"University of California, Riverside",ucr.edu,,03nawhv43
 UCRC,Universidad de Costa Rica,ucr.ac.cr,,02yzgww51
 UED,University of Edinburgh,www.ed.ac.uk,,01nrxwf90
 UFL,University of Florida,ufl.edu,,02y3ad647
+UFS,University of the Free State,ufs.ac.za,,009xwd568
 UGRE,University of Greenwich,gre.ac.uk,,00bmj0a71
 UGTO,Universidad de Guanajuato,ugto.mx,,058cjye32
 UIA,University of Iowa,uiowa.edu,,036jqmy94
@@ -120,6 +133,7 @@ UPS,Université Paris-Saclay,universite-paris-saclay.fr,,03s92mv58
 UQL,University of Queensland,uq.edu.au,,00rqy9422
 USDA-ARS,"United States Department of Agriculture, Agricultural Research Service",uq.edu.au,,02d2m2044
 USH,University of Sheffield,sheffield.ac.uk,,05krs5044
+USM,University of Southern Mindanao,usm.edu.ph,,04mtcj695
 UW,University of Washington,washington.edu,,00cvxb145
 UWM,"University of Wisconsin, Madison",wisc.edu,,01y2jtd41
 UZIM,University of Zimbabwe,www.uz.ac.zw,,04ze6rb18
