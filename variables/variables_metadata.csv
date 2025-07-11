@@ -13,7 +13,7 @@ treatment_vars,character,,yes,,yes,,,no,"treatment variables (if data_type = tri
 response_vars,character,,yes,,yes,,,no,"outcome variables (if data_type = trial/experiments; else ""none"")",,
 publication,character,,yes,,no,,,yes,the doi of the associated publication (if any),,
 data_organization,character,,yes,organization,yes,,,yes,organizational home(s) of the data providers,,
-data_publisher,character,,no,,no,,,yes,organization  the data,,
+publisher,character,,no,,no,,,yes,organization that publishes  the data,,
 date_published,date,,no,,no,,,yes,"date the data were published (""yyyy-mm-dd"")",,
 version,character,,no,,no,,,yes,the dataset version number,,
 project,character,,yes,,no,,,yes,project that this dataset belongs to (if any),,
