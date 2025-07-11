@@ -44,6 +44,7 @@ blue agave,Agave tequilana,,yes,,sugar_crops,,,,
 blue lupin,Lupinus angustifolius,,yes,,green_manures,,,,
 blueberry,Vaccinium spp.,,yes,fruit,fruits,,,blueberries,c_974
 borage,Borago officinalis,,yes,seed,oil_seeds,,,borage seed,c_d2910779
+bottle gourd,Lagenaria siceraria,calabash,yes,fruit,,,,,
 brachiaria,Brachiaria sp.,,yes,fodder,,,,,
 brazil nut,Bertholletia excelsa,,yes,seed,nuts,,,brazil nuts,c_9410
 broccoli,Brassica oleracea var. italica,,yes,,vegetables,,,broccoli,c_7339
@@ -271,7 +272,7 @@ robusta coffee,Coffea canephora,,yes,seed,stimulants,,,robusta coffee,c_6626
 rocket,,,yes,,vegetables,,,rocket,c_5c9e76bc
 root crop,spp,,no,root,root_tuber,,,,
 rose hips,,,yes,fruit,fruits,,,rose hips,c_50142
-roselle,,,yes,,vegetables,,,roselle,c_a8b0f9a7
+roselle,Hibiscus sabdariffa,,yes,,vegetables,,,roselle,c_a8b0f9a7
 rosemary,,,yes,leaves,culinary_herbs,,,rosemary,c_13963
 rubber,,,yes,,industrial_crops,,,rubber crops,c_6679
 runner bean,Phaseolus coccineus,,yes,fruits,pulses,,,,
@@ -291,6 +292,7 @@ shallot,Allium cepa,,yes,,vegetables,,,shallots,c_14233
 shea nut,,,yes,seed,nuts,,,shea nuts,c_25505
 sisal,,,yes,leaves,fibre_crops,,,sisal,c_7086
 sorghum,Sorghum bicolor,,yes,grain,cereals,,18000,sorghum grain,c_7249
+sorrel,Rumex acetosa,,yes,leaves,vegetables,,,,
 sour cherry,,,yes,fruit,fruits,,,sour cherries,c_9767
 soybean,Glycine max,,yes,seed,oil_seeds,,17000,soybeans,c_14477
 spinach,Spinacia oleracea,,yes,,vegetables,,,spinach,c_14508
