@@ -223,6 +223,7 @@ fertilizer_price,character,currency/kg,no,,no,,,yes,price paid for fertilizer(s)
 currency,character,,no,currency,no,,,yes,currency used for prices,,
 flood_stress,character,,no,,no,,,yes,how severe was the damage from flooding?,,
 drought_stress,character,,no,,no,,,yes,how severe was the damage from drought?,,
+stress,character,,no,stress_type,yes,,,yes,type(s) of stress experienced by the crop,,
 LAI,numeric,,no,,no,0,12,yes,"leaf area index (presumbably the max; this needs to be improved, it should be linked to a date and/or growht stage)",,
 harvest_index,numeric,%,no,,no,0,100,yes,"harvest index (100 * yield / (total biomass)), normally as dry weight",,
 farmer_gender,character,,no,,no,,,yes,gender of farmer (on-farm trials or survey),,
