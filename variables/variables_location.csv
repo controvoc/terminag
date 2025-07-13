@@ -10,7 +10,7 @@ location,character,,no,,no,,,yes,"Name of the location where the location was ma
 site,character,,no,,no,,,yes,Name of the sub-location where the observation was made,,
 locality,character,,no,,no,,,yes,locality description,,
 longitude,numeric,degrees,yes,,no,-180,180,no,Longitude of the location where the observation was made (in decimal notation),,
-latitude,numeric,degrees,yes,,no,-60,60,no,Latitude of the location where the observation was made (in decimal notation),,
+latitude,numeric,degrees,yes,,no,-65,65,no,Latitude of the location where the observation was made (in decimal notation),,
 geo_uncertainty,numeric,,no,,no,0,1000000,yes,"Uncertainty of location, expressed as max distance from location (m)",,
 geo_uncertainty_area,WKT,,no,,no,,,yes,"Uncertainty of location described as a WKT (multi-) polygon, using longitude/latitude",,
 geo_from_source,logical,,yes,,no,,,yes,Are these coordinates from the data source?,,
