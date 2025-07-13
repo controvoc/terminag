@@ -115,7 +115,8 @@ durum wheat,Triticum durum,,yes,grain,cereals,,,,
 eggplant,Solanum melongena,,yes,fruit,vegetables,,,eggplants,c_8998
 endive,Cichorium endivia,,yes,leaves,vegetables,,,endives,c_10596
 enset,Ensete ventricosum,,yes,rhizome,root_tuber,,,,
-Ethiopian basil,Ocimum lamiifolium,,yes,leaves,medicinal,,,,
+erect prickly pear,Opuntia stricta,,,,,,,,
+ethiopian basil,Ocimum lamiifolium,,yes,leaves,medicinal,,,,
 faba bean,Vicia faba,,yes,seed,pulses,,6500,faba beans,c_10722
 fennel,Foeniculum vulgare,,yes,seed;bulb;leaves,spices,,,,
 fenugreek,Trigonella foenum-graecum,,yes,seed,spices,,5500,fenugreek,c_b8cb7919
@@ -204,7 +205,7 @@ mate,Ilex paraguariensis,,yes,leaves,stimulants,,,mate,c_4647
 melon,Cucumis melo,,no,fruit,fruits,,,,
 millet,spp,,no,grain,cereals,,,millets,c_4838
 mint,Mentha spp.,,yes,leaves,culinary_herbs,,,mint,c_12606
-Moringa,Moringa stenopetala,,,,,,,,
+moringa,Moringa stenopetala,,,,,,,,
 mulberry,Morus sp.,,yes,fruit,fruits,,,mulberries,c_25487
 mung bean,Vigna radiata,,yes,seed,pulses,,,mung beans,c_4988
 mushrooms,spp,,yes,,vegetables,,,mushrooms,c_2487
@@ -215,10 +216,11 @@ napier grass,Cenchrus purpureus,Pennisetum purpureum,yes,above_ground,fodder_cro
 nectarine,Prunus persica,,yes,fruit,fruits,,,nectarines,c_5100
 niger ,Guizotia abyssinica,sunflecks,yes,seed,oil_seeds,,,,
 none,,fallow,yes,,other,,,,
-nopal,Opuntia ficus-indica,,yes,,,,,,
+nopal,Opuntia ficus-indica,prickly pear,yes,,,,,,
 noug,Guziota scarba,,yes,seed,oil_seeds,,5000,noug seed,c_12827
 nutmeg,Myristica fragrans,,yes,seed,spices,,,nutmegs,c_23169
 oats,Avena sativa,,yes,grain,cereals,,13450,oats,c_5287
+oilseed,sp,,no,seed,oil_crops,,,,
 oil palm,Elaeis sp.,,yes,seed,oil_crops,,,oil palms,c_5330
 okra,Abelmoschus esculentus,,yes,fruit,vegetables,,,okras,c_12920
 olive,Olea europeae,,yes,fruit,fruits,,,olives,c_12926
@@ -305,6 +307,7 @@ sorrel,Rumex acetosa,,yes,leaves,vegetables,,,,
 soursop,Annona muricata,,yes,fruit,fruits,,,,
 sour cherry,Prunus cerasus,,yes,fruit,fruits,,,sour cherries,c_9767
 soybean,Glycine max,,yes,seed,oil_seeds,,17000,soybeans,c_14477
+spices,,,no,,spices,,,,
 spinach,Spinacia oleracea,,yes,,vegetables,,,spinach,c_14508
 squash,Cucurbita pepo,summer squash,yes,,vegetables,,,squashes,c_37735
 star anise,Illicium verum,,yes,fruit,spices,,,,
