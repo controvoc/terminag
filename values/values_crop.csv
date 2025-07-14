@@ -345,7 +345,7 @@ turnip,Brassica rapa,,yes,root; leaves,vegetables,,,turnips,c_8019
 unknown,,,no,,other,,,,
 urd bean,Vigna mungo,,yes,seed,pulses,,,urd beans,c_8089
 vanilla,Vanilla planifolia,,yes,fruit,spices,,,vanilla,c_15126
-vegetables,spp,,no,leaves,vegetables,,,,
+vegetable,spp,,no,,vegetables,,,,
 velvet bean,Mucuna pruriens,,yes,,green manure; medicinal,,,velvet bean,c_4971
 vetch,Vicia spp,,yes,above_ground,green_manures; fodder_crops,,,vetches,c_8214
 walnut,Juglans regia,,yes,seed,nuts,,,walnuts,c_15254
