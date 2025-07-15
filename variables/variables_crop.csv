@@ -10,6 +10,7 @@ harvest_date,date,,no,,no,,,yes,"Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or
 growth_stage,character,,no,,no,,,yes,Growth stage description (code),,
 LTE_name,character,,no,,no,,,yes,Name of long-term experiment,,
 season,character,,no,season,no,,,yes,Season name,,
+flooded,logical,,yes,,no,,,yes,Was the field flooded (most of the time?) --- is this lowland rice?,,AGRO_00000601
 on_farm,logical,,yes,,no,,,yes,Is this observation on farm (not on an expermiment station),,AGRO_00000601
 is_survey,logical,,yes,,no,,,yes,Is this observation from a survey (not an experiment),,
 treatment,character,,no,,no,,,yes,"Description of the treatment, if any. Can be a code used in the original data. There are no rules about its content or format",,AGRO_00000370
