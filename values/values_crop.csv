@@ -194,6 +194,7 @@ loquat,Eriobotrya japonica,,yes,fruit,fruits,,,loquats,c_12246
 lotus,Nelumbo sp.,,yes,root,root_tuber,,,lotus root,c_d1c9cfce
 lucerne,Medicago sativa,alfalfa,yes,above_ground,fodder_crops,,,lucerne,c_4693
 lucuma,Lucuma bifera,,yes,fruit,fruits,,,lucumas,c_4456
+lupin,Lupinus sp.,,no,,,,,,
 macadamia nut,Macadamia sp.,,yes,seed,nuts,,,macadamia nuts,c_12296
 mace,Myristica fragrans,,yes,,spices,,,mace,c_25484
 maize,Zea mays,,yes,grain,cereals,12,41500,maize,c_12332
@@ -213,6 +214,7 @@ muskmelon,Cucumis melo,,yes,fruit,fruits,,,muskmelons,c_12487
 mustard,Brassica sp.,,no,seed,spices,,,mustard seed,c_fd07a050
 napa shak,Malva verticillata,,yes,leaves,vegetables,,,,
 napier grass,Cenchrus purpureus,Pennisetum purpureum,yes,above_ground,fodder_crops,,,,
+narrow leafed lupin,Lupinus angustifolius,,yes,,,,,,
 nectarine,Prunus persica,,yes,fruit,fruits,,,nectarines,c_5100
 niger ,Guizotia abyssinica,sunflecks,yes,seed,oil_seeds,,,,
 none,,fallow,yes,,other,,,,
