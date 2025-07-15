@@ -44,6 +44,7 @@ fw_yield,numeric,kg/ha,no,,no,0,150000,no,"Fresh-weight biomass of the main harv
 dm_yield,numeric,kg/ha,no,,no,0,100000,no,"Dry-matter biomass of the main harvestable parts at maturity, per ha",,
 yield_moisture,numeric,%,no,,no,5,90,yes,Reported moisture content of fresh yield,,
 yield_marketable,numeric,kg/ha,no,,no,0,150000,no,"Fresh weight marketable (e.g. large enough tubers) biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
+grainfill,numeric,%,no,,no,0,100,yes,% of grains that are filled,,
 seed_weight,numeric,g,no,,no,0,1000,yes,1000 seed (grain) weight,,TO_0000382
 fertilizer_used,logical,,no,,no,,,yes,was any inorganic fertilizer used?,,
 foliar_fertilizer_used,logical,,no,,no,,,yes,was any foliar fertilizer used?,,
