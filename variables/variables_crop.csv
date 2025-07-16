@@ -143,7 +143,7 @@ leaf_Al,numeric,mg/g,no,,no,5,50,yes,aluminium content in leaf,,
 leaf_Na,numeric,mg/g,no,,no,5,50,yes,sodium content in leaf,,
 grain_N,numeric,mg/g,no,,no,100,600,yes,nitrogen content in grain,,TO_0003068
 grain_K,numeric,mg/g,no,,no,10,300,yes,potassium content in grain,,TO_0003056
-grain_P,numeric,mg/g,no,,no,10,300,yes,phosphorous content in grain,,TO_0003082
+grain_P,numeric,mg/g,no,,no,1,10,yes,phosphorous content in grain,,TO_0003082
 grain_S,numeric,mg/g,no,,no,1,100,yes,sulphur content in grain,,
 grain_Mg,numeric,mg/g,no,,no,1,100,yes,magnesium content in grain,,
 grain_Ca,numeric,mg/g,no,,no,1,100,yes,calcium content in grain,,
@@ -159,7 +159,7 @@ grain_Mo,numeric,mg/g,no,,no,1,100,yes,,,
 grain_protein,numeric,%,no,,no,1,60,yes,% protein in grain,,
 residue_protein,numeric,%,no,,no,1,30,yes,,,
 residue_N,numeric,mg/g,no,,no,1,500,yes,nitrogen content in residue,,
-residue_P,numeric,mg/g,no,,no,1,200,yes,phosphorus content in residue,,
+residue_P,numeric,mg/g,no,,no,0.05,10,yes,phosphorus content in residue,,
 residue_K,numeric,mg/g,no,,no,1,100,yes,,,
 residue_Mg,numeric,mg/g,no,,no,1,100,yes,,,
 residue_Ca,numeric,mg/g,no,,no,1,100,yes,,,
