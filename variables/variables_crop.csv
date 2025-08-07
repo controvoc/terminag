@@ -238,6 +238,7 @@ house_distance,numeric,,no,,no,,,yes,Distance of field to the house of the perso
 severity_scale,character,,no,,no,,,yes,"Scale of (disease) severity measure, from low to high. E.g. 1-9",,
 NDVI,numeric,,no,,no,0,1,yes,Normalized difference vegetation index,,
 flesh_color,character,,no,,no,,,yes,"""flesh"" color of (sweet)potato and other root/tubers",,
+grain_color,character,,no,,no,,,yes,grain color,,
 CA_years,numeric,,no,,no,0,30,yes,number of years that Conservation Agriculture has been practised,,
 sterility_index,numeric,,no,,no,0,100,yes,% sterility of inflorescence,,
 striga_trial,logical,,no,,no,,,yes,Is this a striga trial?,,
