@@ -221,7 +221,7 @@ none,,fallow,yes,,other,,,,
 nopal,Opuntia ficus-indica,prickly pear,yes,,,,,,
 noug,Guziota scarba,,yes,seed,oil_seeds,,5000,noug seed,c_12827
 nutmeg,Myristica fragrans,,yes,seed,spices,,,nutmegs,c_23169
-oats,Avena sativa,,yes,grain,cereals,,13450,oats,c_5287
+oat,Avena sativa,,yes,grain,cereals,,13450,oats,c_5287
 oilseed,sp,,no,seed,oil_crops,,,,
 oil palm,Elaeis sp.,,yes,seed,oil_crops,,,oil palms,c_5330
 okra,Abelmoschus esculentus,,yes,fruit,vegetables,,,okras,c_12920
