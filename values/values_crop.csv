@@ -1,5 +1,5 @@
 name,sciname,altname,is_preferred,harvest,group,fresh_moisture,max_yield,FAO_name,agrovoc
-abacá,Musa textilis,Manila hemp,yes,leaves,fibre_crops,,,abaca,c_4
+abacÃ¡,Musa textilis,Manila hemp,yes,leaves,fibre_crops,,,abaca,c_4
 abyssinian cabbage,Brassica carinata,,yes,leaves,vegetables,,,brassica carinata,c_33311
 adzuki bean,Vigna angularis,,yes,seed,pulses,,,adzuki beans,c_8632
 african yam bean,Sphenostylis stenocarpa,,yes,seed,pulses,,,,
@@ -47,13 +47,13 @@ borage,Borago officinalis,,yes,seed,oil_seeds,,,borage seed,c_d2910779
 bottle gourd,Lagenaria siceraria,calabash,yes,fruit,,,,,
 brachiaria,Brachiaria sp.,,yes,fodder,,,,,
 brazil nut,Bertholletia excelsa,,yes,seed,nuts,,,brazil nuts,c_9410
-broccoli,Brassica oleracea var. italica,,yes,,vegetables,,,broccoli,c_7339
+broccoli,Brassica oleraceaÂ var.Â italica,,yes,,vegetables,,,broccoli,c_7339
 brown mustard,Brassica juncea,,yes,seed;leaves,spices;vegetables,,,,
 brussels sprouts,Brassica oleracea,,yes,,vegetables,,,brussels sprouts,c_1127
 buckwheat,Fagopyrum esculentum,,yes,seed,pseudocereals,,,buckwheat,c_9471
 butter bean,Phaseolus lunatus,,yes,seed,pulses,,,,
 cabbage,Brassica oleracea,,yes,,vegetables,,,cabbages,c_1173
-calamansi,Citrus × microcarpa,calamondin,yes,fruit,fruits,,,calamondins,c_15497
+calamansi,CitrusÂ Ã—Â microcarpa,calamondin,yes,fruit,fruits,,,calamondins,c_15497
 camelina,Camelina sativa,,yes,,,,,,
 canary grass,Phalaris canariensis,,yes,,fodder_crops,,,,
 cantaloupe,Cucumis melo,,yes,fruit,fruits,,,cantaloupes,c_12714
@@ -88,9 +88,9 @@ cinnamon,Cinnamomum verum,,yes,stem,spices,,,cinnamon,c_9862
 citrange,Citrus sp.,,yes,fruit,fruits,,,citranges,c_1629
 citron,Citrus medica,,yes,fruit,fruits,,,citrons,c_1632
 citrus,Citrus sp.,,no,fruit,fruits,,,citrus fruits,c_1641
-clementine,Citrus × clementina,,yes,fruit,fruits,,,clementines,c_9895
+clementine,Citrus Ã— clementina,,yes,fruit,fruits,,,clementines,c_9895
 clover,Trifolium sp.,,yes,above_ground,fodder_crops,,,clover,c_7910
-cloves,Syzygium aromaticum,,yes,flower,spices,,,cloves,c_23597
+cloves,SyzygiumÂ aromaticum,,yes,flower,spices,,,cloves,c_23597
 cochineal nopal cactus,Nopalea cochenillifera,,yes,,,,,,
 cockscomb,Celosia argentea,,yes,flower,flowers,,,,
 cocoa,Theobroma cacao,,yes,seed,stimulants,,,cocoa beans,c_1711
@@ -138,7 +138,7 @@ goji berry,Lycium sp.,,yes,fruit,fruits,,,goji berries,c_caacd4d4
 gomenzer,Brassica carinata,,yes,leaves,vegetables,,2300,,
 gooseberry,Ribes uva-crispa,,yes,fruit,fruits,,,gooseberries,c_3333
 grape,Vitis vinifera,,yes,fruit; seed,fruits,,,grapes,c_3359
-grapefruit,Citrus × paradisi,,yes,fruit,fruits,,,grapefruits,c_3358
+grapefruit,Citrus Ã— paradisi,,yes,fruit,fruits,,,grapefruits,c_3358
 grass pea,Lathyrus sativus,,yes,seed,pulses,,5000,grass pea,c_4218
 green bean,Phaseolus vulgaris,,yes,pods,vegetables,,,green beans,c_f461a9d7
 green manure,spp,,no,green manure,green_manures,,,,
@@ -175,7 +175,7 @@ kumquat,Citrus sp.,,yes,fruit,fruits,,,kumquats,c_22df2056
 lablab,Lablab purpureus,hyacinth bean,yes,seed,pulses,,5000,lablab,c_12024
 leek,Alllium ampeloprasum,,yes,,vegetables,,,leeks,c_12128
 legume,spp,,no,,other,,,,
-lemon,Citrus × limon,,yes,fruit,fruits,,,lemons,c_4259
+lemon,Citrus Ã— limon,,yes,fruit,fruits,,,lemons,c_4259
 lemon balm,Melissa officinalis,,yes,,culinary_herbs,,,balm,c_25465
 lemon grass,Cymbopogon sp,,yes,leaves,culinary_herbs,,,lemon grass,c_41d978c7
 lentil,Lens culinaris,,yes,seed,pulses,,7000,lentils,c_12140
@@ -184,11 +184,11 @@ liberian coffee,Coffea liberica,,yes,seed,stimulants,,,liberica coffee,c_4308
 licorice,Glycyrrhiza sp.,,yes,,,,,,
 lima bean,Phaseolus lunatus,,yes,seed,,,,,
 lime,Citrus sp.,,yes,fruit,fruits,,,limes,c_4341
-limequat,Citrus × floridana,,yes,fruit,fruits,,,limequats,c_4340
+limequat,Citrus Ã— floridana,,yes,fruit,fruits,,,limequats,c_4340
 lingonberry,Vaccinium vitis-idaea,,yes,fruit,fruits,,,lingonberries,c_ebfdf3a4
 lychee,Litchi chinensis,lichi,yes,fruit,fruits,,,litchis,c_12283
 little millet,Panicum sumatrense,,yes,grain,cereals,,,little millet,c_cc8f6dca
-loganberry,Rubus × loganobaccus,,yes,fruit,fruits,,,loganberries,c_8055f171
+loganberry,Rubus Ã— loganobaccus,,yes,fruit,fruits,,,loganberries,c_8055f171
 longan,Dimocarpus longan,,yes,fruit,fruits,,,longans,c_331528
 loquat,Eriobotrya japonica,,yes,fruit,fruits,,,loquats,c_12246
 lotus,Nelumbo sp.,,yes,root,root_tuber,,,lotus root,c_d1c9cfce
@@ -248,7 +248,7 @@ pecan,Carya illinoinensis,,yes,seed,nuts,,,pecans,c_13178
 pennycress,Thlaspi arvense,,yes,seed,oil_seeds,,,,
 pepino,Solanum muricatum,,yes,fruit,fruits,,,pepino,c_ea979075
 pepper,Piper nigrum,,yes,seed,spices,,1000,pepper,c_25495
-peppermint,Mentha × piperita,,yes,leaves,culinary_herbs,,,peppermint,c_ae411b49
+peppermint,Mentha Ã— piperita,,yes,leaves,culinary_herbs,,,peppermint,c_ae411b49
 perilla,Perilla frutescens,,yes,seed,oil_seeds,,,perilla seed,c_04f3705c
 persimmon,Diospyros kaki,,yes,fruit,,,,,
 phacelia,Phacelia tanacetifolia,,yes,above_ground,green_manures,,,,
@@ -317,21 +317,21 @@ star anise,Illicium verum,,yes,fruit,spices,,,,
 stevia,Stevia rebaudiana,,yes,,,,,,
 strawberry,Fragaria sp.,,yes,fruit,fruits,,,strawberries,c_7443
 subterranean clover,Trifolium subterraneum,,yes,above_ground,fodder,,,,
-sudan grass,Sorghum × drummondii ,,yes,above_ground,fodder,,,,
+sudan grass,Sorghum Ã— drummondii ,,yes,above_ground,fodder,,,,
 sugar beet,Beta vulgaris,,yes,root,sugar_crops,,,sugar beet,c_7499
 sugarcane,Saccharum officinarum,,yes,stems,sugar_crops,,300000,sugar cane,c_7501
 sumac,Rhus sp.,,yes,,spices,,,sumac,c_aa51cda6
-sunflower,Helianthus annuus,,yes,seed,oil_crops,,80000,sunflowers,c_aad037e4
+sunflower,HelianthusÂ annuus,,yes,seed,oil_crops,,80000,sunflowers,c_aad037e4
 sunn hemp,Crotalaria juncea,,yes,leaves,fibre_crops,,,sunn hemp,c_7520
 sweetpotato,Ipomoea batatas,,yes,root,root_tuber,,100000,sweet potatoes,c_14729
 switch grass,Panicum virgatum,,yes,above_ground,fodder,,,,
 tall fescue,Lolium arundinaceum ,,yes,above_ground,fodder,,,,
-tangelo,Citrus × tangelo,,yes,fruit,fruits,,,tangelos,c_7600
+tangelo,Citrus Ã— tangelo,,yes,fruit,fruits,,,tangelos,c_7600
 tangerine,Citrus sp.,,yes,fruit,fruits,,,tangerines,c_7601
-tangor,C. reticulata × C. sinensis,,yes,fruit,fruits,,,tangors,c_7602
+tangor,C. reticulata Ã— C. sinensis,,yes,fruit,fruits,,,tangors,c_7602
 tanier,Xanthosoma spp,,yes,,,,,,
 tannia,Xanthosoma sagittifolium,yautia; taioba,yes,root,root_tuber,,,tannia,c_8460
-taro,Colocasia esculenta,,yes,root,root_tuber,,,taro,c_14791
+taro,Colocasia esculenta,cocoyam,yes,root,root_tuber,,,taro,c_14791
 tarwi,Lupinus mutabilis,chocho,yes,seed,pulses,,,,
 tea,Camellia sinensis,,yes,leaves,stimulants,,,tea,c_7634
 teff,Eragrostis tef,,yes,grain,cereals,,10000,teff,c_b2ba9c4c
@@ -340,8 +340,8 @@ thyme,Thymus vulgaris,,yes,leaves,culinary_herbs,,,thyme,c_14877
 tobacco,Nicotiana tabacum,,yes,leaves,stimulants,,10000,tobacco,c_7796
 tomato,Solanum lycopersicum,,yes,fruit,vegetables,,100000,tomatoes,c_7805
 tomatillo,Physalis philadelphica; Physalis ixocarpa,Mexican husk tomato,yes,fruit,vegetables,,10000,tomatoes,
-triticale,×Triticosecale,,yes,grain,cereals,,12000,triticales,c_7949
-tritordeum,×Tritordeum,,yes,grain,cereals,,12000,,
+triticale,Ã—Triticosecale,,yes,grain,cereals,,12000,triticales,c_7949
+tritordeum,Ã—Tritordeum,,yes,grain,cereals,,12000,,
 tumeric,Curcuma longa,,yes,roots,spices,,,,
 tung tree,Vernicia fordii,,yes,seed,oil_crops,,,tung tree,c_253
 turnip,Brassica rapa,,yes,root; leaves,vegetables,,,turnips,c_8019
