@@ -41,7 +41,7 @@ fwy_total,numeric,kg/ha,no,,no,0,100000,yes,Fresh weight total biomass per ha,,
 fwy_residue,numeric,kg/ha,no,,no,0,100000,yes,Fresh weight residue biomass per ha,,
 yield_part,character,,yes,yield_part,no,,,no,"The part of the crop that ""yield"" refers to (e.g. grain, tubers, roots, leaves, fruit)",,
 yield,numeric,kg/ha,yes,,no,0,150000,no,"Biomass of the main harvestable parts at maturity, per ha --- yield_moisture must also be specified",,AGRO_00000176 
-yield_moisture,numeric,%,yes,,no,5,90,yes,Reported moisture content of fresh yield,,
+yield_moisture,numeric,%,yes,,no,0,90,yes,Moisture content of the reported yield (0 is dry weight),,
 yield_isfresh,logical,,no,,no,,,no,Is the reported yield fresh weight (perhaps with unknown moisture content?),,
 yield_marketable,numeric,kg/ha,no,,no,0,150000,no,"Fresh weight marketable (e.g. large enough tubers) biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
 grain_fill,numeric,%,no,,no,0,100,yes,% of grains that are filled,,
