@@ -99,9 +99,9 @@ transplanting_method,character,,no,planting,no,,,yes,Transplanting method,,AGRO_
 uncertainty,numeric,,no,,no,0,,yes,Measure of noise in data ,,
 uncertainty_type,character,,no,,no,,,yes,Type of noise measure,,
 row_spacing,numeric,cm,no,,no,1,180,yes,Distance between rows,,AGRO_00000318
-plot_area,numeric,m2,no,,no,0,,yes,Area of the plot in square meter,,AGRO_00000302
-plot_length,numeric,m,no,,no,0,,yes,Length of the plot in meter,,AGRO_00000307
-plot_width,numeric,m,no,,no,0,,yes,Width of the plot in meter,,AGRO_00000308
+plot_area,numeric,m2,no,,no,1,50,yes,Area of the plot in square meter,,AGRO_00000302
+plot_length,numeric,m,no,,no,0.5,10,yes,Length of the plot in meter,,AGRO_00000307
+plot_width,numeric,m,no,,no,0.5,10,yes,Width of the plot in meter,,AGRO_00000308
 plant_spacing,numeric,cm,no,,no,5,100,yes,Distance between plants,,AGRO_00000316
 seed_density,numeric,plants/ha,no,,no,500,3100000,yes,Number of plants per ha that were seeded/planted,,
 seed_rate,numeric,kg/ha,no,,no,0,3000,yes,Mass of the seeds sown per hectare,,AGRO_00000202
