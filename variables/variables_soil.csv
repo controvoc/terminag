@@ -21,7 +21,7 @@ soil_NO3,numeric,mg/kg,no,,no,0.01,10000,yes,soil NO3 content,,ENVO_09000017
 soil_NH4,numeric,mg/kg,no,,no,0.01,10000,yes,soil NH4 content,,ENVO_09000017
 soil_K,numeric,mg/kg,no,,no,1,10000,yes,soil K content,,
 soil_P_total,numeric,mg/kg,no,,no,0.4,1000,yes,soil P (total) ,,
-soil_P_Mehlich,numeric,mg/kg,no,,no,0.01,200,yes,soil P (plant available; Mehlich extraction method) ,,
+soil_P,numeric,mg/kg,no,,no,0.01,200,yes,soil P (plant available) ,,
 soil_Ca,numeric,mg/kg,no,,no,1,10000,yes,soil Ca content,,
 soil_Mg,numeric,mg/kg,no,,no,1,10000,yes,soil Mg content,,
 soil_B,numeric,mg/kg,no,,no,0,500,yes,soil B content,,
