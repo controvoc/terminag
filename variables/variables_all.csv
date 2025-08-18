@@ -1,10 +1,10 @@
 name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
 dataset_id,character,,yes,,no,,,no,"dataset identifier (normalized URI, that is: ""/"" replaced with ""_"")",,
-record_id,integer,,no,,no,,,no,Unique identifier for each records in a dataset (sequence from 1 to n),,
+record_id,integer,,no,,no,,,no,Unique identifier for each record in a dataset (sequence from 1 to n),,
 date,date,,no,,no,,,yes,"Observation date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
 time,time,,no,,no,,,yes,"Observation time in ""hh:mm:ss"", ""hh:mm"", or ""hh"" format",,
 reference,character,,no,,no,,,yes,The data source (in data compilations for meta analysis),,
-DAP,integer,,no,,no,,,yes,Days after planting,,
-DAE,integer,,no,,no,,,yes,Days after emergece,,
+DAP,integer,,no,,no,,,yes,Days after planting (relative time scale used in some crop experiments,,
+DAE,integer,,no,,no,,,yes,Days after emergece (relative time scale used in some crop experiments),,
 variable,character,,no,,no,,,yes,Variable name (for long format data),,
 value,numeric,,no,,no,,,yes,Value (for long format data),,
