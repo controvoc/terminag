@@ -4,9 +4,9 @@ depth_top,numeric,cm,no,,no,0,200,yes,depth of soil sample (top; e.g. 0),,
 depth_bottom,numeric,cm,no,,no,0,200,yes,depth of soil sample (bottom; e.g 20),,
 soil_depth,numeric,cm,no,,no,0,200,yes,soil depth (not the sampling depth),,
 soil_type,character,,no,,yes,,,yes,soil name or description,,AGRO_00010099
-soil_pH,numeric,,no,,no,3,10,yes,soil pH (H2O),,ENVO_09200010
-soil_pH_KCl,numeric,,no,,no,3,9,yes,soil pH (KCl),,ENVO_09200010
-soil_pH_CaCl2,numeric,,no,,no,3,10,yes,soil pH (CaCl2),,ENVO_09200010
+soil_pH,numeric,,no,,no,2,10,yes,soil pH (H2O),,ENVO_09200010
+soil_pH_KCl,numeric,,no,,no,2,10,yes,soil pH (KCl),,ENVO_09200010
+soil_pH_CaCl2,numeric,,no,,no,2,10,yes,soil pH (CaCl2),,ENVO_09200010
 soil_SOC,numeric,%,no,,no,0,30,yes,soil organic carbon,,
 soil_SOM,numeric,%,no,,no,0,20,yes,soil organic matter,,
 soil_sand,numeric,%,no,,no,0,100,yes,soil sand content (excluding gravel),,
@@ -37,11 +37,6 @@ soil_EC,numeric,mS/cm,no,,no,0,20,yes,soil electric conductivity,,
 soil_bd,numeric,g/cm^-3,no,,no,0,20,yes,soil bulk density,,
 soil_CEC,numeric,cmol/kg,no,,no,0,200,yes,Cation Exchange Capacity,,
 soil_ECEC,numeric,cmol/kg,no,,no,0,200,yes,Effective Cation Exchange Capacity,,
-soil_ex_Ca,numeric,mg/kg,no,,no,0,200,yes,soil exchangeable Ca,,
-soil_ex_Mg,numeric,mg/kg,no,,no,0,200,yes,soil exchangeable Mg,,
-soil_ex_K,numeric,mg/kg,no,,no,0,200,yes,soil exchangeable K,,
-soil_ex_Na,numeric,mg/kg,no,,no,0,200,yes,soil exchangeable Na,,
-soil_ex_Al,numeric,mg/kg,no,,no,0,200,yes,soil exchangeable Al,,
 soil_color,character,,no,,no,,,yes,soil color,,
 soil_quality,character,,no,,no,,,yes,soil quality preception,,
 landscape_position,character,,no,,no,,,yes,Relative landscape position,,

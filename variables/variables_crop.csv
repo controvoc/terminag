@@ -68,7 +68,7 @@ Mn_fertilizer,numeric,kg/ha,no,,no,0,250,yes,Mn applied in inorganic fertilizer,
 Cl_fertilizer,numeric,kg/ha,no,,no,0,50,yes,Cl applied in inorganic fertilizer,,
 Cu_fertilizer,numeric,kg/ha,no,,no,0,50,yes,Cu applied in inorganic fertilizer,,
 Mo_fertilizer,numeric,kg/ha,no,,no,0,50,yes,Mo applied in inorganic fertilizer,,
-N_fixation,numeric,kg/ha,no,,no,0,50,yes,N fixed by rhizobium or other organisms,,
+N_fixation,numeric,kg/ha,no,,no,0,150,yes,N fixed by rhizobium or other organisms,,
 N_organic,numeric,kg/ha,no,,no,0,600,yes,N applied in organic fertilizer,,
 P_organic,numeric,kg/ha,no,,no,0,250,yes,"P applied in organic fertilizer (as P, not P2O5)",,
 K_organic,numeric,kg/ha,no,,no,0,300,yes,"K applied in organic fertilizer (as K, not K2O)",,
@@ -113,9 +113,9 @@ emergence_days,numeric,days,no,,no,3,90,yes,Days to emergence (after planting),A
 transplanting_days,numeric,days,no,,no,1,50,yes,Days to transplanting,Assumed to be the median number of days,
 heading_days,numeric,days,no,,no,25,300,yes,Days to heading (after planting),Assumed to be the median number of days,
 flowering_days,numeric,days,no,,no,15,250,yes,Days to flowering (after planting),Assumed to be the median number of days,TO_0000344
-anthesis_days,numeric,days,no,,no,30,125,yes,Days to anthesis (after planting). Anthesis occurs when pollen is released,Assumed to be the median number of days,
-silking_days,numeric,days,no,,no,30,125,yes,Days to silking (after planting),Assumed to be the median number of days,
-asi,numeric,days,no,,no,-7,30,yes,Anthesis silking interval,Assumed to be the median number of days,
+anthesis_days,numeric,days,no,,no,30,150,yes,Days to anthesis (after planting). Anthesis occurs when pollen is released,Assumed to be the median number of days,
+silking_days,numeric,days,no,,no,30,150,yes,Days to silking (after planting),Assumed to be the median number of days,
+asi,numeric,days,no,,no,-30,30,yes,Anthesis silking interval,Assumed to be the median number of days,
 tassling_days,numeric,days,no,,no,30,125,yes,Days to tassling (after planting),Assumed to be the median number of days,TO_0000629
 maturity_days,numeric,days,no,,no,45,365,yes,Days to maturity (after planting),Assumed to be the median number of days,TO_0000469
 harvest_days,numeric,days,no,,no,45,365,yes,Days to harvest (after planting),Assumed to be the median number of days,
