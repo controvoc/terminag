@@ -25,3 +25,5 @@ design,character,,no,,no,,,yes,short description of the experimental or survey d
 completion,numeric,,no,,no,,,yes,the percentage of relevant variables that have been standardized,,
 countries,character,,no,,no,,,yes,countries in the data,automatically generated,
 crops,character,,no,,no,,,yes,crops in the data,automatically generated,
+variable,character,,no,,no,,,yes,variable name (for variable level metdata),,
+method,character,,no,,no,,,yes,method used to obtain the values (for variable level metadata),,
