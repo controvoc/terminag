@@ -6,5 +6,6 @@ time,time,,no,,no,,,yes,"Observation time in ""hh:mm:ss"", ""hh:mm"", or ""hh"" 
 reference,character,,no,,no,,,yes,The data source (in data compilations for meta analysis),,
 DAP,integer,,no,,no,,,yes,Days after planting (relative time scale used in some crop experiments,,
 DAE,integer,,no,,no,,,yes,Days after emergece (relative time scale used in some crop experiments),,
-variable,character,,no,,no,,,yes,Variable name (for long format data),,
+variable,character,,no,,no,,,yes,Variable name (for long format data or variable metadata),,
 value,numeric,,no,,no,,,yes,Value (for long format data),,
+method,character,,no,,no,,,yes,method used to obtain the values (for variable level metadata),,
