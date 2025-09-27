@@ -7,4 +7,4 @@
 
 The vocabulary is under development. It is currently used as part of the [Carob](https://carob-data.org) data standard.
 
-You can use *R* package [vocal](https://github.com/carob-data/vocal) to check for compliance with this vocabulary.
+You can use *R* package [vocal](https://github.com/controvoc/vocal) to check for compliance with this vocabulary.
