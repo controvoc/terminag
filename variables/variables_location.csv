@@ -2,10 +2,10 @@ name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,des
 location_id,character,,no,,no,,,no,location identifier,,
 country,character,,yes,country,no,,,no,Country name,,ENVO_00000009
 adm1,character,,no,,no,,,yes,First level administrative subdivision,follow GADM,ENVO_00000005
-adm2,character,,no,,no,,,yes,Second level administrative subdivision (within the first level subdivision),follow GADM,ENVO_00000006
-adm3,character,,no,,no,,,yes,Third level administrative subdivision (within the second level subdivision),follow GADM,ENVO_00000007
-adm4,character,,no,,no,,,yes,Fourth level administrative subdivision (within the third level subdivision),follow GADM,ENVO_00000008
-adm5,character,,no,,no,,,yes,Fifth level administrative subdivision (within the fourth level subdivision),follow GADM,
+adm2,character,,no,,no,,,yes,Second level administrative subdivision,follow GADM,ENVO_00000006
+adm3,character,,no,,no,,,yes,Third level administrative subdivision,follow GADM,ENVO_00000007
+adm4,character,,no,,no,,,yes,Fourth level administrative subdivision,follow GADM,ENVO_00000008
+adm5,character,,no,,no,,,yes,Fifth level administrative subdivision,follow GADM,
 location,character,,no,,no,,,yes,"Name of the location where the location was made. E.g., a place name or locality description.",,ENVO_00000114
 site,character,,no,,no,,,yes,Name of the sub-location where the observation was made,,
 locality,character,,no,,no,,,yes,locality description,,

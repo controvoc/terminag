@@ -107,7 +107,7 @@ seed_density,numeric,plants/ha,no,,no,500,3100000,yes,Number of plants per ha th
 seed_rate,numeric,kg/ha,no,,no,0,3000,yes,Mass of the seeds sown per hectare,,AGRO_00000202
 plant_density,numeric,plants/ha,no,,no,500,3100000,yes,Number of plants per ha that emerged/survived,,PCO_0000079
 cob_density,numeric,cobs/ha,no,,no,500,5000000,yes,Number of cobs (maize) per ha,,
-spike_density,numeric,spikes/ha,no,,no,500,6000000,yes,Number of spikes per ha,,
+spike_density,numeric,spikes/ha,no,,no,500,10000000,yes,Number of spikes per ha,,
 rain,numeric,mm,no,,no,0,3000,yes,Total rainfall between planting and harvest,,ENVO_01000830
 emergence_days,numeric,days,no,,no,3,90,yes,Days to emergence (after planting),Assumed to be the median number of days,
 transplanting_days,numeric,days,no,,no,1,50,yes,Days to transplanting,Assumed to be the median number of days,
