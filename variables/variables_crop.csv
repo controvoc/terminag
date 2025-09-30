@@ -128,19 +128,21 @@ rAUDPC,numeric,,no,,no,0,1,yes,Area under the disease progress curve divided by 
 root_infection,numeric,%,no,,no,0,100,yes,Roots that are disease infected,,
 root_AMF,numeric,%,no,,no,0,100,yes,Root colonization by arbuscular micorrhizal fungi,,
 nodule_weight,numeric,kg/ha,no,,no,0,,yes,Fresh weight or root nodules,,TO_0000899
-leaf_N,numeric,mg/g,no,,no,100,600,yes,nitrogen content in leaf,,TO_0000543
-leaf_K,numeric,mg/g,no,,no,60,300,yes,potassium content in leaf,,
-leaf_P,numeric,mg/g,no,,no,50,300,yes,phosphorous content in leaf,,TO_0001025
+leaf_N,numeric,mg/g,no,,no,10,600,yes,nitrogen content in leaf,,TO_0000543
+leaf_N_NH4,numeric,mg/g,no,,no,10,600,yes,NH4 content in leaf,,
+leaf_N_NO3,numeric,mg/g,no,,no,10,600,yes,NO3 content in leaf,,
+leaf_K,numeric,mg/g,no,,no,6,300,yes,potassium content in leaf,,
+leaf_P,numeric,mg/g,no,,no,5,300,yes,phosphorous content in leaf,,TO_0001025
 leaf_S,numeric,mg/g,no,,no,5,50,yes,sulphur content in leaf,,
-leaf_Mg,numeric,mg/g,no,,no,5,50,yes,calcium content in leaf,,
-leaf_Ca,numeric,mg/g,no,,no,5,50,yes,iron content in leaf,,
-leaf_Fe,numeric,mg/g,no,,no,5,50,yes,zinc content in leaf,,
-leaf_Zn,numeric,mg/g,no,,no,5,50,yes,zinc content in leaf,,
-leaf_Cu,numeric,mg/g,no,,no,5,50,yes,copper content in leaf,,
-leaf_Mn,numeric,mg/g,no,,no,5,50,yes,manganese content in leaf,,
-leaf_B,numeric,mg/g,no,,no,5,50,yes,boron content in leaf,,
-leaf_Al,numeric,mg/g,no,,no,5,50,yes,aluminium content in leaf,,
-leaf_Na,numeric,mg/g,no,,no,5,50,yes,sodium content in leaf,,
+leaf_Mg,numeric,mg/g,no,,no,1,50,yes,calcium content in leaf,,
+leaf_Ca,numeric,mg/g,no,,no,1,50,yes,iron content in leaf,,
+leaf_Fe,numeric,mg/g,no,,no,1,50,yes,zinc content in leaf,,
+leaf_Zn,numeric,mg/g,no,,no,1,50,yes,zinc content in leaf,,
+leaf_Cu,numeric,mg/g,no,,no,1,50,yes,copper content in leaf,,
+leaf_Mn,numeric,mg/g,no,,no,1,50,yes,manganese content in leaf,,
+leaf_B,numeric,mg/g,no,,no,1,50,yes,boron content in leaf,,
+leaf_Al,numeric,mg/g,no,,no,1,50,yes,aluminium content in leaf,,
+leaf_Na,numeric,mg/g,no,,no,1,50,yes,sodium content in leaf,,
 grain_N,numeric,mg/g,no,,no,100,600,yes,nitrogen content in grain,,TO_0003068
 grain_K,numeric,mg/g,no,,no,10,300,yes,potassium content in grain,,TO_0003056
 grain_P,numeric,mg/g,no,,no,1,10,yes,phosphorous content in grain,,TO_0003082
