@@ -4,6 +4,7 @@ plot_id,character,,no,,no,,,yes,Identifier of a single plot in a single trial in
 planting_date,date,,yes,,no,,,yes,"Planting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,AGRO_00010099
 emergence_date,date,,no,,no,,,yes,"Emergence date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see emergence_days,
 transplanting_date,date,,no,,no,,,yes,"Transplanting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see transplanting_days,AGRO_00010131
+heading_date,date,,no,,no,,,yes,"Heading date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
 flowering_date,date,,no,,no,,,yes,"Flowering date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see flowering_days,
 maturity_date,date,,no,,no,,,yes,"Maturity date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see maturity_days,
 harvest_date,date,,no,,no,,,yes,"Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see harvest_days,AGRO_00010128
