@@ -272,7 +272,7 @@ radicchio,Cichorium intybus,,yes,,vegetables,,,radicchio,c_c32f344d
 radish,Raphanus sp.,,yes,root,vegetables;green_manures,,,radishes,c_13735
 rambutan,Nephelium lappaceum,,yes,fruit,fruits,,,rambutans,c_13754
 ramie,Boehmeria nivea,,yes,,fibre_crops,,,ramie,c_6442
-rapeseed,Brassica napus,,yes,seed,oil_seeds,,5000,rapeseed,c_25499
+rapeseed,Brassica napus,canola,yes,seed,oil_seeds,,5000,rapeseed,c_25499
 raspberry,Rubus sp.,,yes,fruit,fruits,,,raspberries,c_6458
 red amaranth,Amaranthus cruentus,,yes,leaves; seed,vegetables,,,,
 red clover,Trifolium pratense,,yes,above_ground,green_manures; feed_crops,,,,
