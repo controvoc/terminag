@@ -12,7 +12,7 @@ soil_sand,numeric,%,no,,no,0,100,yes,soil sand content (excluding gravel),,
 soil_clay,numeric,%,no,,no,0,100,yes,soil clay content (excluding gravel),,ENVO_00002982
 soil_silt,numeric,%,no,,no,0,100,yes,soil silt content (excluding gravel),,
 soil_texture,character,,no,soil_texture,yes,,,yes,soil texture,,
-soil_sand_coarse,numeric,%,no,,no,0,50,yes,coarse soil sand (0.5 - 2 mm) content (excluding gravel),,
+soil_sand_coarse,numeric,%,no,,no,0,60,yes,coarse soil sand (0.5 - 2 mm) content (excluding gravel),,
 soil_sand_medium,numeric,%,no,,no,0,50,yes,medium soil sand  (0.25 - 0.5 mm) content (excluding gravel),,
 soil_sand_fine,numeric,%,no,,no,0,50,yes,fine soil sand (0.106/0.125  - 0.25 mm) content (excluding gravel),,
 soil_sand_veryfine,numeric,%,no,,no,0,50,yes,very fine soil sand (0.05/0.0625 - 0.106/0.125 mm) content (excluding gravel),,
