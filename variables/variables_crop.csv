@@ -143,18 +143,18 @@ leaf_Mn,numeric,mg/g,no,,no,0.5,50,yes,manganese content in leaf,,
 leaf_B,numeric,mg/g,no,,no,0.5,50,yes,boron content in leaf,,
 leaf_Al,numeric,mg/g,no,,no,0.5,50,yes,aluminium content in leaf,,
 leaf_Na,numeric,mg/g,no,,no,0.1,50,yes,sodium content in leaf,,
-grain_N,numeric,mg/g,no,,no,100,600,yes,nitrogen content in grain,,TO_0003068
-grain_K,numeric,mg/g,no,,no,10,300,yes,potassium content in grain,,TO_0003056
+grain_N,numeric,mg/g,no,,no,10,600,yes,nitrogen content in grain,,TO_0003068
+grain_K,numeric,mg/g,no,,no,2,300,yes,potassium content in grain,,TO_0003056
 grain_P,numeric,mg/g,no,,no,1,10,yes,phosphorous content in grain,,TO_0003082
 grain_S,numeric,mg/g,no,,no,1,100,yes,sulphur content in grain,,
 grain_Mg,numeric,mg/g,no,,no,1,100,yes,magnesium content in grain,,
 grain_Ca,numeric,mg/g,no,,no,1,100,yes,calcium content in grain,,
 grain_Fe,numeric,mg/g,no,,no,1,100,yes,iron content in grain,,
-grain_Zn,numeric,mg/g,no,,no,1,100,yes,zinc content in grain,,
-grain_Cu,numeric,mg/g,no,,no,1,100,yes,copper content in grain,,
-grain_Mn,numeric,mg/g,no,,no,1,100,yes,manganese content in grain,,
-grain_B,numeric,mg/g,no,,no,1,100,yes,boron content in grain,,
-grain_Al,numeric,mg/g,no,,no,1,100,yes,aluminium content in grain,,
+grain_Zn,numeric,mg/g,no,,no,0.01,10,yes,zinc content in grain,,
+grain_Cu,numeric,mg/g,no,,no,0.01,10,yes,copper content in grain,,
+grain_Mn,numeric,mg/g,no,,no,0.01,10,yes,manganese content in grain,,
+grain_B,numeric,mg/g,no,,no,0.01,10,yes,boron content in grain,,
+grain_Al,numeric,mg/g,no,,no,0.01,10,yes,aluminium content in grain,,
 grain_Na,numeric,mg/g,no,,no,1,100,yes,,,
 grain_Cl,numeric,mg/g,no,,no,1,100,yes,,,
 grain_Mo,numeric,mg/g,no,,no,1,100,yes,,,

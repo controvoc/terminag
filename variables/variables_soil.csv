@@ -65,14 +65,15 @@ soil_WHC_sat,numeric,%,no,,no,0,100,yes,% of soil water holding capacity that is
 soil_drainage,character,,no,soil_drainage,no,,,yes,soil drainage class ,,
 soil_microbial_activity_category,character,,no,,no,,,yes,microbial activity variable name (for use in long format),,
 soil_microbial_activity_value,numeric,,no,,no,,,yes,microbial activity value (for use in long format),,
+soil_MBC,numeric,,no,,no,,,yes,soil microbial biomass carbon,,
 soil_GWC,numeric,,no,,no,,,yes,gravimetric water content,,
 soil_CaCO3,numeric,g/kg,no,,no,,,yes,soil CaCO3 content (in calcareous soils),,
 soil_B_total,numeric,mg/kg,no,,no,0,500,yes,total soil B content,,
-soil_Mn_total,numeric,mg/kg,no,,no,0,3000,yes,total soil Mn content,,
-soil_Mg_total,numeric,mg/kg,no,,no,0,3000,yes,total soil Mg content,,
+soil_Mn_total,numeric,mg/kg,no,,no,0,6000,yes,total soil Mn content,,
+soil_Mg_total,numeric,mg/kg,no,,no,0,30000,yes,total soil Mg content,,
 soil_Mo_total,numeric,mg/kg,no,,no,,,yes,total soil Mo content,,
 soil_N_total,numeric,mg/kg,no,,no,0.01,10000,yes,total soil N content,,ENVO_09000017
-soil_Fe_total,numeric,mg/kg,no,,no,0.01,10000,yes,total soil Fe content,,ENVO_09000017
+soil_Fe_total,numeric,mg/kg,no,,no,0.01,200000,yes,total soil Fe content,,ENVO_09000017
 soil_Cd_total,numeric,mg/kg,no,,no,,,yes,total soil Cd content,,
 soil_Pb_total,numeric,mg/kg,no,,no,,,yes,total soil Pb content,,
 soil_V_total,numeric,mg/kg,no,,no,,,yes,total soil V (vanadium) content,,
