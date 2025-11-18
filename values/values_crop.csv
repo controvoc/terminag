@@ -51,7 +51,6 @@ broccoli,Brassica oleracea var. italica,,yes,,vegetables,,,broccoli,c_7339
 brown mustard,Brassica juncea,,yes,seed;leaves,spices;vegetables,,,,
 brussels sprouts,Brassica oleracea,,yes,,vegetables,,,brussels sprouts,c_1127
 buckwheat,Fagopyrum esculentum,,yes,seed,pseudocereals,,,buckwheat,c_9471
-butter bean,Phaseolus lunatus,,yes,seed,pulses,,,,
 cabbage,Brassica oleracea,,yes,,vegetables,,,cabbages,c_1173
 calamansi,Citrus × microcarpa,calamondin,yes,fruit,fruits,,,calamondins,c_15497
 camelina,Camelina sativa,,yes,,,,,,
@@ -181,7 +180,7 @@ lentil,Lens culinaris,,yes,seed,pulses,,7000,lentils,c_12140
 lettuce,Lactuca sp.,,yes,,vegetables,,,lettuces,c_12151
 liberian coffee,Coffea liberica,,yes,seed,stimulants,,,liberica coffee,c_4308
 licorice,Glycyrrhiza sp.,,yes,,,,,,
-lima bean,Phaseolus lunatus,,yes,seed,,,,,
+lima bean,Phaseolus lunatus,butter bean,yes,seed,,,,,
 lime,Citrus sp.,,yes,fruit,fruits,,,limes,c_4341
 limequat,Citrus × floridana,,yes,fruit,fruits,,,limequats,c_4340
 lingonberry,Vaccinium vitis-idaea,,yes,fruit,fruits,,,lingonberries,c_ebfdf3a4
