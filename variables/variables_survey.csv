@@ -21,3 +21,8 @@ field_id,character,,no,,no,,,yes,identifier of a particular field within a farm/
 field_size,numeric,ha,no,,no,,,yes,size of the particular field,,
 expected_yield,numeric,kg/ha,no,,no,,,yes,,,
 labour_days,numeric,kg/ha,no,,no,,,yes,Number of days spend working on the crop,,
+farmer_age, numeric,year, no,,no,,,yes,,,
+farmer_education_level,character,,no,,no,,,yes,,,
+farmer_merital_status,character,, no,,no,,,yes,,,
+market_type, character,, no,,no,,,yes,,,
+
