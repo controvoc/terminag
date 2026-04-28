@@ -1,6 +1,7 @@
 name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
 trial_id,character,,yes,,no,,,yes,Identifier of a single trial in a single location and season (that may have treatments and replicates), should be unique within dataset_id,
 plot_id,character,,no,,no,,,yes,Identifier of a single plot in a single trial in a single location and season,,
+block_id,character,,no,,no,,,yes,Identifier of a single block in a single trial in a single location and season,,
 planting_date,date,,yes,,no,,,yes,"Planting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,AGRO_00010099
 emergence_date,date,,no,,no,,,yes,"Emergence date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see emergence_days,
 transplanting_date,date,,no,,no,,,yes,"Transplanting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see transplanting_days,AGRO_00010131
