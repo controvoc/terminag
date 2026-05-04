@@ -229,6 +229,8 @@ previous_crop_residue_management,character,,no,,no,,,yes,how was the previous cr
 crop_price,numeric,currency/kg,no,,no,0,100,yes,current crop price when sold to market,,
 fertilizer_price,numeric,currency/kg,no,,no,0,,yes,price paid for fertilizer(s),,
 OM_price,numeric,currency/kg,no,,no,0,,yes,price paid for organic fertilizer(s),,
+insecticide_price,numeric,??,no,,no,0,,yes,,,
+herbicide_price,numeric,??,no,,no,0,,yes,,,
 currency,character,,no,currency,no,,,yes,currency used for prices,,
 flood_stress,character,,no,,no,,,yes,how severe was the damage from flooding?,,
 drought_stress,character,,no,,no,,,yes,how severe was the damage from drought?,,
