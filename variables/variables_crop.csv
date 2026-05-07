@@ -193,6 +193,7 @@ weeding_times,integer,,no,,no,0,10,yes,how many times was the crop weeded?,,AGRO
 weeding_dates,date,,no,,yes,,,yes,"weeding dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00000562
 weeding_implement,character,,no,implement,no,,,yes,the implement (machine) used,,AGRO_00002006
 weed_species,character,,no,,no,,,yes,weed species names ,,
+weed_density,numeric,plants/ha,no,,no,0,,yes,number of weed plants per ha,,
 weed_biomass,numeric,kg/ha,no,,no,0,100000,yes,Fresh weight weeds biomass,,
 weed_severity,character,,no,,no,,,yes,how severe was the competition from weeds?,,
 weed_cover,numeric,%,no,,no,,,yes,% weed cover,,
