@@ -88,6 +88,7 @@ citron,Citrus medica,,yes,fruit,fruits,,,citrons,c_1632
 citrus,Citrus sp.,,no,fruit,fruits,,,citrus fruits,c_1641
 clementine,Citrus × clementina,,yes,fruit,fruits,,,clementines,c_9895
 clover,Trifolium sp.,,yes,above_ground,fodder_crops,,,clover,c_7910
+crimson clover,Trifolium incarnatum,,yes,,,,,clover,
 cloves,Syzygium aromaticum,,yes,flower,spices,,,cloves,c_23597
 cochineal nopal cactus,Nopalea cochenillifera,,yes,,,,,,
 cockscomb,Celosia argentea,,yes,flower,flowers,,,,
@@ -219,6 +220,7 @@ none,,fallow,yes,,other,,,,
 nopal,Opuntia ficus-indica,prickly pear,yes,,,,,,
 noug,Guziota scarba,,yes,seed,oil_seeds,,5000,noug seed,c_12827
 nutmeg,Myristica fragrans,,yes,seed,spices,,,nutmegs,c_23169
+black oats,Avena strigosa,,,,,,,,
 oats,Avena sativa,,yes,grain,cereals,,13450,oats,c_5287
 oilseed,sp,,no,seed,oil_crops,,,,
 oil palm,Elaeis sp.,,yes,seed,oil_crops,,,oil palms,c_5330
