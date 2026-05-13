@@ -29,6 +29,8 @@ intercrops,character,,no,crop,yes,,,yes,Other crop grown together with the main 
 intercrop_type,character,,no,intercrop,yes,,,yes,"Type of intercropping (e.g. mixed, strip)",,
 previous_crop,character,,no,crop,yes,,,yes,Crop grown on this plot in the prior season,,AGRO_00000592
 crop_rotation,character,,no,crop,yes,,,yes,Crops grown in rotation on this plot,,
+cover_crop,character,,no,crop,yes,,,yes,Crops grown as cover crop on this plot,,
+cover_crop_used,logical,,no,,no,,,yes,Are there cover crops grown on this plot?,,
 dmy_roots,numeric,kg/ha,no,,no,0,5000,yes,Dry-matter weight biomass of fine roots per ha,,
 dmy_stems,numeric,kg/ha,no,,no,0,20000,yes,Dry-matter weight biomass of stems per ha,,
 dmy_leaves,numeric,kg/ha,no,,no,0,20000,yes,Dry-matter weight biomass of leaves per ha,,
