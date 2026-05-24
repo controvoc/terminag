@@ -114,7 +114,7 @@ durum wheat,Triticum durum,,yes,grain,cereals,,,,
 eggplant,Solanum melongena,,yes,fruit,vegetables,,,eggplants,c_8998
 endive,Cichorium endivia,,yes,leaves,vegetables,,,endives,c_10596
 enset,Ensete ventricosum,,yes,rhizome,root_tuber,,,,
-erect prickly pear,Opuntia stricta,,,,,,,,
+erect prickly pear,Opuntia stricta,,yes,,,,,,
 ethiopian basil,Ocimum lamiifolium,,yes,leaves,medicinal,,,,
 faba bean,Vicia faba,,yes,seed,pulses,,6500,faba beans,c_10722
 fennel,Foeniculum vulgare,,yes,seed;bulb;leaves,spices,,,,
@@ -158,7 +158,7 @@ jack bean,Canavalia ensiformis,,yes,seed,,,,,
 jackfruit,Artocarpus heterophyllus,,yes,fruit,fruits,,80000,jackfruit,c_11864
 jatropha,Jatropha curcas,,yes,,,,,,
 jerusalem artichoke,Solanum tuberosum,topinambour,yes,tuber,root_tuber,,,jerusalem artichokes,c_11903
-jicama,Pachyrhizus erosus,Mexican turnip,,root,root_tuber,,,,
+jicama,Pachyrhizus erosus,Mexican turnip,yes,root,root_tuber,,,,
 jojoba,Simmondsia chinensis,,yes,seed,oil_seeds,,,jojoba,c_11913
 jute,Corchorus olitorius,,yes,fiber,fibre_crops,,,jute,c_4065
 kaki,Diospyros kaki,Japanese persimmon,yes,fruit,fruits,,,kaki,c_11934
@@ -205,7 +205,7 @@ mate,Ilex paraguariensis,,yes,leaves,stimulants,,,mate,c_4647
 melon,Cucumis melo,,no,fruit,fruits,,,,
 millet,spp,,no,grain,cereals,,,millets,c_4838
 mint,Mentha spp.,,yes,leaves,culinary_herbs,,,mint,c_12606
-moringa,Moringa stenopetala,,,,,,,,
+moringa,Moringa stenopetala,,yes,,,,,,
 mulberry,Morus sp.,,yes,fruit,fruits,,,mulberries,c_25487
 mung bean,Vigna radiata,,yes,seed,pulses,,,mung beans,c_4988
 mushrooms,spp,,yes,,vegetables,,,mushrooms,c_2487
@@ -220,7 +220,7 @@ none,,fallow,yes,,other,,,,
 nopal,Opuntia ficus-indica,prickly pear,yes,,,,,,
 noug,Guziota scarba,,yes,seed,oil_seeds,,5000,noug seed,c_12827
 nutmeg,Myristica fragrans,,yes,seed,spices,,,nutmegs,c_23169
-black oats,Avena strigosa,,,,,,,,
+black oats,Avena strigosa,,yes,,,,,,
 oats,Avena sativa,,yes,grain,cereals,,13450,oats,c_5287
 oilseed,sp,,no,seed,oil_crops,,,,
 oil palm,Elaeis sp.,,yes,seed,oil_crops,,,oil palms,c_5330
@@ -365,5 +365,6 @@ winter melon,Benincasa hispida,,yes,fruit,fruits,,,winter melons,c_acf09bff
 winter squash,Cucurbita moschata,,yes,fruit,,,,,
 yam,Dioscorea cayenensis subsp. rotundata,white yam,yes,tuber,root_tuber,,60000,yams,c_8478
 yellow lupin,Lupinus luteus,,yes,seed,pulses;feed,,,,
+yellow rocket,Barbarea vulgaris,,yes,,,,,,
 zira,Bunium persicum,white cumin,yes,seed,spices,,,,
 zucchini,Cucurbita pepo,courgette,yes,fruit,vegetables,,,,
