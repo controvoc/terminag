@@ -1,0 +1,149 @@
+:root {
+	--fg: #1c1c1c;
+	--muted: #6b6b6b;
+	--bg: #fafafa;
+	--card-bg: #ffffff;
+	--border: #e5e5e5;
+	--accent: #2e7d32;
+	--accent-fg: #ffffff;
+	--error: #b00020;
+}
+
+* { box-sizing: border-box; }
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	color: var(--fg);
+	background: var(--bg);
+	margin: 0;
+	line-height: 1.4;
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration: underline; }
+.sep { color: var(--muted); margin: 0 .25rem; }
+
+header {
+	padding: 1.5rem 1.5rem 1rem;
+	border-bottom: 1px solid var(--border);
+	background: #fff;
+}
+header h1 {
+	margin: 0 0 .25rem;
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+header h1 a { color: var(--fg); text-decoration: none; }
+header h1 a:hover { text-decoration: underline; }
+
+.tagline {
+	margin: 0 0 .75rem;
+	color: var(--muted);
+}
+
+#filter {
+	width: 100%;
+	max-width: 480px;
+	padding: .5rem .75rem;
+	font-size: 1rem;
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	background: #fff;
+}
+#filter:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+
+.meta {
+	font-size: .85rem;
+	color: var(--muted);
+	margin: 0;
+}
+
+main {
+	padding: 1.5rem;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+section h2 {
+	font-size: .85rem;
+	text-transform: uppercase;
+	letter-spacing: .06em;
+	color: var(--muted);
+	border-bottom: 1px solid var(--border);
+	padding-bottom: .35rem;
+	margin: 1.5rem 0 .25rem;
+}
+section h2:first-child, section:first-child h2 { margin-top: 0; }
+
+.section-blurb {
+	color: var(--muted);
+	margin: .25rem 0 1rem;
+	font-size: .9rem;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+	gap: .65rem;
+	margin-bottom: 1.5rem;
+}
+.card {
+	display: block;
+	padding: .75rem 1rem;
+	background: var(--card-bg);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	text-decoration: none;
+	color: inherit;
+	transition: border-color .15s, box-shadow .15s, transform .05s;
+}
+.card:hover {
+	border-color: var(--accent);
+	box-shadow: 0 1px 3px rgba(0,0,0,.05);
+	text-decoration: none;
+}
+.card:active { transform: translateY(1px); }
+.card h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 500; }
+.card p { margin: 0; color: var(--muted); font-size: .8rem; }
+
+.empty, .muted { color: var(--muted); }
+.error { color: var(--error); }
+
+#table-host { margin-top: .5rem; }
+#table-host .gridjs-wrapper { box-shadow: none; }
+
+/* Allow the table to be wider than the viewport so wide rows stay readable
+ * with a horizontal scrollbar instead of being squashed into many lines. */
+.gridjs-wrapper {
+	overflow-x: auto;
+	max-width: 100%;
+}
+.gridjs-table {
+	width: auto;
+	min-width: 100%;
+}
+
+/* Default: keep cells on a single line; horizontal scroll covers overflow. */
+.gridjs-td { white-space: nowrap; }
+
+/* Long-text columns wrap with a generous width so rows stay <= ~2 lines. */
+.gridjs-td[data-col="description"],
+.gridjs-td[data-col="notes"],
+.gridjs-td[data-col="definition"],
+.gridjs-td[data-col="comment"] {
+	white-space: normal;
+	min-width: 28rem;
+	max-width: 42rem;
+}
+
+footer {
+	text-align: center;
+	padding: 2rem 1rem;
+	color: var(--muted);
+	font-size: .85rem;
+}
+
+/* Slightly compact Grid.js styling so dense tables stay readable. */
+.gridjs-search input { font-size: .9rem; }
+.gridjs-th, .gridjs-td { font-size: .85rem; padding: .4rem .55rem; }
+.gridjs-th-content { font-weight: 600; }

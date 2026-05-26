@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>terminag — table</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header>
+	<h1><a href="./">terminag</a> <span class="sep">/</span> <span id="crumb">…</span></h1>
+	<p class="tagline" id="subtitle"></p>
+	<p class="meta">
+		<a id="raw-link" target="_blank" rel="noopener" href="#">View CSV on GitHub</a>
+		<span class="sep">·</span>
+		<a id="edit-link" target="_blank" rel="noopener" href="#">Edit on GitHub</a>
+	</p>
+</header>
+
+<main>
+	<div id="table-host"><p class="muted">Loading…</p></div>
+</main>
+
+<footer>
+	<p><a href="./">← all tables</a></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
+<script src="config.js"></script>
+<script src="assets/site.js"></script>
+<script>terminag.renderTable();</script>
+</body>
+</html>

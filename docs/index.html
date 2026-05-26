@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>terminag — vocabulary browser</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header>
+	<h1><a href="./">terminag</a></h1>
+	<p class="tagline">A controlled vocabulary for agricultural research data.</p>
+	<input id="filter" type="search" placeholder="Filter tables by name…" autofocus>
+</header>
+
+<main>
+	<section id="variables-section">
+		<h2>Variables</h2>
+		<p class="section-blurb">Variable names and units, with min/max accepted values for numeric variables.</p>
+		<div class="cards" data-group="variables">Loading…</div>
+	</section>
+
+	<section id="values-section">
+		<h2>Values</h2>
+		<p class="section-blurb">Accepted values for some character variables (e.g. country and crop names).</p>
+		<div class="cards" data-group="values">Loading…</div>
+	</section>
+</main>
+
+<footer>
+	<p>
+		<a id="repo-link" href="#">Source on GitHub</a> ·
+		<a href="https://carob-data.org">Carob</a> ·
+		<a href="https://github.com/controvoc/vocal">vocal (R)</a>
+	</p>
+</footer>
+
+<script src="config.js"></script>
+<script src="assets/site.js"></script>
+<script>terminag.renderIndex();</script>
+</body>
+</html>
