@@ -109,6 +109,28 @@ section h2:first-child, section:first-child h2 { margin-top: 0; }
 .empty, .muted { color: var(--muted); }
 .error { color: var(--error); }
 
+.table-controls {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	margin: .5rem 0 .25rem;
+	font-size: .9rem;
+	color: var(--muted);
+}
+.table-controls label {
+	display: inline-flex;
+	align-items: center;
+	gap: .35rem;
+}
+.table-controls select {
+	padding: .2rem .35rem;
+	font-size: .9rem;
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	background: #fff;
+	color: var(--fg);
+}
+
 #table-host { margin-top: .5rem; }
 #table-host .gridjs-wrapper { box-shadow: none; }
 

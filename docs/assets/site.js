@@ -94,14 +94,22 @@
 		if (rawBase) raw.href = `${rawBase}/${file}`; else raw.style.display = "none";
 		if (editBase) edit.href = `${editBase}/${file}`; else edit.style.display = "none";
 
-		// Pull dims from manifest, if available, for a nice subtitle.
-		try {
-			const tables = await fetchTables();
-			const meta = tables.find(t => t.file === file);
-			if (meta) {
-				subtitle.textContent = `${meta.rows.toLocaleString()} rows \u00b7 ${meta.cols} columns`;
-			}
-		} catch (_) { /* manifest is optional */ }
+		// Manifest is used for both the subtitle and the vocabulary -> values-
+		// table linking; failure is non-fatal (table still renders).
+		let manifest = [];
+		try { manifest = await fetchTables(); } catch (_) { /* optional */ }
+
+		const meta = manifest.find(t => t.file === file);
+		if (meta) {
+			subtitle.textContent = `${meta.rows.toLocaleString()} rows \u00b7 ${meta.cols} columns`;
+		}
+
+		// Map lower-cased values-table names -> file path, used to resolve
+		// `vocabulary` cells in variables tables into hyperlinks.
+		const valuesByName = new Map();
+		for (const t of manifest) {
+			if (t.group === "values") valuesByName.set(t.name.toLowerCase(), t.file);
+		}
 
 		let csvText;
 		try {
@@ -131,22 +139,33 @@
 			return row.slice(0, headers.length);
 		});
 
+		({ headers, rows } = dropEmptyColumns(headers, rows));
 		({ headers, rows } = reorderForVariables(file, headers, rows));
 		const colKeys = headers.map(h => String(h).trim().toLowerCase());
+		const vocabIdx = colKeys.indexOf("vocabulary");
 
 		host.innerHTML = "";
-		new gridjs.Grid({
-			columns: headers.map((h, idx) => ({
-				name: h,
-				sort: true,
-				// Tag each cell with the column name so CSS can size / wrap
-				// columns by semantic key rather than by position.
-				attributes: () => ({ "data-col": colKeys[idx] })
-			})),
+		const initialPageSize = readPageSize();
+		applyPageSizeSelect(initialPageSize);
+		const grid = new gridjs.Grid({
+			columns: headers.map((h, idx) => {
+				const key = colKeys[idx];
+				const col = {
+					name: h,
+					sort: true,
+					// Tag each cell with the column name so CSS can size /
+					// wrap columns by semantic key rather than by position.
+					attributes: () => ({ "data-col": key })
+				};
+				if (idx === vocabIdx) {
+					col.formatter = (cell) => vocabularyCell(cell, valuesByName);
+				}
+				return col;
+			}),
 			data: rows,
 			search: { enabled: true },
 			sort: true,
-			pagination: { enabled: true, limit: 50, summary: true },
+			pagination: paginationConfig(initialPageSize, rows.length),
 			resizable: true,
 			fixedHeader: false,
 			width: "100%",
@@ -154,6 +173,86 @@
 				search: { placeholder: "Search this table…" }
 			}
 		}).render(host);
+
+		const sizeSel = document.getElementById("page-size");
+		if (sizeSel) {
+			sizeSel.addEventListener("change", () => {
+				const val = sizeSel.value;
+				writePageSize(val);
+				grid.updateConfig({
+					pagination: paginationConfig(val, rows.length)
+				}).forceRender();
+			});
+		}
+	}
+
+	// Pagination defaults: 100 rows / page, persisted in localStorage.
+	const PAGE_SIZE_KEY = "terminag.pageSize";
+	const DEFAULT_PAGE_SIZE = "100";
+
+	function readPageSize() {
+		try {
+			const v = localStorage.getItem(PAGE_SIZE_KEY);
+			if (v) return v;
+		} catch (_) { /* private mode etc. */ }
+		return DEFAULT_PAGE_SIZE;
+	}
+
+	function writePageSize(v) {
+		try { localStorage.setItem(PAGE_SIZE_KEY, String(v)); } catch (_) {}
+	}
+
+	function applyPageSizeSelect(v) {
+		const sel = document.getElementById("page-size");
+		if (!sel) return;
+		const known = Array.from(sel.options).some(o => o.value === String(v));
+		sel.value = known ? String(v) : DEFAULT_PAGE_SIZE;
+	}
+
+	function paginationConfig(size, totalRows) {
+		// `size` is "all" or a numeric string. Show all rows by setting the
+		// limit to the row count so Grid.js produces a single page.
+		if (String(size).toLowerCase() === "all") {
+			return { enabled: true, limit: Math.max(totalRows, 1), summary: true };
+		}
+		const n = parseInt(size, 10);
+		if (!isFinite(n) || n <= 0) {
+			return { enabled: true, limit: parseInt(DEFAULT_PAGE_SIZE, 10), summary: true };
+		}
+		return { enabled: true, limit: n, summary: true };
+	}
+
+	// Render a `vocabulary` cell as a hyperlink to the matching values table
+	// when it exists, otherwise as plain text. Supports semicolon-separated
+	// lists, e.g. "crop; country", linking each part independently.
+	function vocabularyCell(cell, valuesByName) {
+		if (cell == null) return "";
+		const text = String(cell).trim();
+		if (!text) return "";
+		const parts = text.split(/\s*;\s*/);
+		const rendered = parts.map(part => {
+			const file = valuesByName.get(part.toLowerCase());
+			if (!file) return escapeHtml(part);
+			const href = `table.html?f=${encodeURIComponent(file)}`;
+			return `<a href="${href}">${escapeHtml(part)}</a>`;
+		});
+		return gridjs.html(rendered.join("; "));
+	}
+
+	// Drop any column whose header is blank/whitespace and whose every data
+	// cell is blank/whitespace. Catches the "phantom" trailing column that
+	// CSV parsers report for files with trailing commas (e.g. `name,` ).
+	function dropEmptyColumns(headers, rows) {
+		const keep = headers.map((h, i) => {
+			const headerEmpty = !String(h || "").trim();
+			if (!headerEmpty) return true;
+			return rows.some(r => String(r[i] ?? "").trim() !== "");
+		});
+		if (keep.every(Boolean)) return { headers, rows };
+		return {
+			headers: headers.filter((_, i) => keep[i]),
+			rows: rows.map(r => r.filter((_, i) => keep[i]))
+		};
 	}
 
 	// For "variables" tables, push the most-read columns to the front

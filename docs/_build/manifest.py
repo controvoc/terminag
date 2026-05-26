@@ -23,13 +23,17 @@ def _info(path: str) -> tuple[list[str], int]:
 	Raises with a clear, locatable message if the file is not valid UTF-8 or
 	cannot be parsed -- so encoding regressions surface at build time instead
 	of producing a silently-empty entry in `tables.json`.
+
+	Phantom columns (header cell is blank/whitespace AND every data cell in
+	the column is blank/whitespace) are dropped from the reported column
+	count. This matches what the in-browser renderer does so the column
+	number shown on the index card agrees with what users see.
 	"""
 	try:
 		with open(path, newline="", encoding="utf-8") as f:
 			reader = csv.reader(f)
 			header = next(reader, [])
-			n = sum(1 for _ in reader)
-		return header, n
+			data_rows = list(reader)
 	except UnicodeDecodeError as e:
 		raise SystemExit(
 			f"manifest: {path}: not valid UTF-8 at byte {e.start}: "
@@ -37,6 +41,18 @@ def _info(path: str) -> tuple[list[str], int]:
 		) from e
 	except Exception as e:
 		raise SystemExit(f"manifest: {path}: cannot read: {e}") from e
+
+	keep = []
+	for i, h in enumerate(header):
+		if (h or "").strip():
+			keep.append(True)
+			continue
+		col_nonempty = any(
+			(row[i] if i < len(row) else "").strip() for row in data_rows
+		)
+		keep.append(col_nonempty)
+	header_visible = [h for h, k in zip(header, keep) if k]
+	return header_visible, len(data_rows)
 
 
 def _entry(site: str, group: str, rel: str) -> dict:
