@@ -1,20 +1,20 @@
-﻿name,sciname,altname,,product
-chicken,Gallus gallus domesticus,,,egg;meat
-buffalo,Bubalus bubalis,,,milk;meat
-camel,Camelus dromedarius,,,milk;meat
-cattle,Bos taurus,,,milk;meat
-goat,Capra aegagrus hircus,,,milk;meat
-pig,Sus scrofa domesticus,,,meat
-rabbit,Oryctolagus cuniculus domesticus,,,meat
-sheep,Ovis aries,,,wool;meat
-horse,Equus ferus caballus,,,power;meat
-donkey,Equus asinus,,,power;meat
-mule,Equus asinus × caballus,,,power;meat
-hinny,Equus caballus × asinus,,,power;meat
-guinea pig,Cavia porcellus,,,meat
-duck,Anas platyrhynchos domesticus,,,egg;meat
-goose,Anser anser domesticus,,,egg;meat
-turkey,Meleagris gallopavo,,,meat
-guinea fowl,Numida meleagris,,,meat
-ostrich,Struthio camelus,,,meat
-Japanese quail,Cortunix cortunix japonica,,,meat
+﻿name,sciname,altname,product
+chicken,Gallus gallus domesticus,,egg;meat
+buffalo,Bubalus bubalis,,milk;meat
+camel,Camelus dromedarius,,milk;meat
+cattle,Bos taurus,,milk;meat
+goat,Capra aegagrus hircus,,milk;meat
+pig,Sus scrofa domesticus,,meat
+rabbit,Oryctolagus cuniculus domesticus,,meat
+sheep,Ovis aries,,wool;meat
+horse,Equus ferus caballus,,power;meat
+donkey,Equus asinus,,power;meat
+mule,Equus asinus × caballus,,power;meat
+hinny,Equus caballus × asinus,,power;meat
+guinea pig,Cavia porcellus,,meat
+duck,Anas platyrhynchos domesticus,,egg;meat
+goose,Anser anser domesticus,,egg;meat
+turkey,Meleagris gallopavo,,meat
+guinea fowl,Numida meleagris,,meat
+ostrich,Struthio camelus,,meat
+Japanese quail,Cortunix cortunix japonica,,meat
