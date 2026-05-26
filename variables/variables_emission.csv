@@ -1,0 +1,5 @@
+name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
+N2O emission,numeric,kg [CO2 equivalent] / ha,no,,no,,,yes,,,
+CO2 emission,numeric,kg [CO2 equivalent] / ha,no,,no,,,yes,,,
+CH4 emission,numeric,kg [CO2 equivalent] / ha,no,,no,,,yes,,,
+GHG emission,numeric,kg [CO2 equivalent] / ha,no,,no,,,,,,
