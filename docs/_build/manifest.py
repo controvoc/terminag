@@ -55,21 +55,113 @@ def _info(path: str) -> tuple[list[str], int]:
 	return header_visible, len(data_rows)
 
 
+# Per-group spec for the generated combined tables. The leading underscore
+# in the filename makes them sort to the top of their section in the index.
+# `columns` is either None (union of every column found in the source files,
+# in first-appearance order) or an explicit list (used verbatim). A synthetic
+# `source` column is always prepended.
+COMBINED_BASENAME = "_all.csv"
+COMBINED_SPEC: dict[str, dict] = {
+	"variables": {
+		"display": "all variables (combined)",
+		"columns": None,
+	},
+	"values": {
+		# The values_*.csv files have very heterogeneous schemas, so a union
+		# would be mostly empty. Restrict to the columns useful for an
+		# "everything in one place" search view.
+		"display": "all values (combined)",
+		"columns": ["name", "description"],
+	},
+}
+
+
 def _entry(site: str, group: str, rel: str) -> dict:
 	header, n = _info(os.path.join(site, rel))
 	base = os.path.splitext(os.path.basename(rel))[0]
 	prefix = group + "_"
 	name = base[len(prefix):] if base.startswith(prefix) else base
-	return {
+	entry = {
 		"group": group,
 		"name": name,
 		"file": rel.replace(os.sep, "/"),
 		"rows": n,
 		"cols": len(header),
 	}
+	if entry["file"] == f"{group}/{COMBINED_BASENAME}" and group in COMBINED_SPEC:
+		entry["displayName"] = COMBINED_SPEC[group]["display"]
+	return entry
+
+
+def _build_combined(site: str, group: str, columns: list[str] | None) -> None:
+	"""Write `<site>/<group>/_all.csv` combining every `<group>_*.csv`.
+
+	The output starts with a synthetic `source` column whose value is the
+	source file's short name (e.g. `crop`, `soil`). If `columns` is None,
+	all source columns are kept (union in first-appearance order); if it is
+	a list, only those columns are kept, in the given order. Source files
+	that don't have a requested column leave those cells empty.
+	"""
+	src_dir = os.path.join(site, group)
+	if not os.path.isdir(src_dir):
+		return
+
+	prefix = group + "_"
+	sources: list[tuple[str, list[str], list[list[str]]]] = []
+	for fn in sorted(os.listdir(src_dir)):
+		# Skip the file we are about to write, and any non-source files.
+		if fn == COMBINED_BASENAME:
+			continue
+		if not fn.lower().endswith(".csv"):
+			continue
+		if not fn.startswith(prefix):
+			continue
+		label = os.path.splitext(fn)[0][len(prefix):]
+		path = os.path.join(src_dir, fn)
+		try:
+			with open(path, newline="", encoding="utf-8") as f:
+				reader = csv.reader(f)
+				header = [(h or "").lstrip("\ufeff") for h in next(reader, [])]
+				rows = [row for row in reader]
+		except UnicodeDecodeError as e:
+			raise SystemExit(
+				f"combine: {path}: not valid UTF-8 at byte {e.start}: "
+				f"{e.reason}. Re-save the file as UTF-8 (no BOM)."
+			) from e
+		sources.append((label, header, rows))
+
+	if not sources:
+		return
+
+	if columns is None:
+		seen: set[str] = set()
+		ordered: list[str] = []
+		for _label, header, _rows in sources:
+			for h in header:
+				if h and h not in seen:
+					seen.add(h)
+					ordered.append(h)
+	else:
+		ordered = list(columns)
+
+	out_header = ["source"] + ordered
+	out_path = os.path.join(src_dir, COMBINED_BASENAME)
+	with open(out_path, "w", newline="", encoding="utf-8") as f:
+		w = csv.writer(f)
+		w.writerow(out_header)
+		for label, header, rows in sources:
+			idx_for = {h: i for i, h in enumerate(header) if h}
+			for row in rows:
+				new_row = [label]
+				for col in ordered:
+					i = idx_for.get(col)
+					new_row.append(row[i] if (i is not None and i < len(row)) else "")
+				w.writerow(new_row)
 
 
 def build(site: str) -> list[dict]:
+	for group, spec in COMBINED_SPEC.items():
+		_build_combined(site, group, spec["columns"])
 	tables: list[dict] = []
 	for group in ("variables", "values"):
 		d = os.path.join(site, group)

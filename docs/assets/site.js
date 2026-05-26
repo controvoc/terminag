@@ -14,9 +14,10 @@
 
 	function cardHTML(t) {
 		const dims = `${t.rows.toLocaleString()} row${t.rows === 1 ? "" : "s"} \u00b7 ${t.cols} column${t.cols === 1 ? "" : "s"}`;
+		const label = t.displayName || t.name;
 		return `
 			<a class="card" href="table.html?f=${encodeURIComponent(t.file)}">
-				<h3>${escapeHtml(t.name)}</h3>
+				<h3>${escapeHtml(label)}</h3>
 				<p>${dims}</p>
 			</a>`;
 	}
@@ -86,6 +87,8 @@
 			return;
 		}
 
+		// Crumb defaults to the file path; refined to displayName once the
+		// manifest is available below.
 		crumb.textContent = file;
 		document.title = `terminag — ${file}`;
 
@@ -102,6 +105,9 @@
 		const meta = manifest.find(t => t.file === file);
 		if (meta) {
 			subtitle.textContent = `${meta.rows.toLocaleString()} rows \u00b7 ${meta.cols} columns`;
+			const label = meta.displayName || meta.name;
+			crumb.textContent = label;
+			document.title = `terminag — ${label}`;
 		}
 
 		// Map lower-cased values-table names -> file path, used to resolve
@@ -262,7 +268,7 @@
 		const isVariables =
 			file.startsWith("variables/") || file.startsWith("variables_");
 		if (!isVariables) return { headers, rows };
-		const preferred = ["name", "type", "unit", "description", "vocabulary"];
+		const preferred = ["source", "name", "type", "unit", "description", "vocabulary"];
 		const lower = headers.map(h => String(h).trim().toLowerCase());
 		const order = [];
 		for (const p of preferred) {
