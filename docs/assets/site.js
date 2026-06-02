@@ -4,7 +4,6 @@
 	const cfg = window.SITE_CONFIG || {};
 	const repoUrl = cfg.repo ? `https://github.com/${cfg.repo}` : null;
 	const rawBase = cfg.repo ? `https://raw.githubusercontent.com/${cfg.repo}/${cfg.branch || "main"}` : null;
-	const editBase = cfg.repo ? `${repoUrl}/edit/${cfg.branch || "main"}` : null;
 
 	async function fetchTables() {
 		const r = await fetch("tables.json", { cache: "no-cache" });
@@ -93,9 +92,7 @@
 		document.title = `terminag — ${file}`;
 
 		const raw = document.getElementById("raw-link");
-		const edit = document.getElementById("edit-link");
 		if (rawBase) raw.href = `${rawBase}/${file}`; else raw.style.display = "none";
-		if (editBase) edit.href = `${editBase}/${file}`; else edit.style.display = "none";
 
 		// Manifest is used for both the subtitle and the vocabulary -> values-
 		// table linking; failure is non-fatal (table still renders).
