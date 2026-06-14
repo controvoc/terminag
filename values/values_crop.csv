@@ -124,6 +124,7 @@ fig,Ficus carica,,yes,fruit,fruits,,,figs,c_10840
 fig-leaf gourd,Cucurbita ficifolia,,yes,fruit,fruits,,,,
 finger millet,Eleusine coracana,,yes,grain,cereals,,7500,finger millet,c_2904
 flax,Linum usitatissimum,,yes,seed; stems,oil_seeds; fibre_crops,,,flax,c_2970
+fonio,Digitaria iburua; Digitaria exilis,,no,seed,,,,,
 forage crop,spp,,no,above_ground,fodder_crops,,,forage,c_36108
 forage legume,spp,,no,forage,fodder_crops,,,,
 foxtail amaranth,Amaranthus caudatus,,yes,seed; leaves,pseudocereals; vegetables,,,,
