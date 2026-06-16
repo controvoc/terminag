@@ -48,6 +48,7 @@ irrigation_amount,numeric,mm,no,,no,0,1000,yes,The total irrigation amount appli
 irrigation_fulfullment,character,,no,,no,,,yes,The degree to which irrigation needs were fulfilled,,
 irrigation_dates,date,,no,,yes,,,yes,"Irrigation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00010126
 land_prep_method,character,,no,land_prep,yes,,,yes,"Land preparation (tillage) method used (including ""none"" = ""zero-tillage"")",,AGRO_00000322
+ land_prep_traction,character,,no,land_prep,yes,,,yes,Type of traction used in land preparation,,
 land_prep_implement,character,,no,implement,yes,,,yes,Land preparation (tillage) implement(s) used,,AGRO_00000224
 planting_method,character,,no,planting,no,,,yes,Planting (sowing) method,,AGRO_00000231
 planting_implement,character,,no,implement,no,,,yes,Planting (sowing) implement used,,AGRO_00000232
