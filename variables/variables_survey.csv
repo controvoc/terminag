@@ -10,7 +10,7 @@ hh_elder_women,numeric,,no,,no,0,50,,number of elderly women in household (>65 y
 hh_elder_men,numeric,,no,,no,0,50,,number of elderly men in household (>65 years old),,
 dependency,numeric,,no,,no,0,1,,"Ratio of economically dependent members (children, elderly) to working-age members",,
 is_head,logical,,no,,no,,,,the respondent is identified as the household head (main decision-maker or primary earner),,
-age, numeric,year,no,,no,12,,yes,age of  the respondrent (farmer) or other identified individual,,
+age,numeric,year,no,,no,12,,yes,age of  the respondrent (farmer) or other identified individual,,
 sex,character,,no,,no,,,,sex of the respondent (male/female) or other identified individual,,
 education,character,,no,,no,,,yes,education level attained by the respondrent (farmer) or other identified individual,,
 civil_status,character,, no,,no,,,yes,civil status of the respondrent (farmer) or other identified individual,,
