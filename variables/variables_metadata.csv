@@ -23,5 +23,6 @@ modified_by,character,,no,,yes,,,no,name(s) of contributers who made significant
 notes,character,,no,,no,,,yes,notes about data quality issues in the dataset,,
 design,character,,no,,no,,,yes,short description of the experimental or survey design,,
 completion,numeric,,no,,no,,,yes,the percentage of relevant variables that have been standardized,,
+effort,numeric,,no,,no,,,yes,the effort (in hours) to complete the script,,
 countries,character,,no,,no,,,yes,countries in the data,automatically generated,
 crops,character,,no,,no,,,yes,crops in the data,automatically generated,

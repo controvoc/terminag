@@ -15,6 +15,7 @@ sex,character,,no,,no,,,,sex of the respondent (male/female) or other identified
 education,character,,no,,no,,,yes,education level attained by the respondrent (farmer) or other identified individual,,
 civil_status,character,, no,,no,,,yes,civil status of the respondrent (farmer) or other identified individual,,
 religion,character,, no,,no,,,yes,religion of ther respondrent (farmer) or other identified individual,,
+occupation,character,, no,,no,,,yes,,,
 farmland,numeric,ha,no,,no,0,,yes,amount of farmland managed by the household,,
 farmland_owned,numeric,ha,no,,no,0,,yes,amount of farmland owned by the household,,
 farmland_rentedin,numeric,ha,no,,no,0,,yes,amount of farmland rented in by the household,,
