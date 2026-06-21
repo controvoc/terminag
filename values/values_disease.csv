@@ -1,13 +1,25 @@
-name,crop
-potato late blight,potato
-cassava anthracnose,cassava
-cassava anthracnose,cassava
-cassava bacterial blight,cassava
-superelongation disease,cassava
-cassava brown leaf spot,cassava
-cassava brown leaf spot,cassava
-diffuse leaf spot,cassava
-cassava frogskin disease,cassava
-powdery mildew,many
-rust,many
-septoria,many
+name,pathogen,crop,notes
+potato late blight,phytophthora infestans,potato,
+cassava anthracnose,,cassava,
+cassava anthracnose,,cassava,
+cassava bacterial blight,,cassava,
+superelongation disease,,cassava,
+cassava brown leaf spot,,cassava,
+cassava brown leaf spot,,cassava,
+diffuse leaf spot,,cassava,
+cassava frogskin disease,,cassava,
+powdery mildew,,many,
+rust,,many,
+septoria,,many,
+powdery mildew,,wheat,
+stem rust,,wheat,
+leaf rust,,wheat,
+fusarium scab spike,,wheat,
+helminthosporium sativum leaf,,wheat,
+septoria tritici blotch,,wheat,
+septoria species,,wheat,
+blast severity,,wheat,
+blast intensity,,wheat,
+stripe rust on leaf,,wheat,
+pyrenophora tritici repentis,,wheat,"wheat; causes a disease originally named yellow spot but now commonly called tan spot, yellow leaf spot, yellow leaf blotch or helminthosporiosi"
+fusarium graminearum,,wheat,

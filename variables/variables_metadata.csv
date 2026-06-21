@@ -24,5 +24,3 @@ carob_last_modified,date,,no,,no,,,no,"date of last significant revision of the 
 carob_completion,numeric,,no,,no,,,yes,the percentage of relevant variables that have been standardized,,
 carob_effort,numeric,,no,,no,0,20,yes,the effort (in hours) to complete the script,,
 carob_contributor,character,,yes,,yes,,,no,name(s) of contributers of this script,,
-countries,character,,no,,no,,,yes,countries in the data,automatically generated,
-crops,character,,no,,no,,,yes,crops in the data,automatically generated,
