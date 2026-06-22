@@ -27,12 +27,15 @@ install_local <- function(pkg_path) {
 }
 
 if (!requireNamespace("carobiner", quietly = TRUE)) {
+  yuri_path <- file.path(monorepo_root, "yuri")
   vocal_path <- file.path(monorepo_root, "vocal")
   carobiner_path <- file.path(monorepo_root, "carobiner")
+  if (dir.exists(yuri_path)) install_local(yuri_path)
   if (dir.exists(vocal_path)) install_local(vocal_path)
   if (dir.exists(carobiner_path)) {
     install_local(carobiner_path)
   } else if (!requireNamespace("carobiner", quietly = TRUE)) {
+  remotes::install_github("carob-data/yuri", upgrade = "never", quiet = TRUE)
   remotes::install_github("controvoc/vocal", upgrade = "never", quiet = TRUE)
   remotes::install_github("carob-data/carobiner", upgrade = "never", quiet = TRUE)
   }
