@@ -166,7 +166,7 @@ footer {
 }
 
 /* Carob CSV checker (check.html) */
-.check-main { max-width: 900px; }
+.check-main { max-width: 1100px; }
 .check-form {
 	display: grid;
 	gap: 1rem;
@@ -240,6 +240,93 @@ footer {
 #results-table td:first-child {
 	font-weight: 500;
 	white-space: nowrap;
+}
+
+/* In-page Carob report (check.html) */
+.report-container {
+	background: #fff;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	padding: 1.25rem 1.5rem;
+	margin-top: 0.5rem;
+}
+.report-container .report-title {
+	font-size: 1.35rem;
+	margin: 0 0 0.75rem;
+	font-weight: 600;
+}
+.report-container .report-section {
+	margin: 1.5rem 0;
+}
+.report-container .report-section-title {
+	font-size: 1.05rem;
+	margin: 0 0 0.75rem;
+	font-weight: 600;
+	border-bottom: 1px solid var(--border);
+	padding-bottom: 0.35rem;
+}
+.report-container .report-subsection {
+	margin: 1rem 0;
+}
+.report-container .report-subsection-title {
+	font-size: 0.95rem;
+	margin: 0 0 0.5rem;
+	font-weight: 600;
+	color: var(--muted);
+}
+.report-container .report-completeness-intro {
+	margin-bottom: 1rem;
+}
+.report-container .report-completeness-avg {
+	margin: 0 0 0.5rem;
+	font-weight: 500;
+}
+.report-container .report-citation {
+	padding-left: 2.5rem;
+	margin: 0.5rem 0 1rem;
+}
+.report-container .report-scroll-box {
+	border: 1px solid #ddd;
+	overflow: auto;
+	max-height: 400px;
+	max-width: 100%;
+	margin: 0.5rem 0 1rem;
+}
+.report-container .report-table {
+	border-collapse: collapse;
+	font-size: 0.88rem;
+	width: max-content;
+	min-width: 100%;
+}
+.report-container .report-table caption {
+	caption-side: top;
+	text-align: left;
+	font-weight: 600;
+	padding: 0.5rem 0.65rem 0;
+}
+.report-container .report-table th,
+.report-container .report-table td {
+	padding: 0.35rem 0.55rem;
+	border-bottom: 1px solid var(--border);
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+}
+.report-container .report-table thead th {
+	position: sticky;
+	top: 0;
+	background: #fff;
+	font-weight: 600;
+}
+.report-container .report-table tbody tr:nth-child(even) { background: #f6f6f6; }
+.report-container .report-table tbody tr:hover { background: #eef5ee; }
+.report-container .report-map {
+	height: 480px;
+	width: 100%;
+	max-width: 672px;
+	margin: 0.5rem 0 1rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
 }
 
 /* Slightly compact Grid.js styling so dense tables stay readable. */

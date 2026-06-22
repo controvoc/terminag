@@ -5,6 +5,7 @@
 <title>terminag — check your data</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
 <body>
 <header>
@@ -16,7 +17,7 @@
 	<section>
 		<h2>Upload</h2>
 		<p class="section-blurb">
-			Check wide-format records (and optional metadata).
+			Check wide-format records against the terminag vocabulary.
 		</p>
 
 		<div class="check-form">
@@ -25,13 +26,9 @@
 				<input type="file" id="records-file" accept=".csv,text/csv" required>
 			</label>
 
-			<label class="check-label">
-				<span>Metadata CSV <em class="muted">(optional, one row)</em></span>
-				<input type="file" id="metadata-file" accept=".csv,text/csv">
-			</label>
-
 			<div class="check-actions">
 				<button type="button" id="run-check" class="btn-primary">Run check</button>
+				<button type="button" id="download-report" class="btn-secondary" disabled>Download report HTML</button>
 				<button type="button" id="download-results" class="btn-secondary" disabled>Download results CSV</button>
 			</div>
 			<p id="status" class="muted" aria-live="polite"></p>
@@ -39,16 +36,9 @@
 	</section>
 
 	<section id="results-section" hidden>
-		<h2>Results</h2>
+		<h2>Report</h2>
 		<p id="summary" class="section-blurb"></p>
-		<div class="table-wrap">
-			<table id="results-table">
-				<thead>
-					<tr><th>check</th><th>message</th></tr>
-				</thead>
-				<tbody></tbody>
-			</table>
-		</div>
+		<div id="report-container" class="report-container"></div>
 	</section>
 </main>
 
@@ -60,19 +50,23 @@
 	</p>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="assets/checker.js"></script>
+<script src="assets/report.js"></script>
 <script>
 (function () {
 	"use strict";
 
 	let vocab = null;
 	let lastIssues = [];
+	let lastReportOpts = null;
 
 	const statusEl = document.getElementById("status");
 	const resultsSection = document.getElementById("results-section");
 	const summaryEl = document.getElementById("summary");
-	const tbody = document.querySelector("#results-table tbody");
+	const reportContainer = document.getElementById("report-container");
 	const downloadBtn = document.getElementById("download-results");
+	const downloadReportBtn = document.getElementById("download-report");
 
 	function setStatus(msg, isError) {
 		statusEl.textContent = msg;
@@ -94,28 +88,24 @@
 		});
 	}
 
-	function showResults(issues) {
+	function showResults(issues, records, metadata) {
 		lastIssues = issues;
-		tbody.innerHTML = "";
+		lastReportOpts = { records, metadata, issues, vocab };
 		if (issues.length === 0) {
-			summaryEl.textContent = "No issues found.";
-			resultsSection.hidden = false;
-			downloadBtn.disabled = true;
-			return;
+			summaryEl.textContent = "No vocabulary issues found.";
+		} else {
+			summaryEl.textContent = `${issues.length} issue(s) found.`;
 		}
-		summaryEl.textContent = `${issues.length} issue(s) found.`;
-		for (const row of issues) {
-			const tr = document.createElement("tr");
-			const td1 = document.createElement("td");
-			const td2 = document.createElement("td");
-			td1.textContent = row.check;
-			td2.textContent = row.msg;
-			tr.appendChild(td1);
-			tr.appendChild(td2);
-			tbody.appendChild(tr);
+		const oldMap = reportContainer.querySelector("#carob-report-map");
+		if (oldMap) CarobReport.destroyMap(oldMap);
+		reportContainer.innerHTML = CarobReport.buildReport(lastReportOpts);
+		const mapEl = reportContainer.querySelector("#carob-report-map");
+		if (mapEl) {
+			requestAnimationFrame(() => CarobReport.initMap(mapEl, records));
 		}
 		resultsSection.hidden = false;
-		downloadBtn.disabled = false;
+		downloadBtn.disabled = issues.length === 0;
+		downloadReportBtn.disabled = false;
 	}
 
 	document.getElementById("run-check").addEventListener("click", async () => {
@@ -127,31 +117,19 @@
 		try {
 			setStatus("Loading vocabulary…");
 			if (!vocab) await loadVocab();
-			setStatus("Reading files…");
+			setStatus("Reading file…");
 			const recText = await readFile(recFile);
 			const records = CarobCheck.parseCSV(recText);
 			if (records.rows.length === 0) {
 				setStatus("Records CSV has no data rows.", true);
 				return;
 			}
-			let metadata = null;
-			const metaFile = document.getElementById("metadata-file").files[0];
-			if (metaFile) {
-				const metaText = await readFile(metaFile);
-				const metaTable = CarobCheck.parseCSV(metaText);
-				if (metaTable.rows.length === 0) {
-					setStatus("Metadata CSV has no data rows.", true);
-					return;
-				}
-				metadata = metaTable.rows[0];
-			}
 			const issues = CarobCheck.checkTerms({
 				vocab,
 				records,
-				metadata,
 				check: "nogeo",
 			});
-			showResults(issues);
+			showResults(issues, records, null);
 			setStatus(`Checked ${records.rows.length} record(s).`);
 		} catch (e) {
 			setStatus(e.message || String(e), true);
@@ -169,6 +147,17 @@
 		const a = document.createElement("a");
 		a.href = URL.createObjectURL(blob);
 		a.download = "carob-check-results.csv";
+		a.click();
+		URL.revokeObjectURL(a.href);
+	});
+
+	downloadReportBtn.addEventListener("click", () => {
+		if (!lastReportOpts) return;
+		const html = CarobReport.buildReportDocument(lastReportOpts);
+		const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+		const a = document.createElement("a");
+		a.href = URL.createObjectURL(blob);
+		a.download = "carob-report.html";
 		a.click();
 		URL.revokeObjectURL(a.href);
 	});
