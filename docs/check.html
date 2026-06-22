@@ -10,7 +10,7 @@
 <body>
 <header>
 	<h1><a href="./">terminag</a> <span class="sep">/</span> check</h1>
-	<p class="tagline">Upload records to check variable names and values against the terminag vocabulary.</p>
+	<p class="tagline">Upload records to check variable names and values against the terminag vocabulary and get a report.</p>
 </header>
 
 <main class="check-main">
@@ -119,7 +119,8 @@
 	}
 
 	function showSheetPicker(names, selected) {
-		fillSheetSelect(names, selected);
+		const keep = selected || sheetSelect.value;
+		fillSheetSelect(names, keep);
 		sheetRow.classList.remove("is-hidden");
 		sheetRow.setAttribute("aria-hidden", "false");
 	}
@@ -128,12 +129,16 @@
 		if (CarobSpreadsheet.isXlsxFile(file)) {
 			if (!pendingWorkbook) {
 				pendingWorkbook = await CarobSpreadsheet.readWorkbook(file);
+				const names = CarobSpreadsheet.sheetNames(pendingWorkbook);
+				if (names.length === 0) {
+					throw new Error("Excel file has no sheets.");
+				}
+				showSheetPicker(names);
 			}
 			const names = CarobSpreadsheet.sheetNames(pendingWorkbook);
 			if (names.length === 0) {
 				throw new Error("Excel file has no sheets.");
 			}
-			showSheetPicker(names);
 			const sheetName = sheetSelect.value || names[0];
 			if (!names.includes(sheetName)) {
 				throw new Error(`Sheet not found: ${sheetName}`);
