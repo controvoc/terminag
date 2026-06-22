@@ -26,10 +26,12 @@
 				<input type="file" id="records-file" accept=".csv,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required>
 			</label>
 
-			<label class="check-label" id="sheet-row" hidden>
-				<span>Excel sheet</span>
-				<select id="sheet-select"></select>
-			</label>
+			<div id="sheet-row" class="check-sheet-row is-hidden" aria-hidden="true">
+				<label class="check-label">
+					<span>Excel sheet</span>
+					<select id="sheet-select"></select>
+				</label>
+			</div>
 
 			<div class="check-actions">
 				<button type="button" id="run-check" class="btn-primary">Run check</button>
@@ -105,30 +107,40 @@
 		}
 	}
 
-	function resetSheetPicker() {
-		pendingWorkbook = null;
+	function hideSheetPickerUI() {
 		sheetSelect.innerHTML = "";
-		sheetRow.hidden = true;
+		sheetRow.classList.add("is-hidden");
+		sheetRow.setAttribute("aria-hidden", "true");
+	}
+
+	function hideSheetPicker() {
+		pendingWorkbook = null;
+		hideSheetPickerUI();
+	}
+
+	function showSheetPicker(names, selected) {
+		fillSheetSelect(names, selected);
+		sheetRow.classList.remove("is-hidden");
+		sheetRow.setAttribute("aria-hidden", "false");
 	}
 
 	async function loadRecordsTable(file) {
 		if (CarobSpreadsheet.isXlsxFile(file)) {
 			if (!pendingWorkbook) {
 				pendingWorkbook = await CarobSpreadsheet.readWorkbook(file);
-				const names = CarobSpreadsheet.sheetNames(pendingWorkbook);
-				if (names.length === 0) {
-					throw new Error("Excel file has no sheets.");
-				}
-				fillSheetSelect(names);
-				sheetRow.hidden = false;
 			}
 			const names = CarobSpreadsheet.sheetNames(pendingWorkbook);
+			if (names.length === 0) {
+				throw new Error("Excel file has no sheets.");
+			}
+			showSheetPicker(names);
 			const sheetName = sheetSelect.value || names[0];
 			if (!names.includes(sheetName)) {
 				throw new Error(`Sheet not found: ${sheetName}`);
 			}
 			return CarobSpreadsheet.sheetToTable(pendingWorkbook, sheetName);
 		}
+		hideSheetPicker();
 		const text = await readFile(file);
 		return CarobCheck.parseCSV(text);
 	}
@@ -208,8 +220,8 @@
 	}
 
 	recordsFile.addEventListener("change", async () => {
-		resetSheetPicker();
 		const file = recordsFile.files[0];
+		hideSheetPicker();
 		if (!file) return;
 		if (!CarobSpreadsheet.isXlsxFile(file)) return;
 		try {
@@ -220,8 +232,7 @@
 				setStatus("Excel file has no sheets.", true);
 				return;
 			}
-			fillSheetSelect(names);
-			sheetRow.hidden = false;
+			showSheetPicker(names);
 			setStatus(names.length > 1
 				? `Excel file loaded (${names.length} sheets). Choose a sheet, then run check.`
 				: "Excel file loaded.");
@@ -239,6 +250,9 @@
 		try {
 			setStatus("Loading vocabulary…");
 			if (!vocab) await loadVocab();
+			if (!CarobSpreadsheet.isXlsxFile(recFile)) {
+				hideSheetPicker();
+			}
 			setStatus("Reading file…");
 			const records = await loadRecordsTable(recFile);
 			if (records.rows.length === 0) {
@@ -284,6 +298,7 @@
 		URL.revokeObjectURL(a.href);
 	});
 
+	hideSheetPicker();
 	loadVocab().catch(e => setStatus(e.message, true));
 })();
 </script>

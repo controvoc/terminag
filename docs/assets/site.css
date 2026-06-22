@@ -178,6 +178,9 @@ footer {
 	font-size: .95rem;
 }
 .check-label em { font-style: normal; }
+.check-sheet-row.is-hidden {
+	display: none !important;
+}
 .check-label input[type="file"],
 .check-label select {
 	font-size: .95rem;

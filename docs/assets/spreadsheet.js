@@ -3,11 +3,8 @@
 	"use strict";
 
 	function isXlsxFile(file) {
-		if (!file) return false;
-		const name = (file.name || "").toLowerCase();
-		if (name.endsWith(".xlsx") || name.endsWith(".xls")) return true;
-		const type = (file.type || "").toLowerCase();
-		return type.includes("spreadsheet") || type.includes("excel");
+		if (!file || !file.name) return false;
+		return /\.(xlsx|xls)$/i.test(file.name);
 	}
 
 	function readArrayBuffer(file) {
