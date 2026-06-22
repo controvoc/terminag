@@ -18,6 +18,7 @@ variety_pedigree,character,,no,,no,,,yes,Variety pedigree. E.g. CML311 x CML483,
 variety_type,character,,no,,no,,,yes,"variety grouping (e.g. climbing/bush) and/or ""improved/landrace""",,AGRO_00000616
 variety_traits,character,,no,,no,,,yes,variety characteristics,,
 variety_release_year,integer,,no,,no,,,yes,year the variety was released,,
+intercropped,logical,,no,,no,,,yes,is the crop intercropped,,
 intercrops,character,,no,crop,yes,,,yes,Other crop grown together with the main crop,,
 intercrop_type,character,,no,intercrop,yes,,,yes,"Type of intercropping (e.g. mixed, strip)",,
 previous_crop,character,,no,crop,yes,,,yes,Crop grown on this plot in the prior season,,AGRO_00000592
