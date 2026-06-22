@@ -271,9 +271,14 @@
 					? accepted.map(a => (typeof a === "string" ? a : a.name))
 					: []
 			);
-			let provided = uniqueNonMissing(colValues(table, tr.name));
-			if (tr.required !== "yes") {
-				provided = provided.filter(v => !isMissing(v));
+			let provided;
+			if (tr.required === "yes") {
+				// Match R: empty strings are not NA and are checked against the vocabulary.
+				provided = [...new Set(colValues(table, tr.name).filter(v =>
+					v !== null && v !== undefined && !(typeof v === "number" && Number.isNaN(v))
+				))];
+			} else {
+				provided = uniqueNonMissing(colValues(table, tr.name));
 			}
 			if (tr.multiple_allowed === "yes") {
 				provided = [...new Set(
@@ -406,11 +411,19 @@
 		if (colValues(table, "yield").every(isMissing)) return;
 		const pairs = table.rows
 			.filter(r => !isMissing(r.crop) && !isMissing(r.yield))
-			.map(r => ({ crop: String(r.crop), yield: Number(r.yield) }));
+			.map(r => ({ crop: String(r.crop), yield: r.yield }));
 		const maxByCrop = {};
 		for (const p of pairs) {
-			if (Number.isNaN(p.yield)) continue;
-			maxByCrop[p.crop] = Math.max(maxByCrop[p.crop] || 0, p.yield);
+			const n = Number(p.yield);
+			const y = Number.isNaN(n) ? String(p.yield) : n;
+			if (typeof y === "number") {
+				maxByCrop[p.crop] = Math.max(maxByCrop[p.crop] || 0, y);
+			} else if (maxByCrop[p.crop] === undefined) {
+				maxByCrop[p.crop] = y;
+			} else {
+				const prev = maxByCrop[p.crop];
+				maxByCrop[p.crop] = String(prev) > String(y) ? prev : y;
+			}
 		}
 		const low = Object.keys(maxByCrop).filter(c => maxByCrop[c] < 100);
 		if (low.length) push(issues, "low yield (tons not kg?)", low.join(", "));
@@ -419,7 +432,10 @@
 		const high = [];
 		for (const [crop, y] of Object.entries(maxByCrop)) {
 			const mx = cropMap.get(crop);
-			if (mx !== undefined && y > mx) high.push(`${crop}: ${y}`);
+			if (mx === undefined) continue;
+			const yn = Number(y);
+			const highYield = Number.isNaN(yn) ? String(y) > String(mx) : yn > mx;
+			if (highYield) high.push(`${crop}: ${y}`);
 		}
 		if (high.length) push(issues, "high crop yield", high.join(", "));
 	}

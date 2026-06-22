@@ -1,0 +1,10 @@
+[
+  {
+    "check": "metadata",
+    "msg": "response is not a variable in the data: yield"
+  },
+  {
+    "check": "uri",
+    "msg": "http in uri"
+  }
+]

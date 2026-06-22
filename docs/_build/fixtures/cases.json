@@ -1,0 +1,14 @@
+[
+  { "id": "records_minimal", "records": "records_minimal.csv" },
+  { "id": "records_bad_crop", "records": "records_bad_crop.csv" },
+  { "id": "records_oob_lon", "records": "records_oob_lon.csv" },
+  { "id": "records_na_country", "records": "records_na_country.csv" },
+  { "id": "records_bad_type", "records": "records_bad_type.csv" },
+  { "id": "records_duplicates", "records": "records_duplicates.csv" },
+  {
+    "id": "experiment_with_meta",
+    "records": "records_treatment.csv",
+    "metadata": "metadata_experiment.csv"
+  },
+  { "id": "metadata_uri_http", "metadata": "metadata_uri_http.csv" }
+]

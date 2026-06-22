@@ -1,0 +1,10 @@
+[
+  {
+    "check": "invalid terms",
+    "msg": "crop: notacrop"
+  },
+  {
+    "check": "missing variables",
+    "msg": "dataset_id, N_fertilizer, P_fertilizer, K_fertilizer, irrigated"
+  }
+]

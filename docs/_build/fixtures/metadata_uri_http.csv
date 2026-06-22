@@ -1,0 +1,2 @@
+dataset_id,uri,authors,title,description,license,data_citation,data_type,treatment_vars,response_vars,publication,data_organization,project,carob_group,carob_date,carob_contributor
+test_ds,http://example.com/data,Author,Title,Description,CC-BY,Citation,survey,none,yield,none,ABC,TestProject,crop,2020-01-01,Contributor

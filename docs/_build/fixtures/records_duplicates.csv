@@ -1,0 +1,3 @@
+trial_id,on_farm,is_survey,crop,yield_part,yield,yield_moisture,country,longitude,latitude,geo_from_source,planting_date,harvest_date
+T1,FALSE,FALSE,maize,grain,5000,12,Kenya,36.8,-1.3,TRUE,2020-01-01,2020-06-01
+T1,FALSE,FALSE,maize,grain,5000,12,Kenya,36.8,-1.3,TRUE,2020-01-01,2020-06-01

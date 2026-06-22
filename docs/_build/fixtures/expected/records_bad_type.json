@@ -1,0 +1,14 @@
+[
+  {
+    "check": "bad datatype",
+    "msg": "yield (character, not numeric)"
+  },
+  {
+    "check": "high crop yield",
+    "msg": "maize: abc"
+  },
+  {
+    "check": "missing variables",
+    "msg": "dataset_id, N_fertilizer, P_fertilizer, K_fertilizer, irrigated"
+  }
+]
