@@ -17,13 +17,18 @@
 	<section>
 		<h2>Upload</h2>
 		<p class="section-blurb">
-			Check wide-format records against the terminag vocabulary.
+			Check wide-format records (CSV or Excel) against the terminag vocabulary.
 		</p>
 
 		<div class="check-form">
 			<label class="check-label">
-				<span>Records CSV</span>
-				<input type="file" id="records-file" accept=".csv,text/csv" required>
+				<span>Records file</span>
+				<input type="file" id="records-file" accept=".csv,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required>
+			</label>
+
+			<label class="check-label" id="sheet-row" hidden>
+				<span>Excel sheet</span>
+				<select id="sheet-select"></select>
 			</label>
 
 			<div class="check-actions">
@@ -70,9 +75,11 @@
 	</p>
 </footer>
 
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" crossorigin=""></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" crossorigin=""></script>
 <script src="assets/checker.js"></script>
+<script src="assets/spreadsheet.js"></script>
 <script src="assets/report.js"></script>
 <script src="assets/boxplot.js"></script>
 <script>
@@ -82,6 +89,61 @@
 	let vocab = null;
 	let lastIssues = [];
 	let lastReportOpts = null;
+	let lastUploadName = "";
+	let pendingWorkbook = null;
+
+	function fillSheetSelect(names, selected) {
+		sheetSelect.innerHTML = "";
+		for (const name of names) {
+			const opt = document.createElement("option");
+			opt.value = name;
+			opt.textContent = name;
+			sheetSelect.appendChild(opt);
+		}
+		if (selected && names.includes(selected)) {
+			sheetSelect.value = selected;
+		}
+	}
+
+	function resetSheetPicker() {
+		pendingWorkbook = null;
+		sheetSelect.innerHTML = "";
+		sheetRow.hidden = true;
+	}
+
+	async function loadRecordsTable(file) {
+		if (CarobSpreadsheet.isXlsxFile(file)) {
+			if (!pendingWorkbook) {
+				pendingWorkbook = await CarobSpreadsheet.readWorkbook(file);
+				const names = CarobSpreadsheet.sheetNames(pendingWorkbook);
+				if (names.length === 0) {
+					throw new Error("Excel file has no sheets.");
+				}
+				fillSheetSelect(names);
+				sheetRow.hidden = false;
+			}
+			const names = CarobSpreadsheet.sheetNames(pendingWorkbook);
+			const sheetName = sheetSelect.value || names[0];
+			if (!names.includes(sheetName)) {
+				throw new Error(`Sheet not found: ${sheetName}`);
+			}
+			return CarobSpreadsheet.sheetToTable(pendingWorkbook, sheetName);
+		}
+		const text = await readFile(file);
+		return CarobCheck.parseCSV(text);
+	}
+
+	function deriveDownloadName(uploadName, suffix) {
+		if (!uploadName) return `dataset${suffix}`;
+		if (/\.(csv|xlsx|xls)$/i.test(uploadName)) {
+			return uploadName.replace(/\.(csv|xlsx|xls)$/i, suffix);
+		}
+		return uploadName + suffix;
+	}
+
+	const recordsFile = document.getElementById("records-file");
+	const sheetRow = document.getElementById("sheet-row");
+	const sheetSelect = document.getElementById("sheet-select");
 
 	const statusEl = document.getElementById("status");
 	const resultsSection = document.getElementById("results-section");
@@ -145,20 +207,42 @@
 		});
 	}
 
+	recordsFile.addEventListener("change", async () => {
+		resetSheetPicker();
+		const file = recordsFile.files[0];
+		if (!file) return;
+		if (!CarobSpreadsheet.isXlsxFile(file)) return;
+		try {
+			setStatus("Reading Excel sheets…");
+			pendingWorkbook = await CarobSpreadsheet.readWorkbook(file);
+			const names = CarobSpreadsheet.sheetNames(pendingWorkbook);
+			if (names.length === 0) {
+				setStatus("Excel file has no sheets.", true);
+				return;
+			}
+			fillSheetSelect(names);
+			sheetRow.hidden = false;
+			setStatus(names.length > 1
+				? `Excel file loaded (${names.length} sheets). Choose a sheet, then run check.`
+				: "Excel file loaded.");
+		} catch (e) {
+			setStatus(e.message || String(e), true);
+		}
+	});
+
 	document.getElementById("run-check").addEventListener("click", async () => {
-		const recFile = document.getElementById("records-file").files[0];
+		const recFile = recordsFile.files[0];
 		if (!recFile) {
-			setStatus("Choose a records CSV file.", true);
+			setStatus("Choose a records file.", true);
 			return;
 		}
 		try {
 			setStatus("Loading vocabulary…");
 			if (!vocab) await loadVocab();
 			setStatus("Reading file…");
-			const recText = await readFile(recFile);
-			const records = CarobCheck.parseCSV(recText);
+			const records = await loadRecordsTable(recFile);
 			if (records.rows.length === 0) {
-				setStatus("Records CSV has no data rows.", true);
+				setStatus("File has no data rows.", true);
 				return;
 			}
 			const issues = CarobCheck.checkTerms({
@@ -166,6 +250,7 @@
 				records,
 				check: "nogeo",
 			});
+			lastUploadName = recFile.name;
 			showResults(issues, records, null);
 			setStatus(`Checked ${records.rows.length} record(s).`);
 		} catch (e) {
@@ -183,7 +268,7 @@
 		const blob = new Blob([lines.join("\n") + "\n"], { type: "text/csv" });
 		const a = document.createElement("a");
 		a.href = URL.createObjectURL(blob);
-		a.download = "carob-check-results.csv";
+		a.download = deriveDownloadName(lastUploadName, "_check.csv");
 		a.click();
 		URL.revokeObjectURL(a.href);
 	});
@@ -194,7 +279,7 @@
 		const blob = new Blob([html], { type: "text/html;charset=utf-8" });
 		const a = document.createElement("a");
 		a.href = URL.createObjectURL(blob);
-		a.download = "carob-report.html";
+		a.download = deriveDownloadName(lastUploadName, "_report.html");
 		a.click();
 		URL.revokeObjectURL(a.href);
 	});
