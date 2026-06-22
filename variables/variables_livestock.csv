@@ -1,5 +1,5 @@
 name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
-animal,character,,,animals,,,,,The livestoc type,,
+animal,character,,,animal,,,,,The livestoc type,,
 heads,numeric,,,,,0,,,How many of this type,,
 pastoral,logical,,,,,,,,Are these animals primarily in a pastoral system?,,
 purpose,character,,,,,,,,What is the purpose of these animals?,,
