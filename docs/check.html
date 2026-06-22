@@ -38,7 +38,27 @@
 	<section id="results-section" hidden>
 		<h2>Report</h2>
 		<p id="summary" class="section-blurb"></p>
-		<div id="report-container" class="report-container"></div>
+		<div id="report-container" class="report-container">
+			<div id="report-main"></div>
+			<section id="boxplot-section" class="report-section" hidden>
+				<h2 class="report-section-title">5. BOXPLOT</h2>
+				<p class="section-blurb">
+					Compare the distribution of a quantitative variable, optionally grouped by another variable.
+				</p>
+				<div class="boxplot-controls">
+					<label class="check-label">
+						<span>Quantitative variable</span>
+						<select id="boxplot-y"></select>
+					</label>
+					<label class="check-label">
+						<span>Grouping variable <em class="muted">(optional)</em></span>
+						<select id="boxplot-group"></select>
+					</label>
+				</div>
+				<div id="boxplot-plot" class="boxplot-plot" aria-label="Boxplot chart"></div>
+			</section>
+			<div id="record-sample-section"></div>
+		</div>
 	</section>
 </main>
 
@@ -51,8 +71,10 @@
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" crossorigin=""></script>
 <script src="assets/checker.js"></script>
 <script src="assets/report.js"></script>
+<script src="assets/boxplot.js"></script>
 <script>
 (function () {
 	"use strict";
@@ -65,8 +87,14 @@
 	const resultsSection = document.getElementById("results-section");
 	const summaryEl = document.getElementById("summary");
 	const reportContainer = document.getElementById("report-container");
+	const reportMain = document.getElementById("report-main");
+	const recordSampleSection = document.getElementById("record-sample-section");
 	const downloadBtn = document.getElementById("download-results");
 	const downloadReportBtn = document.getElementById("download-report");
+	const boxplotSection = document.getElementById("boxplot-section");
+	const boxplotY = document.getElementById("boxplot-y");
+	const boxplotGroup = document.getElementById("boxplot-group");
+	const boxplotPlot = document.getElementById("boxplot-plot");
 
 	function setStatus(msg, isError) {
 		statusEl.textContent = msg;
@@ -96,16 +124,25 @@
 		} else {
 			summaryEl.textContent = `${issues.length} issue(s) found.`;
 		}
-		const oldMap = reportContainer.querySelector("#carob-report-map");
+		const oldMap = reportMain.querySelector("#carob-report-map");
 		if (oldMap) CarobReport.destroyMap(oldMap);
-		reportContainer.innerHTML = CarobReport.buildReport(lastReportOpts);
-		const mapEl = reportContainer.querySelector("#carob-report-map");
+		reportMain.innerHTML = CarobReport.buildReport(lastReportOpts);
+		recordSampleSection.innerHTML = CarobReport.buildRecordSampleSectionBlock(records);
+		const mapEl = reportMain.querySelector("#carob-report-map");
 		if (mapEl) {
 			requestAnimationFrame(() => CarobReport.initMap(mapEl, records));
 		}
 		resultsSection.hidden = false;
 		downloadBtn.disabled = issues.length === 0;
 		downloadReportBtn.disabled = false;
+		CarobBoxplot.setup({
+			sectionEl: boxplotSection,
+			ySelectEl: boxplotY,
+			groupSelectEl: boxplotGroup,
+			plotEl: boxplotPlot,
+			table: records,
+			vocab,
+		});
 	}
 
 	document.getElementById("run-check").addEventListener("click", async () => {

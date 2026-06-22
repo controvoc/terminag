@@ -253,6 +253,22 @@
 		return Number.isInteger(pct) || pct % 1 === 0 ? String(Math.round(pct)) : String(pct);
 	}
 
+	function formatRecordNumber(v) {
+		const s = String(v).trim();
+		const n = Number(s);
+		if (Number.isNaN(n)) return s;
+		const abs = Math.abs(n);
+		let decimals;
+		if (abs < 10) decimals = 5;
+		else if (abs < 100) decimals = 3;
+		else if (abs < 1000) decimals = 1;
+		else decimals = 0;
+		return n.toLocaleString(undefined, {
+			minimumFractionDigits: decimals,
+			maximumFractionDigits: decimals,
+		});
+	}
+
 	function formatCompletenessInline(rows) {
 		const incomplete = rows.filter(r => r.completeness < 100);
 		if (incomplete.length === 0) {
@@ -307,13 +323,16 @@
 		].join("\n");
 	}
 
-	function buildDataTable(columns, rows, caption) {
+	function buildDataTable(columns, rows, caption, formatNumbers = false) {
 		if (!columns.length || !rows.length) return "";
 		const thead = columns.map(c => `<th>${escapeHtml(c)}</th>`).join("");
 		const tbody = rows.map(row => {
 			const cells = columns.map(c => {
 				const v = row[c];
-				const text = isMissing(v) ? "" : String(v);
+				let text = "";
+				if (!isMissing(v)) {
+					text = formatNumbers ? formatRecordNumber(v) : String(v);
+				}
 				return `<td>${escapeHtml(text)}</td>`;
 			}).join("");
 			return `<tr>${cells}</tr>`;
@@ -326,7 +345,7 @@
 		const hide = new Set(["dataset_id", "record_id"]);
 		const columns = table.columns.filter(c => !hide.has(c));
 		const rows = table.rows.slice(0, maxRows);
-		return buildDataTable(columns, rows, "records");
+		return buildDataTable(columns, rows, "records", true);
 	}
 
 	function buildIntro(metadata) {
@@ -399,6 +418,10 @@
 		return `<section class="report-section"><h2 class="report-section-title">${num}. ${escapeHtml(title)}</h2>${content}</section>`;
 	}
 
+	function buildRecordSampleSectionBlock(table, maxRows = 25) {
+		return sectionBlock(6, "RECORD SAMPLE", buildRecordSampleSection(table, maxRows));
+	}
+
 	function buildSummarySection(metadata, table, treatments) {
 		const parts = [
 			buildIntro(metadata),
@@ -443,12 +466,10 @@
 		const loc = summarizeLocations(records);
 
 		const sections = [
-			`<h1 class="report-title">Carob report</h1>`,
 			sectionBlock(1, "Summary", buildSummarySection(metadata, records, treatments)),
 			sectionBlock(2, "Vocabulary check warnings", buildWarnings(issues)),
 			sectionBlock(3, "Locations", buildLocationsSection(loc, loc.haveXY)),
 			sectionBlock(4, "Variable completeness", buildCompletenessSection(records, vocab)),
-			sectionBlock(5, "Record sample", buildRecordSampleSection(records, maxPreviewRows)),
 		];
 		return sections.filter(Boolean).join("\n");
 	}
@@ -459,7 +480,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 1.5rem; background: #fff; bor
 a { color: #2e7d32; }
 .report-title { font-size: 1.6rem; margin: 0 0 1rem; font-weight: 600; }
 .report-section { margin: 1.5rem 0; }
-.report-section-title { font-size: 1.1rem; margin: 0 0 0.75rem; font-weight: 600; border-bottom: 1px solid #e5e5e5; padding-bottom: 0.35rem; }
+.report-section-title { font-size: 1.1rem; margin: 0 0 0.75rem; font-weight: 600; color: #2e7d32; border-bottom: 1px solid #c8e6c9; padding-bottom: 0.35rem; }
 .report-subsection { margin: 1rem 0; }
 .report-subsection-title { font-size: 0.95rem; margin: 0 0 0.5rem; font-weight: 600; color: #444; }
 .report-completeness-intro { margin-bottom: 1rem; }
@@ -525,7 +546,8 @@ footer { text-align: center; padding: 1.5rem; color: #6b6b6b; font-size: 0.85rem
 	}
 
 	function buildReportDocument(opts) {
-		const body = buildReport(opts);
+		const maxPreviewRows = opts.maxPreviewRows ?? 25;
+		const body = buildReport(opts) + buildRecordSampleSectionBlock(opts.records, maxPreviewRows);
 		const points = collectMapPoints(opts.records || { columns: [], rows: [] });
 		const generated = new Date().toISOString().slice(0, 10);
 		const mapScript = buildMapInitScript(points);
@@ -533,7 +555,7 @@ footer { text-align: center; padding: 1.5rem; color: #6b6b6b; font-size: 0.85rem
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Carob report</title>
+<title>terminag report</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="${LEAFLET_CSS}" crossorigin="">
 <style>${REPORT_CSS}</style>
@@ -550,6 +572,7 @@ ${mapScript}
 	global.CarobReport = {
 		buildReport,
 		buildReportDocument,
+		buildRecordSampleSectionBlock,
 		collectMapPoints,
 		initMap,
 		destroyMap,

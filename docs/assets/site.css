@@ -242,6 +242,29 @@ footer {
 	white-space: nowrap;
 }
 
+/* Boxplot explorer (check.html) */
+.boxplot-controls {
+	display: grid;
+	gap: 1rem;
+	max-width: 520px;
+	margin-bottom: 1rem;
+}
+.boxplot-controls select {
+	font-size: 0.95rem;
+	padding: 0.4rem 0.5rem;
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	background: #fff;
+	width: 100%;
+}
+.boxplot-plot {
+	min-height: 420px;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	background: #fff;
+	padding: 0.5rem;
+}
+
 /* In-page Carob report (check.html) */
 .report-container {
 	background: #fff;
@@ -262,7 +285,8 @@ footer {
 	font-size: 1.05rem;
 	margin: 0 0 0.75rem;
 	font-weight: 600;
-	border-bottom: 1px solid var(--border);
+	color: var(--accent);
+	border-bottom: 1px solid #c8e6c9;
 	padding-bottom: 0.35rem;
 }
 .report-container .report-subsection {
