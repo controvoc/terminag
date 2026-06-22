@@ -165,6 +165,83 @@ footer {
 	font-size: .85rem;
 }
 
+/* Carob CSV checker (check.html) */
+.check-main { max-width: 900px; }
+.check-form {
+	display: grid;
+	gap: 1rem;
+	max-width: 520px;
+}
+.check-label {
+	display: grid;
+	gap: .35rem;
+	font-size: .95rem;
+}
+.check-label em { font-style: normal; }
+.check-label input[type="file"],
+.check-label select {
+	font-size: .95rem;
+	padding: .4rem .5rem;
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	background: #fff;
+}
+.check-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5rem;
+	align-items: center;
+}
+.btn-primary,
+.btn-secondary {
+	font-size: .95rem;
+	padding: .45rem .9rem;
+	border-radius: 4px;
+	border: 1px solid var(--border);
+	cursor: pointer;
+}
+.btn-primary {
+	background: var(--accent);
+	color: var(--accent-fg);
+	border-color: var(--accent);
+}
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-secondary {
+	background: #fff;
+	color: var(--fg);
+}
+.btn-secondary:disabled {
+	opacity: .5;
+	cursor: not-allowed;
+}
+.table-wrap {
+	overflow-x: auto;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	background: #fff;
+}
+#results-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: .9rem;
+}
+#results-table th,
+#results-table td {
+	padding: .45rem .65rem;
+	border-bottom: 1px solid var(--border);
+	text-align: left;
+	vertical-align: top;
+}
+#results-table th {
+	background: var(--bg);
+	font-weight: 600;
+}
+#results-table tr:last-child td { border-bottom: none; }
+#results-table td:first-child {
+	font-weight: 500;
+	white-space: nowrap;
+}
+
 /* Slightly compact Grid.js styling so dense tables stay readable. */
 .gridjs-search input { font-size: .9rem; }
 .gridjs-th, .gridjs-td { font-size: .85rem; padding: .4rem .55rem; }

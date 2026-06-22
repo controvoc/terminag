@@ -85,6 +85,8 @@ def assemble() -> None:
 	sys.path.insert(0, str(ROOT / "docs" / "_build"))
 	import manifest  # type: ignore
 	manifest.main(["manifest.py", str(SITE)])
+	import vocab  # type: ignore
+	vocab.main(["vocab.py", str(SITE)])
 
 
 def serve(port: int) -> None:

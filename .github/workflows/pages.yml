@@ -63,6 +63,9 @@ jobs:
       - name: Generate tables manifest
         run: python3 docs/_build/manifest.py _site
 
+      - name: Generate checker vocabulary
+        run: python3 docs/_build/vocab.py _site
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

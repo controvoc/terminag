@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>terminag — check your data</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header>
+	<h1><a href="./">terminag</a> <span class="sep">/</span> check</h1>
+	<p class="tagline">Upload a Carob records CSV and check variable names and values against this vocabulary.</p>
+</header>
+
+<main class="check-main">
+	<section>
+		<h2>Upload</h2>
+		<p class="section-blurb">
+			This mirrors <code>carobiner::check_terms</code> for wide-format records (and optional metadata).
+			Geo checks (land, country match) are not run in the browser — use R for those, or treat this as <code>check="nogeo"</code>.
+		</p>
+
+		<div class="check-form">
+			<label class="check-label">
+				<span>Records CSV</span>
+				<input type="file" id="records-file" accept=".csv,text/csv" required>
+			</label>
+
+			<label class="check-label">
+				<span>Metadata CSV <em class="muted">(optional, one row)</em></span>
+				<input type="file" id="metadata-file" accept=".csv,text/csv">
+			</label>
+
+			<div class="check-actions">
+				<button type="button" id="run-check" class="btn-primary">Run check</button>
+				<button type="button" id="download-results" class="btn-secondary" disabled>Download results CSV</button>
+			</div>
+			<p id="status" class="muted" aria-live="polite"></p>
+		</div>
+	</section>
+
+	<section id="results-section" hidden>
+		<h2>Results</h2>
+		<p id="summary" class="section-blurb"></p>
+		<div class="table-wrap">
+			<table id="results-table">
+				<thead>
+					<tr><th>check</th><th>message</th></tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<p>
+		<a href="./">Vocabulary browser</a> ·
+		<a href="https://carob-data.org">Carob</a> ·
+		<a href="https://github.com/controvoc/vocal">vocal (R)</a>
+	</p>
+</footer>
+
+<script src="assets/checker.js"></script>
+<script>
+(function () {
+	"use strict";
+
+	let vocab = null;
+	let lastIssues = [];
+
+	const statusEl = document.getElementById("status");
+	const resultsSection = document.getElementById("results-section");
+	const summaryEl = document.getElementById("summary");
+	const tbody = document.querySelector("#results-table tbody");
+	const downloadBtn = document.getElementById("download-results");
+
+	function setStatus(msg, isError) {
+		statusEl.textContent = msg;
+		statusEl.className = isError ? "error" : "muted";
+	}
+
+	async function loadVocab() {
+		const r = await fetch("vocab.json", { cache: "no-cache" });
+		if (!r.ok) throw new Error("cannot load vocab.json (HTTP " + r.status + ")");
+		vocab = await r.json();
+	}
+
+	function readFile(file) {
+		return new Promise((resolve, reject) => {
+			const reader = new FileReader();
+			reader.onload = () => resolve(reader.result);
+			reader.onerror = () => reject(reader.error);
+			reader.readAsText(file);
+		});
+	}
+
+	function showResults(issues) {
+		lastIssues = issues;
+		tbody.innerHTML = "";
+		if (issues.length === 0) {
+			summaryEl.textContent = "No issues found.";
+			resultsSection.hidden = false;
+			downloadBtn.disabled = true;
+			return;
+		}
+		summaryEl.textContent = `${issues.length} issue(s) found.`;
+		for (const row of issues) {
+			const tr = document.createElement("tr");
+			const td1 = document.createElement("td");
+			const td2 = document.createElement("td");
+			td1.textContent = row.check;
+			td2.textContent = row.msg;
+			tr.appendChild(td1);
+			tr.appendChild(td2);
+			tbody.appendChild(tr);
+		}
+		resultsSection.hidden = false;
+		downloadBtn.disabled = false;
+	}
+
+	document.getElementById("run-check").addEventListener("click", async () => {
+		const recFile = document.getElementById("records-file").files[0];
+		if (!recFile) {
+			setStatus("Choose a records CSV file.", true);
+			return;
+		}
+		try {
+			setStatus("Loading vocabulary…");
+			if (!vocab) await loadVocab();
+			setStatus("Reading files…");
+			const recText = await readFile(recFile);
+			const records = CarobCheck.parseCSV(recText);
+			if (records.rows.length === 0) {
+				setStatus("Records CSV has no data rows.", true);
+				return;
+			}
+			let metadata = null;
+			const metaFile = document.getElementById("metadata-file").files[0];
+			if (metaFile) {
+				const metaText = await readFile(metaFile);
+				const metaTable = CarobCheck.parseCSV(metaText);
+				if (metaTable.rows.length === 0) {
+					setStatus("Metadata CSV has no data rows.", true);
+					return;
+				}
+				metadata = metaTable.rows[0];
+			}
+			const issues = CarobCheck.checkTerms({
+				vocab,
+				records,
+				metadata,
+				check: "nogeo",
+			});
+			showResults(issues);
+			setStatus(`Checked ${records.rows.length} record(s).`);
+		} catch (e) {
+			setStatus(e.message || String(e), true);
+		}
+	});
+
+	downloadBtn.addEventListener("click", () => {
+		const lines = ["check,msg"];
+		for (const row of lastIssues) {
+			const c = `"${String(row.check).replace(/"/g, '""')}"`;
+			const m = `"${String(row.msg).replace(/"/g, '""')}"`;
+			lines.push(`${c},${m}`);
+		}
+		const blob = new Blob([lines.join("\n") + "\n"], { type: "text/csv" });
+		const a = document.createElement("a");
+		a.href = URL.createObjectURL(blob);
+		a.download = "carob-check-results.csv";
+		a.click();
+		URL.revokeObjectURL(a.href);
+	});
+
+	loadVocab().catch(e => setStatus(e.message, true));
+})();
+</script>
+</body>
+</html>
