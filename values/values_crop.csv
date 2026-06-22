@@ -32,6 +32,7 @@ bergamot orange,Citrus bergamia,,yes,fruit,fruits,,,bergamot orange,c_9233
 bermudagrass,Cynodon dactylon,,yes,fodder,,,,,
 berseem clover,Trifolium alexandrium,,yes,above_ground,fodder_crops,,,,
 bilberry,Vaccinium myrtillus,,yes,fruit,fruits,,,bilberries,c_aeec9b59
+bitterball,Solanum incanum ,,yes,fruit,vegetables,,,,
 bitter gourd,Momordica charantia,,yes,fruit,,,,,
 black currant,Ribes nigrum,,yes,fruit,fruits,,,black currants,c_945
 black fonio,Digitaria iburua,,yes,grain,cereals,,,,
@@ -111,6 +112,7 @@ dewberry,Rubus sp.,,yes,fruit,fruits,,,dewberries,c_2232
 dragon fruit,Selenicereus spp.,,yes,fruit,fruits,,,dragon fruits,c_42ce209e
 durian,Durio zibethinus,,yes,fruit,fruits,,,durians,c_10488
 durum wheat,Triticum durum,,yes,grain,cereals,,,,
+eddo,Colocasia antiquorum),,yes,root,vegetables,,,,
 eggplant,Solanum melongena,,yes,fruit,vegetables,,,eggplants,c_8998
 endive,Cichorium endivia,,yes,leaves,vegetables,,,endives,c_10596
 enset,Ensete ventricosum,,yes,rhizome,root_tuber,,,,
