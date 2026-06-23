@@ -2,7 +2,7 @@
 (function (global) {
 	"use strict";
 
-	const MAX_RECORD_ROWS = 1000;
+	const MAX_RECORD_ROWS = 2500;
 
 	function isMissing(v) {
 		if (v === null || v === undefined) return true;
