@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>terminag — ODK form designer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header>
+	<h1><a href="./">terminag</a> <span class="sep">/</span> ODK form designer</h1>
+	<p class="tagline">
+		Build an <a href="https://getodk.org/">ODK</a> XLSForm from terminag variables.
+		Export a spreadsheet for <a href="https://docs.getodk.org/xlsform/">ODK Build</a> or Convert.
+	</p>
+</header>
+
+<main class="odk-main">
+	<section class="odk-panel">
+		<h2>Form settings</h2>
+		<div class="odk-form-grid">
+			<label class="odk-label">
+				<span>Form title</span>
+				<input type="text" id="form-title" value="Agricultural survey" autocomplete="off">
+			</label>
+			<label class="odk-label">
+				<span>Form ID</span>
+				<input type="text" id="form-id" value="terminag_survey" autocomplete="off">
+			</label>
+			<label class="odk-label">
+				<span>Version</span>
+				<input type="text" id="form-version" value="1" autocomplete="off">
+			</label>
+			<label class="odk-label">
+				<span>Preset</span>
+				<select id="form-preset"></select>
+			</label>
+		</div>
+	</section>
+
+	<section class="odk-panel">
+		<h2>Variable groups</h2>
+		<p class="section-blurb">Choose which terminag variable groups to browse in Available.</p>
+		<div class="odk-group-actions">
+			<button type="button" id="groups-select-all" class="btn-secondary">Select all</button>
+			<button type="button" id="groups-unselect-all" class="btn-secondary">Unselect all</button>
+		</div>
+		<div id="group-toggles" class="odk-group-toggles"></div>
+	</section>
+
+	<section class="odk-panel">
+		<h2>Variables</h2>
+		<p class="section-blurb">Choose variable groups to browse, then add fields to the form. Order in <strong>Selected</strong> is the field order in the exported form (within terminag groups).</p>
+		<input id="var-filter" type="search" placeholder="Filter available variables…" class="odk-search">
+		<p id="var-summary" class="meta"></p>
+		<div class="odk-var-transfer">
+			<div class="odk-var-panel">
+				<h3 class="odk-var-panel-title">Available</h3>
+				<div class="table-wrap odk-var-table-wrap">
+					<table id="available-table">
+						<thead>
+							<tr>
+								<th><input type="checkbox" id="available-select-all" title="Select all visible"></th>
+								<th>Name</th>
+								<th>Label</th>
+								<th>Type</th>
+								<th>Group</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+			<div class="odk-var-actions">
+				<button type="button" id="add-vars" class="btn-secondary" title="Add to form">Add →</button>
+				<button type="button" id="remove-vars" class="btn-secondary" title="Remove from form">← Remove</button>
+			</div>
+			<div class="odk-var-panel">
+				<h3 class="odk-var-panel-title">Selected <span id="selected-count" class="odk-count"></span></h3>
+				<div class="table-wrap odk-var-table-wrap">
+					<table id="selected-table">
+						<thead>
+							<tr>
+								<th><input type="checkbox" id="selected-select-all" title="Select all"></th>
+								<th>Name</th>
+								<th>Label</th>
+								<th>Type</th>
+								<th>Group</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="odk-panel">
+		<h2>Export</h2>
+		<p id="export-summary" class="section-blurb"></p>
+		<div class="check-actions">
+			<button type="button" id="download-xlsx" class="btn-primary">Download XLSForm (.xlsx)</button>
+			<button type="button" id="toggle-preview" class="btn-secondary">Show survey preview</button>
+		</div>
+		<div id="preview-wrap" class="odk-preview is-hidden">
+			<div class="table-wrap">
+				<table id="preview-table">
+					<thead>
+						<tr>
+							<th>Type</th>
+							<th>Name</th>
+							<th>Label</th>
+							<th>Required</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<p>
+		<a href="https://github.com/controvoc/terminag">Source on GitHub</a> ·
+		<a href="check.html">Check CSV</a> ·
+		<a href="https://docs.getodk.org/xlsform/">XLSForm reference</a>
+	</p>
+</footer>
+
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" crossorigin=""></script>
+<script src="assets/odk-designer.js"></script>
+<script>
+(function () {
+	"use strict";
+
+	let vocab = null;
+	let groupVars = new Map();
+	let varByName = new Map();
+	/** Ordered variable names in the form. */
+	let selectedOrder = [];
+	let activeGroups = new Set();
+	let availableChecked = new Set();
+	let selectedChecked = new Set();
+
+	const formTitle = document.getElementById("form-title");
+	const formId = document.getElementById("form-id");
+	const formVersion = document.getElementById("form-version");
+	const formPreset = document.getElementById("form-preset");
+	const groupToggles = document.getElementById("group-toggles");
+	const groupsSelectAll = document.getElementById("groups-select-all");
+	const groupsUnselectAll = document.getElementById("groups-unselect-all");
+	const varFilter = document.getElementById("var-filter");
+	const varSummary = document.getElementById("var-summary");
+	const availableTable = document.getElementById("available-table");
+	const selectedTable = document.getElementById("selected-table");
+	const availableSelectAll = document.getElementById("available-select-all");
+	const selectedSelectAll = document.getElementById("selected-select-all");
+	const selectedCount = document.getElementById("selected-count");
+	const addVarsBtn = document.getElementById("add-vars");
+	const removeVarsBtn = document.getElementById("remove-vars");
+	const exportSummary = document.getElementById("export-summary");
+	const downloadBtn = document.getElementById("download-xlsx");
+	const togglePreview = document.getElementById("toggle-preview");
+	const previewWrap = document.getElementById("preview-wrap");
+	const previewTable = document.getElementById("preview-table");
+
+	function escapeHtml(s) {
+		return String(s)
+			.replace(/&/g, "&amp;")
+			.replace(/</g, "&lt;")
+			.replace(/>/g, "&gt;")
+			.replace(/"/g, "&quot;");
+	}
+
+	function allGroups() {
+		return CarobOdk.sortGroupNames([...groupVars.keys()]);
+	}
+
+	function applyPreset(key) {
+		const preset = CarobOdk.PRESETS[key];
+		if (!preset) return;
+		activeGroups.clear();
+		for (const g of preset.groups) activeGroups.add(g);
+		syncGroupToggles();
+		selectedOrder = [];
+		for (const g of preset.groups) {
+			for (const v of groupVars.get(g) || []) {
+				selectedOrder.push(v.name);
+			}
+		}
+		availableChecked.clear();
+		selectedChecked.clear();
+		renderVariableTables();
+		updateSummaries();
+	}
+
+	function syncGroupToggles() {
+		for (const input of groupToggles.querySelectorAll("input[type=checkbox]")) {
+			input.checked = activeGroups.has(input.value);
+		}
+	}
+
+	function selectedVariables() {
+		return selectedOrder.map((name) => varByName.get(name)).filter(Boolean);
+	}
+
+	function selectedGroupOrder() {
+		const seen = new Set();
+		const order = [];
+		for (const name of selectedOrder) {
+			const v = varByName.get(name);
+			if (v && !seen.has(v.group)) {
+				seen.add(v.group);
+				order.push(v.group);
+			}
+		}
+		return order;
+	}
+
+	function availableVariables() {
+		const selectedSet = new Set(selectedOrder);
+		const q = varFilter.value.trim().toLowerCase();
+		const vars = [];
+		for (const g of activeGroups) {
+			for (const v of groupVars.get(g) || []) {
+				if (selectedSet.has(v.name)) continue;
+				if (q) {
+					const hay = `${v.name} ${v.description || ""} ${v.group}`.toLowerCase();
+					if (!hay.includes(q)) continue;
+				}
+				vars.push(v);
+			}
+		}
+		return vars;
+	}
+
+	function odkTypeLabel(v) {
+		return CarobOdk.odkTypeDisplay(v);
+	}
+
+	function variableRowHtml(v, checked, checkboxClass) {
+		const odk = odkTypeLabel(v);
+		return `<tr>
+			<td><input type="checkbox" class="${checkboxClass}" data-name="${escapeHtml(v.name)}" ${checked ? "checked" : ""}></td>
+			<td><code>${escapeHtml(v.name)}</code></td>
+			<td>${escapeHtml(CarobOdk.variableLabel(v))}</td>
+			<td><code>${escapeHtml(odk)}</code></td>
+			<td>${escapeHtml(v.group)}</td>
+		</tr>`;
+	}
+
+	function renderVariableTables() {
+		const available = availableVariables();
+		const tbodyAvail = availableTable.querySelector("tbody");
+		tbodyAvail.innerHTML = available.map((v) =>
+			variableRowHtml(v, availableChecked.has(v.name), "avail-chk")
+		).join("");
+
+		const selected = selectedVariables();
+		const tbodySel = selectedTable.querySelector("tbody");
+		tbodySel.innerHTML = selected.map((v) =>
+			variableRowHtml(v, selectedChecked.has(v.name), "sel-chk")
+		).join("");
+
+		availableSelectAll.checked = available.length > 0
+			&& available.every((v) => availableChecked.has(v.name));
+		selectedSelectAll.checked = selected.length > 0
+			&& selected.every((v) => selectedChecked.has(v.name));
+		selectedCount.textContent = selected.length ? `(${selected.length})` : "";
+	}
+
+	function updateSummaries() {
+		const sel = selectedVariables();
+		const sheets = CarobOdk.buildXlsForm(vocab, sel, {
+			title: formTitle.value,
+			id: formId.value,
+			version: formVersion.value,
+			groupOrder: selectedGroupOrder(),
+		});
+		const fields = sheets.survey.length - 1;
+		const choices = sheets.choices.length - 1;
+		varSummary.textContent = `${availableVariables().length} available · ${sel.length} selected in form.`;
+		exportSummary.textContent = `Ready to export ${fields} survey rows (including groups) and ${choices} choice options. Field names match terminag variable names for easy Carob checking.`;
+		previewTable.querySelector("tbody").innerHTML = sheets.survey.slice(1).map((row) => {
+			if (!row[0] || row[0].startsWith("end")) return "";
+			return `<tr>
+				<td><code>${escapeHtml(row[0])}</code></td>
+				<td><code>${escapeHtml(row[1])}</code></td>
+				<td>${escapeHtml(row[2])}</td>
+				<td>${escapeHtml(row[4])}</td>
+			</tr>`;
+		}).join("");
+	}
+
+	function renderGroupToggles() {
+		groupToggles.innerHTML = allGroups().map((g) => {
+			const id = "grp_" + g;
+			return `<label class="odk-group-chip">
+				<input type="checkbox" id="${escapeHtml(id)}" value="${escapeHtml(g)}" ${activeGroups.has(g) ? "checked" : ""}>
+				<span>${escapeHtml(CarobOdk.groupLabel(g))}</span>
+			</label>`;
+		}).join("");
+	}
+
+	function initPresets() {
+		formPreset.innerHTML = Object.entries(CarobOdk.PRESETS).map(([k, p]) =>
+			`<option value="${escapeHtml(k)}">${escapeHtml(p.label)}</option>`
+		).join("");
+	}
+
+	groupToggles.addEventListener("change", (e) => {
+		const input = e.target;
+		if (input.type !== "checkbox") return;
+		if (input.checked) activeGroups.add(input.value);
+		else activeGroups.delete(input.value);
+		availableChecked.clear();
+		renderVariableTables();
+		updateSummaries();
+		formPreset.value = "custom";
+	});
+
+	groupsSelectAll.addEventListener("click", () => {
+		activeGroups = new Set(allGroups());
+		syncGroupToggles();
+		availableChecked.clear();
+		renderVariableTables();
+		updateSummaries();
+		formPreset.value = "custom";
+	});
+
+	groupsUnselectAll.addEventListener("click", () => {
+		activeGroups.clear();
+		syncGroupToggles();
+		availableChecked.clear();
+		renderVariableTables();
+		updateSummaries();
+		formPreset.value = "custom";
+	});
+
+	formPreset.addEventListener("change", () => applyPreset(formPreset.value));
+
+	varFilter.addEventListener("input", () => {
+		availableChecked.clear();
+		renderVariableTables();
+		updateSummaries();
+	});
+
+	availableTable.addEventListener("change", (e) => {
+		const input = e.target;
+		if (input.type !== "checkbox" || !input.dataset.name) return;
+		if (input.checked) availableChecked.add(input.dataset.name);
+		else availableChecked.delete(input.dataset.name);
+		const visible = availableVariables();
+		availableSelectAll.checked = visible.length > 0
+			&& visible.every((v) => availableChecked.has(v.name));
+	});
+
+	selectedTable.addEventListener("change", (e) => {
+		const input = e.target;
+		if (input.type !== "checkbox" || !input.dataset.name) return;
+		if (input.checked) selectedChecked.add(input.dataset.name);
+		else selectedChecked.delete(input.dataset.name);
+		const sel = selectedVariables();
+		selectedSelectAll.checked = sel.length > 0
+			&& sel.every((v) => selectedChecked.has(v.name));
+	});
+
+	availableSelectAll.addEventListener("change", () => {
+		for (const v of availableVariables()) {
+			if (availableSelectAll.checked) availableChecked.add(v.name);
+			else availableChecked.delete(v.name);
+		}
+		renderVariableTables();
+	});
+
+	selectedSelectAll.addEventListener("change", () => {
+		for (const v of selectedVariables()) {
+			if (selectedSelectAll.checked) selectedChecked.add(v.name);
+			else selectedChecked.delete(v.name);
+		}
+		renderVariableTables();
+	});
+
+	addVarsBtn.addEventListener("click", () => {
+		const toAdd = availableVariables().filter((v) => availableChecked.has(v.name));
+		if (!toAdd.length) return;
+		for (const v of toAdd) {
+			if (!selectedOrder.includes(v.name)) selectedOrder.push(v.name);
+		}
+		availableChecked.clear();
+		renderVariableTables();
+		updateSummaries();
+		formPreset.value = "custom";
+	});
+
+	removeVarsBtn.addEventListener("click", () => {
+		if (!selectedChecked.size) return;
+		selectedOrder = selectedOrder.filter((name) => !selectedChecked.has(name));
+		selectedChecked.clear();
+		renderVariableTables();
+		updateSummaries();
+		formPreset.value = "custom";
+	});
+
+	[formTitle, formId, formVersion].forEach((el) => {
+		el.addEventListener("input", () => updateSummaries());
+	});
+
+	togglePreview.addEventListener("click", () => {
+		previewWrap.classList.toggle("is-hidden");
+		togglePreview.textContent = previewWrap.classList.contains("is-hidden")
+			? "Show survey preview"
+			: "Hide survey preview";
+	});
+
+	downloadBtn.addEventListener("click", () => {
+		const sel = selectedVariables();
+		if (!sel.length) {
+			alert("Select at least one variable.");
+			return;
+		}
+		const sheets = CarobOdk.buildXlsForm(vocab, sel, {
+			title: formTitle.value.trim() || "terminag form",
+			id: formId.value.trim() || "terminag_form",
+			version: formVersion.value.trim() || "1",
+			groupOrder: selectedGroupOrder(),
+		});
+		const safeId = (formId.value.trim() || "terminag_form").replace(/[^a-zA-Z0-9_-]+/g, "_");
+		CarobOdk.writeXlsx(sheets, `${safeId}.xlsx`);
+	});
+
+	async function init() {
+		initPresets();
+		const r = await fetch("vocab.json", { cache: "no-cache" });
+		if (!r.ok) throw new Error("cannot load vocab.json");
+		vocab = await r.json();
+		groupVars = CarobOdk.groupVariables(vocab);
+		varByName = new Map();
+		for (const vars of groupVars.values()) {
+			for (const v of vars) varByName.set(v.name, v);
+		}
+		activeGroups = new Set(CarobOdk.PRESETS.field_survey.groups);
+		selectedOrder = [];
+		availableChecked.clear();
+		selectedChecked.clear();
+		renderGroupToggles();
+		renderVariableTables();
+		updateSummaries();
+		formPreset.value = "custom";
+	}
+
+	init().catch((err) => {
+		exportSummary.textContent = err.message || String(err);
+		exportSummary.classList.add("error");
+	});
+})();
+</script>
+</body>
+</html>

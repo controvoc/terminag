@@ -356,6 +356,124 @@ footer {
 	border-radius: 4px;
 }
 
+/* ODK form designer (odk.html) */
+.odk-main { max-width: 1100px; }
+.odk-panel {
+	margin-bottom: 2rem;
+}
+.odk-panel h2 {
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--fg);
+	text-transform: none;
+	letter-spacing: normal;
+	border-bottom: none;
+	margin: 0 0 0.5rem;
+}
+.odk-form-grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	max-width: 900px;
+}
+.odk-label {
+	display: grid;
+	gap: 0.35rem;
+	font-size: 0.95rem;
+}
+.odk-label input,
+.odk-label select,
+.odk-search {
+	font-size: 0.95rem;
+	padding: 0.4rem 0.5rem;
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	background: #fff;
+	width: 100%;
+}
+.odk-search {
+	max-width: 480px;
+	margin-bottom: 0.75rem;
+}
+.odk-group-toggles {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 0.75rem;
+}
+.odk-group-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 0.75rem;
+}
+.odk-group-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	padding: 0.35rem 0.65rem;
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	background: #fff;
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+.odk-group-chip input { margin: 0; }
+.odk-inline {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.9rem;
+	color: var(--muted);
+}
+.odk-var-table-wrap { max-height: 420px; }
+#available-table code,
+#selected-table code { font-size: 0.85rem; }
+#available-table thead th {
+	text-align: left;
+	vertical-align: bottom;
+}
+.odk-var-transfer {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	gap: 0.75rem;
+	align-items: start;
+}
+.odk-var-panel {
+	min-width: 0;
+}
+.odk-var-panel-title {
+	font-size: 0.9rem;
+	font-weight: 600;
+	margin: 0 0 0.5rem;
+}
+.odk-count {
+	font-weight: 400;
+	color: var(--muted);
+}
+.odk-var-actions {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding-top: 2.5rem;
+}
+.odk-var-actions .btn-secondary {
+	min-width: 6.5rem;
+}
+@media (max-width: 900px) {
+	.odk-var-transfer {
+		grid-template-columns: 1fr;
+	}
+	.odk-var-actions {
+		flex-direction: row;
+		padding-top: 0;
+		justify-content: center;
+	}
+}
+.odk-preview { margin-top: 1rem; }
+.odk-preview.is-hidden { display: none; }
+#preview-table { font-size: 0.85rem; }
+
 /* Slightly compact Grid.js styling so dense tables stay readable. */
 .gridjs-search input { font-size: .9rem; }
 .gridjs-th, .gridjs-td { font-size: .85rem; padding: .4rem .55rem; }

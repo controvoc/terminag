@@ -52,6 +52,8 @@ def _load_variables(site: str) -> list[dict]:
 					"valid_min": (row.get("valid_min") or "").strip(),
 					"valid_max": (row.get("valid_max") or "").strip(),
 					"NAok": (row.get("NAok") or "").strip(),
+					"description": (row.get("description") or "").strip(),
+					"unit": (row.get("unit") or "").strip(),
 				})
 	for fn in sorted(os.listdir(site)):
 		if fn.startswith("variables_") and fn.endswith(".csv"):
@@ -71,6 +73,8 @@ def _load_variables(site: str) -> list[dict]:
 					"valid_min": (row.get("valid_min") or "").strip(),
 					"valid_max": (row.get("valid_max") or "").strip(),
 					"NAok": (row.get("NAok") or "").strip(),
+					"description": (row.get("description") or "").strip(),
+					"unit": (row.get("unit") or "").strip(),
 				})
 	return out
 
