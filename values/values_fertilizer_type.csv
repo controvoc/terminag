@@ -27,6 +27,7 @@ dolomitic-lime,dolomitic limestone,CaMg(CO3)2,0,0,0,0,0,21,0,0,11,0,0,
 lime,limestone,,0,0,0,0,0,NA,0,0,NA,0,0,ENVO_00002053
 none,,,0,0,0,0,0,0,0,0,0,0,0,
 MAP,Monoammonium phosphate ,[NH4]H2PO4,11,52,0,0,0,0,0,0,0,0,0,
+NaNO3,Sodium nitrate,,16.5,0,0,0,0,0,0,0,0,0,0,
 NP,Nitrophosphate,,31,1,0,0,0,0,0,0,0,0,0,
 NPK,"N, P, K blend",,NA,NA,NA,0,0,0,0,0,0,0,0,AGRO_00002046
 NPKS,"N, P, K, S blend",,8,21,7,4,0,0,0,0,0,0,0,
@@ -37,6 +38,7 @@ NPKBFeMgMnSZn,YaraMila COMPLEX,,12,4.84,10.8,8,0.015,0,0,0,1.89,0.02,0.02,
 NPS,"N, P, S blend",,23,21,0,4,0,0,0,0,0,0,0,
 PKS,"P, K, S blend",,0,NA,NA,NA,0,0,0,0,0,0,0,
 PA,Phosphoric acid,H2PO5,0,0,24,0,0,0,0,0,0,0,0,
+S,elemental sulphur,S,0,0,0,100,0,0,0,0,0,0,0,
 SCU,Sulfur-Coated Urea,,39,0,0,13,0,0,0,0,0,0,0,
 SOP,Potassium sulfate,K2SO4,0,0,41.5,18,0,0,0,0,0,0,0,CHEBI_32036
 SSP,Superphosphate,(single),0,8.74,0,12,0,0,0,0,0,0,0,AGRO_00002064
@@ -44,6 +46,7 @@ sympal,Sympal,,0,23,15,4,0,0,0,0,0,0,0,
 TSP,Triple superphosphate,,0,19.23,0,2,0,0,0,0,0,0,0,AGRO_00002065
 unknown,,,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,NA,
 urea,Urea,,46,0,0,0,0,0,0,0,0,0,0,CHEBI_16199
+UAN,Urea Ammonium Nitrate,,30,0,0,0,0,0,0,0,0,0,0,
 SR_urea,Slow-release urea,,46,0,0,0,0,0,0,0,0,0,0,CHEBI_16199
 ZnSO4,Zinc sulfate,ZnSO4,0,0,0,19.9,0,0,0,0,0,0,40.5,CHEBI_35176
 ZnCl2,Zinc chloride,,0,0,0,0,0,0,0,0,0,0,47.8,
@@ -51,13 +54,18 @@ S-compound,S-compound,,8,21,7,4,0,0,0,0,0,0,0,
 MgSO4,Magnesium sulfate,MgSO4,0,0,0,13.19,0,0,0,0,20.19,0,0,
 H3BO3,Boric acid,H3BO3,0,0,0,0,17.48,0,0,0,0,0,0,
 CaCO3,Calcium carbonate,CaCO3,0,0,0,0,0,0.4,0,0,0,0,0,CHEBI_3311
-borax,Disodium tetraborate,Na2B4O7,0,0,0,0,11.3,0,0,0,0,0,0,CHEBI_38892
+borax,Disodium tetraborate,Na2B4O7,0,80,0,0,11.3,0,0,0,0,0,0,CHEBI_38892
 L-compound,L-compound,,5,17,10,6,0.1,0,0,0,0,0,0,
 YaraBela NITROMAG,,NCaMg,27,0,0,0,0,4.2,0,0,1.8,0,0,
+YaraBela Sulfan,,,25,0,0,11.5,0,7,0,0,0,0,0,
 YaraMila Star,,NPKMgSZn,21,7.48,1.8,12,0,0,0,0,0.28,0,0.15,
 YaraMila ACTYVA,,NPKMgSZn,23,4.4,3,12,0,0,0,0,0.21,0,0.3,
 YaraMila HYDRAN,,NPKBMgSZn,19,1.76,11.4,1.9,0.1,0,0,0,0,0,0,
 YaraMila COMPLEX,,NPKBFeMgMnSZn,12,4.84,10.8,8,0.015,0,0,0,1.89,0.02,0.02,
+YaraVita Thiotrac,,,15,0,0,23,0,0,0,0,0,0,0,
 FOMIIMBURA,Burundi product,,9,9.68,3.32,NA,NA,NA,NA,NA,NA,NA,NA,
 FOMIBAGARA,Burundi product,,11,0,18.26,NA,NA,NA,NA,NA,NA,NA,NA,
 FOMITOTAHAZA,Burundi product,,21,0,6.64,NA,NA,NA,NA,NA,NA,NA,NA,
+SuperNitro,"various products, N content approximate",mixture,30,0,0,0,0,0,0,0,0,0,0,
+Agrium Plus,,,16,0,0,40,0,0,0,0,0,0,0,
+Bio-sulphur,,,NA,NA,NA,80,NA,NA,NA,NA,NA,NA,NA,
