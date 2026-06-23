@@ -13,6 +13,14 @@
 		return false;
 	}
 
+	function isNaLiteral(v) {
+		return !isMissing(v) && typeof v === "string" && v.trim().toUpperCase() === "NA";
+	}
+
+	function isAbsent(v) {
+		return isMissing(v) || isNaLiteral(v);
+	}
+
 	function parseCSV(text) {
 		const rows = [];
 		let row = [];
@@ -101,7 +109,7 @@
 	}
 
 	function inferType(values) {
-		const v = values.filter(x => !isMissing(x));
+		const v = values.filter(x => !isAbsent(x));
 		if (v.length === 0) return "character";
 		let numeric = 0;
 		let integer = 0;
@@ -291,7 +299,7 @@
 		const anyNa = [];
 		for (const n of nms) {
 			const vals = colValues(table, n);
-			const na = vals.map(isMissing);
+			const na = vals.map(isAbsent);
 			if (na.every(Boolean)) allNa.push(n);
 			else if (na.some(Boolean)) anyNa.push(n);
 		}
@@ -333,7 +341,7 @@
 			const max = tr.valid_max === "" ? null : Number(tr.valid_max);
 			if (min === null && max === null) continue;
 			const vals = colValues(table, tr.name)
-				.filter(v => !isMissing(v))
+				.filter(v => !isAbsent(v))
 				.map(Number)
 				.filter(n => !Number.isNaN(n));
 			if (vals.length === 0) continue;
@@ -351,7 +359,7 @@
 		let cols = table.columns.filter(c => termByName(trms, c));
 		if (cols.length === 0) return;
 		const skipAllNa = cols.filter(c =>
-			colValues(table, c).every(isMissing)
+			colValues(table, c).every(isAbsent)
 		);
 		cols = cols.filter(c => !skipAllNa.includes(c));
 		if (cols.length === 0) return;
@@ -425,7 +433,7 @@
 
 	function checkDate(table, name, trms, issues) {
 		if (!table.columns.includes(name)) return;
-		let vals = colValues(table, name).filter(v => !isMissing(v));
+		let vals = colValues(table, name).filter(v => !isAbsent(v));
 		if (vals.length === 0) return;
 		const tr = termByName(trms, name);
 		if (vals.some(v => String(v).includes(";"))) {
@@ -434,37 +442,65 @@
 			}
 			vals = vals.flatMap(v => String(v).split(/;|;\s/));
 		}
+		vals = vals.map(v => String(v).trim()).filter(v => v.length > 0);
+		if (vals.length === 0) return;
+
+		const lengths = vals.map(v => v.length);
+		if (lengths.some(n => ![4, 7, 10].includes(n))) {
+			push(issues, "invalid date format", name);
+		}
+
 		const today = new Date();
 		const thisYear = today.getFullYear();
 		const todayStr = today.toISOString().slice(0, 10);
-		for (const raw of vals) {
-			const x = String(raw).trim();
-			const n = x.length;
-			if (![4, 7, 10].includes(n)) {
-				push(issues, "invalid date format", name);
-				continue;
+
+		const ymd = vals.filter(v => v.length === 10);
+		if (ymd.length > 0) {
+			if (ymd.some(x => x.includes("/"))) {
+				push(issues, "date", `found '/' signs in date(s) in: ${name}`);
 			}
-			if (n === 10) {
-				if (x.includes("/")) push(issues, "date", `found '/' signs in date(s) in: ${name}`);
-				const d = Date.parse(x);
-				if (Number.isNaN(d)) push(issues, "date", `invalid date(s) in: ${name}`);
-				if (x < "1950-01-01") push(issues, "date", `date(s) before 1950 in: ${name}`);
-				if (x > todayStr) push(issues, "date", `future date(s) in: ${name}`);
-				const m = Number(x.slice(5, 7));
-				if (m < 1 || m > 12) push(issues, "date", `months not between 1 and 12): ${name}`);
+			const ymdClean = ymd.filter(x => !x.includes("/"));
+			if (ymdClean.some(x => Number.isNaN(Date.parse(x)))) {
+				push(issues, "date", `invalid date(s) in: ${name}`);
 			}
-			if (n === 7) {
-				if (x[4] !== "-") push(issues, "date", `bad date(s) in: ${name}`);
-				const y = Number(x.slice(0, 4));
-				if (y < 1960) push(issues, "date", `date(s) before 1960 in: ${name}`);
-				if (y > thisYear) push(issues, "date", `date(s) after ${thisYear} in: ${name}`);
-				const m = Number(x.slice(5, 7));
-				if (m < 1 || m > 12) push(issues, "date", `months not between 1 and 12): ${name}`);
+			if (ymdClean.some(x => x < "1950-01-01")) {
+				push(issues, "date", `date(s) before 1950 in: ${name}`);
 			}
-			if (n === 4) {
-				const y = Number(x);
-				if (y < 1960) push(issues, "date", `date(s) before 1960 in: ${name}`);
-				if (y > thisYear) push(issues, "date", `date(s) after ${thisYear} in: ${name}`);
+			if (ymdClean.some(x => x > todayStr)) {
+				push(issues, "date", `future date(s) in: ${name}`);
+			}
+			const months = ymdClean.map(x => Number(x.slice(5, 7))).filter(m => !Number.isNaN(m));
+			if (months.some(m => m < 1 || m > 12)) {
+				push(issues, "date", `months not between 1 and 12): ${name}`);
+			}
+		}
+
+		const ym = vals.filter(v => v.length === 7);
+		if (ym.length > 0) {
+			if (ym.some(x => x[4] !== "-")) {
+				push(issues, "date", `bad date(s) in: ${name}`);
+			}
+			const years = ym.map(x => Number(x.slice(0, 4))).filter(y => !Number.isNaN(y));
+			if (years.some(y => y < 1960)) {
+				push(issues, "date", `date(s) before 1960 in: ${name}`);
+			}
+			if (years.some(y => y > thisYear)) {
+				push(issues, "date", `date(s) after ${thisYear} in: ${name}`);
+			}
+			const months = ym.map(x => Number(x.slice(5, 7))).filter(m => !Number.isNaN(m));
+			if (months.some(m => m < 1 || m > 12)) {
+				push(issues, "date", `months not between 1 and 12): ${name}`);
+			}
+		}
+
+		const y = vals.filter(v => v.length === 4);
+		if (y.length > 0) {
+			const years = y.map(x => Number(x)).filter(n => !Number.isNaN(n));
+			if (years.some(n => n < 1960)) {
+				push(issues, "date", `date(s) before 1960 in: ${name}`);
+			}
+			if (years.some(n => n > thisYear)) {
+				push(issues, "date", `date(s) after ${thisYear} in: ${name}`);
 			}
 		}
 	}
