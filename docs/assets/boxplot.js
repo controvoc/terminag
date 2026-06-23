@@ -54,6 +54,20 @@
 		return (vocab.variables || []).find(t => t.name === name);
 	}
 
+	function varNameKey(s) {
+		return String(s).trim().replace(/_/g, "").toLowerCase();
+	}
+
+	function yieldAffinityScore(col) {
+		const target = "yield";
+		const c = varNameKey(col);
+		const t = varNameKey(target);
+		if (c === t) return 0;
+		if (c.startsWith(t)) return c.length - t.length;
+		if (c.endsWith(t)) return c.length - t.length;
+		return Infinity;
+	}
+
 	function isFertilizerVariable(name) {
 		return /_fertilizer$/i.test(name);
 	}
@@ -176,7 +190,18 @@
 	function defaultY(table, vocab) {
 		const yCols = quantitativeColumns(table, vocab || { variables: [] });
 		if (yCols.length === 0) return null;
-		return yCols.includes("yield") ? "yield" : yCols[0];
+		if (yCols.includes("yield")) return "yield";
+		let bestYield = null;
+		let bestScore = Infinity;
+		for (const col of yCols) {
+			const score = yieldAffinityScore(col);
+			if (score < bestScore) {
+				bestScore = score;
+				bestYield = col;
+			}
+		}
+		if (bestYield !== null && bestScore < Infinity) return bestYield;
+		return yCols[0];
 	}
 
 	function defaultGroup(table, vocab, yVar) {
