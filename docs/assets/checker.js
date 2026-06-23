@@ -140,10 +140,125 @@
 		return trms.find(t => t.name === name);
 	}
 
-	function checkKnown(columns, trms, issues) {
+	function varNameKey(s) {
+		return String(s).trim().replace(/_/g, "").toLowerCase();
+	}
+
+	function levenshtein(a, b) {
+		a = String(a).toLowerCase();
+		b = String(b).toLowerCase();
+		const m = a.length;
+		const n = b.length;
+		if (m === 0) return n;
+		if (n === 0) return m;
+		let prev = new Array(n + 1);
+		for (let j = 0; j <= n; j++) prev[j] = j;
+		for (let i = 1; i <= m; i++) {
+			const cur = [i];
+			for (let j = 1; j <= n; j++) {
+				const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+				cur[j] = Math.min(cur[j - 1] + 1, prev[j] + 1, prev[j - 1] + cost);
+			}
+			prev = cur;
+		}
+		return prev[n];
+	}
+
+	function adistOneToMany(a, terms) {
+		return terms.map(t => levenshtein(a, t));
+	}
+
+	function commonPrefixLen(a, b) {
+		const ak = varNameKey(a);
+		const bk = varNameKey(b);
+		const n = Math.min(ak.length, bk.length);
+		for (let k = 0; k < n; k++) {
+			if (ak[k] !== bk[k]) return k;
+		}
+		return n;
+	}
+
+	function termMatchesStartOrEnd(unknown, known) {
+		const pairs = [
+			{ u: String(unknown).trim(), k: String(known).trim() },
+			{ u: varNameKey(unknown), k: varNameKey(known) },
+		];
+		for (const { u, k } of pairs) {
+			const nu = u.length;
+			const nk = k.length;
+			if (nu === 0 || nu > nk) continue;
+			if (k.slice(0, nu).toLowerCase() === u.toLowerCase()) return true;
+			if (k.slice(nk - nu).toLowerCase() === u.toLowerCase()) return true;
+		}
+		return false;
+	}
+
+	function suggestTermName(name, terms, maxDist = 2, maxRel = 0.25,
+		minLenRatio = 0.65, minPrefix = 3) {
+		if (!terms || !terms.length) return null;
+		name = String(name).trim();
+		const unique = [...new Set(terms.map(t => String(t).trim()))];
+		if (unique.includes(name)) return null;
+
+		const nk = varNameKey(name);
+		const nt = unique.map(varNameKey);
+		const d1 = adistOneToMany(name, unique);
+		const d2 = nk === name.toLowerCase() ? d1 : adistOneToMany(nk, nt);
+
+		let best = null;
+		let bestScore = Infinity;
+		let bestDist = Infinity;
+		for (let j = 0; j < unique.length; j++) {
+			const cand = unique[j];
+			if (cand === name) continue;
+			const nc = nt[j];
+			const ln = Math.max(nk.length, nc.length, 1);
+			const affix = termMatchesStartOrEnd(name, cand);
+			const dist = Math.min(d1[j], d2[j]);
+
+			let score;
+			if (affix) {
+				score = ln - Math.min(nk.length, nc.length);
+			} else {
+				if (Math.min(nk.length, nc.length) / ln < minLenRatio) continue;
+				const pfx = commonPrefixLen(name, cand);
+				if (pfx < Math.min(minPrefix, Math.min(nk.length, nc.length))) continue;
+				const rel = dist / ln;
+				if (dist > maxDist && rel > maxRel) continue;
+				score = 1000 + dist;
+			}
+
+			if (score < bestScore || (score === bestScore && dist < bestDist)) {
+				bestScore = score;
+				bestDist = dist;
+				best = cand;
+			}
+		}
+		return best;
+	}
+
+	function checkKnown(columns, trms, issues, suggest = true) {
 		const known = new Set(trms.map(t => t.name));
 		const bad = columns.filter(c => !known.has(c));
-		if (bad.length) push(issues, "unknown variables", bad.join(", "));
+		if (!bad.length) return;
+		if (!suggest) {
+			push(issues, "unknown variables", bad.join(", "));
+			return;
+		}
+		const suggested = [];
+		const unsuggested = [];
+		const termNames = trms.map(t => t.name);
+		for (const u of bad) {
+			const sug = suggestTermName(u, termNames);
+			if (sug) suggested.push(`${u} (${sug}?)`);
+			else unsuggested.push(u);
+		}
+		for (const msg of suggested) {
+			push(issues, "unknown variable", msg);
+		}
+		if (unsuggested.length) {
+			push(issues, "unknown variables", unsuggested.join(", "));
+		}
 	}
 
 	function checkRequired(columns, trms, issues, typeLabel) {
@@ -162,8 +277,8 @@
 		if (dups.length) push(issues, "duplicate variables", dups.join(", "));
 	}
 
-	function checkVariables(table, trms, issues, required) {
-		checkKnown(table.columns, trms, issues);
+	function checkVariables(table, trms, issues, required, suggest = true) {
+		checkKnown(table.columns, trms, issues, suggest);
 		if (required) checkRequired(table.columns, trms, issues, "");
 		checkDups(table.columns, issues);
 	}
@@ -354,8 +469,8 @@
 		}
 	}
 
-	function checkCombined(table, trms, vocab, issues, required) {
-		checkVariables(table, trms, issues, required);
+	function checkCombined(table, trms, vocab, issues, required, suggest = true) {
+		checkVariables(table, trms, issues, required, suggest);
 		checkValues(table, trms, vocab, issues);
 		const dateCols = table.columns.filter(c => c.includes("_date") || c.endsWith("date"));
 		for (const d of dateCols) checkDate(table, d, trms, issues);
@@ -464,7 +579,8 @@
 
 	function checkRecords(table, vocab, issues, opts) {
 		const trms = filterVariables(vocab, { exclude: ["metadata", "carob-metadata"] });
-		checkCombined(table, trms, vocab, issues, true);
+		const suggest = opts.suggest !== false;
+		checkCombined(table, trms, vocab, issues, true, suggest);
 		checkDatespan(table, issues);
 		checkConsistency(table, issues);
 		checkCropYield(table, vocab, issues);
@@ -559,5 +675,6 @@
 		parseCSV,
 		tableFromRows,
 		checkTerms,
+		suggestTermName,
 	};
 })(typeof window !== "undefined" ? window : globalThis);
