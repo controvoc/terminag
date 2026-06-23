@@ -294,7 +294,11 @@
 
 	downloadReportBtn.addEventListener("click", () => {
 		if (!lastReportOpts) return;
-		const html = CarobReport.buildReportDocument(lastReportOpts);
+		const html = CarobReport.buildReportDocument({
+			...lastReportOpts,
+			boxplotY: boxplotY.value,
+			boxplotGroup: boxplotGroup.value,
+		});
 		const blob = new Blob([html], { type: "text/html;charset=utf-8" });
 		const a = document.createElement("a");
 		a.href = URL.createObjectURL(blob);

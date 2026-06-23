@@ -162,14 +162,8 @@
 		);
 	}
 
-	function render(plotEl, table, yVar, groupVar) {
-		if (!plotEl || typeof global.Plotly === "undefined") return false;
-		const traces = buildTraces(table, yVar, groupVar);
-		if (!traces) {
-			plotEl.innerHTML = "<p class=\"muted\">No numeric values to plot for this variable.</p>";
-			return false;
-		}
-		const layout = {
+	function plotLayout(yVar, groupVar) {
+		return {
 			margin: { t: 24, r: 24, b: 72, l: 64 },
 			yaxis: { title: yVar },
 			xaxis: { title: groupVar || "" },
@@ -177,6 +171,40 @@
 			boxmode: "group",
 			hovermode: "closest",
 		};
+	}
+
+	function defaultY(table, vocab) {
+		const yCols = quantitativeColumns(table, vocab || { variables: [] });
+		if (yCols.length === 0) return null;
+		return yCols.includes("yield") ? "yield" : yCols[0];
+	}
+
+	function defaultGroup(table, vocab, yVar) {
+		const gCols = groupingColumns(table, vocab || { variables: [] }, yVar);
+		if (gCols.includes("treatment")) return "treatment";
+		return "";
+	}
+
+	function exportConfig(table, vocab, yVar, groupVar) {
+		if (!yVar) return null;
+		const traces = buildTraces(table, yVar, groupVar || null);
+		if (!traces) return null;
+		return {
+			traces,
+			layout: plotLayout(yVar, groupVar || null),
+			yVar,
+			groupVar: groupVar || null,
+		};
+	}
+
+	function render(plotEl, table, yVar, groupVar) {
+		if (!plotEl || typeof global.Plotly === "undefined") return false;
+		const traces = buildTraces(table, yVar, groupVar);
+		if (!traces) {
+			plotEl.innerHTML = "<p class=\"muted\">No numeric values to plot for this variable.</p>";
+			return false;
+		}
+		const layout = plotLayout(yVar, groupVar);
 		global.Plotly.newPlot(plotEl, traces, layout, { responsive: true, displayModeBar: true });
 		return true;
 	}
@@ -216,7 +244,7 @@
 			return;
 		}
 
-		const preferredY = yCols.includes("yield") ? "yield" : yCols[0];
+		const preferredY = defaultY(table, vocab);
 		fillSelect(ySelectEl, yCols, preferredY);
 
 		function refreshGroupOptions() {
@@ -236,8 +264,9 @@
 			}
 			if (prev && gCols.includes(prev)) {
 				groupSelectEl.value = prev;
-			} else if (gCols.includes("treatment")) {
-				groupSelectEl.value = "treatment";
+			} else {
+				const def = defaultGroup(table, vocab, yVar);
+				if (def && gCols.includes(def)) groupSelectEl.value = def;
 			}
 		}
 
@@ -269,6 +298,9 @@
 	global.CarobBoxplot = {
 		quantitativeColumns,
 		groupingColumns,
+		defaultY,
+		defaultGroup,
+		exportConfig,
 		render,
 		setup,
 		reset,

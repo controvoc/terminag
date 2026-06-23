@@ -2,6 +2,8 @@
 (function (global) {
 	"use strict";
 
+	const MAX_RECORD_ROWS = 1000;
+
 	function isMissing(v) {
 		if (v === null || v === undefined) return true;
 		if (typeof v === "number" && Number.isNaN(v)) return true;
@@ -418,8 +420,32 @@
 		return `<section class="report-section"><h2 class="report-section-title">${num}. ${escapeHtml(title)}</h2>${content}</section>`;
 	}
 
-	function buildRecordSampleSectionBlock(table, maxRows = 25) {
-		return sectionBlock(6, "RECORD SAMPLE", buildRecordSampleSection(table, maxRows));
+	function buildRecordSampleSectionBlock(table, maxRows = MAX_RECORD_ROWS) {
+		return sectionBlock(6, "RECORDS", buildRecordSampleSection(table, maxRows));
+	}
+
+	function getBoxplotExport(opts) {
+		const bp = global.CarobBoxplot;
+		if (!bp || !opts.records?.rows?.length) return null;
+		const vocab = opts.vocab || { variables: [] };
+		const yVar = opts.boxplotY || bp.defaultY(opts.records, vocab);
+		if (!yVar) return null;
+		const groupVar = opts.boxplotGroup !== undefined
+			? opts.boxplotGroup
+			: bp.defaultGroup(opts.records, vocab, yVar);
+		return bp.exportConfig(opts.records, vocab, yVar, groupVar || null);
+	}
+
+	function buildBoxplotSectionBlock(opts) {
+		const ex = getBoxplotExport(opts);
+		if (!ex) return "";
+		const groupText = ex.groupVar
+			? `Grouped by <strong>${escapeHtml(ex.groupVar)}</strong>.`
+			: "All records (no grouping).";
+		const content = `
+			<p>Distribution of <strong>${escapeHtml(ex.yVar)}</strong>. ${groupText}</p>
+			<div id="carob-report-boxplot" class="report-boxplot" aria-label="Boxplot chart"></div>`;
+		return sectionBlock(5, "BOXPLOT", content);
 	}
 
 	function buildSummarySection(metadata, table, treatments) {
@@ -441,15 +467,20 @@
 	}
 
 	function buildRecordSampleSection(table, maxRows) {
-		const previewN = Math.min(table.rows.length, maxRows);
-		return `
-			<p>These are the first ${previewN} records:</p>
-			${previewRecords(table, maxRows)}`;
+		const total = table.rows.length;
+		const shown = Math.min(total, maxRows);
+		let intro;
+		if (total <= maxRows) {
+			intro = `<p>All ${shown} records:</p>`;
+		} else {
+			intro = `<p>Showing ${shown} of ${total} records (maximum included in report):</p>`;
+		}
+		return `${intro}${previewRecords(table, maxRows)}`;
 	}
 
 	/**
 	 * Build report body HTML (fragment).
-	 * @param {{ records: object, metadata?: object|null, issues?: array, vocab?: object, maxPreviewRows?: number }} opts
+	 * @param {{ records: object, metadata?: object|null, issues?: array, vocab?: object, maxRecordRows?: number }} opts
 	 */
 	function buildReport(opts) {
 		const {
@@ -457,7 +488,6 @@
 			metadata = null,
 			issues = [],
 			vocab = { variables: [] },
-			maxPreviewRows = 25,
 		} = opts;
 		if (!records || !records.rows || records.rows.length === 0) {
 			return "<p>No records to report.</p>";
@@ -494,11 +524,13 @@ a { color: #2e7d32; }
 .report-table tbody tr:nth-child(even) { background: #f6f6f6; }
 .report-table tbody tr:hover { background: #eef5ee; }
 .report-map { height: 480px; width: 100%; max-width: 672px; margin: 0.5rem 0 1rem; border: 1px solid #ddd; border-radius: 4px; }
+.report-boxplot { min-height: 420px; width: 100%; margin: 0.5rem 0 1rem; border: 1px solid #ddd; border-radius: 4px; background: #fff; }
 footer { text-align: center; padding: 1.5rem; color: #6b6b6b; font-size: 0.85rem; }
 `;
 
 	const LEAFLET_CSS = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
 	const LEAFLET_JS = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+	const PLOTLY_JS = "https://cdn.plot.ly/plotly-2.35.2.min.js";
 
 	function buildMapInitScript(points) {
 		if (!points.length) return "";
@@ -545,12 +577,32 @@ footer { text-align: center; padding: 1.5rem; color: #6b6b6b; font-size: 0.85rem
 </script>`;
 	}
 
+	function buildBoxplotInitScript(exportConfig) {
+		if (!exportConfig) return "";
+		const json = JSON.stringify({
+			traces: exportConfig.traces,
+			layout: exportConfig.layout,
+		}).replace(/</g, "\\u003c");
+		return `<script>
+(function () {
+	var spec = ${json};
+	var el = document.getElementById("carob-report-boxplot");
+	if (!el || typeof Plotly === "undefined" || !spec.traces.length) return;
+	Plotly.newPlot(el, spec.traces, spec.layout, { responsive: true, displayModeBar: true });
+})();
+</script>`;
+	}
+
 	function buildReportDocument(opts) {
-		const maxPreviewRows = opts.maxPreviewRows ?? 25;
-		const body = buildReport(opts) + buildRecordSampleSectionBlock(opts.records, maxPreviewRows);
+		const maxRecordRows = opts.maxRecordRows ?? MAX_RECORD_ROWS;
+		const boxplotExport = getBoxplotExport(opts);
+		const body = buildReport(opts)
+			+ buildBoxplotSectionBlock(opts)
+			+ buildRecordSampleSectionBlock(opts.records, maxRecordRows);
 		const points = collectMapPoints(opts.records || { columns: [], rows: [] });
 		const generated = new Date().toISOString().slice(0, 10);
 		const mapScript = buildMapInitScript(points);
+		const boxplotScript = buildBoxplotInitScript(boxplotExport);
 		return `<!doctype html>
 <html lang="en">
 <head>
@@ -564,7 +616,9 @@ footer { text-align: center; padding: 1.5rem; color: #6b6b6b; font-size: 0.85rem
 <main class="report-document">${body}</main>
 <footer>Generated by terminag checker on ${generated}.</footer>
 <script src="${LEAFLET_JS}" crossorigin=""></script>
+<script src="${PLOTLY_JS}" crossorigin=""></script>
 ${mapScript}
+${boxplotScript}
 </body>
 </html>`;
 	}
@@ -576,5 +630,6 @@ ${mapScript}
 		collectMapPoints,
 		initMap,
 		destroyMap,
+		MAX_RECORD_ROWS,
 	};
 })(typeof window !== "undefined" ? window : globalThis);
