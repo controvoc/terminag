@@ -186,6 +186,18 @@
 		return n;
 	}
 
+	function commonSuffixLen(a, b) {
+		const ak = varNameKey(a);
+		const bk = varNameKey(b);
+		const na = ak.length;
+		const nb = bk.length;
+		const n = Math.min(na, nb);
+		for (let k = 0; k < n; k++) {
+			if (ak[na - k - 1] !== bk[nb - k - 1]) return k;
+		}
+		return n;
+	}
+
 	function termMatchesStartOrEnd(unknown, known) {
 		const pairs = [
 			{ u: String(unknown).trim(), k: String(known).trim() },
@@ -194,9 +206,17 @@
 		for (const { u, k } of pairs) {
 			const nu = u.length;
 			const nk = k.length;
-			if (nu === 0 || nu > nk) continue;
-			if (k.slice(0, nu).toLowerCase() === u.toLowerCase()) return true;
-			if (k.slice(nk - nu).toLowerCase() === u.toLowerCase()) return true;
+			if (nu === 0 || nk === 0) continue;
+			const lu = u.toLowerCase();
+			const lk = k.toLowerCase();
+			if (nu <= nk) {
+				if (lk.slice(0, nu) === lu) return true;
+				if (lk.slice(nk - nu) === lu) return true;
+			}
+			if (nk <= nu) {
+				if (lu.slice(0, nk) === lk) return true;
+				if (lu.slice(nu - nk) === lk) return true;
+			}
 		}
 		return false;
 	}
@@ -229,8 +249,11 @@
 				score = ln - Math.min(nk.length, nc.length);
 			} else {
 				if (Math.min(nk.length, nc.length) / ln < minLenRatio) continue;
-				const pfx = commonPrefixLen(name, cand);
-				if (pfx < Math.min(minPrefix, Math.min(nk.length, nc.length))) continue;
+				const overlap = Math.max(
+					commonPrefixLen(name, cand),
+					commonSuffixLen(name, cand)
+				);
+				if (overlap < Math.min(minPrefix, Math.min(nk.length, nc.length))) continue;
 				const rel = dist / ln;
 				if (dist > maxDist && rel > maxRel) continue;
 				score = 1000 + dist;
