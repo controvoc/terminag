@@ -22,7 +22,9 @@ gypsum,Gypsum,CaSO4 . 2H2O,0,0,0,19,0,0,0,0,0,0,0,CHEBI_48838
 KCl,Potassium chloride,KCl; Muriate of potash (MOP),0,0,49.8,0,0,0,0,0,0,0,0,CHEBI_32588
 KNO,Potassium nitrate,KNO3,13,0,44,0,0,0,0,0,0,0,0,CHEBI_63043
 KMgS,"K, Mg, S blend",,0,0,18,22,0,0,0,0,11,0,0,
-lime,Limestone,CaCO3,0,0,0,0,0,0,0,0,0,0,0,ENVO_00002053
+calcitic-lime,calcitic limestone,CaCO3,0,0,0,0,0,40,0,0,0,0,0,
+dolomitic-lime,dolomitic limestone,CaMg(CO3)2,0,0,0,0,0,21,0,0,11,0,0,
+lime,limestone,,0,0,0,0,0,NA,0,0,NA,0,0,ENVO_00002053
 none,,,0,0,0,0,0,0,0,0,0,0,0,
 MAP,Monoammonium phosphate ,[NH4]H2PO4,11,52,0,0,0,0,0,0,0,0,0,
 NP,Nitrophosphate,,31,1,0,0,0,0,0,0,0,0,0,
