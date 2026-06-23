@@ -32,6 +32,7 @@ Ca_organic,numeric,kg/ha,no,,no,0,250,yes,Ca applied in organic fertilizer,,
 Mg_organic,numeric,kg/ha,no,,no,0,250,yes,Mg applied in organic fertilizer,,
 lime,numeric,kg/ha,no,,no,0,10000,yes,lime applied,,
 lime_used,logical,,no,,no,,,yes,was any lime applied?,,
+lime_date,date,,no,,no,,,yes,when was lime applied?,,
 gypsum,numeric,kg/ha,no,,no,0,10000,yes,gypsum applied,,
 OM_used,logical,,no,,no,,,yes,Organic fertilizer applied,,AGRO_00002039
 OM_type,character,,no,OM,yes,,,yes,Type of organic fertilzer applied,,AGRO_00002039
