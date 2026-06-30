@@ -428,7 +428,7 @@
 			}
 			if (tr.multiple_allowed === "yes") {
 				provided = [...new Set(
-					provided.flatMap(v => String(v).split(/;|;\s/))
+					provided.flatMap(v => String(v).split(/;|;\s/).map(s => s.trim()).filter(Boolean))
 				)];
 			}
 			if (vocKey === "crop") {

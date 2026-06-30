@@ -15,3 +15,4 @@ geo_uncertainty,numeric,,no,,no,0,1000000,yes,"Uncertainty of location, expresse
 geo_uncertainty_area,WKT,,no,,no,,,yes,"Uncertainty of location described as a WKT (multi-) polygon, using longitude/latitude",,
 geo_from_source,logical,,yes,,no,,,yes,Are these coordinates from the data source?,,
 elevation,numeric,meter,no,,no,-200,5000,yes,Elevation above sea level,,
+geo_source,character,,no,,no,,,yes,source of the georeferences,,
