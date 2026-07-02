@@ -71,11 +71,16 @@ jobs:
           python-version: "3.x"
 
       - name: Install R packages
+        env:
+          # Avoid remotes using GITHUB_TOKEN for cross-org Remotes: installs (401).
+          GITHUB_PAT: ""
+          GITHUB_TOKEN: ""
         run: |
           install.packages(c("remotes", "jsonlite", "rappdirs"), repos = "https://cloud.r-project.org")
-          remotes::install_local("yuri", upgrade = "never", dependencies = TRUE, quiet = TRUE)
-          remotes::install_local("vocal", upgrade = "never", dependencies = TRUE, quiet = TRUE)
-          remotes::install_local("carobiner", upgrade = "never", dependencies = TRUE, quiet = TRUE)
+          deps <- c("Depends", "Imports")
+          remotes::install_local("yuri", upgrade = "never", dependencies = deps, quiet = TRUE)
+          remotes::install_local("vocal", upgrade = "never", dependencies = deps, quiet = TRUE)
+          remotes::install_local("carobiner", upgrade = "never", dependencies = deps, quiet = TRUE)
         shell: Rscript {0}
 
       - name: Build checker vocabulary
