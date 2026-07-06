@@ -1,8 +1,8 @@
-name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
-carob_group,character,,,no,,,no,Carob group,,
-carob_date,date,,,no,,,no,"date of first contribution to Carob (""yyyy-mm-dd"")",,
-carob_modified_by,character,,,yes,,,no,name(s) of contributers who made significant changes to the script,,
-carob_last_modified,date,,,no,,,no,"date of last significant revision of the script (""yyyy-mm-dd"")",,
-carob_completion,numeric,,,no,1,100,yes,the percentage of relevant variables that have been standardized,,
-carob_effort,numeric,,,no,0.016666667,20,yes,the effort (in hours) to complete the script,,
-carob_contributor,character,,,yes,,,no,name(s) of contributers of this script,,
+name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
+carob_group,character,,,no,,,Carob group,,
+carob_date,date,,,no,,,"date of first contribution to Carob (""yyyy-mm-dd"")",,
+carob_modified_by,character,,,yes,,,name(s) of contributers who made significant changes to the script,,
+carob_last_modified,date,,,no,,,"date of last significant revision of the script (""yyyy-mm-dd"")",,
+carob_completion,numeric,,,no,1,100,the percentage of relevant variables that have been standardized,,
+carob_effort,numeric,,,no,0.016666667,20,the effort (in hours) to complete the script,,
+carob_contributor,character,,,yes,,,name(s) of contributers of this script,,

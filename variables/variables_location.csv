@@ -1,18 +1,18 @@
-name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
-location_id,character,,,no,,,no,location identifier,,
-country,character,,country,no,,,no,Country name,,ENVO_00000009
-adm1,character,,,no,,,yes,First level administrative subdivision,follow GADM,ENVO_00000005
-adm2,character,,,no,,,yes,Second level administrative subdivision,follow GADM,ENVO_00000006
-adm3,character,,,no,,,yes,Third level administrative subdivision,follow GADM,ENVO_00000007
-adm4,character,,,no,,,yes,Fourth level administrative subdivision,follow GADM,ENVO_00000008
-adm5,character,,,no,,,yes,Fifth level administrative subdivision,follow GADM,
-location,character,,,no,,,yes,"Name of the location where the location was made. E.g., a place name or locality description.",,ENVO_00000114
-site,character,,,no,,,yes,Name of the sub-location where the observation was made,,
-locality,character,,,no,,,yes,locality description,,
-longitude,numeric,degrees,,no,-180,180,no,Longitude of the location where the observation was made (in decimal notation),,
-latitude,numeric,degrees,,no,-65,65,no,Latitude of the location where the observation was made (in decimal notation),,
-geo_uncertainty,numeric,,,no,0,1000000,yes,"Uncertainty of location, expressed as max distance from location (m)",,
-geo_uncertainty_area,WKT,,,no,,,yes,"Uncertainty of location described as a WKT (multi-) polygon, using longitude/latitude",,
-geo_from_source,logical,,,no,,,yes,Are these coordinates from the data source?,,
-elevation,numeric,meter,,no,-200,5000,yes,Elevation above sea level,,
-geo_source,character,,,no,,,yes,source of the georeferences,,
+name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
+location_id,character,,,no,,,location identifier,,
+country,character,,country,no,,,Country name,,ENVO_00000009
+adm1,character,,,no,,,First level administrative subdivision,follow GADM,ENVO_00000005
+adm2,character,,,no,,,Second level administrative subdivision,follow GADM,ENVO_00000006
+adm3,character,,,no,,,Third level administrative subdivision,follow GADM,ENVO_00000007
+adm4,character,,,no,,,Fourth level administrative subdivision,follow GADM,ENVO_00000008
+adm5,character,,,no,,,Fifth level administrative subdivision,follow GADM,
+location,character,,,no,,,"Name of the location where the location was made. E.g., a place name or locality description.",,ENVO_00000114
+site,character,,,no,,,Name of the sub-location where the observation was made,,
+locality,character,,,no,,,locality description,,
+longitude,numeric,degrees,,no,-180,180,Longitude of the location where the observation was made (in decimal notation),,
+latitude,numeric,degrees,,no,-65,65,Latitude of the location where the observation was made (in decimal notation),,
+geo_uncertainty,numeric,,,no,0,1000000,"Uncertainty of location, expressed as max distance from location (m)",,
+geo_uncertainty_area,WKT,,,no,,,"Uncertainty of location described as a WKT (multi-) polygon, using longitude/latitude",,
+geo_from_source,logical,,,no,,,Are these coordinates from the data source?,,
+elevation,numeric,meter,,no,-200,5000,Elevation above sea level,,
+geo_source,character,,,no,,,source of the georeferences,,

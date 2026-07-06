@@ -1,9 +1,9 @@
-name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
-animal,character,,animal,yes,,,,The livestoc type,,
-heads,numeric,,,no,0,,,How many of this type,,
-TLU,numeric,,,yes,,,,Tropical Livestock Units,,
-pastoral,logical,,,yes,,,,Are these animals primarily in a pastoral system?,,
-purpose,character,,,yes,,,,What is the purpose of these animals?,,
-feed_type,character,,,yes,,,,What is the main feed source for these animals,,
-feed_source,,,,yes,,,,,,
-feeding_type,,,,yes,,,,"E.g. Rotational grazing, Stall feeding",,
+name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
+animal,character,,animal,yes,,,The livestoc type,,
+heads,numeric,,,no,0,,How many of this type,,
+TLU,numeric,,,yes,,,Tropical Livestock Units,,
+pastoral,logical,,,yes,,,Are these animals primarily in a pastoral system?,,
+purpose,character,,,yes,,,What is the purpose of these animals?,,
+feed_type,character,,,yes,,,What is the main feed source for these animals,,
+feed_source,,,,yes,,,,,
+feeding_type,,,,yes,,,"E.g. Rotational grazing, Stall feeding",,

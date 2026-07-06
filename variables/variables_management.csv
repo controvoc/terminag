@@ -1,89 +1,89 @@
-name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
-planting_date,date,,,no,,,yes,"Planting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,AGRO_00010099
-transplanting_date,date,,,no,,,yes,"Transplanting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see transplanting_days,AGRO_00010131
-harvest_date,date,,,no,,,yes,"Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see harvest_days,AGRO_00010128
-fertilizer_used,logical,,,no,,,yes,was any inorganic fertilizer used?,,
-foliar_fertilizer_used,logical,,,no,,,yes,was any foliar fertilizer used?,,
-fertilizer_type,character,,fertilizer_type,yes,,,yes,Name of inorganic fertilizer used,,CHEBI_33287
-fertilizer_date,date,,,yes,,,yes,"Date(s) of inorganic fertilizer applications. Possibly followed by ""(product; amount)""",,AGRO_00010143
-fertilizer_dap,character,,,yes,-30,150,yes,"Inorganic fertilizer applications in ""days after planting"". Possibly followed by ""(product; amount)""",,AGRO_00010143
-fertilizer_amount,numeric,kg/ha,,no,0,1000,yes,Total amount of inorganic fertilizer applied,,
-fertilization_method,character,,,no,,,yes,Fertilizer application method,,
-N_fertilizer,numeric,kg/ha,,no,0,600,yes,N applied in inorganic fertilizer,,AGRO_00000158
-N_splits,integer,,,no,0,5,yes,Number of splits in the N_fertilizer application,,
-N_fert_level,character,,,no,,,yes,Qualtiative description of N fertilizer amount,,
-P_fertilizer,numeric,kg/ha,,no,0,350,yes,"P applied in inorganic fertilizer (as P, not P2O5)",,AGRO_00000160 
-K_fertilizer,numeric,kg/ha,,no,0,300,yes,"K applied in inorganic fertilizer (as K, not K2O)",,AGRO_00000201
-Zn_fertilizer,numeric,kg/ha,,no,0,100,yes,Zn applied in inorganic fertilizer,,
-S_fertilizer,numeric,kg/ha,,no,0,250,yes,S applied in inorganic fertilizer,,TO_0000658
-B_fertilizer,numeric,kg/ha,,no,0,100,yes,B applied in inorganic fertilizer,,
-Ca_fertilizer,numeric,kg/ha,,no,0,250,yes,Ca applied in inorganic fertilizer,,
-Mg_fertilizer,numeric,kg/ha,,no,0,250,yes,Mg applied in inorganic fertilizer,,
-Fe_fertilizer,numeric,kg/ha,,no,0,250,yes,Fe applied in inorganic fertilizer,,
-Mn_fertilizer,numeric,kg/ha,,no,0,250,yes,Mn applied in inorganic fertilizer,,
-Cl_fertilizer,numeric,kg/ha,,no,0,50,yes,Cl applied in inorganic fertilizer,,
-Cu_fertilizer,numeric,kg/ha,,no,0,50,yes,Cu applied in inorganic fertilizer,,
-Mo_fertilizer,numeric,kg/ha,,no,0,50,yes,Mo applied in inorganic fertilizer,,
-N_fixation,numeric,kg/ha,,no,0,150,yes,N fixed by rhizobium or other organisms,,
-N_organic,numeric,kg/ha,,no,0,600,yes,N applied in organic fertilizer,,
-P_organic,numeric,kg/ha,,no,0,250,yes,"P applied in organic fertilizer (as P, not P2O5)",,
-K_organic,numeric,kg/ha,,no,0,300,yes,"K applied in organic fertilizer (as K, not K2O)",,
-Ca_organic,numeric,kg/ha,,no,0,250,yes,Ca applied in organic fertilizer,,
-Mg_organic,numeric,kg/ha,,no,0,250,yes,Mg applied in organic fertilizer,,
-lime,numeric,kg/ha,,no,0,10000,yes,lime applied,,
-lime_used,logical,,,no,,,yes,was any lime applied?,,
-lime_date,date,,,no,,,yes,when was lime applied?,,
-gypsum,numeric,kg/ha,,no,0,10000,yes,gypsum applied,,
-OM_used,logical,,,no,,,yes,Organic fertilizer applied,,AGRO_00002039
-OM_type,character,,OM,yes,,,yes,Type of organic fertilzer applied,,AGRO_00002039
-OM_amount,numeric,kg/ha,,no,0,,yes,Amount of organic fertilizer applied,,AGRO_00010008
-inoculated,logical,,,no,,,yes,Was the field inoculated (with Rhizobium),,
-inoculant,character,,,no,,,yes,Name of the inoculant product,,
-node_count,numeric,,,no,,,yes,Number of Rhizobium nodes per plant,,
-biochar,numeric,kg/ha,,no,,,yes,"Amount of biochar applied	",,
-irrigated,logical,,,no,,,yes,Was the plot irrigated?,,AGRO_00000006
-irrigation_source,character,,,no,,,yes,the source of irrigation water,,AGRO_00000009
-irrigation_method,character,,irrigation,no,,,yes,the irrigation method,,AGRO_00000054
-irrigation_number,integer,,,no,0,50,yes,How many times was the crop irrigated?,,AGRO_00010015
-irrigation_amount,numeric,mm,,no,0,1000,yes,The total irrigation amount applied to the crop,,AGRO_00000010
-irrigation_fulfullment,character,,,no,,,yes,The degree to which irrigation needs were fulfilled,,
-irrigation_dates,date,,,yes,,,yes,"Irrigation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00010126
-land_prep_method,character,,land_prep,yes,,,yes,"Land preparation (tillage) method used (including ""none"" = ""zero-tillage"")",,AGRO_00000322
- land_prep_traction,character,,land_prep,yes,,,yes,Type of traction used in land preparation,,
-land_prep_times,integer,,,no,0,10,yes,How many passes were made for land prepration?,,
-land_prep_implement,character,,implement,yes,,,yes,Land preparation (tillage) implement(s) used,,AGRO_00000224
-planting_method,character,,planting,no,,,yes,Planting (sowing) method,,AGRO_00000231
-planting_implement,character,,implement,no,,,yes,Planting (sowing) implement used,,AGRO_00000232
-transplanting_method,character,,planting,no,,,yes,Transplanting method,,AGRO_00000229
-seed_density,numeric,plants/ha,,no,500,3100000,yes,Number of plants per ha that were seeded/planted,,
-seed_rate,numeric,kg/ha,,no,0,3000,yes,Mass of the seeds sown per hectare,,AGRO_00000202
-seed_source,character,,,no,,,yes,source of the seed used,,
-seed_treatment,character,,,no,,,yes,chemical or biological products applied to the seed,,
-herbicide_used,logical,,,no,,,yes,was a herbicide used?,,
-herbicide_product,character,,herbicides,yes,,,yes,name(s) of the active ingredient of the herbicide,,
-herbicide_timing,character,,,no,-30,200,yes,days after (or before) planting on which herbicide was used, multiple applications separated by ,
-herbicide_times,integer,,,no,0,5,yes,number of herbicide applications,,
-herbicide_dates,date,,,yes,,,yes,"herbicide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
-herbicide_amount,numeric,kg (ai) / ha,,no,0,100,yes,how much herbicide was used?,,AGRO_00000662
-herbicide_implement,character,,implement,no,,,yes,the implement (machine) used,,
-weeding_done,logical,,,no,,,yes,was the crop weeded?,,
-weeding_method,character,,,yes,,,yes,Weeding method used,,
-weeding_times,integer,,,no,0,10,yes,how many times was the crop weeded?,,AGRO_00010018
-weeding_dates,date,,,yes,,,yes,"weeding dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00000562
-weeding_implement,character,,implement,no,,,yes,the implement (machine) used,,AGRO_00002006
-insecticide_used,logical,,,no,,,yes,was an insecticide used?,,
-insecticide_product,character,,insecticides,yes,,,yes,name(s) of the active ingredient of the insecticide,,
-insecticide_dates,date,,,yes,,,yes,"insecticide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
-insecticide_timing,integer,,,no,-30,200,yes,days after (or before) planting on which insecticide was used,,
-insecticide_times,integer,,,no,0,12,yes,number of insecticide applications,,
-insecticide_amount,numeric,kg (ai) / ha,,no,,,yes,how much insecticide was used?,,AGRO_00000663
-insecticide_implement,character,,implement,no,,,yes,the implement (machine) used,,
-fungicide_used,logical,,,no,,,yes,was a herbicide used?,,
-fungicide_product,character,,fungicides,yes,,,yes,name(s) of the active ingredient of the fungicide,,
-fungicide_dates,date,,,yes,,,yes,"fungicide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
-fungicide_timing,integer,,,no,-30,200,yes,days after (or before) planting on which fungicide was used,,
-fungicide_times,integer,,,no,0,20,yes,number of fungicide applications,,
-fungicide_amount,numeric,kg (ai) / ha,,no,,,yes,how much fungicide was used?,,
-fungicide_implement,character,,implement,no,,,yes,the implement (machine) used,,
-mulch,numeric,kg/ha,,no,,,yes,how much mulch is on the field?,,AGRO_00010013
-mulch_type,character,,,no,,,yes,Type of mulch used,,
+name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
+planting_date,date,,,no,,,"Planting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,AGRO_00010099
+transplanting_date,date,,,no,,,"Transplanting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see transplanting_days,AGRO_00010131
+harvest_date,date,,,no,,,"Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see harvest_days,AGRO_00010128
+fertilizer_used,logical,,,no,,,was any inorganic fertilizer used?,,
+foliar_fertilizer_used,logical,,,no,,,was any foliar fertilizer used?,,
+fertilizer_type,character,,fertilizer_type,yes,,,Name of inorganic fertilizer used,,CHEBI_33287
+fertilizer_date,date,,,yes,,,"Date(s) of inorganic fertilizer applications. Possibly followed by ""(product; amount)""",,AGRO_00010143
+fertilizer_dap,character,,,yes,-30,150,"Inorganic fertilizer applications in ""days after planting"". Possibly followed by ""(product; amount)""",,AGRO_00010143
+fertilizer_amount,numeric,kg/ha,,no,0,1000,Total amount of inorganic fertilizer applied,,
+fertilization_method,character,,,no,,,Fertilizer application method,,
+N_fertilizer,numeric,kg/ha,,no,0,600,N applied in inorganic fertilizer,,AGRO_00000158
+N_splits,integer,,,no,0,5,Number of splits in the N_fertilizer application,,
+N_fert_level,character,,,no,,,Qualtiative description of N fertilizer amount,,
+P_fertilizer,numeric,kg/ha,,no,0,350,"P applied in inorganic fertilizer (as P, not P2O5)",,AGRO_00000160 
+K_fertilizer,numeric,kg/ha,,no,0,300,"K applied in inorganic fertilizer (as K, not K2O)",,AGRO_00000201
+Zn_fertilizer,numeric,kg/ha,,no,0,100,Zn applied in inorganic fertilizer,,
+S_fertilizer,numeric,kg/ha,,no,0,250,S applied in inorganic fertilizer,,TO_0000658
+B_fertilizer,numeric,kg/ha,,no,0,100,B applied in inorganic fertilizer,,
+Ca_fertilizer,numeric,kg/ha,,no,0,250,Ca applied in inorganic fertilizer,,
+Mg_fertilizer,numeric,kg/ha,,no,0,250,Mg applied in inorganic fertilizer,,
+Fe_fertilizer,numeric,kg/ha,,no,0,250,Fe applied in inorganic fertilizer,,
+Mn_fertilizer,numeric,kg/ha,,no,0,250,Mn applied in inorganic fertilizer,,
+Cl_fertilizer,numeric,kg/ha,,no,0,50,Cl applied in inorganic fertilizer,,
+Cu_fertilizer,numeric,kg/ha,,no,0,50,Cu applied in inorganic fertilizer,,
+Mo_fertilizer,numeric,kg/ha,,no,0,50,Mo applied in inorganic fertilizer,,
+N_fixation,numeric,kg/ha,,no,0,150,N fixed by rhizobium or other organisms,,
+N_organic,numeric,kg/ha,,no,0,600,N applied in organic fertilizer,,
+P_organic,numeric,kg/ha,,no,0,250,"P applied in organic fertilizer (as P, not P2O5)",,
+K_organic,numeric,kg/ha,,no,0,300,"K applied in organic fertilizer (as K, not K2O)",,
+Ca_organic,numeric,kg/ha,,no,0,250,Ca applied in organic fertilizer,,
+Mg_organic,numeric,kg/ha,,no,0,250,Mg applied in organic fertilizer,,
+lime,numeric,kg/ha,,no,0,10000,lime applied,,
+lime_used,logical,,,no,,,was any lime applied?,,
+lime_date,date,,,no,,,when was lime applied?,,
+gypsum,numeric,kg/ha,,no,0,10000,gypsum applied,,
+OM_used,logical,,,no,,,Organic fertilizer applied,,AGRO_00002039
+OM_type,character,,OM,yes,,,Type of organic fertilzer applied,,AGRO_00002039
+OM_amount,numeric,kg/ha,,no,0,,Amount of organic fertilizer applied,,AGRO_00010008
+inoculated,logical,,,no,,,Was the field inoculated (with Rhizobium),,
+inoculant,character,,,no,,,Name of the inoculant product,,
+node_count,numeric,,,no,,,Number of Rhizobium nodes per plant,,
+biochar,numeric,kg/ha,,no,,,"Amount of biochar applied	",,
+irrigated,logical,,,no,,,Was the plot irrigated?,,AGRO_00000006
+irrigation_source,character,,,no,,,the source of irrigation water,,AGRO_00000009
+irrigation_method,character,,irrigation,no,,,the irrigation method,,AGRO_00000054
+irrigation_number,integer,,,no,0,50,How many times was the crop irrigated?,,AGRO_00010015
+irrigation_amount,numeric,mm,,no,0,1000,The total irrigation amount applied to the crop,,AGRO_00000010
+irrigation_fulfullment,character,,,no,,,The degree to which irrigation needs were fulfilled,,
+irrigation_dates,date,,,yes,,,"Irrigation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00010126
+land_prep_method,character,,land_prep,yes,,,"Land preparation (tillage) method used (including ""none"" = ""zero-tillage"")",,AGRO_00000322
+ land_prep_traction,character,,land_prep,yes,,,Type of traction used in land preparation,,
+land_prep_times,integer,,,no,0,10,How many passes were made for land prepration?,,
+land_prep_implement,character,,implement,yes,,,Land preparation (tillage) implement(s) used,,AGRO_00000224
+planting_method,character,,planting,no,,,Planting (sowing) method,,AGRO_00000231
+planting_implement,character,,implement,no,,,Planting (sowing) implement used,,AGRO_00000232
+transplanting_method,character,,planting,no,,,Transplanting method,,AGRO_00000229
+seed_density,numeric,plants/ha,,no,500,3100000,Number of plants per ha that were seeded/planted,,
+seed_rate,numeric,kg/ha,,no,0,3000,Mass of the seeds sown per hectare,,AGRO_00000202
+seed_source,character,,,no,,,source of the seed used,,
+seed_treatment,character,,,no,,,chemical or biological products applied to the seed,,
+herbicide_used,logical,,,no,,,was a herbicide used?,,
+herbicide_product,character,,herbicides,yes,,,name(s) of the active ingredient of the herbicide,,
+herbicide_timing,character,,,no,-30,200,days after (or before) planting on which herbicide was used, multiple applications separated by ,
+herbicide_times,integer,,,no,0,5,number of herbicide applications,,
+herbicide_dates,date,,,yes,,,"herbicide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
+herbicide_amount,numeric,kg (ai) / ha,,no,0,100,how much herbicide was used?,,AGRO_00000662
+herbicide_implement,character,,implement,no,,,the implement (machine) used,,
+weeding_done,logical,,,no,,,was the crop weeded?,,
+weeding_method,character,,,yes,,,Weeding method used,,
+weeding_times,integer,,,no,0,10,how many times was the crop weeded?,,AGRO_00010018
+weeding_dates,date,,,yes,,,"weeding dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00000562
+weeding_implement,character,,implement,no,,,the implement (machine) used,,AGRO_00002006
+insecticide_used,logical,,,no,,,was an insecticide used?,,
+insecticide_product,character,,insecticides,yes,,,name(s) of the active ingredient of the insecticide,,
+insecticide_dates,date,,,yes,,,"insecticide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
+insecticide_timing,integer,,,no,-30,200,days after (or before) planting on which insecticide was used,,
+insecticide_times,integer,,,no,0,12,number of insecticide applications,,
+insecticide_amount,numeric,kg (ai) / ha,,no,,,how much insecticide was used?,,AGRO_00000663
+insecticide_implement,character,,implement,no,,,the implement (machine) used,,
+fungicide_used,logical,,,no,,,was a herbicide used?,,
+fungicide_product,character,,fungicides,yes,,,name(s) of the active ingredient of the fungicide,,
+fungicide_dates,date,,,yes,,,"fungicide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
+fungicide_timing,integer,,,no,-30,200,days after (or before) planting on which fungicide was used,,
+fungicide_times,integer,,,no,0,20,number of fungicide applications,,
+fungicide_amount,numeric,kg (ai) / ha,,no,,,how much fungicide was used?,,
+fungicide_implement,character,,implement,no,,,the implement (machine) used,,
+mulch,numeric,kg/ha,,no,,,how much mulch is on the field?,,AGRO_00010013
+mulch_type,character,,,no,,,Type of mulch used,,
