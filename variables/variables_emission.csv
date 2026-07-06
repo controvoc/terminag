@@ -1,5 +1,5 @@
-name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
-N2O_emission,numeric,kg [CO2 equivalent] / ha,no,,no,,,yes,,,
-CO2_emission,numeric,kg [CO2 equivalent] / ha,no,,no,,,yes,,,
-CH4_emission,numeric,kg [CO2 equivalent] / ha,no,,no,,,yes,,,
-GHG_emission,numeric,kg [CO2 equivalent] / ha,no,,no,,,,,,
+name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
+N2O_emission,numeric,kg [CO2 equivalent] / ha,,no,,,yes,,,
+CO2_emission,numeric,kg [CO2 equivalent] / ha,,no,,,yes,,,
+CH4_emission,numeric,kg [CO2 equivalent] / ha,,no,,,yes,,,
+GHG_emission,numeric,kg [CO2 equivalent] / ha,,no,,,,,,

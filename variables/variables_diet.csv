@@ -1,2 +1,2 @@
-name,type,unit,required,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
-diet_diversity,numeric,,no,,no,,,yes,measire of dietary diversity,,
+name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,NAok,description,notes,obo
+diet_diversity,numeric,,,no,,,yes,measire of dietary diversity,,
