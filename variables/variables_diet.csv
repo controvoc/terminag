@@ -1,2 +1,3 @@
 name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
-diet_diversity,numeric,,,no,,,measire of dietary diversity,,
+diet_diversity,numeric,,,no,,,measure of dietary diversity,,
+diet_diversity_metric,character,,,no,,,name of diet_diversity metric used,,
