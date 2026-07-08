@@ -10,43 +10,44 @@ almond,Prunus dulcis,,yes,seed,nuts,,,almonds,c_8734
 aloe vera,Aloe vera,,yes,leaves,medicinal,,,,
 amaranth,Amaranthus sp,,yes,seed; leaves,pseudocereals; vegetables,,,,
 anise,Pimpinella anisum,,yes,seed,spices,,,anise,c_8817
-annual ryegrass,Festuca perennis,,yes,fodder,,,,,
+annual ryegrass,Festuca perennis,,yes,fodder,fodder_crops,,,,
 apple,Malus domestica,,yes,fruit,fruits,,,apples,c_541
 apricot,Prunus armeniaca,,yes,fruit,fruits,,,apricots,c_545
 arabica coffee,Coffea arabica,,yes,seed,stimulants,,,arabica coffee,c_566
 areca nut,Areca catechu,,yes,seed,nuts,,,areca nuts,c_ac0d27db
 argan,Argania spinosa,,yes,seed,oil_crops,,,argan,c_32068
-artichoke,Cynara cardunculus,,yes,flower,,,,,
+artichoke,Cynara cardunculus,,yes,flower,vegetables,,,,
 asparagus,asparagus officinalis,,yes,stems,vegetables,,,asparagus,c_669
 asparagus bean,Vigna unguiculata subsp. sesquipedalis,yardlong bean; pea bean; long-podded cowpea; Chinese long bean; snake bean,yes,seed,pulses,,,asparagus beans,c_670
 avocado,Persea americana,,yes,fruit,fruits,,,avocados,c_9022
 babassu palm,Attalea speciosa,,yes,seed,oil_crops,,,babassu palm,c_703
-bahia grass,Paspalum spp.,,yes,fodder,,,,,
+bahia grass,Paspalum spp.,,yes,fodder,fodder_crops,,,,
 bambara groundnut,Vigna subterranea,,yes,seed,pulses,,5000,bambara groundnut,c_15594
+bamboo,Bambusa spp.,,no,,,,,,
 banana,Musa acuminata,,yes,fruit,fruits,,173000,bananas,c_806
 barley,Hordeum vulgare,,yes,grain,cereals,,12000,barley,c_823
 basil,Ocimum basilicum,,yes,leaves,culinary_herbs,,,basil,c_9093
 beetroot,Beta vulgaris,,yes,root,vegetables,,,beetroot,c_867
 bell pepper,Capsicum annuum,,yes,fruit,vegetables,,,sweet peppers,c_14727
 bergamot orange,Citrus bergamia,,yes,fruit,fruits,,,bergamot orange,c_9233
-bermudagrass,Cynodon dactylon,,yes,fodder,,,,,
+bermudagrass,Cynodon dactylon,,yes,fodder,fodder_crops,,,,
 berseem clover,Trifolium alexandrium,,yes,above_ground,fodder_crops,,,,
 bilberry,Vaccinium myrtillus,,yes,fruit,fruits,,,bilberries,c_aeec9b59
 bitterball,Solanum incanum ,,yes,fruit,vegetables,,,,
-bitter gourd,Momordica charantia,,yes,fruit,,,,,
+bitter gourd,Momordica charantia,,yes,fruit,fruits,,,,
 black currant,Ribes nigrum,,yes,fruit,fruits,,,black currants,c_945
 black fonio,Digitaria iburua,,yes,grain,cereals,,,,
 black gram,Vigna mungo,,yes,seed,pulses,,,,
 black mustard,Brassica nigra,,yes,seed,spices,,,,
 black salsify,Scorzonera hispanica,,yes,root,vegetables,,,black salsify,c_0f628632
-black walnut,Juglans nigra,,yes,fruit,,,,,
+black walnut,Juglans nigra,,yes,fruit,nuts,,,,
 blackberry,Rubus spp,,yes,fruit,fruits,,,blackberries,c_947
 blue agave,Agave tequilana,,yes,,sugar_crops,,,,
 blue lupin,Lupinus angustifolius,,yes,,green_manures,,,,
 blueberry,Vaccinium spp.,,yes,fruit,fruits,,,blueberries,c_974
 borage,Borago officinalis,,yes,seed,oil_seeds,,,borage seed,c_d2910779
-bottle gourd,Lagenaria siceraria,calabash,yes,fruit,,,,,
-brachiaria,Brachiaria sp.,,yes,fodder,,,,,
+bottle gourd,Lagenaria siceraria,calabash,yes,fruit,vegetables,,,,
+brachiaria,Brachiaria sp.,,yes,fodder,fodder_crops,,,,
 brazil nut,Bertholletia excelsa,,yes,seed,nuts,,,brazil nuts,c_9410
 broccoli,Brassica oleracea var. italica,,yes,,vegetables,,,broccoli,c_7339
 brown mustard,Brassica juncea,,yes,seed;leaves,spices;vegetables,,,,
@@ -125,6 +126,7 @@ fiber crop,spp,,no,stems; leaves,fibre_crops,,,fibre crops,c_2876
 fig,Ficus carica,,yes,fruit,fruits,,,figs,c_10840
 fig-leaf gourd,Cucurbita ficifolia,,yes,fruit,fruits,,,,
 finger millet,Eleusine coracana,,yes,grain,cereals,,7500,finger millet,c_2904
+firewood,,,no,,,,,,
 flax,Linum usitatissimum,,yes,seed; stems,oil_seeds; fibre_crops,,,flax,c_2970
 fonio,Digitaria iburua; Digitaria exilis,,no,seed,,,,,
 forage crop,spp,,no,above_ground,fodder_crops,,,forage,c_36108
@@ -269,9 +271,10 @@ pulse,spp,,no,seed,pulses,,,,
 pomelo,Citrus maxima,,yes,fruit,fruits,,,pummelos,c_6367
 pumpkin,Cucurbita spp.,,yes,fruit; seed,vegetables,,,pumpkins,c_6369
 purple yam,Dioscorea alata,ube,yes,tuber,root_tuber,,60000,yams,c_8478
+pyrethrum,Tanacetum cinerariifolium,,yes,flower,,,,,
 quince,Cydonia oblonga,,yes,fruit,fruits,,,quinces,c_13714
 quinoa,Chenopodium quinoa,,yes,seed,pseudocereals,,,quinoa,c_13716
-radicchio,Cichorium intybus,,yes,,vegetables,,,radicchio,c_c32f344d
+radicchio,Cichorium intybus,,yes,leaves,vegetables,,,radicchio,c_c32f344d
 radish,Raphanus sp.,,yes,root,vegetables;green_manures,,,radishes,c_13735
 rambutan,Nephelium lappaceum,,yes,fruit,fruits,,,rambutans,c_13754
 ramie,Boehmeria nivea,,yes,,fibre_crops,,,ramie,c_6442
@@ -340,6 +343,7 @@ tea,Camellia sinensis,,yes,leaves,stimulants,,,tea,c_7634
 teff,Eragrostis tef,,yes,grain,cereals,,10000,teff,c_b2ba9c4c
 tepary bean,Phaseolus acutifolius,,yes,seed,,,,,
 thyme,Thymus vulgaris,,yes,leaves,culinary_herbs,,,thyme,c_14877
+timber,,,no,wood,,,,,
 tobacco,Nicotiana tabacum,,yes,leaves,stimulants,,10000,tobacco,c_7796
 tomato,Solanum lycopersicum,,yes,fruit,vegetables,,100000,tomatoes,c_7805
 tomatillo,Physalis philadelphica; Physalis ixocarpa,Mexican husk tomato,yes,fruit,vegetables,,10000,tomatoes,
