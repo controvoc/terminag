@@ -5,6 +5,10 @@
 	const repoUrl = cfg.repo ? `https://github.com/${cfg.repo}` : null;
 	const rawBase = cfg.repo ? `https://raw.githubusercontent.com/${cfg.repo}/${cfg.branch || "main"}` : null;
 
+	// Columns that may hold long free text; they wrap (see site.css) and get
+	// a content-aware minimum width in renderTable().
+	const LONG_TEXT_COLS = new Set(["description", "notes", "definition", "comment"]);
+
 	async function fetchTables() {
 		const r = await fetch("tables.json", { cache: "no-cache" });
 		if (!r.ok) throw new Error("cannot load tables.json (HTTP " + r.status + ")");
@@ -147,6 +151,12 @@
 		const colKeys = headers.map(h => String(h).trim().toLowerCase());
 		const vocabIdx = colKeys.indexOf("vocabulary");
 
+		// Longest cell (in characters) per column, used to give long-text
+		// columns a content-aware minimum width: columns with short text hug
+		// their content instead of taking a fixed generous width.
+		const maxChars = headers.map((_, i) =>
+			rows.reduce((m, r) => Math.max(m, String(r[i] ?? "").length), 0));
+
 		host.innerHTML = "";
 		const initialPageSize = readPageSize();
 		applyPageSizeSelect(initialPageSize);
@@ -158,7 +168,21 @@
 					sort: true,
 					// Tag each cell with the column name so CSS can size /
 					// wrap columns by semantic key rather than by position.
-					attributes: () => ({ "data-col": key })
+					// Long-text body cells also get an inline, content-aware
+					// minimum width (capped at 28rem): it only takes effect
+					// in the hidden measurement table Grid.js uses to pick
+					// default column widths, so columns with short text hug
+					// their content while long text gets a generous, wrapped
+					// default. `row` is undefined for header cells, which
+					// must not get the style (a custom style on the header
+					// cell would clobber the width Grid.js manages there).
+					attributes: (cell, row) => {
+						const attrs = { "data-col": key };
+						if (row && LONG_TEXT_COLS.has(key)) {
+							attrs.style = `min-width: min(28rem, ${maxChars[idx] + 2}ch)`;
+						}
+						return attrs;
+					}
 				};
 				if (idx === vocabIdx) {
 					col.formatter = (cell) => vocabularyCell(cell, valuesByName);

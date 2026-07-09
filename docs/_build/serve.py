@@ -9,7 +9,6 @@ from __future__ import annotations
 
 import http.server
 import shutil
-import socketserver
 import sys
 import time
 from functools import partial
@@ -92,8 +91,11 @@ def assemble() -> None:
 def serve(port: int) -> None:
 	# Use `directory=` instead of chdir so the server never pins _site/ as
 	# its cwd -- a re-run can then rebuild without hitting WinError 32.
+	# ThreadingHTTPServer (not the single-threaded TCPServer) is required:
+	# browsers open several parallel connections, which wedge a
+	# single-threaded server and make later requests hang / be refused.
 	handler = partial(http.server.SimpleHTTPRequestHandler, directory=str(SITE))
-	with socketserver.TCPServer(("", port), handler) as httpd:
+	with http.server.ThreadingHTTPServer(("", port), handler) as httpd:
 		print(f"terminag preview at http://localhost:{port}/  (Ctrl+C to stop)")
 		try:
 			httpd.serve_forever()

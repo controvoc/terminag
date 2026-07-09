@@ -134,28 +134,58 @@ section h2:first-child, section:first-child h2 { margin-top: 0; }
 #table-host { margin-top: .5rem; }
 #table-host .gridjs-wrapper { box-shadow: none; }
 
-/* Allow the table to be wider than the viewport so wide rows stay readable
- * with a horizontal scrollbar instead of being squashed into many lines. */
+/* The wrapper shrink-wraps the table, so the table takes the width of its
+ * columns (as measured by Grid.js) instead of being stretched to fill the
+ * page. Tables wider than the viewport get a horizontal scrollbar instead
+ * of being squashed. The table itself keeps the Grid.js theme styling
+ * (width: 100%, table-layout: fixed); column drag-resizing relies on it. */
 .gridjs-wrapper {
+	width: fit-content;
 	overflow-x: auto;
 	max-width: 100%;
 }
-.gridjs-table {
-	width: auto;
-	min-width: 100%;
+
+/* Default: keep cells on a single line; when a column is dragged narrower
+ * than its content, clip with an ellipsis instead of bleeding into the
+ * neighbouring cells. */
+.gridjs-td {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
-/* Default: keep cells on a single line; horizontal scroll covers overflow. */
-.gridjs-td { white-space: nowrap; }
-
-/* Long-text columns wrap with a generous width so rows stay <= ~2 lines. */
+/* Long-text columns wrap. Their minimum width is set inline per table by
+ * site.js (content-aware), so columns with short text hug their content
+ * while genuinely long text keeps a generous width and wraps. */
 .gridjs-td[data-col="description"],
 .gridjs-td[data-col="notes"],
 .gridjs-td[data-col="definition"],
 .gridjs-td[data-col="comment"] {
 	white-space: normal;
-	min-width: 28rem;
+	overflow-wrap: break-word;
 	max-width: 42rem;
+}
+
+/* Grid.js measures default column widths on a hidden clone of the table,
+ * rendered inside .gridjs-temp with an inline `width: 100%`. Override that
+ * inline width so columns are measured at their natural (content) size
+ * instead of being stretched to share the full page width; the measured
+ * values become the columns' default widths. Only the hidden measurement
+ * clone lives inside .gridjs-temp, so the visible table is unaffected. */
+.gridjs-temp table.gridjs-table {
+	width: auto !important;
+}
+
+/* During its minimum-width pass, Grid.js tags the measurement clone with
+ * gridjs-shadowTable; what it measures there becomes the narrowest a column
+ * can be dragged to. Let cells (headers included) wrap anywhere and drop
+ * the long-text min-width floors during that pass, so every column can be
+ * dragged down to just a few characters wide. */
+table.gridjs-shadowTable .gridjs-td,
+table.gridjs-shadowTable .gridjs-th {
+	min-width: 0 !important;
+	white-space: normal !important;
+	word-break: break-all !important;
 }
 
 footer {
