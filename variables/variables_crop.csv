@@ -58,7 +58,7 @@ plot_slope,numeric,degrees,,no,0,45,Slope of the plot in degrees,,
 plant_spacing,numeric,cm,,no,5,100,Distance between plants,,AGRO_00000316
 plant_density,numeric,plants/ha,,no,500,3100000,Number of plants per ha that emerged/survived,,PCO_0000079
 cob_density,numeric,cobs/ha,,no,500,5000000,Number of cobs (maize) per ha,,
-spike_density,numeric,spikes/ha,,no,500,10000000,Number of spikes per ha,,
+spike_density,numeric,spikes/ha,,no,500,10000000,Number of spikes (heads) per ha,,
 pod_density,numeric,pods/ha,,no,500,10000000,Number of pods per ha,,
 rain,numeric,mm,,no,0,3000,Total rainfall between planting and harvest,,ENVO_01000830
 emergence_days,numeric,days,,no,3,90,Days to emergence (after planting),Assumed to be the median number of days,
