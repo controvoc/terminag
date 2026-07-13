@@ -6,8 +6,6 @@ growth_stage,character,,,no,,,Growth stage description (code),,
 LTE_name,character,,,no,,,Name of long-term experiment,,
 season,character,,season,no,,,Season name,,
 flooded,logical,,,no,,,Was the field flooded (most of the time?) --- is this lowland rice?,,AGRO_00000601
-on_farm,logical,,,no,,,Is this observation on farm (not on an expermiment station),,AGRO_00000601
-is_survey,logical,,,no,,,Is this observation from a survey (not an experiment),,
 treatment,character,,,no,,,"Description of the treatment, if any. Can be a code used in the original data. There are no rules about its content or format",,AGRO_00000370
 rep,integer,,,no,,,"Replication number (1, 2, 3, ...) For this specific observation",,AGRO_00000318
 crop,character,,crop,no,,,Crop name(s),,AGRO_00000325

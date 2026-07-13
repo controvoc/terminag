@@ -9,3 +9,5 @@ DAE,integer,,,no,,,Days after emergece (relative time scale used in some crop ex
 variable,character,,,no,,,Variable name (for long format data or variable metadata),,
 value,numeric,,,no,,,Value (for long format data),,
 method,character,,,no,,,method used to obtain the values (for variable level metadata),,
+on_farm,logical,,,no,,,Is this observation on farm (not on an expermiment station),,AGRO_00000601
+is_survey,logical,,,no,,,Is this observation from a survey (not an experiment),,
