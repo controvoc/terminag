@@ -1,4 +1,5 @@
 name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
+station_id,character,,,no,,,ID of the weather stations,,
 station_name,character,,,no,,,name of the weather station,,
 prec,numeric,mm,,no,0,1000,precipitation,,
 temp,numeric,C,,no,-50,60,(average) temperature,,
@@ -16,3 +17,4 @@ wspdmx,numeric,m/s,,no,0,50,maximum wind speed,,
 wdir,numeric,degrees,,no,0,360,wind direction,,
 wgst,numeric,m/s,,no,0,25,wind gust,,
 ETo,numeric,mm/day,,no,0,10,reference evapotranspiration,,
+ETP,numeric,mm/day,,no,0,10,evapotranspiration,,
