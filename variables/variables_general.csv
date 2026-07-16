@@ -3,6 +3,7 @@ dataset_id,character,,,no,,,"dataset identifier (normalized URI, that is: ""/"" 
 record_id,integer,,,no,,,Unique identifier for each record in a dataset (sequence from 1 to n),,
 date,date,,,no,,,"Observation date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
 time,time,,,no,,,"Observation time in ""hh:mm:ss"", ""hh:mm"", or ""hh"" format",,
+order,integer,,,no,1,,"Observation order (1, 2, 3, …)",,
 reference,character,,,no,,,The data source (in data compilations for meta analysis),,
 DAP,integer,,,no,,,Days after planting (relative time scale used in some crop experiments,,
 DAE,integer,,,no,,,Days after emergece (relative time scale used in some crop experiments),,
