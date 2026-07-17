@@ -71,15 +71,24 @@ jobs:
           python-version: "3.x"
 
       - name: Install R packages
-        env:
-          # Avoid remotes using GITHUB_TOKEN for cross-org Remotes: installs (401).
-          GITHUB_PAT: ""
-          GITHUB_TOKEN: ""
         run: |
           install.packages(c("remotes", "jsonlite", "rappdirs"), repos = "https://cloud.r-project.org")
           deps <- c("Depends", "Imports")
           remotes::install_local("yuri", upgrade = "never", dependencies = deps, quiet = TRUE)
           remotes::install_local("vocal", upgrade = "never", dependencies = deps, quiet = TRUE)
+          # yuri and vocal are already installed from the local checkouts above, so
+          # drop carobiner's GitHub "Remotes" field before installing. Otherwise
+          # remotes resolves those remotes via the GitHub API, which fails with
+          # HTTP 401 ("Bad credentials") as this job has no cross-org token.
+          dsc <- "carobiner/DESCRIPTION"
+          x <- readLines(dsc)
+          i <- grep("^Remotes:", x)
+          if (length(i)) {
+            drop <- i
+            k <- i + 1
+            while (k <= length(x) && grepl("^[ \t]", x[k])) { drop <- c(drop, k); k <- k + 1 }
+            writeLines(x[-drop], dsc)
+          }
           remotes::install_local("carobiner", upgrade = "never", dependencies = deps, quiet = TRUE)
         shell: Rscript {0}
 
