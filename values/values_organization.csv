@@ -1,8 +1,8 @@
 name,longname,URL,dataURL,ROR
 AARU,Aarhus Universitet,au.dk,,01aj84f44
 AAU,Addis Ababa University,aau.edu.et,,038b8e254
-ABIO,abacusbio,abacusbio.com,,
 ABC,Alliance of Bioversity and International Center for Tropical Agriculture,alliancebioversityciat.org,,04xsxqp89
+ABIO,abacusbio,abacusbio.com,,
 ABU,Ahmadu Bello University,abu.edu.ng,,019apvn83
 AfricaRice,Africa Rice Center,africarice.org,dataverse.harvard.edu/dataverse/AfricaRice,040y9br29
 AMDSL,Agencia Mexicana para el Desarrollo Sustentable en Laderas,,,
@@ -16,10 +16,10 @@ AVRDC,World Vegetable Center,avrdc.org,,05dvmy761
 BARI,Bangladesh Agricultural Research Institute,bari.gov.bd,,01n09m616
 BAU,Bangor University,bangor.ac.uk,,006jb1a24
 BIOV,Bioversity International,alliancebioversityciat.org,,01a15g348
-BUK,Bayero University Kano,buk.edu.ng,,049pzty39
-BRRI,Bangladesh Rice Research Institute,brri.gov.bd,,01zmzpt10
 BOKU,BOKU University,boku.ac.at,,057ff4y42
 BOU,Boston University,bu.edu,,05qwgg493
+BRRI,Bangladesh Rice Research Institute,brri.gov.bd,,01zmzpt10
+BUK,Bayero University Kano,buk.edu.ng,,049pzty39
 CAAS,Chinese Academy of Agricultural Sciences,caas.cn,,0313jb750
 CARS,Chitedze Agricultural Research Station,,,
 CAU,Christian-Albrechts-Universität zu Kiel,uni-kiel.de,,04v76ef78
@@ -27,22 +27,22 @@ CIAT,International Center for Tropical Agriculture,alliancebioversityciat.org,da
 CIMMYT,International Maize and Wheat Improvement Center,cimmyt.org,data.cimmyt.org,04d4vcg59
 CIP,International Potato Center,cipotato.org,data.cipotato.org,05asvgp75
 CIRAD,Centre de Coopération Internationale en Recherche Agronomique pour le Développement,cirad.fr,dataverse.cirad.fr,05kpkpg04
-CSSRI,Central Soil Salinity Research Institute,cssri.res.in,,0366v8040
 CLU,Clemson University,clemson.edu,,037s24f05
 COLSU,Colorado State University,colostate.edu,,03k1gpj17
 CREA,Consiglio per la ricerca in agricoltura e l'analisi dell'economia agraria,crea.gov.it,,0327f2m07
 CRS,Catholic Relief Services,crs.org,,05xm0ec82
 CSIR,Council for Scientific and Industrial Research,csir.org.gh,,03ad6kn10
+CSSRI,Central Soil Salinity Research Institute,cssri.res.in,,0366v8040
 CSUEB,"California State University, East Bay",csueastbay.edu,,04jaeba88
 CU,Cornell University,cornell.edu,,05bnh6r87
 DIMITRA,Hellenic Agricultural Organization - DIMITRA,elgo.gr,,0542gd495
 DRC,Danish Refugee Council,drc.ngo,,04j9qwe36
 EEFRI,Ethiopian Environment and Forest Research Institute,tss.epa.gov.et,,03k2bxj15
 EIAR,Ethiopian Institute of Agricultural Research,eiar.gov.et,,01mhm6x57
+Embrapa,Empresa Brasileira de Pesquisa Agropecuária,embrapa.br,,0482b5b22
 ENSAT,École Nationale Supérieure Agronomique de Toulouse,ensat.fr,,03d5w9863
 ESS,Ethiopian Statistics Service,ess.gov.et,,
 ETH,ETH Zürich,ethz.ch,,05a28rw58
-Embrapa,Empresa Brasileira de Pesquisa Agropecuária,embrapa.br,,0482b5b22
 FAO,Food and Agricultural Orgnization of the United Nations,fao.org,,00pe0tf51
 FENALCE,"Federación Nacional de Cultivadores de Cereales, Leguminosas y Soya",fenalce.co,,
 FOFIFA,Centre National de la Recherche Appliquée au Developpement Rural,fofifa.mg,,0579ray12
@@ -60,9 +60,9 @@ HCSB,Hoima community seed bank,,,
 HEBAU,Hebei Agricultural University,hebau.edu.cn,,009fw8j44
 HWU,Hawassa University,hu.edu.et,,04r15fz20
 IAPC,"Institute of Atmospheric Physics, Chinese Academy of Sciences",iap.cas.cn,,0424h4e32
+IARI,Indian Agricultural Research Institute,iari.res.in,,01bzgdw81
 IASU,Iowa State University,iastate.edu,,04rswrd78
 IAU,Islamic Azad University,iau.ir,,049g0t365
-IARI,Indian Agricultural Research Institute,iari.res.in,,01bzgdw81
 ICAR,Indian Council of Agricultural Research,icar.org.in,,04fw54a43
 ICARDA,International Center for Agricultural Research in the Dry Areas,icarda.org,data.mel.cgiar.org,02n2syw04
 ICDF,International Cooperation and Development Fund,icdf.org.tw,,
@@ -74,6 +74,7 @@ IFA,International Fertilizer Association,fertilizer.org,,
 IFC,International Finance Corporatin,,,049rm1a24
 IFDC,International Fertilizer Development Center,ifdc.org,,045dj7z60
 IFPRI,International Food Policy Research Institute,ifpri.org,dataverse.harvard.edu/dataverse/IFPRI,03pxz9p87
+IFZ,Institute of Sugar Beet Research,ifz-goettingen.de,,01mdqc612
 IIAM,Instituto de Investigação Agrária de Moçambique,iiam.gov.mz,,05p3cb968
 IITA,International Institute of Tropical Agriculture,iita.org,data.iita.org,0556kt608
 ILO,International Labour Organization,ilo.org,,03tebpn36
@@ -88,30 +89,30 @@ INRAN,Institut National de la Recherche Agronomique du Niger,inran.refer.ne,,00r
 IPNI,International Plant Nutrition Institute,ipni.net,,05dn5a810
 IRD,Institut de Recherche pour le Développement,ird.fr,dataverse.ird.fr,051ykjw41
 IRRI,International Rice Research Institute,irri.org,dataverse.harvard.edu/dataverse/IRRI,0593p4448
-IFZ,Institute of Sugar Beet Research,ifz-goettingen.de,,01mdqc612
 ISRIC,International Soil Reference and Information Centre,isric.org,,01z8yfp14
 IWMI,International Water Management Institute,iwmi.org,,04vpcaw67
 JHU,James Hutton Institute,hutton.ac.uk,,03rzp5127
 JIRCAS,Japan International Research Centre for Agricultural Science,jircas.go.jp,,005pdtr14
 JMU,Julius-Maximilians-Universität Würzburg,uni-wuerzburg.de,,00fbnyb24
-Luke,Natural Resources Institute Finland,luke.fi,,02hb7bm88
-KUN,Kathmandu University,ku.edu.np,,036xnae80
 KALRO,Kenya Agricultural and Livestock Research Organization,kalro.org,,00wawdr98
 KEU,Kenyatta University,ku.ac.ke,,05p2z3x69
 KIOT,Karlsruhe Institute of Technology,kit.edu,,04t3en479
 KSU,Kansas State University,k-state.edu,,05p1j8758
+KUDK,Københavns Universitet,om.ku.dk,,035b05819
 KUL,"Katholieke Universiteit, Leuven",kuleuven.be,,05f950310
+KUN,Kathmandu University,ku.edu.np,,036xnae80
 KVC,Kula Vyema Centre,kulavyema.org,,
 LFN,Lao Farmer Network,laofarmers.net,,
 LLNL,Lawrence Livermore National Laboratory,llnl.gov,,041nk4h53
 LUANAR,Lilongwe University of Agriculture & Natural Resources,luanar.ac.mw,,0188qm081
 LUH,Leibniz Universität Hannover,uni-hannover.de,,0304hq317
+Luke,Natural Resources Institute Finland,luke.fi,,02hb7bm88
+MAFFKH,"Ministry of Agriculture, Forestry and Fisheries, Cambodia",maff.gov.kh,,
 MAK,Makerere University,mak.ac.ug,,03dmz0111
 MAM,Ministère de l'Agriculture du Mali,ma.gouv.ml,,
 MMOA,Malawi Ministry of Agriculture,agriculture.gov.mw,,
-MAFFKH,"Ministry of Agriculture, Forestry and Fisheries, Cambodia",maff.gov.kh,,
-MSU,Michigan State University,msu.edu,,00yfma824
 MONTSU,Montana State University,montana.edu,,02w0trx84
+MSU,Michigan State University,msu.edu,,00yfma824
 NARC,Nepal Agricultural Research Council,narc.org.np,,05aqbwk58
 NARI,National Agricultural Research Institute,,,
 NARL,National Agricultural Research Laboratories,naro.go.ug/naris/narl,,
@@ -121,24 +122,24 @@ NCSU,North Carolina State University,ncsu.edu,,04tj63d06
 NDSU,North Dakota State University,ndsu.edu,,05h1bnb22
 NMBU,Norwegian University of Life Sciences,nmbu.no,,04a1mvv97
 OAF,One Acre Fund,oneacrefund.org,,
+OHSU,The Ohio State University,osu.edu,,00rs6vg23
 OSU,Oregon State University,,,00ysfqy60
 OUAT,Odisha University of Agriculture and Technology,,,
-OHSU,The Ohio State University,osu.edu,,00rs6vg23
 PATAZ,Asociación Pataz,asociacionpataz.org.pe,,
+PSU,Pennsylvania State University,psu.edu,,04p491231
 PUADV,Pour une Agriculture du Vivant,agricultureduvivant.org,,
 PURDUE,Purdue University,purdue.edu,,05p8z3f47
-PSU,Pennsylvania State University,psu.edu,,04p491231
 RAB,Rwanda Agriculture and Animal Resources Development Board,rab.gov.rw,,03nkkb025
 RDRS,Rangpur Dinajpur Rural Service,rdrsbangladesh.org,,
 ROTH,Rothamsted Research,.rothamsted.ac.uk,,0347fy350
 RRDI,Rice Research and Development Institute,doa.gov.lk/rrdi_homepage/,,
 RUA,Royal University of Agriculture,rua.edu.kh,,033dmae14
+SAQ,Sustentabilidad Agropecuario Queretaro,facebook.com/SAQac2012/,,
 SARC,Agricultural Research Council of South Africa,arc.agric.za,,04r1s2546
 SARI,Selian Agricultural Research Institute,tari.go.tz/centres/tari-selian,,
-SAQ,Sustentabilidad Agropecuario Queretaro,facebook.com/SAQac2012/,,
 SCU,Southern Cross University,,,001xkv632
-SLARI,Sierra Leone Agricultural Research Institute,slari.gov.sl,,05xkpwf58
 SIU,"Southern Illinois University, Carbondale",siu.edu,,049kefs16
+SLARI,Sierra Leone Agricultural Research Institute,slari.gov.sl,,05xkpwf58
 SLU,Sveriges lantbruksuniversitet,slu.se,,02yy8x990
 SNV,SNV Netherlands Development Organisation,snv.org,,01a4v4q66
 SPIA,Standing Panel on Impact Assessment,iaes.cgiar.org/spia,dataverse.harvard.edu/dataverse/spia,
@@ -146,10 +147,10 @@ SSSA,Scuola Superiore Sant'Anna,santannapisa.it,,025602r80
 STATS4SD,Statistics for Sustainable Development,stats4sd.org,,
 SUA,Sokoine University of Agriculture,sua.ac.tz,,00jdryp44
 SUN,Stellenbosch University,www.sun.ac.za,,05bk57929
+TAID,Tree AID,treeaid.org,,
 TARI,Tanzania Agricultural Research Institute,tari.go.tz,,00h98p168
 TCD,Trinity College Dublin,tcd.ie,,02tyrky19
 TLC,Total Land Care,totallandcare.net,,
-TAID,Tree AID,treeaid.org,,
 TUAF,Thai Nguyen University of Agriculture and Forestry,tuaf.edu.vn,,028zxrr95
 UAB,Universitat Autònoma de Barcelona,uab.cat,,052g8jq94
 UAKS,University of Arkansas System,uasys.edu,,05vvhh982
@@ -162,7 +163,6 @@ UCD,"University of California, Davis",ucdavis.edu,,05rrcem69
 UCM,"University of California, Merced",ucmerced.edu,,00d9ah105
 UCR,"University of California, Riverside",ucr.edu,,03nawhv43
 UCRC,Universidad de Costa Rica,ucr.ac.cr,,02yzgww51
-KUDK,Københavns Universitet,om.ku.dk,,035b05819
 UED,University of Edinburgh,www.ed.ac.uk,,01nrxwf90
 UFL,University of Florida,ufl.edu,,02y3ad647
 UFS,University of the Free State,ufs.ac.za,,009xwd568
@@ -177,11 +177,11 @@ UMELB,University of Melbourne,unimelb.edu.au,,01ej9dk98
 UMICH,University of Michigan,umich.edu,,00jmfr291
 UMINN,University of Minnesota,umn.edu,,017zqws13
 UMPL,Université de Montpellier,umontpellier.fr,,051escj72
-UONBI,University of Nairobi,uonbi.ac.ke,,02y9nww90
 UNAL,Universidad Nacional de Colombia,unal.edu.co,,059yx9a68
 UNAM,Universidad Nacional Autónoma de México,unam.mx,,01tmp8f25
 UNIQ,Unique land use,unique-landuse.de,,
 UNL,"University of Nebraska, Lincoln",unl.edu,,043mer456
+UONBI,University of Nairobi,uonbi.ac.ke,,02y9nww90
 UOR,University of Oregon,uoregon.edu,,0293rh119
 UPE,University of Peradeniya,pdn.ac.lk,,025h79t26
 UPS,Université Paris-Saclay,universite-paris-saclay.fr,,03s92mv58
