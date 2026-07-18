@@ -10,11 +10,21 @@ Usage:
 from __future__ import annotations
 
 import csv
+import io
 import json
 import os
 import sys
+import urllib.request
 
 META_GROUPS = frozenset({"metadata", "carob-metadata"})
+
+# Which variables are "required" (and which may not contain NA) is deliberately
+# not part of the vocabulary; it lives in carobiner. The in-browser checker must
+# use the same source of truth as `carobiner::check_terms`, so we pull it in here.
+REQUIRED_VARIABLES_URL = (
+	"https://raw.githubusercontent.com/carob-data/carobiner/master/"
+	"inst/terms/required_variables.csv"
+)
 
 
 def _read_csv(path: str) -> tuple[list[str], list[dict[str, str]]]:
@@ -127,11 +137,86 @@ def _load_values(site: str) -> dict:
 	return out
 
 
+def _read_required_rows(text: str) -> list[dict]:
+	reader = csv.DictReader(io.StringIO(text))
+	if reader.fieldnames is None:
+		return []
+	out: list[dict] = []
+	for row in reader:
+		row = {(k.lstrip("\ufeff") if k else k): (v or "") for k, v in row.items()}
+		name = (row.get("name") or "").strip()
+		if not name:
+			continue
+		out.append({
+			"name": name,
+			"file": (row.get("file") or "").strip(),
+			"required": (row.get("required") or "").strip(),
+			"NAok": (row.get("NAok") or "").strip(),
+		})
+	return out
+
+
+def _required_local_paths(site: str) -> list[str]:
+	rel = os.path.join("inst", "terms", "required_variables.csv")
+	env = os.environ.get("CAROBINER_REQUIRED_VARIABLES")
+	roots = [
+		os.getcwd(),
+		os.path.join(os.getcwd(), ".."),
+		site,
+		os.path.join(site, ".."),
+		os.path.join(site, "..", ".."),
+	]
+	paths: list[str] = []
+	if env:
+		paths.append(env)
+	for root in roots:
+		paths.append(os.path.join(root, "carobiner", rel))
+		paths.append(os.path.join(root, "..", "carobiner", rel))
+	# de-duplicate while preserving order
+	seen: set[str] = set()
+	uniq: list[str] = []
+	for p in paths:
+		ap = os.path.normpath(p)
+		if ap not in seen:
+			seen.add(ap)
+			uniq.append(ap)
+	return uniq
+
+
+def _load_required(site: str) -> list[dict]:
+	"""Load carobiner's `required_variables.csv`.
+
+	Prefer a local carobiner checkout (env var or sibling directory); otherwise
+	fetch it from the carobiner repository over HTTP.
+	"""
+	for path in _required_local_paths(site):
+		if os.path.isfile(path):
+			with open(path, encoding="utf-8") as f:
+				rows = _read_required_rows(f.read())
+			if rows:
+				print(f"vocab: loaded required variables from {path}")
+				return rows
+	try:
+		with urllib.request.urlopen(REQUIRED_VARIABLES_URL, timeout=30) as resp:
+			text = resp.read().decode("utf-8")
+		rows = _read_required_rows(text)
+		if rows:
+			print(f"vocab: loaded required variables from {REQUIRED_VARIABLES_URL}")
+			return rows
+	except Exception as exc:  # noqa: BLE001 - report and fail below
+		raise SystemExit(
+			f"vocab: could not read required variables locally or from "
+			f"{REQUIRED_VARIABLES_URL}: {exc}"
+		)
+	raise SystemExit("vocab: required_variables.csv was empty")
+
+
 def build_vocab(site: str) -> dict:
 	variables = _load_variables(site)
 	return {
 		"variables": variables,
 		"values": _load_values(site),
+		"required": _load_required(site),
 		"metaGroups": sorted(META_GROUPS),
 	}
 
@@ -147,7 +232,8 @@ def main(argv: list[str]) -> int:
 		json.dump(vocab, f, indent=2, ensure_ascii=False)
 		f.write("\n")
 	print(f"vocab: wrote {len(vocab['variables'])} variables, "
-	      f"{len(vocab['values'])} value lists to {out}")
+	      f"{len(vocab['values'])} value lists, "
+	      f"{len(vocab['required'])} required rules to {out}")
 	return 0
 
 

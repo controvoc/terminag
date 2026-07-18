@@ -292,13 +292,82 @@
 		}
 	}
 
-	function checkRequired(columns, trms, issues, typeLabel) {
-		const req = trms.filter(t => t.required === "yes").map(t => t.name);
-		const missing = req.filter(n => !columns.includes(n));
-		if (missing.length) {
-			const prefix = typeLabel ? `${typeLabel}: ` : "";
-			push(issues, "missing variables", prefix + missing.join(", "));
+	// Whether `required` (a cell from carobiner's required_variables.csv) applies
+	// to `group`. Mirrors carobiner:::missing_required_variables. Multiple
+	// conditions separated by ";" must all hold, e.g. "!survey;!soil_samples".
+	function requiredApplies(required, group) {
+		const r = String(required == null ? "" : required).trim();
+		if (r === "yes") return true;
+		if (r === "" || r === "no") return false;
+		const conds = r.split(";").map(s => s.trim()).filter(Boolean);
+		return conds.every(cnd => {
+			if (cnd.startsWith("!")) return !String(group).includes(cnd.slice(1));
+			return String(group).includes(cnd);
+		});
+	}
+
+	// Ordered, de-duplicated required variable names for a group. `isMeta`
+	// selects the metadata rows (file contains "meta") vs the record rows.
+	function requiredNames(vocab, group, isMeta) {
+		const rows = (vocab.required || []).filter(r => {
+			const meta = /meta/.test(String(r.file || ""));
+			return isMeta ? meta : !meta;
+		});
+		const out = [];
+		const seen = new Set();
+		for (const r of rows) {
+			if (!requiredApplies(r.required, group)) continue;
+			if (seen.has(r.name)) continue;
+			seen.add(r.name);
+			out.push(r.name);
 		}
+		return out;
+	}
+
+	function requiredContext(vocab, group, isMeta) {
+		const names = requiredNames(vocab, group, isMeta);
+		return {
+			names,
+			set: new Set(names),
+			check: isMeta ? "missing metadata" : "missing variables",
+		};
+	}
+
+	// Variables flagged NAok=="no" in required_variables.csv must not contain NA.
+	// Mirrors carobiner:::check_NAok_variables (reports "NA detected").
+	function checkNAok(table, vocab, issues) {
+		const noNA = [];
+		const seen = new Set();
+		for (const r of vocab.required || []) {
+			if (String(r.NAok || "").trim() !== "no") continue;
+			if (seen.has(r.name)) continue;
+			seen.add(r.name);
+			noNA.push(r.name);
+		}
+		const bad = [];
+		for (const n of noNA) {
+			if (!table.columns.includes(n)) continue;
+			const vals = colValues(table, n);
+			// Mirror R's is.na(): a blank cell in a character column is an empty
+			// string (not NA); only literal "NA" and blanks in non-character
+			// columns count as missing.
+			const type = inferType(vals);
+			const hasNA = vals.some(v => {
+				if (v === null || v === undefined) return true;
+				if (typeof v === "number" && Number.isNaN(v)) return true;
+				if (isNaLiteral(v)) return true;
+				if (type !== "character" && typeof v === "string" && v.trim() === "") return true;
+				return false;
+			});
+			if (hasNA) bad.push(n);
+		}
+		if (bad.length) push(issues, "NA detected", bad.join(", "));
+	}
+
+	function checkRequired(columns, req, issues) {
+		if (!req) return;
+		const missing = req.names.filter(n => !columns.includes(n));
+		if (missing.length) push(issues, req.check, missing.join(", "));
 	}
 
 	function checkDups(columns, issues) {
@@ -308,9 +377,9 @@
 		if (dups.length) push(issues, "duplicate variables", dups.join(", "));
 	}
 
-	function checkVariables(table, trms, issues, required, suggest = true) {
+	function checkVariables(table, trms, issues, req, suggest = true) {
 		checkKnown(table.columns, trms, issues, suggest);
-		if (required) checkRequired(table.columns, trms, issues, "");
+		checkRequired(table.columns, req, issues);
 		checkDups(table.columns, issues);
 	}
 
@@ -338,7 +407,10 @@
 			const inferred = inferType(vals);
 			if (inferred !== "character") continue;
 			for (const v of vals) {
-				if (isMissing(v)) continue;
+				// An empty string is a present (non-NA) empty value in R and is
+				// flagged; only genuine null/undefined/NaN are skipped here.
+				if (v === null || v === undefined) continue;
+				if (typeof v === "number" && Number.isNaN(v)) continue;
 				const raw = String(v);
 				const trimmed = raw.trim();
 				if (trimmed === "") badEmpty.push(col);
@@ -405,7 +477,8 @@
 		checkRanges(table, keepTrms, issues);
 	}
 
-	function checkAccepted(table, trms, vocab, issues) {
+	function checkAccepted(table, trms, vocab, issues, req) {
+		const reqSet = req ? req.set : new Set();
 		const withVoc = trms.filter(t => t.vocabulary);
 		for (const tr of withVoc) {
 			if (!table.columns.includes(tr.name)) continue;
@@ -418,7 +491,7 @@
 					: []
 			);
 			let provided;
-			if (tr.required === "yes") {
+			if (reqSet.has(tr.name)) {
 				// Match R: empty strings are not NA and are checked against the vocabulary.
 				provided = [...new Set(colValues(table, tr.name).filter(v =>
 					v !== null && v !== undefined && !(typeof v === "number" && Number.isNaN(v))
@@ -447,11 +520,11 @@
 		}
 	}
 
-	function checkValues(table, trms, vocab, issues) {
+	function checkValues(table, trms, vocab, issues, req) {
 		checkMissingValues(table, trms, issues);
 		checkEmpty(table, issues);
 		checkTypeRange(table, trms, issues);
-		checkAccepted(table, trms, vocab, issues);
+		checkAccepted(table, trms, vocab, issues, req);
 	}
 
 	function checkDate(table, name, trms, issues) {
@@ -528,9 +601,9 @@
 		}
 	}
 
-	function checkCombined(table, trms, vocab, issues, required, suggest = true) {
-		checkVariables(table, trms, issues, required, suggest);
-		checkValues(table, trms, vocab, issues);
+	function checkCombined(table, trms, vocab, issues, req, suggest = true) {
+		checkVariables(table, trms, issues, req, suggest);
+		checkValues(table, trms, vocab, issues, req);
 		const dateCols = table.columns.filter(c => c.includes("_date") || c.endsWith("date"));
 		for (const d of dateCols) checkDate(table, d, trms, issues);
 	}
@@ -637,9 +710,12 @@
 	}
 
 	function checkRecords(table, vocab, issues, opts) {
+		const group = opts.group || "";
 		const trms = filterVariables(vocab, { exclude: ["metadata", "carob-metadata"] });
 		const suggest = opts.suggest !== false;
-		checkCombined(table, trms, vocab, issues, true, suggest);
+		const req = requiredContext(vocab, group, false);
+		checkCombined(table, trms, vocab, issues, req, suggest);
+		checkNAok(table, vocab, issues);
 		checkDatespan(table, issues);
 		checkConsistency(table, issues);
 		checkCropYield(table, vocab, issues);
@@ -659,7 +735,8 @@
 	function checkMetadata(meta, vocab, issues) {
 		const trms = filterVariables(vocab, { include: ["metadata", "carob-metadata"] });
 		const table = tableFromRows([meta]);
-		checkCombined(table, trms, vocab, issues, true);
+		const req = requiredContext(vocab, "metadata", true);
+		checkCombined(table, trms, vocab, issues, req);
 		if (meta.uri && String(meta.uri).includes("http")) {
 			push(issues, "uri", "http in uri");
 		}
@@ -699,6 +776,17 @@
 		}
 	}
 
+	// Mirrors carobiner:::suppress_some_warnings.
+	function suppressSomeWarnings(issues, group) {
+		return issues.filter(it => {
+			if (it.check === "all NA" && it.msg === "yield_isfresh") return false;
+			if (group === "survey" && it.check === "missing variables" && it.msg === "trial_id") {
+				return false;
+			}
+			return true;
+		});
+	}
+
 	function checkTerms(opts) {
 		const {
 			vocab,
@@ -724,10 +812,10 @@
 			}
 		}
 		if (records) {
-			checkRecords(records, vocab, issues, { nogeo });
+			checkRecords(records, vocab, issues, { nogeo, group });
 			findDuplicates(records, issues);
 		}
-		return issues;
+		return suppressSomeWarnings(issues, group);
 	}
 
 	global.CarobCheck = {

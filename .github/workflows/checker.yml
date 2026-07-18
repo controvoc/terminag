@@ -93,6 +93,10 @@ jobs:
         shell: Rscript {0}
 
       - name: Build checker vocabulary
+        env:
+          # Use the checked-out carobiner as the source of truth for which
+          # variables are required (see docs/_build/vocab.py).
+          CAROBINER_REQUIRED_VARIABLES: ${{ github.workspace }}/carobiner/inst/terms/required_variables.csv
         run: |
           set -euo pipefail
           cd terminag

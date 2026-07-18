@@ -1,7 +1,7 @@
 [
   {
     "check": "missing variables",
-    "msg": "dataset_id, N_fertilizer, P_fertilizer, K_fertilizer, irrigated"
+    "msg": "dataset_id, irrigated, K_fertilizer, N_fertilizer, P_fertilizer"
   },
   {
     "check": "out of bounds",
