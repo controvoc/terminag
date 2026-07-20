@@ -1,4 +1,4 @@
-name: Checker golden tests
+name: Checker tests
 
 on:
   push:

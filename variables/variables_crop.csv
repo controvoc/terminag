@@ -55,6 +55,8 @@ plot_width,numeric,m,,no,0.5,10,Width of the plot in meter,,AGRO_00000308
 plot_slope,numeric,degrees,,no,0,45,Slope of the plot in degrees,,
 plant_spacing,numeric,cm,,no,5,100,Distance between plants,,AGRO_00000316
 plant_density,numeric,plants/ha,,no,500,3100000,Number of plants per ha that emerged/survived,,PCO_0000079
+stem_density,numeric,stems/ha,,no,500,3100000,Number of stems per ha,,
+stake_orientation,character,,,no,,,Orientation of (cassava) stake at planting,,
 cob_density,numeric,cobs/ha,,no,500,5000000,Number of cobs (maize) per ha,,
 spike_density,numeric,spikes/ha,,no,500,10000000,Number of spikes (heads) per ha,,
 pod_density,numeric,pods/ha,,no,500,10000000,Number of pods per ha,,
