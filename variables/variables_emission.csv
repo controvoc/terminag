@@ -1,5 +1,8 @@
 name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
-N2O_emission,numeric,kg [CO2 equivalent] / ha,,no,,,,,
-CO2_emission,numeric,kg [CO2 equivalent] / ha,,no,,,,,
-CH4_emission,numeric,kg [CO2 equivalent] / ha,,no,,,,,
-GHG_emission,numeric,kg [CO2 equivalent] / ha,,no,,,,,
+emission_N2O,numeric,kg [CO2 equivalent]  ha-1 season-1,,no,,,,,
+emission_CO2,numeric,kg [CO2 equivalent]  ha-1 season-1,,no,,,,,
+emission_CH4,numeric,kg [CO2 equivalent]  ha-1 season-1,,no,,,,,
+emission_GHG,numeric,kg [CO2 equivalent]  ha-1 season-1,,no,,,,,
+flux_N2O,numeric,mg m-2 h-1,,no,,,,,
+flux_CO2,numeric,mg (C) m-2  h-1,,no,,,,,
+flux_CH4,numeric,µg  m-2 h-1,,no,,,,,
