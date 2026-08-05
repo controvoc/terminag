@@ -2,6 +2,7 @@ name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes
 dataset_id,character,,,no,,,id (normalized uri),,
 uri,character,,,no,,,the uri of the dataset,,
 authors,character,,,yes,,,dataset authors,,
+author_email,character,,,yes,,,email(s) of dataset authors,,
 title,character,,,no,,,title,,
 description,character,,,no,,,description,,
 license,character,,,no,,,license that comes with the data,,
