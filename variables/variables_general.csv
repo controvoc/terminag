@@ -8,6 +8,7 @@ reference,character,,,no,,,The data source (in data compilations for meta analys
 DAP,integer,,,no,,,Days after planting (relative time scale used in some crop experiments,,
 DAE,integer,,,no,,,Days after emergece (relative time scale used in some crop experiments),,
 variable,character,,,no,,,Variable name (for long format data or variable metadata),,
+period,character,,,no,,,"Any other indication of a ""period"" such as ""before"" and ""after""",,
 value,numeric,,,no,,,Value (for long format data),,
 method,character,,,no,,,method used to obtain the values (for variable level metadata),,
 on_farm,logical,,,no,,,Is this observation on farm (not on an expermiment station),,AGRO_00000601
