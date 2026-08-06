@@ -45,7 +45,6 @@ yield,numeric,kg/ha,,no,0,150000,"Biomass of the main harvestable parts at matur
 yield_moisture,numeric,%,,no,0,90,Moisture content of the reported yield (0 is dry weight),,
 yield_isfresh,logical,,,no,,,Is the reported yield fresh weight (perhaps with unknown moisture content?),,
 yield_marketable,numeric,kg/ha,,no,0,150000,"Fresh weight marketable (e.g. large enough tubers) biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
-yield_rank,integer,,,no,1,,rank (1-n) of yield relative to other variety or treatment in the experiment,,
 grain_fill,numeric,%,,no,0,100,% of grains that are filled,,
 seed_weight,numeric,g,,no,0,1000,1000 seed (grain) weight,,TO_0000382
 uncertainty,numeric,,,no,0,,Measure of noise in data ,,
@@ -129,4 +128,3 @@ shrub_density,numeric,/ha,,no,0,10000,number of shrubs per ha,,
 frac_int_radiation ,numeric,,,no,0,1,fraction of the incoming solar radiation that is intercepted by the crop,,
 stake_diameter,numeric,mm,,no,1,100,diamter of planting stake,,
 SPAD,numeric,,,no,0,,SPAD index of relative leaf chlorophyll content,,
-preference_rank,integer,,,no,1,,rank (1-n) of prefernce of this variety or treatment in the experiment,,
