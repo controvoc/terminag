@@ -165,7 +165,8 @@ jatropha,Jatropha curcas,,yes,,,,,,
 jerusalem artichoke,Solanum tuberosum,topinambour,yes,tuber,root_tuber,,,jerusalem artichokes,c_11903
 jicama,Pachyrhizus erosus,Mexican turnip,yes,root,root_tuber,,,,
 jojoba,Simmondsia chinensis,,yes,seed,oil_seeds,,,jojoba,c_11913
-jute,Corchorus olitorius,,yes,fiber,fibre_crops,,,jute,c_4065
+jute,Corchorus capsularis,,yes,fiber,fibre_crops,,,jute,c_4065
+jute mallow ,Corchorus olitorius,,yes,fiber,fibre_crops; vegetables,,,jute,c_4065
 kaki,Diospyros kaki,Japanese persimmon,yes,fruit,fruits,,,kaki,c_11934
 kale,Brassica oleracea,,yes,leaves,vegetables,,,kales,c_4070
 kapok,Bombax sp.,,yes,,fibre_crops,,,kapok,c_16497
