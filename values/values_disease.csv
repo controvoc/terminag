@@ -1,11 +1,12 @@
 name,pathogen,crop,notes
-potato late blight,phytophthora infestans,potato,
+potato late blight,Phytophthora infestans,potato,
 cassava anthracnose,,cassava,
 cassava anthracnose,,cassava,
 cassava bacterial blight,,cassava,
 superelongation disease,,cassava,
 cassava brown leaf spot,,cassava,
 cassava brown leaf spot,,cassava,
+cassva mosaic,Begomovirus spp,cassava,
 diffuse leaf spot,,cassava,
 cassava frogskin disease,,cassava,
 powdery mildew,,many,
