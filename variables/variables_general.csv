@@ -14,5 +14,5 @@ value,numeric,,,no,,,Value (for long format data),,
 method,character,,,no,,,method used to obtain the values (for variable level metadata),,
 on_farm,logical,,,no,,,Is this observation on farm (not on an expermiment station),,AGRO_00000601
 is_survey,logical,,,no,,,Is this observation from a survey (not an experiment),,
-rank_variable,character,,,no,,,"ranking variable (e.g. yield, quality, …)",,
+rank_variable,character,,,no,,,"ranking variable (e.g. yield, quality, ...)",,
 rank_score,integer,,,no,1,,rank (1-n) of prefernce of this variety or treatment in the experiment,,
