@@ -44,7 +44,8 @@ if (!requireNamespace("carobiner", quietly = TRUE)) {
 suppressPackageStartupMessages(library(carobiner))
 suppressPackageStartupMessages(library(jsonlite))
 
-carobiner::carob_vocabulary(reset = TRUE)
+# Use the checked-out terminag tree only — do not reset to github:controvoc/terminag
+# (that hits the GitHub API and fails CI on 504/timeouts).
 suppressMessages(carobiner::carob_vocabulary(terminag_root, add = FALSE, save = FALSE))
 
 read_one_csv <- function(path) {
