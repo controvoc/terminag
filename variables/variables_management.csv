@@ -87,3 +87,4 @@ fungicide_amount,numeric,kg (ai) / ha,,no,,,how much fungicide was used?,,
 fungicide_implement,character,,implement,no,,,the implement (machine) used,,
 mulch,numeric,kg/ha,,no,,,how much mulch is on the field?,,AGRO_00010013
 mulch_type,character,,,no,,,Type of mulch used,,
+biosolarized,logical,,,no,,,Was the soil biosolarized?,,
