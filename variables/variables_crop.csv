@@ -19,6 +19,7 @@ variety_release_year,integer,,,no,,,year the variety was released,,
 intercropped,logical,,,no,,,is the crop intercropped,,
 intercrops,character,,crop,yes,,,Other crop grown together with the main crop,,
 intercrop_type,character,,intercrop,yes,,,"Type of intercropping (e.g. mixed, strip)",,
+intercrop_fraction,numeric,,,no,,,Fraction of this crop in the intercropping,,
 previous_crop,character,,crop,yes,,,Crop grown on this plot in the prior season,,AGRO_00000592
 crop_rotation,character,,crop,yes,,,Crops grown in rotation on this plot,,
 cover_crop,character,,crop,yes,,,Crops grown as cover crop on this plot,,
