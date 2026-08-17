@@ -82,6 +82,7 @@ rAUDPC,numeric,,,no,0,1,Area under the disease progress curve divided by the non
 root_infection,numeric,%,,no,0,100,Roots that are disease infected,,
 root_AMF,numeric,%,,no,0,100,Root colonization by arbuscular micorrhizal fungi,,
 nodule_weight,numeric,kg/ha,,no,0,,Fresh weight or root nodules,,TO_0000899
+nodule_plant,numeric,,,no,0,,Number of root nodules per plant,,
 germination_rate,numeric,%,,no,0,100,,,
 season_constraint,character,,,no,,,"a constraint that occurred in this particular season (e.g. drought, flood)",,
 weed_species,character,,,no,,,weed species names ,,
