@@ -465,7 +465,7 @@
 			if (!tr || !tr.type) continue;
 			let actual = inferType(colValues(table, col));
 			let expected = tr.type;
-			if (actual === "character" && expected === "date") expected = "character";
+			if (actual === "character" && (expected === "date" || expected === "time")) expected = "character";
 			if (actual === "integer" && expected === "numeric") actual = "numeric";
 			if (actual !== expected) {
 				badTypes.push(`${col} (${actual}, not ${expected})`);
