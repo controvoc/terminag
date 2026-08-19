@@ -29,23 +29,27 @@ heading_date,date,,,no,,,"Heading date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy
 flowering_date,date,,,no,,,"Flowering date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see flowering_days,
 podding_date,date,,,no,,,"Podding date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see podding_days,
 maturity_date,date,,,no,,,"Maturity date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",see maturity_days,
-dmy_roots,numeric,kg/ha,,no,0,5000,Dry-matter weight biomass of fine roots per ha,,
-dmy_stems,numeric,kg/ha,,no,0,20000,Dry-matter weight biomass of stems per ha,,
-dmy_leaves,numeric,kg/ha,,no,0,20000,Dry-matter weight biomass of leaves per ha,,
-dmy_storage,numeric,kg/ha,,no,0,50000,Dry-matter weight biomass of storage organs per ha,,
-dmy_total,numeric,kg/ha,,no,0,100000,Dry-matter weight total biomass per ha,,
-dmy_residue,numeric,kg/ha,,no,0,100000,Dry-matter weight residue biomass per ha,,
-fwy_roots,numeric,kg/ha,,no,0,5000,Fresh weight biomass of fine roots per ha,,
-fwy_stems,numeric,kg/ha,,no,0,21000,Fresh weight biomass of stems per ha,,
-fwy_leaves,numeric,kg/ha,,no,0,20000,Fresh weight biomass of leaves per ha,,
-fwy_storage,numeric,kg/ha,,no,0,50000,Fresh weight biomass of storage organs per ha,,
-fwy_total,numeric,kg/ha,,no,0,100000,Fresh weight total biomass per ha,,
-fwy_residue,numeric,kg/ha,,no,0,100000,Fresh weight residue biomass per ha,,
+dmy_roots,numeric,kg/ha,,no,0,5000,Dry-matter yield biomass of fine roots per ha,,
+dmy_stems,numeric,kg/ha,,no,0,20000,Dry-matter yield biomass of stems per ha,,
+dmy_leaves,numeric,kg/ha,,no,0,20000,Dry-matter yield biomass of leaves per ha,,
+dmy_storage,numeric,kg/ha,,no,0,50000,Dry-matter yield biomass of storage organs per ha,,
+dmy_total,numeric,kg/ha,,no,0,100000,Dry-matter yield total biomass per ha,,
+dmy_residue,numeric,kg/ha,,no,0,100000,Dry-matter yield residue biomass per ha,,
+fwy_roots,numeric,kg/ha,,no,0,5000,Fresh-matter yield biomass of fine roots per ha,,
+fwy_stems,numeric,kg/ha,,no,0,21000,Fresh-matter yield biomass of stems per ha,,
+fwy_leaves,numeric,kg/ha,,no,0,20000,Fresh-matter yield biomass of leaves per ha,,
+fwy_storage,numeric,kg/ha,,no,0,50000,Fresh-matter yield biomass of storage organs per ha,,
+fwy_total,numeric,kg/ha,,no,0,100000,Fresh-matter yield total biomass per ha,,
+fwy_residue,numeric,kg/ha,,no,0,100000,Fresh-matter yield residue biomass per ha,,
 yield_part,character,,yield_part,no,,,"The part of the crop that ""yield"" refers to (e.g. grain, tubers, roots, leaves, fruit)",,
 yield,numeric,kg/ha,,no,0,150000,"Biomass of the main harvestable parts at maturity, per ha --- yield_moisture must also be specified",,AGRO_00000176 
 yield_moisture,numeric,%,,no,0,90,Moisture content of the reported yield (0 is dry weight),,
 yield_isfresh,logical,,,no,,,Is the reported yield fresh weight (perhaps with unknown moisture content?),,
 yield_marketable,numeric,kg/ha,,no,0,150000,"Fresh weight marketable (e.g. large enough tubers) biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
+roots_moisture,numeric,%,,no,0,90,Moisture content,,
+stems_moisture,numeric,%,,no,0,90,Moisture content,,
+leaves_moisture,numeric,%,,no,0,90,Moisture content,,
+storage_moisture,numeric,%,,no,0,90,Moisture content,,
 grain_fill,numeric,%,,no,0,100,% of grains that are filled,,
 seed_weight,numeric,g,,no,0,1000,1000 seed (grain) weight,,TO_0000382
 uncertainty,numeric,,,no,0,,Measure of noise in data ,,
@@ -54,7 +58,6 @@ row_spacing,numeric,cm,,no,1,180,Distance between rows,,AGRO_00000318
 plot_area,numeric,m2,,no,1,350,Area of the plot in square meter,,AGRO_00000302
 plot_length,numeric,m,,no,0.5,10,Length of the plot in meter,,AGRO_00000307
 plot_width,numeric,m,,no,0.5,10,Width of the plot in meter,,AGRO_00000308
-plot_slope,numeric,degrees,,no,0,45,Slope of the plot in degrees,,
 plant_spacing,numeric,cm,,no,5,100,Distance between plants,,AGRO_00000316
 plant_density,numeric,plants/ha,,no,500,3100000,Number of plants per ha that emerged/survived,,PCO_0000079
 stem_density,numeric,stems/ha,,no,500,3100000,Number of stems per ha,,
