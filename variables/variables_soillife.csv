@@ -1,0 +1,9 @@
+name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
+soil_microbial_activity_category,character,,,no,,,microbial activity variable name (for use in long format),,
+soil_microbial_activity_value,numeric,,,no,,,microbial activity value (for use in long format),,
+soil_protein,numeric,,,no,,,,,
+soil_MBC,numeric,,,no,,,soil microbial biomass carbon,,
+soil_MBN,numeric,,,no,,,soil microbial biomass nitrogen,,
+soil_MBP,numeric,,,no,,,soil microbial biomass phosphorus,,
+soil_ACP,numeric,,,no,,,acid phosphatase enzyme activity,,
+soil_ALP,numeric,,,no,,,alkaline phosphatase enzyme activity,,
