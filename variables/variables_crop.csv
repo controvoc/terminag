@@ -61,7 +61,7 @@ plot_width,numeric,m,,no,0.5,10,Width of the plot in meter,,AGRO_00000308
 plant_spacing,numeric,cm,,no,5,100,Distance between plants,,AGRO_00000316
 plant_density,numeric,plants/ha,,no,500,3100000,Number of plants per ha that emerged/survived,,PCO_0000079
 stem_density,numeric,stems/ha,,no,500,3100000,Number of stems per ha,,
-leaf_density,,leaves/ha,,no,500,,Number of leaves per ha,,
+leaf_density,numeric,leaves/ha,,no,500,,Number of leaves per ha,,
 tuber_density,numeric,tubers/ha,,no,0,,Number of tubers per ha,,
 vine_density,numeric,vines/ha,,no,0,,Number of vines per ha,,
 stake_orientation,character,,,no,,,Orientation of (cassava) stake at planting,,
@@ -126,7 +126,7 @@ shelling_percentage,numeric,,,no,10,90,"100 * grain weight / fruit (pod, ear) we
 house_distance,numeric,,,no,,,Distance of field to the house of the person managing the field,,
 NDVI,numeric,,,no,0,1,Normalized difference vegetation index,,
 flesh_color,character,,,no,,,"""flesh"" color of (sweet)potato and other root/tubers",,
-tree_density,character,,,no,,,grain color,,
+grain_color,character,,,no,,,grain color,,
 CA_years,numeric,,,no,0,50,number of years that Conservation Agriculture has been practised,,
 sterility_index,numeric,,,no,0,100,% sterility of inflorescence,,
 striga_trial,logical,,,no,,,Is this a striga trial?,,
