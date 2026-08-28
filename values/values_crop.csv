@@ -110,6 +110,7 @@ cucumber,Cucumis sativus,,yes,,vegetables,,,cucumbers,c_10195
 cumin,Cuminum cyminum,,yes,seed,spices,,,cumin,c_10205
 date,Phoenix dactylifera,,yes,fruit,fruits,,,dates,c_25475
 dewberry,Rubus sp.,,yes,fruit,fruits,,,dewberries,c_2232
+dolichos,Dolichos sp,,yes,,,,,,
 dragon fruit,Selenicereus spp.,,yes,fruit,fruits,,,dragon fruits,c_42ce209e
 durian,Durio zibethinus,,yes,fruit,fruits,,,durians,c_10488
 durum wheat,Triticum durum,,yes,grain,cereals,,,,
@@ -324,6 +325,7 @@ squash,Cucurbita pepo,summer squash,yes,,vegetables,,,squashes,c_37735
 star anise,Illicium verum,,yes,fruit,spices,,,,
 stevia,Stevia rebaudiana,,yes,,,,,,
 strawberry,Fragaria sp.,,yes,fruit,fruits,,,strawberries,c_7443
+stylosanthes,Stylosanthes sp.,,yes,,,,,,
 subterranean clover,Trifolium subterraneum,,yes,above_ground,fodder,,,,
 sudan grass,Sorghum × drummondii ,,yes,above_ground,fodder,,,,
 sugar beet,Beta vulgaris,,yes,root,sugar_crops,,,sugar beet,c_7499
