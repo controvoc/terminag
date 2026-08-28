@@ -139,4 +139,4 @@ frac_int_radiation ,numeric,,,no,0,1,fraction of the incoming solar radiation th
 stake_diameter,numeric,mm,,no,1,100,diamter of planting stake,,
 SPAD,numeric,,,no,0,,SPAD index of relative leaf chlorophyll content,,
 crop_health,character,,,no,,,Description of crop health,,
-pheromone_date ,date,,,no,,,Date the pheromone (trap) was installed / renewed,,
+pheromone_date,date,,,no,,,Date the pheromone (trap) was installed / renewed,,
