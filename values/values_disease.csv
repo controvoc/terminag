@@ -1,5 +1,12 @@
 name,pathogen,crop,notes
 potato late blight,Phytophthora infestans,potato,
+ bacterial wilt,,potato,
+potato leafroll virus,,potato,
+potato virus A,,potato,
+potato virus M,,potato,
+potato virus S,,potato,
+potato virus X,,potato,
+potato virus Y,,potato,
 cassava anthracnose,,cassava,
 cassava anthracnose,,cassava,
 cassava bacterial blight,,cassava,
