@@ -8,6 +8,7 @@ fertilizer_app_cost,numeric,currency/ha,,yes,0,,cost of fertilizer application(s
 fertilizer_price,numeric,currency/kg,,yes,0,,cost of fertilizer(s) per kg,,
 fungicide_cost,numeric,currency/kg,,yes,0,,cost  of fungide used per ha,,
 fungicide_app_cost,numeric,currency/ha,,yes,0,,cost of fungicide application per ha,,
+fungicide_price,numeric,??,,yes,0,,fungicide price ,,
 harvest_cost,numeric,currency/kg,,no,0,,cost of harvest per ha,,
 herbicide_cost,numeric,currency/ha,,yes,0,,cost of herbicide per ha,,
 herbicide_app_cost,numeric,currency/ha,,yes,0,,cost of herbicide application per ha,,
