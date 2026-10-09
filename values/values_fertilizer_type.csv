@@ -13,7 +13,6 @@ Bio-sulphur,,,NA,NA,NA,80,NA,NA,NA,NA,NA,NA,NA,
 Borate 48,Borate 48,,,,,,14.9,,,,,,,
 Borate Granular,Borate Granular,Na2B4O7.5H2O,,,,,15,,,,,,,
 Borax,Borax (sodium tetraborate decahydrate),Na2B4O7. 10H2O,0,0,0,0,11,0,0,0,0,0,0,CHEBI_38892
-,,,,,,,,,,,,,,
 Boron frit,Boron frit/sodium borosilicate,,,,,,6,,,,,,,
 Burned lime,Burned lime,CaO,0,0,0,0,,70,,,0,,,
 CaCl2,Calcium chloride,CaCl2,0,0,0,0,0,36.1,0,0,0,0,0,
@@ -153,4 +152,3 @@ Zinc sulfate monohydrate,Zinc sulfate monohydrate,ZnSO4.H2O,,,,,,,,,,,29,
 Zinc sulfide,Zinc sulfide ( sphalerite),,,,,,,,,,,,61,
 ZnCl2,Zinc chloride,,0,0,0,0,0,0,0,0,0,0,47.8,
 ZnSO4,Zinc sulfate,ZnSO4,0,0,0,19.9,0,0,0,0,0,0,40.5,CHEBI_35176
-,Concentrated wet-process phosphoric acid,H3PO4,0,20.51,0,0,,0,,,0,,,
