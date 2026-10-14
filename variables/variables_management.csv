@@ -53,8 +53,8 @@ land_prep_method,character,,land_prep,yes,,,"Land preparation (tillage) method u
  land_prep_traction,character,,land_prep,yes,,,Type of traction used in land preparation,,
 land_prep_times,integer,,,no,0,10,How many passes were made for land prepration?,,
 land_prep_implement,character,,implement,yes,,,Land preparation (tillage) implement(s) used,,AGRO_00000224
-planting_method,character,,planting,no,,,Planting (sowing) method,,AGRO_00000231
-planting_implement,character,,implement,no,,,Planting (sowing) implement used,,AGRO_00000232
+planting_method,character,,planting,yes,,,Planting (sowing) method,,AGRO_00000231
+planting_implement,character,,implement,yes,,,Planting (sowing) implement used,,AGRO_00000232
 transplanting_method,character,,planting,no,,,Transplanting method,,AGRO_00000229
 seed_density,numeric,plants/ha,,no,500,3100000,Number of plants per ha that were seeded/planted,,
 seed_rate,numeric,kg/ha,,no,0,3000,Mass of the seeds sown per hectare,,AGRO_00000202
