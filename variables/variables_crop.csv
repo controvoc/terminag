@@ -10,13 +10,6 @@ flooded,logical,,,no,,,Was the field flooded (most of the time?) --- is this low
 treatment,character,,,no,,,"Description of the treatment, if any. Can be a code used in the original data. There are no rules about its content or format",,AGRO_00000370
 rep,integer,,,no,,,"Replication number (1, 2, 3, ...) For this specific observation",,AGRO_00000318
 crop,character,,crop,no,,,Crop name(s),,AGRO_00000325
-variety,character,,,no,,,Variety name,,
-variety_alt,character,,,no,,,Alternative names for variety,,
-variety_code,character,,,no,,,Variety code,,
-variety_pedigree,character,,,no,,,Variety pedigree. E.g. CML311 x CML483,,
-variety_type,character,,,no,,,"variety grouping (e.g. climbing/bush) and/or ""improved/landrace""",,AGRO_00000616
-variety_traits,character,,,no,,,variety characteristics,,
-variety_release_year,integer,,,no,,,year the variety was released,,
 intercropped,logical,,,no,,,is the crop intercropped,,
 intercrops,character,,crop,yes,,,Other crop grown together with the main crop,,
 intercrop_type,character,,intercrop,yes,,,"Type of intercropping (e.g. mixed, strip)",,

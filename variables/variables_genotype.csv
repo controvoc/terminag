@@ -1,0 +1,10 @@
+name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
+variety,character,,,no,,,variety name,,
+variety_alt,character,,,no,,,alternative names for variety,,
+variety_code,character,,,no,,,variety code,,
+variety_pedigree,character,,,no,,,variety pedigree. E.g. CML311 x CML483,,
+variety_type,character,,,no,,,"variety grouping (e.g. climbing/bush) and/or ""improved/landrace""",,AGRO_00000616
+variety_traits,character,,,no,,,variety characteristics,,
+variety_release_year,integer,,,no,,,year the variety was released,,
+female_parent,character,,,no,,,variety female parent,,
+male_parent,character,,,no,,,variety male parent,,
