@@ -73,6 +73,7 @@ cauliflower,Brassica oleracea,,yes,,vegetables,,,cauliflowers,c_1394
 celeriac,Apium graveolens var. rapaceum,celery root,yes,,vegetables,,,celeriac,c_1411
 celery,Apium graveolens,,yes,stems; leaves; seed,vegetables,,,celery,c_1412
 cereal,spp,,no,seed,cereals,,,,
+chard,Beta vulgaris,,yes,leaves,vegetables,,,,
 chayote,Sicyos edulis,,yes,fruit,vegetables,,,,
 cherimoya,Annona cherimola,,yes,fruit,fruits,,,cherimoyas,c_9761
 cherry,Prunus avium; Prunus cerasus,,yes,fruit,fruits,,,cherries,c_1534
@@ -203,7 +204,10 @@ lucuma,Lucuma bifera,,yes,fruit,fruits,,,lucumas,c_4456
 lupin,Lupinus sp.,,no,,,,,,
 macadamia nut,Macadamia sp.,,yes,seed,nuts,,,macadamia nuts,c_12296
 mace,Myristica fragrans,,yes,,spices,,,mace,c_25484
-maize,Zea mays,,yes,grain,cereals,12,41500,maize,c_12332
+silage maize,Zea mays,,yes,above_ground,fodder_crops,12,41500,maize,c_12332
+forage maize,Zea mays,,yes,above_ground,fodder_crops,12,41500,maize,c_12332
+maize,Zea mays,,yes,grain,cereals,12,25000,maize,c_12332
+sweet corn,Zea mays,,yes,grain,vegetables,12,25000,maize,c_12332
 mandarin,Citrus reticulata,,yes,fruit,fruits,,,mandarins,c_4568
 mango,Mangifera indica,,yes,fruit,fruits,,100000,mangoes,c_12367
 mangosteen,Garcinia mangostana,,yes,fruit,fruits,,,mangosteens,c_12368

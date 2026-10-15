@@ -8,6 +8,7 @@ soil_type,character,,,yes,,,soil name or description,,AGRO_00010099
 soil_pH,numeric,,,no,2,10,soil pH (H2O),,ENVO_09200010
 soil_pH_KCl,numeric,,,no,2,10,soil pH (KCl),,ENVO_09200010
 soil_pH_CaCl2,numeric,,,no,2,10,soil pH (CaCl2),,ENVO_09200010
+soil_pH_buffer,numeric,,,no,,,reseve acidity,,
 soil_sand,numeric,%,,no,0,100,soil sand content (excluding gravel),,
 soil_clay,numeric,%,,no,0,100,soil clay content (excluding gravel),,ENVO_00002982
 soil_silt,numeric,%,,no,0,100,soil silt content (excluding gravel),,
@@ -92,7 +93,9 @@ soil_CO2,numeric,(g/cm2)/day,,no,,,CO2 emitted from soil,,
 soil_N2O,numeric,(mg (N) m2)/day,,no,,,N2O emitted from soil,,
 soil_NO,numeric,(mg (N) m2)/day,,no,,,NO emitted from soil,,
 soil_FC,numeric,,,no,,,Field capacity,,
-soil_PWP,numeric,,,no,,,Permanent Wilting Point,,
+soil_PWP,numeric,,,no,,,Permanent wilting point,,
+soil_SP,numeric,%,,no,,,Saturation point,,
 land_use,character,,,no,,,land use type,,
 soil_POXC,numeric,,,no,,,Permanganate oxidizable carbon,,
 land_slope,numeric,degrees,,no,0,60,Slope of the land / plot in degrees,,
+soil_Ksat,numeric,cm/h,,no,0,40,Saturated Hydraulic Conductivity,,
