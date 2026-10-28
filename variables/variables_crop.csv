@@ -9,6 +9,8 @@ season,character,,season,no,,,Season name,,
 flooded,logical,,,no,,,Was the field flooded (most of the time?) --- is this lowland rice?,,AGRO_00000601
 treatment,character,,,no,,,"Description of the treatment, if any. Can be a code used in the original data. There are no rules about its content or format",,AGRO_00000370
 rep,integer,,,no,,,"Replication number (1, 2, 3, ...) For this specific observation",,AGRO_00000318
+plot_row,integer,,,no,,,relative position in experiment,,
+plot_columns,integer,,,no,,,relative position in experiment,,
 crop,character,,crop,no,,,Crop name(s),,AGRO_00000325
 intercropped,logical,,,no,,,is the crop intercropped,,
 intercrops,character,,crop,yes,,,Other crop grown together with the main crop,,
@@ -62,6 +64,7 @@ stake_orientation,character,,,no,,,Orientation of (cassava) stake at planting,,
 cob_density,numeric,cobs/ha,,no,500,5000000,Number of cobs (maize) per ha,,
 spike_density,numeric,spikes/ha,,no,500,10000000,Number of spikes (heads) per ha,,
 pod_density,numeric,pods/ha,,no,500,10000000,Number of pods per ha,,
+grains_per_spike,numeric,grains/spike,,no,0,,Number of grains per spike,,
 rain,numeric,mm,,no,0,3000,Total rainfall between planting and harvest,,ENVO_01000830
 emergence_days,numeric,days,,no,3,90,Days to emergence (after planting),Assumed to be the median number of days,
 transplanting_days,numeric,days,,no,0,50,Days to transplanting,Assumed to be the median number of days,
