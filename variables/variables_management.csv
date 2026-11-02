@@ -84,6 +84,7 @@ fungicide_product,character,,fungicides,yes,,,name(s) of the active ingredient o
 fungicide_dates,date,,,yes,,,"fungicide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,
 fungicide_timing,integer,,,no,-30,200,days after (or before) planting on which fungicide was used,,
 fungicide_times,integer,,,no,0,20,number of fungicide applications,,
+fungicide_interval,integer,days,,no,1,100,number of days between fungicide applications,,
 fungicide_amount,numeric,kg (ai) / ha,,no,,,how much fungicide was used?,,
 fungicide_implement,character,,implement,no,,,the implement (machine) used,,
 mulch,numeric,kg/ha,,no,,,how much mulch is on the field?,,AGRO_00010013
