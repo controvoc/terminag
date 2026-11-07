@@ -88,5 +88,6 @@ fungicide_interval,integer,days,,no,1,100,number of days between fungicide appli
 fungicide_amount,numeric,kg (ai) / ha,,no,,,how much fungicide was used?,,
 fungicide_implement,character,,implement,no,,,the implement (machine) used,,
 mulch,numeric,kg/ha,,no,,,how much mulch is on the field?,,AGRO_00010013
+mulch_depth,numeric,cm,,no,0,30,how thick is the much layer,,
 mulch_type,character,,,no,,,Type of mulch used,,
 biosolarized,logical,,,no,,,Was the soil biosolarized?,,
