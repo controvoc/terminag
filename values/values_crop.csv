@@ -112,6 +112,7 @@ cumin,Cuminum cyminum,,yes,seed,spices,,,cumin,c_10205
 date,Phoenix dactylifera,,yes,fruit,fruits,,,dates,c_25475
 desmodium,Desmodium spp,,yes,,green_manures,,,,
 dewberry,Rubus sp.,,yes,fruit,fruits,,,dewberries,c_2232
+dhavanam,Artemisia pallens,,yes,leaves,culinary_herbs,,,,
 dolichos,Dolichos sp,,yes,,,,,,
 dragon fruit,Selenicereus spp.,,yes,fruit,fruits,,,dragon fruits,c_42ce209e
 durian,Durio zibethinus,,yes,fruit,fruits,,,durians,c_10488
@@ -122,6 +123,7 @@ endive,Cichorium endivia,,yes,leaves,vegetables,,,endives,c_10596
 enset,Ensete ventricosum,,yes,rhizome,root_tuber,,,,
 erect prickly pear,Opuntia stricta,,yes,,,,,,
 ethiopian basil,Ocimum lamiifolium,,yes,leaves,medicinal,,,,
+eucalyptus,Eucalyptus sp,,yes,,,,,,
 faba bean,Vicia faba,,yes,seed,pulses,,6500,faba beans,c_10722
 fennel,Foeniculum vulgare,,yes,seed;bulb;leaves,spices,,,,
 fenugreek,Trigonella foenum-graecum,,yes,seed,spices,,5500,fenugreek,c_b8cb7919
@@ -131,6 +133,7 @@ fig-leaf gourd,Cucurbita ficifolia,,yes,fruit,fruits,,,,
 finger millet,Eleusine coracana,,yes,grain,cereals,,7500,finger millet,c_2904
 firewood,,,no,,,,,,
 flax,Linum usitatissimum,,yes,seed; stems,oil_seeds; fibre_crops,,,flax,c_2970
+flowers,spp,,no,flowers,,,,,
 fonio,Digitaria iburua; Digitaria exilis,,no,seed,,,,,
 forage crop,spp,,no,above_ground,fodder_crops,,,forage,c_36108
 forage legume,spp,,no,forage,fodder_crops,,,,
@@ -161,7 +164,9 @@ hazelnut,Corylus avellana,,yes,seed,nuts,,,hazelnuts,c_18248
 hemp,Cannabis sativa,,yes,stems,fibre_crops,,,hemp,c_3558
 hesperaloe,Hesperaloe spp.,,yes,,,,,,
 hops,Humulus lupulus,,yes,fruit,,,,,
+horse gram,Macrotyloma uniflorum,,yes,seed,pulses,,,,
 horseradish,Armoracia rusticana,,yes,root,spices,,,horseradish,c_11614
+ivy gourd,Coccinia grandis,donda,yes,fruit,vegetables,,,,
 jack bean,Canavalia ensiformis,,yes,seed,,,,,
 jackfruit,Artocarpus heterophyllus,,yes,fruit,fruits,,80000,jackfruit,c_11864
 jatropha,Jatropha curcas,,yes,,,,,,
@@ -205,6 +210,7 @@ lucuma,Lucuma bifera,,yes,fruit,fruits,,,lucumas,c_4456
 lupin,Lupinus sp.,,no,,,,,,
 macadamia nut,Macadamia sp.,,yes,seed,nuts,,,macadamia nuts,c_12296
 mace,Myristica fragrans,,yes,,spices,,,mace,c_25484
+managu,Solanum scabrum,,yes,leaves,vegetables,,,,
 silage maize,Zea mays,,yes,above_ground,fodder_crops,12,41500,maize,c_12332
 forage maize,Zea mays,,yes,above_ground,fodder_crops,12,41500,maize,c_12332
 maize,Zea mays,,yes,grain,cereals,12,25000,maize,c_12332
@@ -227,7 +233,7 @@ napa shak,Malva verticillata,,yes,leaves,vegetables,,,,
 napier grass,Cenchrus purpureus,Pennisetum purpureum,yes,above_ground,fodder_crops,,,,
 narrow leafed lupin,Lupinus angustifolius,,yes,,,,,,
 nectarine,Prunus persica,,yes,fruit,fruits,,,nectarines,c_5100
-niger ,Guizotia abyssinica,sunflecks,yes,seed,oil_seeds,,,,
+niger,Guizotia abyssinica,sunflecks,yes,seed,oil_seeds,,,,
 none,,fallow,yes,,other,,,,
 nopal,Opuntia ficus-indica,prickly pear,yes,,,,,,
 noug,Guziota scarba,,yes,seed,oil_seeds,,5000,noug seed,c_12827
@@ -312,6 +318,7 @@ saffron,Crocus sativus,,yes,flower,spices,,,saffron,c_14023
 safou,Dacryodes edulis,,yes,fruit,fruits,,,safou,c_34775
 sage,Salvia officinalis,,yes,leaves,culinary_herbs,,,sage,c_14025
 salsify,Tragopogon porrifolius,,yes,,vegetables,,,salsify,c_14055
+sandalwood,Santalum spp.,,yes,stems,wood,,,,
 satsuma,Citrus unshiu,,yes,fruit,fruits,,,satsumas,c_6819
 seakale,Crambe maritima,crambe,yes,,vegetables,,,seakale,c_87057e4f
 sesame,Sesamum indicum,,yes,seed,oil_seeds,,,sesame seed,c_14216
