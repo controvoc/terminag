@@ -114,7 +114,7 @@ previous_crop_residue_management,character,,,no,,,how was the previous crop resi
 flood_stress,character,,,no,,,how severe was the damage from flooding?,,
 drought_stress,character,,,no,,,how severe was the damage from drought?,,
 stress,character,,stress_type,yes,,,type(s) of stress experienced by the crop,,
-LAI,numeric,,,no,0,12,"leaf area index (presumbably the max; this needs to be improved, it should be linked to a date and/or growht stage)",,
+LAI,numeric,,,no,0,12,leaf area index (presumbably the max; unless it linked to a date and/or growht stage),,
 ground_cover,numeric,%,,no,0,100,ground covered by crop canopy,,
 IPAR,numeric,,,no,,,intercepted photosynthetically active radiation,,
 harvest_index,numeric,%,,no,0,100,"harvest index (100 * yield / (total biomass)), normally as dry weight",,

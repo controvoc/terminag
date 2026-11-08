@@ -30,6 +30,7 @@ soil_C_litter,numeric,g/m2,,no,0,1000,total C stock in litter,,
 soil_N,numeric,mg/kg,,no,0.01,10000,extractable soil N content,,ENVO_09000017
 soil_NO3,numeric,mg/kg,,no,0.01,10000,soil NO3 content,,ENVO_09000017
 soil_NH4,numeric,mg/kg,,no,0.01,10000,soil NH4 content,,ENVO_09000017
+soil_N_min_total,numeric,kg/ha,,no,0.01,,mineral N in soil ,,
 soil_K,numeric,mg/kg,,no,1,10000,extractable soil K content,,
 soil_K_exch,numeric,cmol(+)/kg,,no,,,exchangeable soil K content,,
 soil_P,numeric,mg/kg,,no,0.01,200,extractable soil P,,
@@ -68,7 +69,9 @@ soil_aluminium_toxicity,logical,,,no,,,was the soil Al concentration toxic for t
 soil_Al_sat,numeric,%,,no,0,100,soil Al saturation (% of ECEC),,
 soil_WHC_sat,numeric,%,,no,0,100,% of soil water holding capacity that is filled,,
 soil_drainage,character,,soil_drainage,no,,,soil drainage class ,,
-soil_GWC,numeric,,,no,,,gravimetric water content,,
+soil_GWC,numeric,g/g,,no,0,,gravimetric water content,,
+soil_VWC,numeric,cm3/cm3,,no,0,,volumetric weater content,,
+soil_SWC,numeric,mm,,no,0,,water content,,
 soil_CaCO3,numeric,g/kg,,no,,,soil CaCO3 content (in calcareous soils),,
 soil_B_total,numeric,mg/kg,,no,0,500,total soil B content,,
 soil_Mn_total,numeric,mg/kg,,no,0,6000,total soil Mn content,,

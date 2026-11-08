@@ -38,6 +38,8 @@ gypsum,numeric,kg/ha,,no,0,10000,gypsum applied,,
 OM_used,logical,,,no,,,Organic fertilizer applied,,AGRO_00002039
 OM_type,character,,OM,yes,,,Type of organic fertilzer applied,,AGRO_00002039
 OM_amount,numeric,kg/ha,,no,0,,Amount of organic fertilizer applied,,AGRO_00010008
+soil_amendment_type,character,,,yes,,,,,
+soil_amendment,numeric,kg/ha,,no,0,,,,
 inoculated,logical,,,no,,,Was the field inoculated (with Rhizobium),,
 inoculant,character,,,no,,,Name of the inoculant product,,
 node_count,numeric,,,no,,,Number of Rhizobium nodes per plant,,
@@ -50,10 +52,13 @@ irrigation_amount,numeric,mm,,no,0,1000,The total irrigation amount applied to t
 irrigation_fulfullment,character,,,no,,,The degree to which irrigation needs were fulfilled,,
 irrigation_dates,date,,,yes,,,"Irrigation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00010126
 land_prep_method,character,,land_prep,yes,,,"Land preparation (tillage) method used (including ""none"" = ""zero-tillage"")",,AGRO_00000322
- land_prep_traction,character,,land_prep,yes,,,Type of traction used in land preparation,,
+land_prep_traction,character,,land_prep,yes,,,Type of traction used in land preparation,,
 land_prep_times,integer,,,no,0,10,How many passes were made for land prepration?,,
 land_prep_implement,character,,implement,yes,,,Land preparation (tillage) implement(s) used,,AGRO_00000224
+land_prep_date,date,,,yes,,,Date(s) of land preparation (tillage),,
+tillage_depth,numeric,cm,,no,0,50,Depth of tillage,,
 planting_method,character,,planting,yes,,,Planting (sowing) method,,AGRO_00000231
+planting_depth,numeric,cm,,no,0,,Depth of planting,,
 planting_implement,character,,implement,yes,,,Planting (sowing) implement used,,AGRO_00000232
 transplanting_method,character,,planting,no,,,Transplanting method,,AGRO_00000229
 seed_density,numeric,plants/ha,,no,500,3100000,Number of plants per ha that were seeded/planted,,
