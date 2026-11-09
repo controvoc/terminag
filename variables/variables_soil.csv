@@ -30,6 +30,8 @@ soil_C_litter,numeric,g/m2,,no,0,1000,total C stock in litter,,
 soil_N,numeric,mg/kg,,no,0.01,10000,extractable soil N content,,ENVO_09000017
 soil_NO3,numeric,mg/kg,,no,0.01,10000,soil NO3 content,,ENVO_09000017
 soil_NH4,numeric,mg/kg,,no,0.01,10000,soil NH4 content,,ENVO_09000017
+NO3_trapped,numeric,kg/ha,,no,,1000,NO3-N captured by a buried ion-exchange resin trap over a stated period; a measure of nitrate leaching,negative values can occur after blank correction,
+NH4_trapped,numeric,kg/ha,,no,,1000,NH4-N captured by a buried ion-exchange resin trap over a stated period; a measure of ammonium leaching,negative values can occur after blank correction,
 soil_N_min_total,numeric,kg/ha,,no,0.01,,mineral N in soil ,,
 soil_K,numeric,mg/kg,,no,1,10000,extractable soil K content,,
 soil_K_exch,numeric,cmol(+)/kg,,no,,,exchangeable soil K content,,

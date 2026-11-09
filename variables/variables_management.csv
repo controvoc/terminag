@@ -41,6 +41,7 @@ OM_amount,numeric,kg/ha,,no,0,,Amount of organic fertilizer applied,,AGRO_000100
 soil_amendment_type,character,,,yes,,,,,
 soil_amendment,numeric,kg/ha,,no,0,,,,
 inoculated,logical,,,no,,,Was the field inoculated (with Rhizobium),,
+nitrification_inhibitor,logical,,,no,,,Was a (synthetic) nitrification inhibitor applied?,,
 inoculant,character,,,no,,,Name of the inoculant product,,
 node_count,numeric,,,no,,,Number of Rhizobium nodes per plant,,
 biochar,numeric,kg/ha,,no,,,"Amount of biochar applied	",,
