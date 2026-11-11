@@ -1,0 +1,19 @@
+name,description
+river,
+stream,
+lake,
+reservoir,large dam reservoir
+small reservoir,small dam or weir
+dugout,excavated pond that stores runoff
+pond,
+canal,
+spring,
+surface water,surface source not further specified
+groundwater,"well, borehole or tube well"
+harvested rainwater,
+wastewater,untreated
+treated wastewater,
+drainage water,
+piped supply,municipal or community piped water
+unknown,
+none,
