@@ -50,6 +50,7 @@ irrigation_source,character,,,no,,,the source of irrigation water,,AGRO_00000009
 irrigation_method,character,,irrigation,no,,,the irrigation method,,AGRO_00000054
 irrigation_number,integer,,,no,0,50,How many times was the crop irrigated?,,AGRO_00010015
 irrigation_amount,numeric,mm,,no,0,1000,The total irrigation amount applied to the crop,,AGRO_00000010
+irrigation_lifting,character,,,yes,,,"How the irrigation water was obtained (gravity, pump, by hand)",,
 irrigation_fulfullment,character,,,no,,,The degree to which irrigation needs were fulfilled,,
 irrigation_dates,date,,,yes,,,"Irrigation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """,,AGRO_00010126
 land_prep_method,character,,land_prep,yes,,,"Land preparation (tillage) method used (including ""none"" = ""zero-tillage"")",,AGRO_00000322
