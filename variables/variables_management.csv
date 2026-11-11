@@ -46,7 +46,7 @@ inoculant,character,,,no,,,Name of the inoculant product,,
 node_count,numeric,,,no,,,Number of Rhizobium nodes per plant,,
 biochar,numeric,kg/ha,,no,,,"Amount of biochar applied	",,
 irrigated,logical,,,no,,,Was the plot irrigated?,,AGRO_00000006
-irrigation_source,character,,,no,,,the source of irrigation water,,AGRO_00000009
+irrigation_source,character,,irrigation_source,no,,,the source of irrigation water,,AGRO_00000009
 irrigation_method,character,,irrigation,no,,,the irrigation method,,AGRO_00000054
 irrigation_number,integer,,,no,0,50,How many times was the crop irrigated?,,AGRO_00010015
 irrigation_amount,numeric,mm,,no,0,1000,The total irrigation amount applied to the crop,,AGRO_00000010
