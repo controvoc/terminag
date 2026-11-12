@@ -1,0 +1,11 @@
+name,description
+gravity,"water flows by gravity from a canal, river or reservoir"
+manual,"water is carried or applied by hand: bucket, watering can or hose"
+hand pump,
+treadle pump,
+diesel pump,
+petrol pump,
+electric pump,pump on grid electricity
+solar pump,pump powered by solar photovoltaic panels
+motorized pump,engine-driven pump with unknown fuel
+unknown,

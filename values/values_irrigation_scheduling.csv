@@ -1,0 +1,14 @@
+name,description
+farmer practice,timing and amount based on the farmer's own judgement
+calendar,irrigation on fixed dates or at a fixed interval
+crop stage,irrigation at set crop growth stages
+crop water requirement,amount based on computed crop water requirement (ETc)
+soil water balance,scheduling with a soil water balance model
+soil moisture sensor,"scheduling based on soil moisture readings, e.g. capacitance or TDR sensors"
+tensiometer,scheduling based on soil water tension
+wetting front detector,"scheduling with a wetting front detector, e.g. FullStop"
+alternate wetting and drying,rice is re-flooded when the field water level drops to a threshold below the soil surface
+deficit irrigation,irrigation deliberately below the full crop water requirement
+advisory service,scheduling based on advice from an extension or ICT advisory service
+unknown,
+none,

@@ -1,5 +1,5 @@
 name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
-sample_id,character,,,no,,,unique identifier of a soil sample,,
+sample_id,character,,,no,,,unique identifier of a soil or water sample,,
 depth,numeric,cm,,no,0,300,depth of soil sample,,
 depth_top,numeric,cm,,no,0,200,depth of soil sample (top; e.g. 0),,
 depth_bottom,numeric,cm,,no,0,200,depth of soil sample (bottom; e.g 20),,
