@@ -37,8 +37,16 @@ fwy_leaves,numeric,kg/ha,,no,0,20000,Fresh-matter yield biomass of leaves per ha
 fwy_storage,numeric,kg/ha,,no,0,50000,Fresh-matter yield biomass of storage organs per ha,,
 fwy_total,numeric,kg/ha,,no,0,100000,Fresh-matter yield total biomass per ha,,
 fwy_residue,numeric,kg/ha,,no,0,100000,Fresh-matter yield residue biomass per ha,,
+y_roots,numeric,kg/ha,,no,0,5000,yield biomass of fine roots per ha (not specificed if fresh or dry),,
+y_stems,numeric,kg/ha,,no,0,21000,yield biomass of stems per ha  (not specificed if fresh or dry),,
+y_leaves,numeric,kg/ha,,no,0,20000,yield biomass of leaves per ha  (not specificed if fresh or dry),,
+y_storage,numeric,kg/ha,,no,0,50000,yield biomass of storage organs per ha  (not specificed if fresh or dry),,
+y_total,numeric,kg/ha,,no,0,100000,yield total biomass per ha  (not specificed if fresh or dry),,
+y_residue,numeric,kg/ha,,no,0,100000,yield residue biomass per ha  (not specificed if fresh or dry),,
 yield_part,character,,yield_part,no,,,"The part of the crop that ""yield"" refers to (e.g. grain, tubers, roots, leaves, fruit)",,
-yield,numeric,kg/ha,,no,0,150000,"Biomass of the main harvestable parts at maturity, per ha --- yield_moisture must also be specified",,AGRO_00000176 
+yield,numeric,kg/ha,,no,0,150000,"Biomass of the main harvestable parts at maturity, per ha. Not specified if fresh or dry",,AGRO_00000176 
+yield_fresh,numeric,kg/ha,,no,0,150000,"Biomass of the main harvestable parts at maturity, per ha --- fresh weight yield_moisture must also be specified",,
+yield_dry,numeric,kg/ha,,no,0,130000,"Biomass of the main harvestable parts at maturity, per ha --- dry weight",,
 yield_moisture,numeric,%,,no,0,90,Moisture content of the reported yield (0 is dry weight),,
 yield_isfresh,logical,,,no,,,Is the reported yield fresh weight (perhaps with unknown moisture content?),,
 yield_marketable,numeric,kg/ha,,no,0,150000,"Fresh weight marketable (e.g. large enough tubers) biomass of the main harvestable parts at maturity, per ha",,AGRO_00000176 
@@ -59,6 +67,7 @@ plant_density,numeric,plants/ha,,no,500,3100000,Number of plants per ha that eme
 stem_density,numeric,stems/ha,,no,500,3100000,Number of stems per ha,,
 leaf_density,numeric,leaves/ha,,no,500,,Number of leaves per ha,,
 tuber_density,numeric,tubers/ha,,no,0,,Number of tubers per ha,,
+tuber_density_marketable,numeric,tubers/ha,,no,0,,Number of marketable tubers per ha,,
 vine_density,numeric,vines/ha,,no,0,,Number of vines per ha,,
 stake_orientation,character,,,no,,,Orientation of (cassava) stake at planting,,
 cob_density,numeric,cobs/ha,,no,500,5000000,Number of cobs (maize) per ha,,
