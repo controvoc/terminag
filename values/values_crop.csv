@@ -184,6 +184,7 @@ kenaf,Hibiscus cannabinus,,yes,,fibre_crops,,,kenaf,c_4084
 khat,Catha edulis,chat,yes,leaves,stimulants,,,,
 kidney bean,Phaseolus vulgaris,,yes,seed,pulses,,6500,,
 kiwi,Actinidia chinensis,Chinese gooseberry,yes,fruit,fruits,,,kiwifruits,c_12002
+kodo millet,Paspalum scrobiculatum,,yes,seed,cereals,,6000,,
 kohlrabi,Brassica oleracea,,yes,,vegetables,,,kohlrabi,c_4114
 kola nut,Cola sp.,,yes,seed,nuts,,10000,kola nuts,c_25471
 kumquat,Citrus sp.,,yes,fruit,fruits,,,kumquats,c_22df2056
@@ -226,6 +227,7 @@ melon,Cucumis melo,,no,fruit,fruits,,,,
 millet,spp,,no,grain,cereals,,,millets,c_4838
 mint,Mentha spp.,,yes,leaves,culinary_herbs,,,mint,c_12606
 moringa,Moringa stenopetala,,yes,,,,,,
+moth bean,Vigna aconitifolia,,yes,seed,pulses,,,,
 mulberry,Morus sp.,,yes,fruit,fruits,,,mulberries,c_25487
 mung bean,Vigna radiata,,yes,seed,pulses,,,mung beans,c_4988
 mushrooms,spp,,yes,,vegetables,,,mushrooms,c_2487
