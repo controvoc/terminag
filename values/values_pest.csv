@@ -1,7 +1,10 @@
-name,crop,notes
-borer,maize,stem borer
-stem borer,maize,
-Eldana saccharina,maize,stem borer
-Mussidia nigrivenella,maize,ear borer
-insect,,
-Striga,maize,parasitic weed
+name,altname,crop,notes
+borer,,maize,stem borer
+stem borer,,maize,
+Eldana saccharina,,maize,stem borer
+Mussidia nigrivenella,,maize,ear borer
+insect,,,
+Striga,,maize,parasitic weed
+Busseola fusca,maize stalk borer.,,
+Chilo partellus,spotted stalk borer,,
+Spodoptera frugiperda,Fall armyworm,,
