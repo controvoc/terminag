@@ -109,3 +109,4 @@ wavenumber,numeric,cm-1,,no,400,8000,mid-infrared wavenumber,for use in long for
 absorbance,numeric,,,no,0,5,mid-infrared absorbance,for use in long format,
 TBI_k,numeric,,,no,0,,tea bag index decomposition rate,doi:10.1111/2041-210X.12097,
 TBI_S,numeric,,,no,0,,tea bag index litter stabilizaton factor,doi:10.1111/2041-210X.12097,
+soil_sample_date,date,,,no,,,"Soil sampling date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format",,
