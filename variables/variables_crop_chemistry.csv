@@ -1,4 +1,4 @@
-﻿name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
+name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
 leaf_N,numeric,mg/g,,no,4,600,nitrogen content in leaf,,TO_0000543
 leaf_N_NH4,numeric,mg/g,,no,5,600,N (NH4) content in leaf,,
 leaf_N_NO3,numeric,mg/g,,no,5,600,N (NO3) content in leaf,,

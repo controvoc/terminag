@@ -1,4 +1,4 @@
-name,sciname,altname,is_preferred,harvest,group,fresh_moisture,max_yield,FAO_name,agrovoc
+﻿name,sciname,altname,is_preferred,harvest,group,fresh_moisture,max_yield,FAO_name,agrovoc
 abacá,Musa textilis,Manila hemp,yes,leaves,fibre_crops,,,abaca,c_4
 abyssinian cabbage,Brassica carinata,,yes,leaves,vegetables,,,brassica carinata,c_33311
 adzuki bean,Vigna angularis,,yes,seed,pulses,,,adzuki beans,c_8632
@@ -102,7 +102,8 @@ coconut,Cocos nucifera,,yes,seed,nuts,,,coconuts,c_25470
 coffee,Coffea sp.,,yes,seed,stimulants,,,,
 common bean,Phaseolus vulgaris,,yes,seed,pulses,,9000,common beans,c_4098
 concord grape,Vitis labrusca,,yes,fruit,,,,,
-coriander,Coriandrum sativum,,yes,leaves,culinary_herbs,,,coriander,c_10097
+coriander,Coriandrum sativum,,yes,seed,culinary_herbs,,,coriander,c_10097
+cilantro,Coriandrum sativum,,yes,leaves,culinary_herbs,,,coriander,c_10097
 cotton,Gossypium hirsutum,,yes,bolls,plant_fibres,,5000,cotton,c_1926
 cowpea,Vigna unguiculata,,yes,seed,pulses,,5000,cowpeas,c_1938
 crambe,Crambe abyssinica,,yes,,,,,,
@@ -380,6 +381,7 @@ vegetable,spp,,no,,vegetables,,,,
 velvet bean,Mucuna pruriens,,yes,,green manure; medicinal,,,velvet bean,c_4971
 vetch,Vicia spp,,yes,above_ground,green_manures; fodder_crops,,,vetches,c_8214
 walnut,Juglans regia,,yes,seed,nuts,,,walnuts,c_15254
+water spinach,Ipomoea aquatica,kangkong,yes,leaves,vegetables,,,,
 watercress,Nasturtium officinale,,yes,,vegetables,,,watercress,c_15275
 waterleaf,Talinum fruticosum,,yes,,vegetables,,,,
 watermelon,Citrullus lanatus,,yes,fruit,fruits,,,watermelons,c_15277
