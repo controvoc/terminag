@@ -28,11 +28,13 @@ REQUIRED_VARIABLES_URL = (
 
 
 def _read_csv(path: str) -> tuple[list[str], list[dict[str, str]]]:
-	with open(path, newline="", encoding="utf-8") as f:
+	# utf-8-sig drops a leading BOM. A BOM left on the first header (Excel)
+	# makes the crop "name" column invisible and every crop looks invalid.
+	with open(path, newline="", encoding="utf-8-sig") as f:
 		reader = csv.DictReader(f)
 		if reader.fieldnames is None:
 			return [], []
-		header = [h.lstrip("\ufeff") for h in reader.fieldnames]
+		header = list(reader.fieldnames)
 		rows: list[dict[str, str]] = []
 		for row in reader:
 			rows.append({k: (v if v is not None else "") for k, v in row.items()})
