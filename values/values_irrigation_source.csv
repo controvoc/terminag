@@ -4,6 +4,7 @@ stream,
 lake,
 reservoir,large dam reservoir
 small reservoir,small dam or weir
+dam,dam or reservoir of unspecified size
 dugout,excavated pond that stores runoff
 pond,
 canal,

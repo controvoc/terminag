@@ -1,6 +1,6 @@
 name,type,unit,vocabulary,multiple_allowed,valid_min,valid_max,description,notes,obo
 irrigation_scheduling,character,,irrigation_scheduling,no,,,rule used to decide when and how much to irrigate,replaces the provisional irrigation_scheduling_ in doi_10.7910_DVN_U9MZZV,
-irrigation_interval,integer,days,,no,1,60,number of days between irrigation events,,
+irrigation_interval,numeric,days,,no,0.25,60,number of days between irrigation events,,
 irrigation_duration,numeric,hours,,no,0,24,average duration of one irrigation event,,
 irrigation_start_time,time,,,no,,,start time of an irrigation event,"CGIAR minimum variable; one row per event, with the event date in date",
 irrigation_end_time,time,,,no,,,end time of an irrigation event,CGIAR minimum variable,

@@ -3,6 +3,7 @@ gravity,"water flows by gravity from a canal, river or reservoir"
 manual,"water is carried or applied by hand: bucket, watering can or hose"
 hand pump,
 treadle pump,
+manual pump,"hand- or foot-operated pump, not specified whether hand or treadle"
 diesel pump,
 petrol pump,
 electric pump,pump on grid electricity
