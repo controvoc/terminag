@@ -88,6 +88,7 @@ maturity_days,numeric,days,,no,45,365,Days to maturity (after planting),Assumed 
 harvest_days,numeric,days,,no,45,365,Days to harvest (after planting),Assumed to be the median number of days,
 plant_height,numeric,cm,,no,10,500,Maximum plant height,,TO_0000207
 ear_height,numeric,cm,,no,10,350,height of first ear (maize female inflorescence),,
+panicle_length,numeric,cm,,no,1,100,Length of panicle (inflorescence),,TO_0000040
 pathogen,character,,pathogen,yes,,,Name of the pathogen studied,,
 AUDPC,numeric,,,no,0,150,Area under the disease progress curve (the sum of fraction infected (not percentage)),,
 rAUDPC,numeric,,,no,0,1,Area under the disease progress curve divided by the non-diseased season length,,
