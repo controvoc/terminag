@@ -1,17 +1,23 @@
 name,pathogen,crop,notes
 potato late blight,Phytophthora infestans,potato,
-bacterial wilt,,potato,
+bacterial wilt,Ralstonia solanacearum,potato,
 potato leafroll virus,,potato,
 potato virus A,,potato,
 potato virus M,,potato,
 potato virus S,,potato,
 potato virus X,,potato,
 potato virus Y,,potato,
-cassava anthracnose,,cassava,
+Andean potato latent virus,Andean potato latent virus,potato,
+Andean potato mottle virus,Andean potato mottle virus,potato,
+potato yellow vein virus,Potato yellow vein virus,potato,
+black leg,Pectobacterium spp,potato,
+black scurf,Rhizoctonia solani,potato,
+powdery scab,Spongospora subterranea,potato,
+silver scurf,Helminthosporium solani,potato,
+fusarium,Fusarium spp,potato; many,
 cassava anthracnose,,cassava,
 cassava bacterial blight,,cassava,
 superelongation disease,,cassava,
-cassava brown leaf spot,,cassava,
 cassava brown leaf spot,,cassava,
 cassava brown streak,,cassava,
 cassava mosaic,Begomovirus spp,cassava,
@@ -54,4 +60,14 @@ gray leaf spot,Cercospora zeae-maydis,maize,
 southern leaf blight,Bipolaris maydis,maize,
 stalk rot,,maize,
 maize streak virus,Maize streak virus,maize,
+smut,Ustilago maydis,maize,common smut
+head smut,Sporisorium reilianum,maize,
+tar spot,Phyllachora maydis,maize,
+corn stunt,Spiroplasma kunkelii,maize,
+sheath blight,Rhizoctonia solani,maize; rice,banded leaf and sheath blight
+rhizoctonia,Rhizoctonia solani,maize; many,
+sclerospora macrospora,Sclerophthora macrospora,maize,crazy top
+aspergillus flavus,Aspergillus flavus,maize,aspergillus ear rot
+leaf spot,,many,unspecified foliar leaf spot
+leaf diseases,,many,unspecified foliar diseases
 banana bunchy top,,banana,
