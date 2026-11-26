@@ -59,8 +59,8 @@ seed_weight,numeric,g,,no,0,1000,1000 seed (grain) weight,,TO_0000382
 uncertainty,numeric,,,no,0,,Measure of noise in data ,,
 uncertainty_type,character,,,no,,,Type of noise measure,,
 row_spacing,numeric,cm,,no,1,180,Distance between rows,,AGRO_00000318
-plot_area,numeric,m2,,no,1,10000,Area of the plot in square meter,,AGRO_00000302
-plot_length,numeric,m,,no,0.5,100,Length of the plot in meter,,AGRO_00000307
+plot_area,numeric,m2,,no,0.1,10000,Area of the plot in square meter,,AGRO_00000302
+plot_length,numeric,m,,no,0.1,100,Length of the plot in meter,,AGRO_00000307
 plot_width,numeric,m,,no,0.5,100,Width of the plot in meter,,AGRO_00000308
 plant_spacing,numeric,cm,,no,5,100,Distance between plants,,AGRO_00000316
 plant_density,numeric,plants/ha,,no,500,3100000,Number of plants per ha that emerged/survived,,PCO_0000079
@@ -78,17 +78,22 @@ rain,numeric,mm,,no,0,3000,Total rainfall between planting and harvest,,ENVO_010
 emergence_days,numeric,days,,no,3,90,Days to emergence (after planting),Assumed to be the median number of days,
 transplanting_days,numeric,days,,no,0,90,Days to transplanting,Assumed to be the median number of days,
 heading_days,numeric,days,,no,25,300,Days to heading (after planting),Assumed to be the median number of days,
-flowering_days,numeric,days,,no,15,250,Days to flowering (after planting),Assumed to be the median number of days,TO_0000344
+flowering_days,numeric,days,,no,15,500,Days to flowering (after planting),Assumed to be the median number of days,TO_0000344
 podding_days,numeric,days,,no,15,250,Days to podding (after planting),Assumed to be the median number of days,
 anthesis_days,numeric,days,,no,30,150,Days to anthesis (after planting). Anthesis occurs when pollen is released,Assumed to be the median number of days,
 silking_days,numeric,days,,no,30,150,Days to silking (after planting),Assumed to be the median number of days,
 asi,numeric,days,,no,-30,30,Anthesis silking interval,Assumed to be the median number of days,
 tassling_days,numeric,days,,no,30,125,Days to tassling (after planting),Assumed to be the median number of days,TO_0000629
 maturity_days,numeric,days,,no,45,365,Days to maturity (after planting),Assumed to be the median number of days,TO_0000469
-harvest_days,numeric,days,,no,45,365,Days to harvest (after planting),Assumed to be the median number of days,
-plant_height,numeric,cm,,no,10,500,Maximum plant height,,TO_0000207
+harvest_days,numeric,days,,no,30,600,Days to harvest (after planting),Assumed to be the median number of days,
+plant_height,numeric,cm,,no,0,600,Maximum plant height,,TO_0000207
 ear_height,numeric,cm,,no,10,350,height of first ear (maize female inflorescence),,
 panicle_length,numeric,cm,,no,1,100,Length of panicle (inflorescence),,TO_0000040
+pod_length,numeric,cm,,no,0.5,100,Length of pod,,TO_0000898
+pod_width,numeric,cm,,no,0.1,20,Width of pod,,TO_0000897
+stem_diameter,numeric,cm,,no,0.05,50,Diameter of stem,,TO_0001035
+tiller_number,numeric,tillers/plant,,no,0,100,Number of tillers per plant,,TO_0000346
+spikelet_fertility,numeric,%,,no,0,100,Percentage of fertile spikelets,,TO_0000436
 pathogen,character,,pathogen,yes,,,Name of the pathogen studied,,
 AUDPC,numeric,,,no,0,150,Area under the disease progress curve (the sum of fraction infected (not percentage)),,
 rAUDPC,numeric,,,no,0,1,Area under the disease progress curve divided by the non-diseased season length,,
@@ -140,6 +145,9 @@ herbicide_damage,character,,,no,,,"one of : ""none"", ""traces"", ""slight"", ""
 shelling_percentage,numeric,,,no,10,90,"100 * grain weight / fruit (pod, ear) weight",,
 house_distance,numeric,,,no,,,Distance of field to the house of the person managing the field,,
 NDVI,numeric,,,no,0,1,Normalized difference vegetation index,,
+NDVI_green,numeric,,,no,0,1,Green normalized difference vegetation index (GNDVI),,
+chlorophyll_index,numeric,,,no,-1,50,Chlorophyll index (remote sensing),,
+canopy_temperature,numeric,C,,no,-5,60,Canopy temperature,,
 flesh_color,character,,,no,,,"""flesh"" color of (sweet)potato and other root/tubers",,
 grain_color,character,,,no,,,grain color,,
 CA_years,numeric,,,no,0,50,number of years that Conservation Agriculture has been practised,,
