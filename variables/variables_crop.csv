@@ -80,7 +80,7 @@ transplanting_days,numeric,days,,no,0,90,Days to transplanting,Assumed to be the
 heading_days,numeric,days,,no,25,300,Days to heading (after planting),Assumed to be the median number of days,
 flowering_days,numeric,days,,no,15,500,Days to flowering (after planting),Assumed to be the median number of days,TO_0000344
 podding_days,numeric,days,,no,15,250,Days to podding (after planting),Assumed to be the median number of days,
-anthesis_days,numeric,days,,no,30,150,Days to anthesis (after planting). Anthesis occurs when pollen is released,Assumed to be the median number of days,
+anthesis_days,numeric,days,,no,30,300,Days to anthesis (after planting). Anthesis occurs when pollen is released,Assumed to be the median number of days,
 silking_days,numeric,days,,no,30,150,Days to silking (after planting),Assumed to be the median number of days,
 asi,numeric,days,,no,-30,30,Anthesis silking interval,Assumed to be the median number of days,
 tassling_days,numeric,days,,no,30,125,Days to tassling (after planting),Assumed to be the median number of days,TO_0000629
