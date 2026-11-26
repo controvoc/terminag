@@ -1,5 +1,6 @@
 name,sciname,altname,is_preferred,harvest,group,fresh_moisture,max_yield,FAO_name,agrovoc
 abacá,Musa textilis,Manila hemp,yes,leaves,fibre_crops,,,abaca,c_4
+acacia,Acacia spp.,,no,wood,wood,,,,
 abyssinian cabbage,Brassica carinata,,yes,leaves,vegetables,,,brassica carinata,c_33311
 adzuki bean,Vigna angularis,,yes,seed,pulses,,,adzuki beans,c_8632
 african eggplant,Solanum macrocarpon,,yes,fruit,vegetables,,,,
@@ -28,6 +29,7 @@ bamboo,Bambusa spp.,,no,,,,,,
 banana,Musa acuminata,,yes,fruit,fruits,,173000,bananas,c_806
 barley,Hordeum vulgare,,yes,grain,cereals,,12000,barley,c_823
 basil,Ocimum basilicum,,yes,leaves,culinary_herbs,,,basil,c_9093
+bathua,Chenopodium album,lamb's quarters; fat-hen,yes,leaves,vegetables,,,,
 beetroot,Beta vulgaris,,yes,root,vegetables,,,beetroot,c_867
 bell pepper,Capsicum annuum,,yes,fruit,vegetables,,,sweet peppers,c_14727
 bergamot orange,Citrus bergamia,,yes,fruit,fruits,,,bergamot orange,c_9233
@@ -36,6 +38,7 @@ berseem clover,Trifolium alexandrium,,yes,above_ground,fodder_crops,,,,
 bilberry,Vaccinium myrtillus,,yes,fruit,fruits,,,bilberries,c_aeec9b59
 bitterball,Solanum incanum ,,yes,fruit,vegetables,,,,
 bitter gourd,Momordica charantia,,yes,fruit,fruits,,,,
+black cumin,Nigella sativa,kalonji; black seed,yes,seed,spices,,,,
 black currant,Ribes nigrum,,yes,fruit,fruits,,,black currants,c_945
 black fonio,Digitaria iburua,,yes,grain,cereals,,,,
 black gram,Vigna mungo,,yes,seed,pulses,,,,
@@ -176,6 +179,7 @@ jackfruit,Artocarpus heterophyllus,,yes,fruit,fruits,,80000,jackfruit,c_11864
 jatropha,Jatropha curcas,,yes,,,,,,
 jerusalem artichoke,Solanum tuberosum,topinambour,yes,tuber,root_tuber,,,jerusalem artichokes,c_11903
 jicama,Pachyrhizus erosus,Mexican turnip,yes,root,root_tuber,,,,
+job's tears,Coix lacryma-jobi,adlay,yes,grain,cereals,,,,
 jojoba,Simmondsia chinensis,,yes,seed,oil_seeds,,,jojoba,c_11913
 jute,Corchorus capsularis,,yes,fiber,fibre_crops,,,jute,c_4065
 jute mallow,Corchorus olitorius,,yes,fiber,fibre_crops; vegetables,,,jute,c_4065
@@ -215,6 +219,7 @@ lucuma,Lucuma bifera,,yes,fruit,fruits,,,lucumas,c_4456
 lupin,Lupinus sp.,,no,,,,,,
 macadamia nut,Macadamia sp.,,yes,seed,nuts,,,macadamia nuts,c_12296
 mace,Myristica fragrans,,yes,,spices,,,mace,c_25484
+malabar spinach,Basella alba,poi; Ceylon spinach,yes,leaves,vegetables,,,,
 managu,Solanum scabrum,,yes,leaves,vegetables,,,,
 silage maize,Zea mays,,yes,above_ground,fodder_crops,12,41500,maize,c_12332
 forage maize,Zea mays,,yes,above_ground,fodder_crops,12,41500,maize,c_12332
@@ -281,6 +286,7 @@ pineapple,Ananas comosus,,yes,fruit,fruits,,,pineapples,c_13394
 pistachio,Pistacia vera,,yes,seed,nuts,,,pistachios,c_13413
 plantain,Musa sp.,,yes,,vegetables,,,plantains,c_5989
 plum,Prunus insititia,,yes,fruit,fruits,,,plums,c_6028
+pointed gourd,Trichosanthes dioica,parwal; patal,yes,fruit,vegetables,,,,
 pomegranate,Punica granatum,,yes,fruit,fruits,,,pomegranates,c_13505
 poppy,Papaver somniferum,,yes,seed,oil_seeds,,,poppy seed,c_25498
 potato,Solanum tuberosum,,yes,tuber,root_tuber,80,175000,potatoes,c_13551
@@ -319,6 +325,7 @@ runner bean,Phaseolus coccineus,,yes,fruits,pulses,,,,
 rutabaga,Brassica napus,,yes,,vegetables,,,rutabagas,c_6713
 rye,Secale cereale,,yes,grain,cereals,,,rye,c_14010
 rye grass,Lolium perenne,,yes,above_ground,fodder_crops,,,,
+sabai grass,Eulaliopsis binata,,yes,leaves,fibre_crops,,,,
 safflower,Cartamo tinctorius,,yes,seed,oil_seeds,,,safflower seed,c_25503
 saffron,Crocus sativus,,yes,flower,spices,,,saffron,c_14023
 safou,Dacryodes edulis,,yes,fruit,fruits,,,safou,c_34775

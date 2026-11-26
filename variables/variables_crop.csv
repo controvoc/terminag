@@ -59,9 +59,9 @@ seed_weight,numeric,g,,no,0,1000,1000 seed (grain) weight,,TO_0000382
 uncertainty,numeric,,,no,0,,Measure of noise in data ,,
 uncertainty_type,character,,,no,,,Type of noise measure,,
 row_spacing,numeric,cm,,no,1,180,Distance between rows,,AGRO_00000318
-plot_area,numeric,m2,,no,1,350,Area of the plot in square meter,,AGRO_00000302
-plot_length,numeric,m,,no,0.5,10,Length of the plot in meter,,AGRO_00000307
-plot_width,numeric,m,,no,0.5,10,Width of the plot in meter,,AGRO_00000308
+plot_area,numeric,m2,,no,1,10000,Area of the plot in square meter,,AGRO_00000302
+plot_length,numeric,m,,no,0.5,100,Length of the plot in meter,,AGRO_00000307
+plot_width,numeric,m,,no,0.5,100,Width of the plot in meter,,AGRO_00000308
 plant_spacing,numeric,cm,,no,5,100,Distance between plants,,AGRO_00000316
 plant_density,numeric,plants/ha,,no,500,3100000,Number of plants per ha that emerged/survived,,PCO_0000079
 stem_density,numeric,stems/ha,,no,500,3100000,Number of stems per ha,,
@@ -76,7 +76,7 @@ pod_density,numeric,pods/ha,,no,500,10000000,Number of pods per ha,,
 grains_per_spike,numeric,grains/spike,,no,0,,Number of grains per spike,,
 rain,numeric,mm,,no,0,3000,Total rainfall between planting and harvest,,ENVO_01000830
 emergence_days,numeric,days,,no,3,90,Days to emergence (after planting),Assumed to be the median number of days,
-transplanting_days,numeric,days,,no,0,50,Days to transplanting,Assumed to be the median number of days,
+transplanting_days,numeric,days,,no,0,90,Days to transplanting,Assumed to be the median number of days,
 heading_days,numeric,days,,no,25,300,Days to heading (after planting),Assumed to be the median number of days,
 flowering_days,numeric,days,,no,15,250,Days to flowering (after planting),Assumed to be the median number of days,TO_0000344
 podding_days,numeric,days,,no,15,250,Days to podding (after planting),Assumed to be the median number of days,
@@ -120,8 +120,11 @@ previous_crop_residue_weight,numeric,kg/ha,,no,0,10000,weight of residue of prev
 previous_crop_residue_perc,numeric,%,,no,0,100,percentage of residue of previous crop that stayed on the field,,
 previous_crop_burnt,logical,,,no,,,was the residue of the previous crop burnt?,,
 previous_crop_residue_management,character,,,no,,,how was the previous crop residue managed?,,
-flood_stress,character,,,no,,,how severe was the damage from flooding?,,
-drought_stress,character,,,no,,,how severe was the damage from drought?,,
+flood_stress,character,,,no,,,how severe was the damage from flooding?,character severity rating; use flood or submergence (logical) for presence/absence,
+drought_stress,character,,,no,,,how severe was the damage from drought?,character severity rating; use drought (logical) for presence/absence,
+drought,logical,,,no,,,Did the crop experience drought?,,
+flood,logical,,,no,,,Did the crop experience flooding?,,
+submergence,logical,,,no,,,Was the crop submerged by floodwater?,,
 stress,character,,stress_type,yes,,,type(s) of stress experienced by the crop,,
 LAI,numeric,,,no,0,12,leaf area index (presumbably the max; unless it linked to a date and/or growht stage),,
 ground_cover,numeric,%,,no,0,100,ground covered by crop canopy,,

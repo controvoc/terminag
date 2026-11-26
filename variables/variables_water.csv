@@ -7,7 +7,7 @@ irrigation_end_time,time,,,no,,,end time of an irrigation event,CGIAR minimum va
 irrigation_flow_rate,numeric,m3/h,,no,0,1000,discharge rate of the pump or pipe used for irrigation,CGIAR minimum variable; L/s x 3.6 = m3/h,
 soil_moisture_before,character,,soil_moisture_status,no,,,soil moisture status of the plot before irrigation,CGIAR minimum variable,
 soil_moisture_after,character,,soil_moisture_status,no,,,soil moisture status of the plot after irrigation,CGIAR minimum variable,
-irrigation_lifting,character,,irrigation_lifting,no,,,how irrigation water is lifted or delivered to the field,"the energy source is part of the value, e.g. diesel pump or solar pump",
+irrigation_lifting,character,,irrigation_lifting,yes,,,how irrigation water is lifted or delivered to the field,"the energy source is part of the value, e.g. diesel pump or solar pump",
 irrigation_source_distance,numeric,m,,no,0,10000,distance from the field to the source of irrigation water,,
 irrigation_fuel,numeric,L/ha,,no,0,5000,fuel used for pumping irrigation water per ha over the season,as weeding_fuel,
 irrigation_electricity,numeric,kWh/ha,,no,0,50000,electricity used for pumping irrigation water per ha over the season,,
