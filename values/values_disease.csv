@@ -72,3 +72,37 @@ leaf spot,,many,unspecified foliar leaf spot
 leaf diseases,,many,unspecified foliar diseases
 banana bunchy top,,banana,
 early leaf spot,Passalora arachidicola,groundnut,formerly Cercospora arachidicola
+late leaf spot,Nothopassalora personata,groundnut,formerly Cercosporidium personatum
+bacterial leaf blight,Xanthomonas oryzae pv. oryzae,rice,
+bacterial leaf streak,Xanthomonas oryzae pv. oryzicola,rice,
+bakanae,Fusarium fujikuroi,rice,
+black leaf streak,Pseudocercospora fijiensis,banana,black Sigatoka
+blast,Pyricularia grisea,many,e.g. pearl millet / rice / wheat blast
+brown spot,Bipolaris oryzae,rice,
+cassava root rot,,cassava,
+common scab,Streptomyces scabies,potato,
+dirty panicle,,rice,grain discoloration complex
+early blight,Alternaria solani,potato; tomato,
+false smut,Ustilaginoidea virens,rice,
+finger millet finger blast,Pyricularia grisea,finger millet,
+finger millet leaf blast,Pyricularia grisea,finger millet,
+finger millet neck blast,Pyricularia grisea,finger millet,
+fusarium wilt,Fusarium oxysporum,many,
+gumming,Xanthomonas axonopodis pv. vasculorum,sugarcane,
+leaf blast,Pyricularia oryzae,rice,
+leaf curl,,potato; many,
+leaf scald,,sugarcane; rice,"Xanthomonas albilineans in sugarcane; Microdochium albescens in rice"
+leaf smut,Entyloma oryzae,rice,
+narrow brown spot,Sphaerulina oryzina,rice,formerly Cercospora janseana
+neck blast,Pyricularia oryzae,rice,
+potato purple top,Candidatus Phytoplasma,potato,
+red stripe,,rice; sugarcane,
+rice grassy stunt,Rice grassy stunt virus,rice,
+rice orange leaf,Rice orange leaf phytoplasma,rice,
+rice ragged stunt,Rice ragged stunt virus,rice,
+rice tungro,Rice tungro virus,rice,
+rice yellow dwarf,Rice yellow dwarf phytoplasma,rice,
+sheath rot,Sarocladium oryzae,rice,
+sterility mosaic,Pigeonpea sterility mosaic virus,pigeon pea,
+wheat blast,Magnaporthe oryzae Triticum,wheat,
+yellowing syndrome,,rice,
